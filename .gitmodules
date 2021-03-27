@@ -4,3 +4,6 @@
 [submodule "dependencies/prov"]
 	path = dependencies/prov
 	url = https://github.com/trungdong/prov.git
+[submodule "dependencies/prov-check"]
+	path = dependencies/prov-check
+	url = https://github.com/ajnelson-nist/prov-check.git
