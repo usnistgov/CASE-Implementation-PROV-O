@@ -1,0 +1,3 @@
+[submodule "dependencies/CASE-Examples-QC"]
+	path = dependencies/CASE-Examples-QC
+	url = https://github.com/ajnelson-nist/CASE-Examples-QC.git
