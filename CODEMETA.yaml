@@ -21,7 +21,7 @@ categories:
   - scientific-software
   # - ai-ml
   #- simulation
-  #- visualization
+  - visualization
   #- build-tools
   #- hpc-workflow
 themes:
@@ -35,9 +35,9 @@ themes:
   # - Energy
   # - Environment
   # - Fire
-  # - Forensic Science
+  - Forensic Science
   # - Health
-  # - Information Technology
+  - Information Technology
   # - Infrastructure
   # - Manufacturing
   # - Materials
@@ -49,11 +49,5 @@ themes:
   # - Physics
   # - Public safety
   # - Resilience
-  # - Standards
+  - Standards
   # - Transportation
-  # - Energy
-  # - Environment
-  # - Fire
-  # - Forensic Science
-  # - Health
-  # - Information technology
