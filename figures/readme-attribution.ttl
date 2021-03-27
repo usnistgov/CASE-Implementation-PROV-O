@@ -1,0 +1,23 @@
+@prefix kb: <urn:example:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+kb:someAgent
+	a prov:Agent ;
+	.
+
+kb:unqualifiablyAttributedEntity
+	a prov:Entity ;
+	prov:wasAttributedTo kb:someAgent ;
+	.
+
+kb:qualifiablyAttributedEntity
+	a prov:Entity ;
+	prov:wasAttributedTo kb:someAgent ;
+	prov:qualifiedAttribution kb:someAttribution ;
+	.
+
+kb:someAttribution
+	a prov:Attribution ;
+	prov:agent kb:someAgent ;
+	.
+

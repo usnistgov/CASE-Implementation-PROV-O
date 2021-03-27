@@ -1,0 +1,34 @@
+DEBUG:provconstraints.py:(rdflib.term.URIRef('http://example.org/kb/investigative-action5-uuid'),)
+DEBUG:provconstraints.py:
+    PREFIX prov: <http://www.w3.org/ns/prov#>
+
+    select ?e where {
+        ?e a prov:Entity, prov:Activity .
+    }
+
+DEBUG:provconstraints.py:(rdflib.term.URIRef('http://example.org/kb/forensic_action6'),)
+DEBUG:provconstraints.py:
+    PREFIX prov: <http://www.w3.org/ns/prov#>
+
+    select ?e where {
+        ?e a prov:Entity, prov:Activity .
+    }
+
+impossibility
+Oresteia-prov.ttl False
+accounts-prov.ttl True
+bulk_extractor_forensic_path-prov.ttl True
+call_log-prov.ttl True
+device-prov.ttl True
+exif_data-prov.ttl True
+file-prov.ttl True
+impossibility
+forensic_lifecycle-prov.ttl False
+location-prov.ttl True
+message-prov.ttl True
+mobile_device_and_sim_card-prov.ttl True
+multipart_file-prov.ttl True
+network_connection-prov.ttl True
+raw_data-prov.ttl True
+reconstructed_file-prov.ttl True
+sms_and_contacts-prov.ttl True

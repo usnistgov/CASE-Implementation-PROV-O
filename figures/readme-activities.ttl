@@ -1,0 +1,23 @@
+@prefix kb: <urn:example:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:activity1
+	a prov:Activity ;
+	prov:startedAtTime "2020-01-02T03:04:05Z"^^xsd:dateTime ;
+	.
+
+kb:activity2
+	a prov:Activity ;
+	prov:wasInformedBy kb:activity1 ;
+	prov:startedAtTime "2020-01-02T06:07:08Z"^^xsd:dateTime ;
+	prov:endedAtTime "2020-01-02T12:00:01Z"^^xsd:dateTime ;
+	.
+
+
+kb:activity3
+	a prov:Activity ;
+	prov:wasInformedBy kb:activity2 ;
+	prov:endedAtTime "2020-01-02T21:00:02Z"^^xsd:dateTime ;
+	.
+

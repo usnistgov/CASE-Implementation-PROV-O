@@ -1,0 +1,1094 @@
+@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:action-uuid-1
+	a prov:Activity ;
+	rdfs:comment "Exhibit submitted for Kiosk examination" ;
+	prov:endedAtTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-1 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:officer-uuid-1 ;
+	.
+
+kb:action-uuid-10
+	a prov:Activity ;
+	rdfs:comment "Report DVD Generated as associated exhibit" ;
+	prov:endedAtTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-7 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:file2-uuid-1 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-6 ;
+		]
+		;
+	prov:used
+		kb:file2-uuid-1 ,
+		kb:provenance-record-uuid-6
+		;
+	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	prov:wasInformedBy kb:action-uuid-7 ;
+	.
+
+kb:action-uuid-11
+	a prov:Activity ;
+	rdfs:comment "DVD Report sealed" ;
+	prov:endedAtTime "2019-01-01T15:10:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	.
+
+kb:action-uuid-12
+	a prov:Activity ;
+	rdfs:comment "Witness statement completed" ;
+	prov:endedAtTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-10 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:dvd-uuid-1 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-7 ;
+		]
+		;
+	prov:used
+		kb:dvd-uuid-1 ,
+		kb:provenance-record-uuid-7
+		;
+	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	prov:wasInformedBy kb:action-uuid-10 ;
+	.
+
+kb:action-uuid-13
+	a prov:Activity ;
+	rdfs:comment "Sealed Exhibit handed the OIC & Transfer documentation signed" ;
+	prov:endedAtTime "2019-01-01T15:20:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-1 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-3 ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-3 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:subject-device-uuid-1 ;
+		]
+		;
+	prov:used
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	prov:wasInformedBy
+		kb:action-uuid-1 ,
+		kb:action-uuid-3
+		;
+	.
+
+kb:action-uuid-2
+	a prov:Activity ;
+	rdfs:comment "Exhibit seal checks (passed) & Exhibit receipted in lab" ;
+	prov:endedAtTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-2 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-1 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-1 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:subject-device-uuid-1 ;
+		]
+		;
+	prov:used
+		kb:provenance-record-uuid-1 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasAssociatedWith kb:officer-uuid-2 ;
+	prov:wasInformedBy kb:action-uuid-1 ;
+	.
+
+kb:action-uuid-3
+	a prov:Activity ;
+	rdfs:comment "Exhibit assigned to Kiosk technician" ;
+	prov:endedAtTime "2019-01-01T14:05:30+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-2 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-1 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-1 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:subject-device-uuid-1 ;
+		]
+		;
+	prov:used
+		kb:provenance-record-uuid-1 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasAssociatedWith kb:officer-uuid-2 ;
+	prov:wasInformedBy kb:action-uuid-1 ;
+	.
+
+kb:action-uuid-4
+	a prov:Activity ;
+	rdfs:comment "Sealed Exhibit Photographed" ;
+	prov:endedAtTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-1 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-3 ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-3 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:subject-device-uuid-1 ;
+		]
+		;
+	prov:used
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasAssociatedWith kb:camera-uuid-1 ;
+	prov:wasInformedBy
+		kb:action-uuid-1 ,
+		kb:action-uuid-3
+		;
+	.
+
+kb:action-uuid-5
+	a prov:Activity ;
+	rdfs:comment "Exhibit Unsealed" ;
+	prov:endedAtTime "2019-01-01T14:20:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	.
+
+kb:action-uuid-6
+	a prov:Activity ;
+	rdfs:comment "Unsealed Exhibit Photographed" ;
+	prov:endedAtTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-1 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-3 ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-3 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:subject-device-uuid-1 ;
+		]
+		;
+	prov:used
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasAssociatedWith kb:camera-uuid-1 ;
+	prov:wasInformedBy
+		kb:action-uuid-1 ,
+		kb:action-uuid-3
+		;
+	.
+
+kb:action-uuid-7
+	a prov:Activity ;
+	rdfs:comment "Exhibit Connected to Kiosk & process started; exhibit disconnected at conclusion" ;
+	prov:endedAtTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-1 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-3 ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenance-record-uuid-3 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
+			prov:entity kb:subject-device-uuid-1 ;
+		]
+		;
+	prov:startedAtTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasAssociatedWith kb:kiosk-uuid-1 ;
+	prov:wasInformedBy
+		kb:action-uuid-1 ,
+		kb:action-uuid-3
+		;
+	.
+
+kb:action-uuid-9
+	a prov:Activity ;
+	rdfs:comment "Exhibit Resealed" ;
+	prov:endedAtTime "2019-01-01T15:00:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	.
+
+kb:camera-uuid-1
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:officer-uuid-3 ;
+	prov:qualifiedDelegation
+		[
+			a prov:Delegation ;
+			prov:agent kb:officer-uuid-3 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:agent kb:officer-uuid-3 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		]
+		;
+	.
+
+kb:dvd-uuid-1
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:file2-uuid-1 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-6 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-10 ;
+		prov:atTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-3 ;
+	prov:wasDerivedFrom
+		kb:file2-uuid-1 ,
+		kb:provenance-record-uuid-6
+		;
+	prov:wasGeneratedBy kb:action-uuid-10 ;
+	.
+
+kb:extracted-file-uuid-1
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-7 ;
+		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:kiosk-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-7 ;
+	.
+
+kb:file-uuid-1
+	a prov:Entity ;
+	rdfs:comment "Intake Form" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-2 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-1 ;
+			prov:hadActivity kb:action-uuid-2 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-2 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-2 ;
+		prov:atTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-2 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-1 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-2 ;
+	.
+
+kb:file-uuid-2
+	a prov:Entity ;
+	rdfs:comment "Kiosk report" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-7 ;
+		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:kiosk-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-7 ;
+	.
+
+kb:file-uuid-3
+	a prov:Entity ;
+	rdfs:comment "Witness statement" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:dvd-uuid-1 ;
+			prov:hadActivity kb:action-uuid-12 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-7 ;
+			prov:hadActivity kb:action-uuid-12 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-12 ;
+		prov:atTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-3 ;
+	prov:wasDerivedFrom
+		kb:dvd-uuid-1 ,
+		kb:provenance-record-uuid-7
+		;
+	prov:wasGeneratedBy kb:action-uuid-12 ;
+	.
+
+kb:file2-uuid-1
+	a prov:Entity ;
+	.
+
+kb:kiosk-uuid-1
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:officer-uuid-3 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:officer-uuid-3 ;
+		prov:hadActivity kb:action-uuid-7 ;
+	] ;
+	.
+
+kb:officer-uuid-1
+	a
+		prov:Agent ,
+		prov:Person
+		;
+	.
+
+kb:officer-uuid-2
+	a
+		prov:Agent ,
+		prov:Person
+		;
+	.
+
+kb:officer-uuid-3
+	a
+		prov:Agent ,
+		prov:Person
+		;
+	.
+
+kb:provenance-record-uuid-
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:dvd-uuid-1 ;
+			prov:hadActivity kb:action-uuid-12 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-7 ;
+			prov:hadActivity kb:action-uuid-12 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-12 ;
+		prov:atTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-3 ;
+	prov:wasDerivedFrom
+		kb:dvd-uuid-1 ,
+		kb:provenance-record-uuid-7
+		;
+	prov:wasGeneratedBy kb:action-uuid-12 ;
+	.
+
+kb:provenance-record-uuid-1
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:subject-device-uuid-1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:action-uuid-1 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-1 ;
+		prov:atTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-1 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:action-uuid-1 ;
+	case-investigation:exhibitNumber "EXH-20190101-7" ;
+	.
+
+kb:provenance-record-uuid-2
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:file-uuid-1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-2 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-1 ;
+			prov:hadActivity kb:action-uuid-2 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-2 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-2 ;
+		prov:atTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-2 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-1 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-2 ;
+	case-investigation:exhibitNumber "EXH-20190101-7-IntakeForm" ;
+	.
+
+kb:provenance-record-uuid-3
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:subject-device-uuid-1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-2 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-1 ;
+			prov:hadActivity kb:action-uuid-3 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-3 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-3 ;
+		prov:atTime "2019-01-01T14:05:30+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-2 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-1 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-3 ;
+	case-investigation:exhibitNumber "EXH-20190101-7" ;
+	.
+
+kb:provenance-record-uuid-4
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:subject-device-photograph-uuid-1 ,
+		kb:subject-device-photograph-uuid-2 ,
+		kb:subject-device-photograph-uuid-3
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-4 ;
+		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-4 ;
+	case-investigation:exhibitNumber "EXH-20190101-7-SealedPhotos" ;
+	.
+
+kb:provenance-record-uuid-5
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:subject-device-photograph-uuid-4 ,
+		kb:subject-device-photograph-uuid-5 ,
+		kb:subject-device-photograph-uuid-6
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-6 ;
+		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-6 ;
+	case-investigation:exhibitNumber "EXH-20190101-7-UnsealedPhotos" ;
+	.
+
+kb:provenance-record-uuid-6
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:extracted-file-uuid-1 ,
+		kb:file-uuid-2
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-7 ;
+		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:kiosk-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-7 ;
+	case-investigation:exhibitNumber "EXH-20190101-7-KioskReport" ;
+	.
+
+kb:provenance-record-uuid-7
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:dvd-uuid-1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:file2-uuid-1 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-6 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-10 ;
+		prov:atTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-3 ;
+	prov:wasDerivedFrom
+		kb:file2-uuid-1 ,
+		kb:provenance-record-uuid-6
+		;
+	prov:wasGeneratedBy kb:action-uuid-10 ;
+	case-investigation:exhibitNumber "EXH-20190101-7-KioskReportDVD" ;
+	.
+
+kb:provenance-record-uuid-8
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:subject-device-uuid-1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-13 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-13 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-13 ;
+		prov:atTime "2019-01-01T15:20:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-3 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-13 ;
+	case-investigation:exhibitNumber "EXH-20190101-7" ;
+	.
+
+kb:subject-device-photograph-uuid-1
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-4 ;
+		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-4 ;
+	.
+
+kb:subject-device-photograph-uuid-2
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-4 ;
+		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-4 ;
+	.
+
+kb:subject-device-photograph-uuid-3
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-4 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-4 ;
+		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-4 ;
+	.
+
+kb:subject-device-photograph-uuid-4
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-6 ;
+		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-6 ;
+	.
+
+kb:subject-device-photograph-uuid-5
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-6 ;
+		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-6 ;
+	.
+
+kb:subject-device-photograph-uuid-6
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:camera-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-6 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-6 ;
+		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:camera-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-6 ;
+	.
+
+kb:subject-device-uuid-1
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:officer-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:action-uuid-1 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-1 ;
+		prov:atTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:officer-uuid-1 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:action-uuid-1 ;
+	.
+

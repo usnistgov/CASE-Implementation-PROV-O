@@ -1,0 +1,135 @@
+@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
+			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	] ;
+	prov:wasAttributedTo kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	prov:wasDerivedFrom
+		kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ,
+		kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
+		;
+	prov:wasGeneratedBy kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
+		]
+		;
+	prov:used
+		kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ,
+		kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
+		;
+	prov:wasAssociatedWith kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	.
+
+kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43
+	a
+		prov:Agent ,
+		prov:Person
+		;
+	.
+
+kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168
+	a prov:Entity ;
+	.
+
+kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
+		prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	] ;
+	.
+
+kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f
+	a prov:Person ;
+	.
+
+kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Smartphone used by subject" ;
+	prov:hadMember kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+	case-investigation:exhibitNumber "SD1" ;
+	.
+
+kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8
+	a prov:Collection ;
+	prov:hadMember kb:f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
+	case-investigation:exhibitNumber "MD1" ;
+	.
+
+kb:provenance-record2-37826ad6-9edc-493b-b130-c3378622263a
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
+			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	] ;
+	prov:wasAttributedTo kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	prov:wasDerivedFrom
+		kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ,
+		kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
+		;
+	prov:wasGeneratedBy kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+

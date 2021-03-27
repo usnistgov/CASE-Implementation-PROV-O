@@ -1,0 +1,597 @@
+@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:aeschylus-uuid
+	a prov:Person ;
+	.
+
+kb:argive-elder1-phoneaccnt-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action5-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	.
+
+kb:argive-elder2-phoneaccnt-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action5-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	.
+
+kb:argive-elder3-phoneaccnt-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action5-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	.
+
+kb:athens-warrant1-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf
+		kb:investigator1-uuid ,
+		kb:investigator2-uuid
+		;
+	prov:qualifiedDelegation
+		[
+			a prov:Delegation ;
+			prov:agent kb:investigator1-uuid ;
+			prov:hadActivity kb:investigative-action10-uuid ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:agent kb:investigator2-uuid ;
+			prov:hadActivity kb:investigative-action1-uuid ;
+		]
+		;
+	.
+
+kb:cassandra-device-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:athens-warrant1-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action1-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:wasAttributedTo kb:athens-warrant1-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	.
+
+kb:cassandra-mobiledevice-forensicduplicate-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-device-uuid ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record2-uuid ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action2-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool1-uuid ;
+	prov:wasDerivedFrom
+		kb:cassandra-device-uuid ,
+		kb:provenance-record2-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	.
+
+kb:cassandra-mobiledevice-mmssms-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool2-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+			prov:hadActivity kb:investigative-action4-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record3-uuid ;
+			prov:hadActivity kb:investigative-action4-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action4-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool2-uuid ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action4-uuid ;
+	.
+
+kb:cassandra-uuid
+	a prov:Person ;
+	.
+
+kb:electra-uuid
+	a prov:Person ;
+	.
+
+kb:euripides-uuid
+	a prov:Person ;
+	.
+
+kb:investigative-action1-uuid
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:athens-warrant1-uuid ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:athens-warrant1-uuid ;
+	.
+
+kb:investigative-action10-uuid
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:athens-warrant1-uuid ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:cassandra-device-uuid ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record1-uuid ;
+		]
+		;
+	prov:used
+		kb:cassandra-device-uuid ,
+		kb:provenance-record1-uuid
+		;
+	prov:wasAssociatedWith kb:athens-warrant1-uuid ;
+	prov:wasInformedBy kb:investigative-action1-uuid ;
+	.
+
+kb:investigative-action2-uuid
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool1-uuid ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action1-uuid ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action10-uuid ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:cassandra-device-uuid ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record2-uuid ;
+		]
+		;
+	prov:used
+		kb:cassandra-device-uuid ,
+		kb:provenance-record2-uuid
+		;
+	prov:wasAssociatedWith kb:tool1-uuid ;
+	prov:wasInformedBy
+		kb:investigative-action1-uuid ,
+		kb:investigative-action10-uuid
+		;
+	.
+
+kb:investigative-action4-uuid
+	a
+		prov:Activity ,
+		prov:Agent
+		;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool2-uuid ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action2-uuid ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record3-uuid ;
+		]
+		;
+	prov:used
+		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasAssociatedWith kb:tool2-uuid ;
+	prov:wasInformedBy kb:investigative-action2-uuid ;
+	.
+
+kb:investigative-action5-uuid
+	a
+		prov:Activity ,
+		prov:Entity
+		;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool2-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+			prov:hadActivity kb:investigative-action4-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record3-uuid ;
+			prov:hadActivity kb:investigative-action4-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action4-uuid ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool2-uuid ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action4-uuid ;
+	.
+
+kb:investigator1-uuid
+	a prov:Agent ;
+	.
+
+kb:investigator2-uuid
+	a prov:Agent ;
+	.
+
+kb:provenance-record1-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Mobile device used by murder victim Cassandra" ;
+	prov:hadMember kb:cassandra-device-uuid ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:athens-warrant1-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action1-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:wasAttributedTo kb:athens-warrant1-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	case-investigation:exhibitNumber "ArgosPD-20170622-001A" ;
+	.
+
+kb:provenance-record2-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Android smartphone seized by Argos PD" ;
+	prov:hadMember kb:cassandra-device-uuid ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:athens-warrant1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-device-uuid ;
+			prov:hadActivity kb:investigative-action10-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record1-uuid ;
+			prov:hadActivity kb:investigative-action10-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action10-uuid ;
+	] ;
+	prov:wasAttributedTo kb:athens-warrant1-uuid ;
+	prov:wasDerivedFrom
+		kb:cassandra-device-uuid ,
+		kb:provenance-record1-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action10-uuid ;
+	case-investigation:exhibitNumber "AthensPD-2017220601" ;
+	.
+
+kb:provenance-record3-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic duplicate of mobile device used by murder victim Cassandra" ;
+	prov:hadMember kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-device-uuid ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record2-uuid ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action2-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool1-uuid ;
+	prov:wasDerivedFrom
+		kb:cassandra-device-uuid ,
+		kb:provenance-record2-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02" ;
+	.
+
+kb:provenance-record4-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "SMS SQLite database on mobile device used by murder victim Cassandra" ;
+	prov:hadMember kb:cassandra-mobiledevice-mmssms-uuid ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool2-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+			prov:hadActivity kb:investigative-action4-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record3-uuid ;
+			prov:hadActivity kb:investigative-action4-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action4-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool2-uuid ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action4-uuid ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02-03" ;
+	.
+
+kb:provenance-record5-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Parsed messages from mobile device used by murder victim Cassandra" ;
+	prov:hadMember
+		kb:argive-elder1-phoneaccnt-uuid ,
+		kb:argive-elder2-phoneaccnt-uuid ,
+		kb:argive-elder3-phoneaccnt-uuid ,
+		kb:sms-message1-uuid ,
+		kb:sms-message2-uuid
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action5-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	case-investigation:exhibitNumber "ArgosPD-20170622-001A-100" ;
+	.
+
+kb:sms-message1-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action5-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	.
+
+kb:sms-message2-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool3-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action5-uuid ;
+	] ;
+	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	.
+
+kb:thyestes-uuid
+	a prov:Person ;
+	.
+
+kb:tool1-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigator1-uuid ;
+		prov:hadActivity kb:investigative-action2-uuid ;
+	] ;
+	.
+
+kb:tool2-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigator1-uuid ;
+		prov:hadActivity kb:investigative-action4-uuid ;
+	] ;
+	.
+
+kb:tool3-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigative-action4-uuid ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigative-action4-uuid ;
+		prov:hadActivity kb:investigative-action5-uuid ;
+	] ;
+	.
+

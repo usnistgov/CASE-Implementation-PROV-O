@@ -1,0 +1,222 @@
+@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix kb: <http://example.org/kb#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:219189B6-356C-4D53-A844-F0031E74F156
+	a prov:Activity ;
+	rdfs:comment "Suspect device physical acquisition" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool-embeddedextractor1-uid ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity kb:suspect-device-uuid ;
+	] ;
+	prov:used kb:suspect-device-uuid ;
+	prov:wasAssociatedWith kb:tool-embeddedextractor1-uid ;
+	prov:wasInformedBy kb:investigative-action1-uuid ;
+	.
+
+kb:48C0F0E8-9A63-45EE-99BF-23CC354C3252
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-embeddedextractor1-uid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:suspect-device-uuid ;
+		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
+	prov:wasDerivedFrom kb:suspect-device-uuid ;
+	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	.
+
+kb:90F73123-DB7E-41E5-B6CA-493B96E4B89F
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-embeddedextractor1-uid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:suspect-device-uuid ;
+		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
+	prov:wasDerivedFrom kb:suspect-device-uuid ;
+	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	.
+
+kb:97C74753-FCEB-49C8-A611-7A70EF46AB5D
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-embeddedextractor1-uid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:suspect-device-uuid ;
+		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
+	prov:wasDerivedFrom kb:suspect-device-uuid ;
+	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	.
+
+kb:B2A7B20E-8307-40CF-ABAF-9733ABBF4335
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-embeddedextractor1-uid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:suspect-device-uuid ;
+		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
+	prov:wasDerivedFrom kb:suspect-device-uuid ;
+	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	.
+
+kb:E9AA4F26-D187-4F32-A602-86A6DF4B8528
+	a prov:Agent ;
+	.
+
+kb:EBAB06EE-7522-42D6-96EA-E3121D67E393
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-embeddedextractor1-uid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:suspect-device-uuid ;
+		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
+	prov:wasDerivedFrom kb:suspect-device-uuid ;
+	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	.
+
+kb:investigative-action1-uuid
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:odin-decree13-uuid ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:odin-decree13-uuid ;
+	.
+
+kb:investigator2-uuid
+	a prov:Agent ;
+	.
+
+kb:odin-decree13-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator2-uuid ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigator2-uuid ;
+		prov:hadActivity kb:investigative-action1-uuid ;
+	] ;
+	.
+
+kb:provenance-record1-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Suspect device found near Bifrost Bridge after disruption" ;
+	prov:hadMember kb:suspect-device-uuid ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:odin-decree13-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action1-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:wasAttributedTo kb:odin-decree13-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	case-investigation:exhibitNumber "AsgardPD-20190330-001A" ;
+	.
+
+kb:suspect-device-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:odin-decree13-uuid ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action1-uuid ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:wasAttributedTo kb:odin-decree13-uuid ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	.
+
+kb:tool-embeddedextractor1-uid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:E9AA4F26-D187-4F32-A602-86A6DF4B8528 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:E9AA4F26-D187-4F32-A602-86A6DF4B8528 ;
+		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	] ;
+	.
+

@@ -1,0 +1,14 @@
+@prefix kb: <urn:example:> .
+@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+kb:someEntity
+	a prov:Entity ;
+	.
+
+kb:someCollection
+	a prov:Collection ;
+	case-investigation:exhibitNumber "1234-5" ;
+	prov:hadMember kb:someEntity ;
+	.
+

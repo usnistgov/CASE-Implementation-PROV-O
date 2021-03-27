@@ -1,0 +1,59 @@
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:annotation1
+	a prov:Entity ;
+	rdfs:comment "Photo was taken by a Canon digital camera." ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:annotator_tool1 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:forensic_action7 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action7 ;
+	] ;
+	prov:wasAttributedTo kb:annotator_tool1 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:forensic_action7 ;
+	.
+
+kb:annotator_tool1
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:examiner1 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:examiner1 ;
+		prov:hadActivity kb:forensic_action7 ;
+	] ;
+	.
+
+kb:examiner1
+	a prov:Agent ;
+	.
+
+kb:forensic_action7
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:annotator_tool1 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:annotator_tool1 ;
+	.
+

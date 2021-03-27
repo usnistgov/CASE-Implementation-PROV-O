@@ -1,0 +1,40 @@
+# This software was developed at the National Institute of Standards
+# and Technology by employees of the Federal Government in the course
+# of their official duties. Pursuant to title 17 Section 105 of the
+# United States Code this software is not subject to copyright
+# protection and is in the public domain. NIST assumes no
+# responsibility whatsoever for its use by other parties, and makes
+# no guarantees, expressed or implied, about its quality,
+# reliability, or any other characteristic.
+#
+# We would appreciate acknowledgement if the software is used.
+
+CONSTRUCT
+{
+  # Augment CASE ProvenanceRecords as PROV Collections.
+  ?nProvenanceRecord a prov:Collection .
+  ?nProvenanceRecord prov:hadMember ?nObject .
+
+  # Copy exhibitNumber statements for CASE-specific label construction.
+  # (This is only necessary if the PROV-O triples are not folded back
+  # into the original graph.  Copying this triple has no effect on the
+  # input graph.)
+  ?nProvenanceRecord case-investigation:exhibitNumber ?lExhibitNumber .
+
+  # In case a member is not defined in the graph, include a statement
+  # that the member is an Entity.  This satisfies the range of
+  # prov:hadMember.
+  ?nObject a prov:Entity .
+}
+WHERE {
+  ?nProvenanceRecord
+    a case-investigation:ProvenanceRecord ;
+    uco-core:object ?nObject ;
+    .
+
+  OPTIONAL {
+    ?nProvenanceRecord
+      case-investigation:exhibitNumber ?lExhibitNumber ;
+      .
+  }
+}

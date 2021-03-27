@@ -1,0 +1,11 @@
+*.done.log
+*.dot
+*.egg-info
+*.png
+*.svg
+*.swp
+.DS_Store
+_*
+build
+dist
+venv

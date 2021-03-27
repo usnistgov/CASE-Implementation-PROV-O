@@ -1,0 +1,154 @@
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:extracted-connections-provenancerecord-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Network connections and files parsed with PCAParser" ;
+	prov:hadMember
+		kb:network-connection1-uuid ,
+		kb:network-connection2-uuid ,
+		kb:network-connection3-uuid
+		;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-file-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-provenancerecord-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:extraction-action-uuid ;
+	] ;
+	prov:wasDerivedFrom
+		kb:pcap-file-uuid ,
+		kb:pcap-provenancerecord-uuid
+		;
+	prov:wasGeneratedBy kb:extraction-action-uuid ;
+	.
+
+kb:extraction-action-uuid
+	a prov:Activity ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:pcap-file-uuid ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:pcap-provenancerecord-uuid ;
+		]
+		;
+	prov:used
+		kb:pcap-file-uuid ,
+		kb:pcap-provenancerecord-uuid
+		;
+	.
+
+kb:network-connection1-uuid
+	a prov:Entity ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-file-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-provenancerecord-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:extraction-action-uuid ;
+	] ;
+	prov:wasDerivedFrom
+		kb:pcap-file-uuid ,
+		kb:pcap-provenancerecord-uuid
+		;
+	prov:wasGeneratedBy kb:extraction-action-uuid ;
+	.
+
+kb:network-connection2-uuid
+	a prov:Entity ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-file-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-provenancerecord-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:extraction-action-uuid ;
+	] ;
+	prov:wasDerivedFrom
+		kb:pcap-file-uuid ,
+		kb:pcap-provenancerecord-uuid
+		;
+	prov:wasGeneratedBy kb:extraction-action-uuid ;
+	.
+
+kb:network-connection3-uuid
+	a prov:Entity ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-file-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:pcap-provenancerecord-uuid ;
+			prov:hadActivity kb:extraction-action-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:extraction-action-uuid ;
+	] ;
+	prov:wasDerivedFrom
+		kb:pcap-file-uuid ,
+		kb:pcap-provenancerecord-uuid
+		;
+	prov:wasGeneratedBy kb:extraction-action-uuid ;
+	.
+
+kb:pcap-file-uuid
+	a prov:Entity ;
+	.
+
+kb:pcap-provenancerecord-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Parsed packet capture files" ;
+	prov:hadMember kb:pcap-file-uuid ;
+	.
+
+kb:pcap-tool-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	.
+
