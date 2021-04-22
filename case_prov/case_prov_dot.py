@@ -37,6 +37,8 @@ import prov.dot
 import pydot
 import rdflib.plugins.sparql
 
+import case_utils
+
 _logger = logging.getLogger(os.path.basename(__file__))
 
 NS_CASE_INVESTIGATION = rdflib.Namespace("https://caseontology.org/ontology/case/investigation#")
@@ -84,14 +86,14 @@ def main():
     subset_group.add_argument("--activity-informing", action="store_true", help="Only display Activity nodes and wasInformedBy relationships.")
     subset_group.add_argument("--agent-delegating", action="store_true", help="Only display Agent nodes and actedOnBehalfOf relationships.")
     subset_group.add_argument("--entity-deriving", action="store_true", help="Only display Entity nodes and wasDerivedBy relationships.")
-    parser.add_argument("in_ttl")
+    parser.add_argument("in_graph")
     parser.add_argument("out_dot")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     graph = rdflib.Graph()
-    graph.parse(args.in_ttl, format="turtle")
+    graph.parse(args.in_graph, format=case_utils.guess_format(args.in_graph))
 
     graph.bind("case-investigation", NS_CASE_INVESTIGATION)
 
