@@ -23,6 +23,8 @@ example_srcdir := $(qc_srcdir)/dependencies/casework.github.io/examples/owl_traf
 
 tests_srcdir := $(top_srcdir)/tests
 
+sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
+
 all: \
   prov-constraints.log \
   owl_trafficking-prov.png \
@@ -50,7 +52,8 @@ clean:
 	  prov-constraints.log
 
 owl_trafficking-prov.dot: \
-  owl_trafficking-prov.ttl
+  owl_trafficking-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -59,7 +62,8 @@ owl_trafficking-prov.dot: \
 	mv _$@ $@
 
 owl_trafficking-prov-focus-extracted-file-uuid-1.dot: \
-  owl_trafficking-prov.ttl
+  owl_trafficking-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -69,7 +73,8 @@ owl_trafficking-prov-focus-extracted-file-uuid-1.dot: \
 	mv _$@ $@
 
 owl_trafficking-prov-originals.dot: \
-  owl_trafficking-prov.ttl
+  owl_trafficking-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -80,7 +85,9 @@ owl_trafficking-prov-originals.dot: \
 
 owl_trafficking-prov.ttl: \
   $(example_srcdir)/owl_trafficking.json \
-  $(tests_srcdir)/.venv.done.log
+  $(sparql_files) \
+  $(tests_srcdir)/.venv.done.log \
+  $(top_srcdir)/case_prov/case_prov_rdf.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_rdf \
 	    --debug \

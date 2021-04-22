@@ -23,6 +23,8 @@ example_srcdir := $(qc_srcdir)/dependencies/casework.github.io/examples/urgent_e
 
 tests_srcdir := $(top_srcdir)/tests
 
+sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
+
 all: \
   prov-constraints.log \
   urgent_evidence-prov-activities.svg \
@@ -66,7 +68,9 @@ prov-constraints.log: \
 
 urgent_evidence-prov.ttl: \
   $(example_srcdir)/urgent_evidence.json \
-  $(tests_srcdir)/.venv.done.log
+  $(sparql_files) \
+  $(tests_srcdir)/.venv.done.log \
+  $(top_srcdir)/case_prov/case_prov_rdf.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_rdf \
 	    --debug \
@@ -83,7 +87,8 @@ urgent_evidence-prov.ttl: \
 	mv _$@ $@
 
 urgent_evidence-prov-activities.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --activity-informing \
@@ -94,7 +99,8 @@ urgent_evidence-prov-activities.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-agents.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --agent-delegating \
@@ -105,7 +111,8 @@ urgent_evidence-prov-agents.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-activities-focus-extracted-file-uuid-1.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --activity-informing \
@@ -117,7 +124,8 @@ urgent_evidence-prov-activities-focus-extracted-file-uuid-1.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-all.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --dash-unqualified \
@@ -127,7 +135,8 @@ urgent_evidence-prov-all.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-all-focus-extracted-file-uuid-1.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --dash-unqualified \
@@ -138,7 +147,8 @@ urgent_evidence-prov-all-focus-extracted-file-uuid-1.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-all-initial_investigative_actions.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -148,7 +158,8 @@ urgent_evidence-prov-all-initial_investigative_actions.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-entities.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --dash-unqualified \
@@ -159,7 +170,8 @@ urgent_evidence-prov-entities.dot: \
 	mv _$@ $@
 
 urgent_evidence-prov-entities-focus-extracted-file-uuid-1.dot: \
-  urgent_evidence-prov.ttl
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --dash-unqualified \

@@ -23,6 +23,8 @@ example_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/examples
 
 tests_srcdir := $(top_srcdir)/tests
 
+sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
+
 json_files := $(wildcard $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/CASE-Examples/examples/*.json)
 
 ttl_files := $(foreach json_file,$(json_files),$(subst .json,-prov.ttl,$(shell basename $(json_file))))
@@ -70,7 +72,8 @@ all: \
 	mv _$@ $@
 
 %-all.dot: \
-  %.ttl
+  %.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -79,7 +82,8 @@ all: \
 	mv _$@ $@
 
 %-originals.dot: \
-  %.ttl
+  %.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -90,7 +94,9 @@ all: \
 
 %-prov.ttl: \
   $(example_srcdir)/%.json \
-  $(tests_srcdir)/.venv.done.log
+  $(sparql_files) \
+  $(tests_srcdir)/.venv.done.log \
+  $(top_srcdir)/case_prov/case_prov_rdf.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_rdf \
 	    --allow-empty-results \
@@ -108,7 +114,8 @@ all: \
 	mv _$@ $@
 
 Oresteia-prov.dot: \
-  Oresteia-prov.ttl
+  Oresteia-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -117,7 +124,8 @@ Oresteia-prov.dot: \
 	mv _$@ $@
 
 Oresteia-prov-activities.dot: \
-  Oresteia-prov.ttl
+  Oresteia-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --activity-informing \
@@ -128,7 +136,8 @@ Oresteia-prov-activities.dot: \
 	mv _$@ $@
 
 Oresteia-prov-agents.dot: \
-  Oresteia-prov.ttl
+  Oresteia-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --agent-delegating \
@@ -139,7 +148,8 @@ Oresteia-prov-agents.dot: \
 	mv _$@ $@
 
 Oresteia-prov-entities.dot: \
-  Oresteia-prov.ttl
+  Oresteia-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --entity-deriving \
@@ -150,7 +160,8 @@ Oresteia-prov-entities.dot: \
 	mv _$@ $@
 
 Oresteia-prov-focus-sms-message1-uuid.dot: \
-  Oresteia-prov.ttl
+  Oresteia-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -160,7 +171,8 @@ Oresteia-prov-focus-sms-message1-uuid.dot: \
 	mv _$@ $@
 
 Oresteia-prov-focus-sms-message2-uuid.dot: \
-  Oresteia-prov.ttl
+  Oresteia-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \

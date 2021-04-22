@@ -19,8 +19,6 @@ top_srcdir := $(shell cd .. ; pwd)
 
 qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
 
-sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
-
 all: \
   all-CASE-Examples \
   all-casework.github.io
@@ -35,11 +33,7 @@ all: \
 
 .venv.done.log: \
   $(qc_srcdir)/deps/requirements.txt \
-  $(sparql_files) \
   $(top_srcdir)/.git_submodule_init.done.log \
-  $(top_srcdir)/case_prov/__init__.py \
-  $(top_srcdir)/case_prov/case_prov_dot.py \
-  $(top_srcdir)/case_prov/case_prov_rdf.py \
   $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt \
   $(top_srcdir)/setup.cfg \
   $(top_srcdir)/setup.py \
@@ -61,7 +55,9 @@ all: \
 	    --requirement $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt
 	source venv/bin/activate \
 	  && cd $(top_srcdir) \
-	    && python3 setup.py install
+	    && pip install \
+	      --editable \
+	      .
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(qc_srcdir)/deps/requirements.txt
