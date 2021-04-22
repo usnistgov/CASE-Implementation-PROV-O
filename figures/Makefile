@@ -37,6 +37,7 @@ clean:
 
 readme-activities.dot: \
   readme-activities.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py \
   $(top_srcdir)/tests/.venv.done.log
 	source $(top_srcdir)/tests/venv/bin/activate \
 	  && case_prov_dot \
@@ -47,6 +48,7 @@ readme-activities.dot: \
 
 readme-attribution.dot: \
   readme-attribution.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py \
   $(top_srcdir)/tests/.venv.done.log
 	source $(top_srcdir)/tests/venv/bin/activate \
 	  && case_prov_dot \
@@ -58,6 +60,7 @@ readme-attribution.dot: \
 
 readme-provenance-records.dot: \
   readme-provenance-records.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py \
   $(top_srcdir)/tests/.venv.done.log
 	source $(top_srcdir)/tests/venv/bin/activate \
 	  && case_prov_dot \

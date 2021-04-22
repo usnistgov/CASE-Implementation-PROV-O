@@ -23,6 +23,8 @@ example_srcdir := $(qc_srcdir)/dependencies/casework.github.io/examples/asgard
 
 tests_srcdir := $(top_srcdir)/tests
 
+sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
+
 all: \
   prov-constraints.log \
   asgard-prov.png \
@@ -42,7 +44,8 @@ check: \
   prov-constraints.log
 
 asgard-prov.dot: \
-  asgard-prov.ttl
+  asgard-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -51,7 +54,8 @@ asgard-prov.dot: \
 	mv _$@ $@
 
 asgard-prov-focus-extracted-file-uuid-1.dot: \
-  asgard-prov.ttl
+  asgard-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -61,7 +65,8 @@ asgard-prov-focus-extracted-file-uuid-1.dot: \
 	mv _$@ $@
 
 asgard-prov-originals.dot: \
-  asgard-prov.ttl
+  asgard-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
 	    --debug \
@@ -72,7 +77,9 @@ asgard-prov-originals.dot: \
 
 asgard-prov.ttl: \
   $(example_srcdir)/asgard.json \
-  $(tests_srcdir)/.venv.done.log
+  $(sparql_files) \
+  $(tests_srcdir)/.venv.done.log \
+  $(top_srcdir)/case_prov/case_prov_rdf.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_rdf \
 	    --debug \
