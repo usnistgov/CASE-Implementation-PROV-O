@@ -7,3 +7,6 @@
 [submodule "dependencies/prov-check"]
 	path = dependencies/prov-check
 	url = https://github.com/ajnelson-nist/prov-check.git
+[submodule "dependencies/CASE-Utilities-Python"]
+	path = dependencies/CASE-Utilities-Python
+	url = https://github.com/casework/CASE-Utilities-Python.git
