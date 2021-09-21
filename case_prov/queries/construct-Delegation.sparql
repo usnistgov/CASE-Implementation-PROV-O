@@ -27,7 +27,7 @@ WHERE {
     .
 
   ?nActionReferences
-    a uco-action:ActionReferences ;
+    a uco-action:ActionReferencesFacet ;
     uco-action:instrument ?nInstrument ;
     uco-action:performer ?nPerformer ;
     .
