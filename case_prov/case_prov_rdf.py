@@ -31,7 +31,7 @@ from . import queries
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace("https://caseontology.org/ontology/case/investigation#")
+NS_CASE_INVESTIGATION = rdflib.Namespace("https://ontology.caseontology.org/case/investigation/")
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_UCO_ACTION = rdflib.Namespace("https://unifiedcyberontology.org/ontology/uco/action#")
 NS_UCO_IDENTITY = rdflib.Namespace("https://unifiedcyberontology.org/ontology/uco/identity#")

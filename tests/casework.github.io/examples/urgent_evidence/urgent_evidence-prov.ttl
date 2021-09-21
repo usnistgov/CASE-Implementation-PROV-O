@@ -1,4 +1,4 @@
-@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .

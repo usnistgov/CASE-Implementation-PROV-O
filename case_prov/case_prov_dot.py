@@ -41,7 +41,7 @@ import case_utils
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace("https://caseontology.org/ontology/case/investigation#")
+NS_CASE_INVESTIGATION = rdflib.Namespace("https://ontology.caseontology.org/case/investigation/")
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_RDFS = rdflib.RDFS
 

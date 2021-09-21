@@ -26,7 +26,7 @@ WHERE {
     .
 
   ?nActionReferences
-    a uco-action:ActionReferences ;
+    a uco-action:ActionReferencesFacet ;
     (uco-action:object|uco-action:result) ?nObject ;
     .
 

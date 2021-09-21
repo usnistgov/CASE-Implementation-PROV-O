@@ -32,7 +32,7 @@ WHERE {
     SELECT ?nActionReferences ?nObjectA
     WHERE {
       ?nActionReferences
-        a uco-action:ActionReferences ;
+        a uco-action:ActionReferencesFacet ;
         uco-action:object ?nObjectA ;
         .
     }
@@ -42,7 +42,7 @@ WHERE {
     SELECT ?nActionReferences ?nObjectA
     WHERE {
       ?nActionReferences
-        a uco-action:ActionReferences ;
+        a uco-action:ActionReferencesFacet ;
         .
       BIND ( prov:EmptyCollection AS ?nObjectA )
       FILTER NOT EXISTS {

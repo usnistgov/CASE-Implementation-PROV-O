@@ -1,4 +1,4 @@
-@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -16,17 +16,27 @@ kb:argive-elder1-phoneaccnt-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool3-uuid ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action5-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record4-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasGeneratedBy kb:investigative-action5-uuid ;
 	.
 
@@ -36,17 +46,27 @@ kb:argive-elder2-phoneaccnt-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool3-uuid ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action5-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record4-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasGeneratedBy kb:investigative-action5-uuid ;
 	.
 
@@ -56,17 +76,27 @@ kb:argive-elder3-phoneaccnt-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool3-uuid ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action5-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record4-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasGeneratedBy kb:investigative-action5-uuid ;
 	.
 
@@ -308,6 +338,10 @@ kb:investigative-action5-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool2-uuid ;
 	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action4-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -324,11 +358,20 @@ kb:investigative-action5-uuid
 		a prov:Generation ;
 		prov:activity kb:investigative-action4-uuid ;
 	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
-	] ;
-	prov:used prov:EmptyCollection ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record4-uuid ;
+		]
+		;
+	prov:used
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasAssociatedWith kb:tool3-uuid ;
 	prov:wasAttributedTo kb:tool2-uuid ;
 	prov:wasDerivedFrom
@@ -336,6 +379,7 @@ kb:investigative-action5-uuid
 		kb:provenance-record3-uuid
 		;
 	prov:wasGeneratedBy kb:investigative-action4-uuid ;
+	prov:wasInformedBy kb:investigative-action4-uuid ;
 	.
 
 kb:investigator1-uuid
@@ -497,17 +541,27 @@ kb:provenance-record5-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool3-uuid ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action5-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record4-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasGeneratedBy kb:investigative-action5-uuid ;
 	case-investigation:exhibitNumber "ArgosPD-20170622-001A-100" ;
 	.
@@ -518,17 +572,27 @@ kb:sms-message1-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool3-uuid ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action5-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record4-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasGeneratedBy kb:investigative-action5-uuid ;
 	.
 
@@ -538,17 +602,27 @@ kb:sms-message2-uuid
 		a prov:Attribution ;
 		prov:agent kb:tool3-uuid ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action5-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record4-uuid ;
+			prov:hadActivity kb:investigative-action5-uuid ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:provenance-record4-uuid
+		;
 	prov:wasGeneratedBy kb:investigative-action5-uuid ;
 	.
 
