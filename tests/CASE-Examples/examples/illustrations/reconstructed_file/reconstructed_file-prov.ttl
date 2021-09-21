@@ -1,3 +1,4 @@
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -121,8 +122,17 @@ kb:investigative_action2
 	.
 
 kb:provenance_record1
-	a prov:Entity ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
 	rdfs:comment "Reconstructed JPG File" ;
+	prov:hadMember
+		kb:reconstructed_file ,
+		kb:relationship0 ,
+		kb:relationship1 ,
+		kb:relationship2
+		;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:carving_tool1 ;
@@ -155,11 +165,21 @@ kb:provenance_record1
 		kb:data_piece2
 		;
 	prov:wasGeneratedBy kb:investigative_action2 ;
+	case-investigation:exhibitNumber "ACME-676553402357-00" ;
 	.
 
 kb:provenance_record2
-	a prov:Entity ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
 	rdfs:comment "Carved data fragments" ;
+	prov:hadMember
+		kb:data_piece1 ,
+		kb:data_piece2 ,
+		kb:relationship3 ,
+		kb:relationship4
+		;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:carving_tool1 ;
@@ -176,6 +196,13 @@ kb:provenance_record2
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom kb:android_image ;
 	prov:wasGeneratedBy kb:investigative_action1 ;
+	case-investigation:exhibitNumber "ACME-676553402357-01" ;
+	.
+
+kb:provenance_record3
+	a prov:Collection ;
+	prov:hadMember kb:data_piece0 ;
+	case-investigation:exhibitNumber "ACME-676553402357-02" ;
 	.
 
 kb:reconstructed_file
