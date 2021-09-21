@@ -28,6 +28,20 @@ WHERE {
     SELECT ?nActionReferences ?nAgent
     WHERE {
       ?nActionReferences
+        uco-action:instrument ?nAgent ;
+        .
+      FILTER NOT EXISTS {
+        ?nActionReferences
+          uco-action:performer ?nPerformer ;
+          .
+      }
+    }
+  }
+  UNION
+  {
+    SELECT ?nActionReferences ?nAgent
+    WHERE {
+      ?nActionReferences
         uco-action:performer ?nAgent ;
         .
       FILTER NOT EXISTS {
