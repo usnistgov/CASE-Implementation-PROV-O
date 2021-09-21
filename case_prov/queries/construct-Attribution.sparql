@@ -26,7 +26,7 @@ WHERE {
 
   ?nActionReferences
     a uco-action:ActionReferencesFacet ;
-    uco-action:result ?nResult
+    uco-action:result ?nResult ;
     .
 
   {
@@ -38,6 +38,7 @@ WHERE {
       FILTER NOT EXISTS {
         ?nActionReferences
           uco-action:instrument ?nInstrument ;
+          .
       }
     }
   }

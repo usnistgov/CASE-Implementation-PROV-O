@@ -38,6 +38,7 @@ WHERE {
       FILTER NOT EXISTS {
         ?nActionReferences
           uco-action:instrument ?nInstrument ;
+          .
       }
     }
   }
