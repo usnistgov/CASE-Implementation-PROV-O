@@ -19,7 +19,7 @@ subjectdir_basename := $(shell basename $$PWD)
 
 qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
 
-case_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE
+case_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE
 
 example_srcdir := $(qc_srcdir)/dependencies/casework.github.io/examples/$(subjectdir_basename)
 

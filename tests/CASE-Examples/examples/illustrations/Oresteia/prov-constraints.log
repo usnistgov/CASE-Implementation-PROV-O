@@ -1,0 +1,10 @@
+DEBUG:provconstraints.py:(rdflib.term.URIRef('http://example.org/kb/investigative-action5-uuid'),)
+DEBUG:provconstraints.py:
+    PREFIX prov: <http://www.w3.org/ns/prov#>
+
+    select ?e where {
+        ?e a prov:Entity, prov:Activity .
+    }
+
+impossibility
+Oresteia-prov.ttl False

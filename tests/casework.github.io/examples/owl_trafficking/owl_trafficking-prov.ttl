@@ -98,13 +98,12 @@ kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
 	.
 
 kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8
-	a prov:Collection ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic duplicate of smartphone used by subject" ;
 	prov:hadMember kb:f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
-	case-investigation:exhibitNumber "MD1" ;
-	.
-
-kb:provenance-record2-37826ad6-9edc-493b-b130-c3378622263a
-	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
@@ -131,5 +130,6 @@ kb:provenance-record2-37826ad6-9edc-493b-b130-c3378622263a
 		kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
 		;
 	prov:wasGeneratedBy kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	case-investigation:exhibitNumber "MD1" ;
 	.
 

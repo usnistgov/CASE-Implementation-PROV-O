@@ -13,87 +13,41 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd ../../.. ; pwd)
+top_srcdir := $(shell cd ../../../../.. ; pwd)
+
+subjectdir_basename := $(shell basename $$PWD)
 
 qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
 
-case_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE
+case_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE-0.3.0/CASE
 
-example_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/examples
+example_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)
 
-tests_srcdir := $(top_srcdir)/tests
+subject_json := $(example_srcdir)/$(subjectdir_basename).json
 
 sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
 
-json_files := $(wildcard $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/CASE-Examples/examples/*.json)
+tests_srcdir := $(top_srcdir)/tests
 
-ttl_files := $(foreach json_file,$(json_files),$(subst .json,-prov.ttl,$(shell basename $(json_file))))
-
-substantive_svg_files := \
-  Oresteia-prov-activities.svg \
-  Oresteia-prov-agents.svg \
-  Oresteia-prov-all.svg \
-  Oresteia-prov-entities.svg \
-  accounts-prov-all.svg \
-  exif_data-prov-all.svg \
-  forensic_lifecycle-prov-all.svg \
-  network_connection-prov-all.svg \
-  reconstructed_file-prov-all.svg
 
 all: \
-  Oresteia-prov-focus-sms-message1-uuid.svg \
-  Oresteia-prov-focus-sms-message2-uuid.svg \
-  Oresteia-prov-originals.svg \
-  exif_data-prov-originals.svg \
-  forensic_lifecycle-prov-originals.svg \
-  network_connection-prov-originals.svg \
   prov-constraints.log \
-  reconstructed_file-prov-originals.svg \
-  $(substantive_svg_files)
-
-.PRECIOUS: \
-  %-all.dot \
-  %-originals.dot \
-  %-prov.ttl \
-  %.dot \
-  %.ttl
-
-%.png: \
-  %.ttl
-	source $(tests_srcdir)/venv/bin/activate \
-	  && rdf2dot -f turtle $< > __$@
-	dot -o _$@ -T png __$@
-	rm __$@
-	mv _$@ $@
+  $(subjectdir_basename)-prov_activities.svg \
+  $(subjectdir_basename)-prov_all.svg \
+  $(subjectdir_basename)-prov_agents.svg \
+  $(subjectdir_basename)-prov_entities.svg \
+  $(subjectdir_basename)-prov_originals.svg
 
 %.svg: \
   %.dot
-	dot -o _$@ -T svg $<
+	dot \
+	  -o _$@ \
+	  -T svg \
+	  $<
 	mv _$@ $@
 
-%-all.dot: \
-  %.ttl \
-  $(top_srcdir)/case_prov/case_prov_dot.py
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    $< \
-	    _$@
-	mv _$@ $@
-
-%-originals.dot: \
-  %.ttl \
-  $(top_srcdir)/case_prov/case_prov_dot.py
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    --from-empty-set \
-	    $< \
-	    _$@
-	mv _$@ $@
-
-%-prov.ttl: \
-  $(example_srcdir)/%.json \
+$(subjectdir_basename)-prov.ttl: \
+  $(subject_json) \
   $(sparql_files) \
   $(tests_srcdir)/.venv.done.log \
   $(top_srcdir)/case_prov/case_prov_rdf.py
@@ -104,8 +58,8 @@ all: \
 	    $< \
 	    __$@
 	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
-	  -ibi \
-	  -ibn \
+	  --infer-base-iri \
+	  --inline-blank-nodes \
 	  --source __$@ \
 	  --source-format turtle \
 	  --target _$@ \
@@ -113,18 +67,8 @@ all: \
 	rm __$@
 	mv _$@ $@
 
-Oresteia-prov.dot: \
-  Oresteia-prov.ttl \
-  $(top_srcdir)/case_prov/case_prov_dot.py
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    $< \
-	    _$@
-	mv _$@ $@
-
-Oresteia-prov-activities.dot: \
-  Oresteia-prov.ttl \
+$(subjectdir_basename)-prov_activities.dot: \
+  $(subjectdir_basename)-prov.ttl \
   $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
@@ -135,8 +79,8 @@ Oresteia-prov-activities.dot: \
 	    _$@
 	mv _$@ $@
 
-Oresteia-prov-agents.dot: \
-  Oresteia-prov.ttl \
+$(subjectdir_basename)-prov_agents.dot: \
+  $(subjectdir_basename)-prov.ttl \
   $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
@@ -147,58 +91,60 @@ Oresteia-prov-agents.dot: \
 	    _$@
 	mv _$@ $@
 
-Oresteia-prov-entities.dot: \
-  Oresteia-prov.ttl \
+$(subjectdir_basename)-prov_all.dot: \
+  $(subjectdir_basename)-prov.ttl \
   $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
-	    --entity-deriving \
 	    --dash-unqualified \
 	    --debug \
 	    $< \
 	    _$@
 	mv _$@ $@
 
-Oresteia-prov-focus-sms-message1-uuid.dot: \
-  Oresteia-prov.ttl \
+$(subjectdir_basename)-prov_entities.dot: \
+  $(subjectdir_basename)-prov.ttl \
   $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
+	    --dash-unqualified \
 	    --debug \
-	    --entity-ancestry http://example.org/kb/sms-message1-uuid \
+	    --entity-deriving \
 	    $< \
 	    _$@
 	mv _$@ $@
 
-Oresteia-prov-focus-sms-message2-uuid.dot: \
-  Oresteia-prov.ttl \
+$(subjectdir_basename)-prov_originals.dot: \
+  $(subjectdir_basename)-prov.ttl \
   $(top_srcdir)/case_prov/case_prov_dot.py
 	source $(tests_srcdir)/venv/bin/activate \
 	  && case_prov_dot \
+	    --dash-unqualified \
 	    --debug \
-	    --entity-ancestry http://example.org/kb/sms-message2-uuid \
+	    --from-empty-set \
 	    $< \
 	    _$@
 	mv _$@ $@
 
 check: \
   prov-constraints.log
+	@test 1 -eq $$(tail -n1 $< | grep 'True' | wc -l) \
+	  || (echo "ERROR:illustration.mk:prov-constraints reported a constraint error." >&2 ; exit 1)
 
 clean:
 	@rm -f \
 	  *.dot \
-	  *.png \
 	  *.svg \
 	  *.ttl \
 	  prov-constraints.log
 
 prov-constraints.log: \
   $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
-  $(ttl_files)
+  $(subjectdir_basename)-prov.ttl
 	source $(tests_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
 	    --debug \
-	    $(ttl_files) \
+	    $(subjectdir_basename)-prov.ttl \
 	    > _$@ \
 	    2>&1
 	mv _$@ $@
