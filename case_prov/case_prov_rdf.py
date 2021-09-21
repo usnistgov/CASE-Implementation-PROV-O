@@ -21,7 +21,7 @@ import argparse
 import glob
 import logging
 import os
-import importlib
+import importlib.resources
 
 import rdflib.plugins.sparql
 
