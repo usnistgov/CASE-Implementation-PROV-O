@@ -135,7 +135,7 @@ clean:
 	  *.dot \
 	  *.svg \
 	  *.ttl \
-	  $(subjectdir_basename)-prov-constraints.log
+	  prov-constraints.log
 
 prov-constraints.log: \
   $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
