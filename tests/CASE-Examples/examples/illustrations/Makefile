@@ -13,18 +13,31 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd ../../../.. ; pwd)
+illdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
 
-all:
-	$(MAKE) \
-	  --file ../src/example.mk
+all_targets       := $(foreach illdir,$(illdirs),all-$(illdir))
+check_targets     := $(foreach illdir,$(illdirs),check-$(illdir))
+clean_targets     := $(foreach illdir,$(illdirs),clean-$(illdir))
 
-check:
+all: \
+  $(all_targets)
+
+all-%:
 	$(MAKE) \
-	  --file ../src/example.mk \
+	  --directory $$(echo $@ | sed -e 's/^all-//')
+
+check: \
+  $(check_targets)
+
+check-%:
+	$(MAKE) \
+	  --directory $$(echo $@ | sed -e 's/^check-//') \
 	  check
 
-clean:
+clean: \
+  $(clean_targets)
+
+clean-%:
 	@$(MAKE) \
-	  --file ../src/example.mk \
+	  --directory $$(echo $@ | sed -e 's/^clean-//') \
 	  clean

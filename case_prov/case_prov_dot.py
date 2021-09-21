@@ -96,6 +96,7 @@ def main():
     graph.parse(args.in_graph, format=case_utils.guess_format(args.in_graph))
 
     graph.bind("case-investigation", NS_CASE_INVESTIGATION)
+    graph.bind("prov", NS_PROV)
 
     nsdict = {k:v for (k,v) in graph.namespace_manager.namespaces()}
 

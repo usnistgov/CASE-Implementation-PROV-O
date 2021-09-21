@@ -68,7 +68,7 @@ all: \
 all-CASE-Examples: \
   .venv.done.log
 	$(MAKE) \
-	  --directory CASE-Examples/examples
+	  --directory CASE-Examples/examples/illustrations
 
 all-casework.github.io: \
   .venv.done.log
@@ -82,7 +82,7 @@ check: \
 check-CASE-Examples: \
   .venv.done.log
 	$(MAKE) \
-	  --directory CASE-Examples/examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  check
 
 check-casework.github.io: \
@@ -101,7 +101,7 @@ clean: \
 
 clean-CASE-Examples:
 	@$(MAKE) \
-	  --directory CASE-Examples/examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  clean
 
 clean-casework.github.io:

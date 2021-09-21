@@ -13,18 +13,18 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd ../../../.. ; pwd)
+top_srcdir := $(shell cd ../../../../.. ; pwd)
 
 all:
 	$(MAKE) \
-	  --file ../src/example.mk
+	  --file ../src/illustration.mk
 
 check:
 	$(MAKE) \
-	  --file ../src/example.mk \
+	  --file ../src/illustration.mk \
 	  check
 
 clean:
 	@$(MAKE) \
-	  --file ../src/example.mk \
+	  --file ../src/illustration.mk \
 	  clean
