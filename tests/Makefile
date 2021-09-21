@@ -48,16 +48,15 @@ all: \
 	    setuptools \
 	    wheel
 	source venv/bin/activate \
-	  && cd $(top_srcdir)/dependencies/CASE-Utilities-Python \
-	    && pip install .
+	  && pip install \
+	    $(top_srcdir)/dependencies/CASE-Utilities-Python
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt
 	source venv/bin/activate \
-	  && cd $(top_srcdir) \
-	    && pip install \
-	      --editable \
-	      .
+	  && pip install \
+	    --editable \
+	    $(top_srcdir)
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(qc_srcdir)/deps/requirements.txt
