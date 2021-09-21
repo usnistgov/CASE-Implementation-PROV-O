@@ -16,6 +16,10 @@ kb:extracted-connections-provenancerecord-uuid
 		kb:network-connection2-uuid ,
 		kb:network-connection3-uuid
 		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -32,6 +36,7 @@ kb:extracted-connections-provenancerecord-uuid
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
@@ -41,6 +46,10 @@ kb:extracted-connections-provenancerecord-uuid
 
 kb:extraction-action-uuid
 	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -55,10 +64,15 @@ kb:extraction-action-uuid
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
 		;
+	prov:wasAssociatedWith kb:pcap-tool-uuid ;
 	.
 
 kb:network-connection1-uuid
 	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -75,6 +89,7 @@ kb:network-connection1-uuid
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
@@ -84,6 +99,10 @@ kb:network-connection1-uuid
 
 kb:network-connection2-uuid
 	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -100,6 +119,7 @@ kb:network-connection2-uuid
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
@@ -109,6 +129,10 @@ kb:network-connection2-uuid
 
 kb:network-connection3-uuid
 	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -125,6 +149,7 @@ kb:network-connection3-uuid
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
