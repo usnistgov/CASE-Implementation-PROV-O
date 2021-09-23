@@ -224,11 +224,11 @@ WHERE {
     nodes_agents = dict()
     nodes_entities = dict()
 
-    # IRI -> IRI -> (pydot.Edge identifier, kwargs)
-    edges = collections.defaultdict(dict)
-    edges_deriving = collections.defaultdict(dict)
-    edges_delegating = collections.defaultdict(dict)
-    edges_informing = collections.defaultdict(dict)
+    # IRI -> IRI -> short predicate -> (pydot.Edge identifier, kwargs)
+    edges = collections.defaultdict(lambda: collections.defaultdict(dict))
+    edges_deriving = collections.defaultdict(lambda: collections.defaultdict(dict))
+    edges_delegating = collections.defaultdict(lambda: collections.defaultdict(dict))
+    edges_informing = collections.defaultdict(lambda: collections.defaultdict(dict))
 
     wrapper = textwrap.TextWrapper(
       break_long_words=True,
@@ -390,7 +390,12 @@ WHERE {
         nodes[activity_iri] = record
         nodes_activities[activity_iri] = record
 
-    def _render_edges(select_query_text, kwargs, supplemental_dict=None):
+    def _render_edges(
+      select_query_text : str,
+      short_edge_label : str,
+      kwargs,
+      supplemental_dict=None
+    ) -> None:
         select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
         for record in graph.query(select_query_object):
             (n_thing_1, n_thing_2) = record
@@ -403,9 +408,9 @@ WHERE {
               gv_node_id_2,
               kwargs
             )
-            edges[thing_1_iri][thing_2_iri] = record
+            edges[thing_1_iri][thing_2_iri][short_edge_label] = record
             if not supplemental_dict is None:
-                supplemental_dict[thing_1_iri][thing_2_iri] = record
+                supplemental_dict[thing_1_iri][thing_2_iri][short_edge_label] = record
 
     # Render actedOnBehalfOf.
     select_query_text = """\
@@ -419,7 +424,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_DELEGATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs, edges_delegating)
+    _render_edges(select_query_text, "actedOnBehalfOf", kwargs, edges_delegating)
     if args.dash_unqualified:
         # Render actedOnBehalfOf, with stronger line from Delegation.
         select_query_text = """\
@@ -435,7 +440,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_DELEGATION)
-        _render_edges(select_query_text, kwargs, edges_delegating)
+        _render_edges(select_query_text, "actedOnBehalfOf", kwargs, edges_delegating)
 
     # Render hadMember.
     select_query_text = """\
@@ -447,7 +452,7 @@ WHERE {
 }
 """
     kwargs = clone_style(prov.constants.PROV_MEMBERSHIP)
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "hadMember", kwargs)
 
     # Render used.
     select_query_text = """\
@@ -461,7 +466,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_USAGE)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "used", kwargs)
     if args.dash_unqualified:
         # Render used, with stronger line from Usage.
         select_query_text = """\
@@ -477,7 +482,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_USAGE)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "used", kwargs)
 
     # Render wasAssociatedWith.
     select_query_text = """\
@@ -491,7 +496,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_ASSOCIATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "wasAssociatedWith", kwargs)
     if args.dash_unqualified:
         # Render wasAssociatedWith, with stronger line from Association.
         select_query_text = """\
@@ -507,7 +512,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_ASSOCIATION)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "wasAssociatedWith", kwargs)
 
     # Render wasAttributedTo.
     select_query_text = """\
@@ -525,7 +530,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_ATTRIBUTION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "wasAttributedTo", kwargs)
     if args.dash_unqualified:
         # Render wasAttributedTo, with stronger line from Attribution.
         select_query_text = """\
@@ -541,7 +546,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_ATTRIBUTION)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "wasAttributedTo", kwargs)
 
     # Render wasDerivedFrom.
     select_query_text = """\
@@ -555,7 +560,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_DERIVATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs, edges_deriving)
+    _render_edges(select_query_text, "wasDerivedFrom", kwargs, edges_deriving)
     if args.dash_unqualified:
         # Render wasDerivedFrom, with stronger line from Derivation.
         # Note that though PROV-O allows using prov:hadUsage and
@@ -591,7 +596,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_DERIVATION)
-        _render_edges(select_query_text, kwargs, edges_deriving)
+        _render_edges(select_query_text, "wasDerivedFrom", kwargs, edges_deriving)
 
     # Render wasGeneratedBy.
     select_query_text = """\
@@ -603,7 +608,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_GENERATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "wasGeneratedBy", kwargs)
     if args.dash_unqualified:
         # Render wasGeneratedBy, with stronger line from Generation.
         select_query_text = """\
@@ -619,7 +624,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_GENERATION)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "wasGeneratedBy", kwargs)
 
     # Render wasInformedBy.
     select_query_text = """\
@@ -633,7 +638,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_COMMUNICATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs, edges_informing)
+    _render_edges(select_query_text, "wasInformedBy", kwargs, edges_informing)
     if args.dash_unqualified:
         # Render wasInformedBy, with stronger line from Communication.
         select_query_text = """\
@@ -649,7 +654,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_COMMUNICATION)
-        _render_edges(select_query_text, kwargs, edges_informing)
+        _render_edges(select_query_text, "wasInformedBy", kwargs, edges_informing)
 
     dot_graph = pydot.Dot("PROV-O render", graph_type="digraph")
 
@@ -701,11 +706,14 @@ WHERE {
         for iri_2 in sorted(edges[iri_1].keys()):
             if not iri_2 in iris_used:
                 continue
-            node_id_1 = edges[iri_1][iri_2][0]
-            node_id_2 = edges[iri_1][iri_2][1]
-            kwargs = edges[iri_1][iri_2][2]
-            dot_edge = pydot.Edge(node_id_1, node_id_2, **kwargs)
-            dot_graph.add_edge(dot_edge)
+            for short_edge_label in sorted(edges[iri_1][iri_2]):
+                # short_edge_label is intentionally not used aside from as a selector.  Edge labelling is left to pydot.
+                record = edges[iri_1][iri_2][short_edge_label]
+                node_id_1 = record[0]
+                node_id_2 = record[1]
+                kwargs = record[2]
+                dot_edge = pydot.Edge(node_id_1, node_id_2, **kwargs)
+                dot_graph.add_edge(dot_edge)
 
     dot_graph.write_raw(args.out_dot)
 
