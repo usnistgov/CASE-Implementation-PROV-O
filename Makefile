@@ -30,8 +30,7 @@ all: \
 	git submodule update
 	$(MAKE) \
 	  --directory dependencies/CASE-Examples-QC \
-	  .git_submodule_init.done.log \
-	  .lib.done.log
+	  .git_submodule_init.done.log
 	touch $@
 
 check: \
@@ -43,6 +42,10 @@ check: \
 clean: \
   clean-figures \
   clean-tests
+	@rm -f \
+	  dependencies/CASE-Examples-QC/.git_submodule_init.done.log
+	@rm -f \
+	  .git_submodule_init.done.log
 
 clean-figures:
 	@$(MAKE) \

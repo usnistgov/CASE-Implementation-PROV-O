@@ -700,8 +700,12 @@ kb:officer-uuid-3
 		;
 	.
 
-kb:provenance-record-uuid-
-	a prov:Entity ;
+kb:provenance-record-73f59a8a-1c22-41fe-af50-13e8b6a65de9
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:file-uuid-3 ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:officer-uuid-3 ;
