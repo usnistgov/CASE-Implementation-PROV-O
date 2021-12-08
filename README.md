@@ -64,6 +64,7 @@ Releases and issue tracking will be handled at the [casework location](https://g
 
 Some `make` targets are defined for this repository:
 * `all` - Build PROV-O mapping files based on CASE examples, and generate figures.
+  - **Non-Python dependency** - Figures require [`dot`](https://graphviz.org/) be installed.
 * `check` - Run unit tests.
 * `clean` - Remove built files.
 * `distclean` - Also remove test-installation artifacts.
