@@ -94,10 +94,6 @@ kb:investigative_action2
 		a prov:Association ;
 		prov:agent kb:carving_tool1 ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigative_action1 ;
-	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -118,7 +114,6 @@ kb:investigative_action2
 		kb:data_piece2
 		;
 	prov:wasAssociatedWith kb:carving_tool1 ;
-	prov:wasInformedBy kb:investigative_action1 ;
 	.
 
 kb:provenance_record1

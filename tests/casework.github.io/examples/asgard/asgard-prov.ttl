@@ -13,17 +13,12 @@ kb:219189B6-356C-4D53-A844-F0031E74F156
 		a prov:Association ;
 		prov:agent kb:tool-embeddedextractor1-uid ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigative-action1-uuid ;
-	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
 		prov:entity kb:suspect-device-uuid ;
 	] ;
 	prov:used kb:suspect-device-uuid ;
 	prov:wasAssociatedWith kb:tool-embeddedextractor1-uid ;
-	prov:wasInformedBy kb:investigative-action1-uuid ;
 	.
 
 kb:48C0F0E8-9A63-45EE-99BF-23CC354C3252
