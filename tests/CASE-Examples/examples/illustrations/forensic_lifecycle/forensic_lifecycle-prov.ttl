@@ -138,10 +138,6 @@ kb:forensic_action6
 		a prov:Attribution ;
 		prov:agent kb:tool3 ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:forensic_action5 ;
-	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -184,7 +180,6 @@ kb:forensic_action6
 		kb:sd_card1_image
 		;
 	prov:wasGeneratedBy kb:forensic_action5 ;
-	prov:wasInformedBy kb:forensic_action5 ;
 	.
 
 kb:image_partition

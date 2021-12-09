@@ -121,10 +121,6 @@ kb:investigative-action2-uuid
 		a prov:Association ;
 		prov:agent kb:cellebrite-pa1-uuid ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigative-action1-uuid ;
-	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -140,7 +136,6 @@ kb:investigative-action2-uuid
 		kb:provenance-record3-uuid
 		;
 	prov:wasAssociatedWith kb:cellebrite-pa1-uuid ;
-	prov:wasInformedBy kb:investigative-action1-uuid ;
 	.
 
 kb:investigator1-uuid

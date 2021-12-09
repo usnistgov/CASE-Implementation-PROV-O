@@ -125,16 +125,10 @@ kb:action-uuid-13
 		a prov:Association ;
 		prov:agent kb:officer-uuid-3 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -150,10 +144,7 @@ kb:action-uuid-13
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-2
@@ -224,16 +215,10 @@ kb:action-uuid-4
 		a prov:Association ;
 		prov:agent kb:camera-uuid-1 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -249,10 +234,7 @@ kb:action-uuid-4
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:camera-uuid-1 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-5
@@ -279,16 +261,10 @@ kb:action-uuid-6
 		a prov:Association ;
 		prov:agent kb:camera-uuid-1 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -304,10 +280,7 @@ kb:action-uuid-6
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:camera-uuid-1 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-7
@@ -318,16 +291,10 @@ kb:action-uuid-7
 		a prov:Association ;
 		prov:agent kb:kiosk-uuid-1 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -346,10 +313,7 @@ kb:action-uuid-7
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:kiosk-uuid-1 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-8
