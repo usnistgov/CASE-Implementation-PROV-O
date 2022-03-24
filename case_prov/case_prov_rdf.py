@@ -48,7 +48,7 @@ def main():
 
     in_graph = rdflib.Graph()
     out_graph = rdflib.Graph()
-    in_graph.parse(args.in_graph, format=case_utils.guess_format(args.in_graph))
+    in_graph.parse(args.in_graph)
 
     # Guarantee prov: and minimal CASE and UCO prefixes are in input and output contexts.
     in_graph.namespace_manager.bind("case-investigation", NS_CASE_INVESTIGATION)
@@ -89,7 +89,7 @@ def main():
         if not args.allow_empty_results:
             raise ValueError("Failed to construct any results.")
 
-    out_graph.serialize(args.out_file, format=case_utils.guess_format(args.out_file))
+    out_graph.serialize(args.out_file)
 
 if __name__ == "__main__":
     main()
