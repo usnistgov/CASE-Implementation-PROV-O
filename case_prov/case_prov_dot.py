@@ -93,7 +93,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     graph = rdflib.Graph()
-    graph.parse(args.in_graph, format=case_utils.guess_format(args.in_graph))
+    graph.parse(args.in_graph)
 
     graph.bind("case-investigation", NS_CASE_INVESTIGATION)
     graph.bind("prov", NS_PROV)
