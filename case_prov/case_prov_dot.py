@@ -41,12 +41,15 @@ import case_utils
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace("https://ontology.caseontology.org/case/investigation/")
+NS_CASE_INVESTIGATION = rdflib.Namespace(
+    "https://ontology.caseontology.org/case/investigation/"
+)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_RDFS = rdflib.RDFS
 
 # This one isn't among the prov constants.
 PROV_COLLECTION = NS_PROV.Collection
+
 
 def clone_style(prov_constant):
     if prov_constant == PROV_COLLECTION:
@@ -66,26 +69,56 @@ def clone_style(prov_constant):
 
     return retval
 
+
 def iri_to_gv_node_id(iri):
     hasher = hashlib.sha256()
     hasher.update(iri.encode())
     return "_" + hasher.hexdigest()
 
+
 def iri_to_short_iri(iri):
-    return iri.replace("http://example.org/kb/", "kb:").replace("http://www.w3.org/ns/prov#", "prov:")
+    return iri.replace("http://example.org/kb/", "kb:").replace(
+        "http://www.w3.org/ns/prov#", "prov:"
+    )
+
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
-    parser.add_argument("--dash-unqualified", action="store_true", help="Use dash-style edges for graph nodes not also related by qualifying Influences.")
-    parser.add_argument("--entity-ancestry", help="Visualize the ancestry of the node with this IRI.  If absent, entire graph is returned.")  #TODO - Add inverse --entity-progeny as well.
+    parser.add_argument(
+        "--dash-unqualified",
+        action="store_true",
+        help="Use dash-style edges for graph nodes not also related by qualifying Influences.",
+    )
+    parser.add_argument(
+        "--entity-ancestry",
+        help="Visualize the ancestry of the node with this IRI.  If absent, entire graph is returned.",
+    )  # TODO - Add inverse --entity-progeny as well.
     parser.add_argument("--from-empty-set", action="store_true")
     parser.add_argument("--omit-empty-set", action="store_true")
-    parser.add_argument("--wrap-comment", type=int, nargs="?", default=60, help="Number of characters to have before a line wrap in rdfs:label renders.")
+    parser.add_argument(
+        "--wrap-comment",
+        type=int,
+        nargs="?",
+        default=60,
+        help="Number of characters to have before a line wrap in rdfs:label renders.",
+    )
     subset_group = parser.add_argument_group()
-    subset_group.add_argument("--activity-informing", action="store_true", help="Only display Activity nodes and wasInformedBy relationships.")
-    subset_group.add_argument("--agent-delegating", action="store_true", help="Only display Agent nodes and actedOnBehalfOf relationships.")
-    subset_group.add_argument("--entity-deriving", action="store_true", help="Only display Entity nodes and wasDerivedBy relationships.")
+    subset_group.add_argument(
+        "--activity-informing",
+        action="store_true",
+        help="Only display Activity nodes and wasInformedBy relationships.",
+    )
+    subset_group.add_argument(
+        "--agent-delegating",
+        action="store_true",
+        help="Only display Agent nodes and actedOnBehalfOf relationships.",
+    )
+    subset_group.add_argument(
+        "--entity-deriving",
+        action="store_true",
+        help="Only display Entity nodes and wasDerivedBy relationships.",
+    )
     parser.add_argument("in_graph")
     parser.add_argument("out_dot")
     args = parser.parse_args()
@@ -98,24 +131,12 @@ def main():
     graph.bind("case-investigation", NS_CASE_INVESTIGATION)
     graph.bind("prov", NS_PROV)
 
-    nsdict = {k:v for (k,v) in graph.namespace_manager.namespaces()}
+    nsdict = {k: v for (k, v) in graph.namespace_manager.namespaces()}
 
     # Add a few axioms from PROV-O.
-    graph.add((
-      NS_PROV.Collection,
-      NS_RDFS.subClassOf,
-      NS_PROV.Entity
-    ))
-    graph.add((
-      NS_PROV.Person,
-      NS_RDFS.subClassOf,
-      NS_PROV.Agent
-    ))
-    graph.add((
-      NS_PROV.SoftwareAgent,
-      NS_RDFS.subClassOf,
-      NS_PROV.Agent
-    ))
+    graph.add((NS_PROV.Collection, NS_RDFS.subClassOf, NS_PROV.Entity))
+    graph.add((NS_PROV.Person, NS_RDFS.subClassOf, NS_PROV.Agent))
+    graph.add((NS_PROV.SoftwareAgent, NS_RDFS.subClassOf, NS_PROV.Agent))
 
     # An include-list.
     filter_iris = None
@@ -153,12 +174,14 @@ WHERE {
 }
 """
         for (select_query_label, select_query_text) in [
-          ("activities", select_query_actions_text),
-          ("agents", select_query_agents_text),
-          ("entities", select_query_entities_text)
+            ("activities", select_query_actions_text),
+            ("agents", select_query_agents_text),
+            ("entities", select_query_entities_text),
         ]:
             _logger.debug("Running %s filtering query.", select_query_label)
-            select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+            select_query_object = rdflib.plugins.sparql.prepareQuery(
+                select_query_text, initNs=nsdict
+            )
             for record in graph.query(select_query_object):
                 (n_include,) = record
                 filter_iri = n_include.toPython()
@@ -204,13 +227,18 @@ WHERE {
 }
 """
         for (select_query_label, select_query_text) in [
-          ("activities", select_query_actions_text),
-          ("agents", select_query_agents_text),
-          ("entities", select_query_entities_text)
+            ("activities", select_query_actions_text),
+            ("agents", select_query_agents_text),
+            ("entities", select_query_entities_text),
         ]:
             _logger.debug("Running %s filtering query.", select_query_label)
-            select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
-            for record in graph.query(select_query_object, initBindings={"nEndIRI": rdflib.URIRef(args.entity_ancestry)}):
+            select_query_object = rdflib.plugins.sparql.prepareQuery(
+                select_query_text, initNs=nsdict
+            )
+            for record in graph.query(
+                select_query_object,
+                initBindings={"nEndIRI": rdflib.URIRef(args.entity_ancestry)},
+            ):
                 (n_include,) = record
                 filter_iri = n_include.toPython()
                 filter_iris.add(filter_iri)
@@ -231,10 +259,10 @@ WHERE {
     edges_informing = collections.defaultdict(lambda: collections.defaultdict(dict))
 
     wrapper = textwrap.TextWrapper(
-      break_long_words=True,
-      drop_whitespace=False,
-      replace_whitespace=False,
-      width=args.wrap_comment
+        break_long_words=True,
+        drop_whitespace=False,
+        replace_whitespace=False,
+        width=args.wrap_comment,
     )
 
     # Render Agents.
@@ -252,7 +280,9 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_agent, l_label, l_comment) = record
         agent_iri = n_agent.toPython()
@@ -263,37 +293,38 @@ WHERE {
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_AGENT)
         kwargs["label"] = dot_label
-        #_logger.debug("Agent %r.", agent_iri)
-        record = (
-          iri_to_gv_node_id(agent_iri),
-          kwargs
-        )
+        # _logger.debug("Agent %r.", agent_iri)
+        record = (iri_to_gv_node_id(agent_iri), kwargs)
         nodes[agent_iri] = record
         nodes_agents[agent_iri] = record
-    #_logger.debug("nodes = %s." % pprint.pformat(nodes))
+    # _logger.debug("nodes = %s." % pprint.pformat(nodes))
 
     # Find Collections, to adjust Entity rendering in the next block.
-    collection_iris = {
-      "http://www.w3.org/ns/prov#EmptyCollection"
-    }
+    collection_iris = {"http://www.w3.org/ns/prov#EmptyCollection"}
     select_query_text = """\
 SELECT ?nCollection
 WHERE {
   ?nCollection a prov:Collection .
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_collection,) = record
         collection_iri = n_collection.toPython()
         collection_iris.add(collection_iri)
-    #_logger.debug("len(collection_iris) = %d.", len(collection_iris))
+    # _logger.debug("len(collection_iris) = %d.", len(collection_iris))
 
     # Render Entities.
     # This loop operates differently from the others, to insert prov:EmptyCollection.
     entity_iri_to_label_comment = dict()
     if not args.omit_empty_set:
-        entity_iri_to_label_comment["http://www.w3.org/ns/prov#EmptyCollection"] = (None, None, None)
+        entity_iri_to_label_comment["http://www.w3.org/ns/prov#EmptyCollection"] = (
+            None,
+            None,
+            None,
+        )
     select_query_text = """\
 SELECT ?nEntity ?lLabel ?lComment ?lExhibitNumber
 WHERE {
@@ -312,7 +343,9 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_entity, l_label, l_comment, l_exhibit_number) = record
         entity_iri = n_entity.toPython()
@@ -331,11 +364,8 @@ WHERE {
         else:
             kwargs = clone_style(prov.constants.PROV_ENTITY)
         kwargs["label"] = dot_label
-        #_logger.debug("Entity %r.", entity_iri)
-        record = (
-          iri_to_gv_node_id(entity_iri),
-          kwargs
-        )
+        # _logger.debug("Entity %r.", entity_iri)
+        record = (iri_to_gv_node_id(entity_iri), kwargs)
         nodes[entity_iri] = record
         nodes_entities[entity_iri] = record
 
@@ -362,7 +392,9 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_activity, l_label, l_comment, l_start_time, l_end_time) = record
         activity_iri = n_activity.toPython()
@@ -382,32 +414,24 @@ WHERE {
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_ACTIVITY)
         kwargs["label"] = dot_label
-        #_logger.debug("Activity %r.", activity_iri)
-        record = (
-          iri_to_gv_node_id(activity_iri),
-          kwargs
-        )
+        # _logger.debug("Activity %r.", activity_iri)
+        record = (iri_to_gv_node_id(activity_iri), kwargs)
         nodes[activity_iri] = record
         nodes_activities[activity_iri] = record
 
     def _render_edges(
-      select_query_text : str,
-      short_edge_label : str,
-      kwargs,
-      supplemental_dict=None
+        select_query_text: str, short_edge_label: str, kwargs, supplemental_dict=None
     ) -> None:
-        select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+        select_query_object = rdflib.plugins.sparql.prepareQuery(
+            select_query_text, initNs=nsdict
+        )
         for record in graph.query(select_query_object):
             (n_thing_1, n_thing_2) = record
             thing_1_iri = n_thing_1.toPython()
             thing_2_iri = n_thing_2.toPython()
             gv_node_id_1 = iri_to_gv_node_id(thing_1_iri)
             gv_node_id_2 = iri_to_gv_node_id(thing_2_iri)
-            record = (
-              gv_node_id_1,
-              gv_node_id_2,
-              kwargs
-            )
+            record = (gv_node_id_1, gv_node_id_2, kwargs)
             edges[thing_1_iri][thing_2_iri][short_edge_label] = record
             if not supplemental_dict is None:
                 supplemental_dict[thing_1_iri][thing_2_iri][short_edge_label] = record
@@ -523,10 +547,7 @@ WHERE {
     .
 }
 """
-    kwargs = {
-      "color": "pink",
-      "label": "wasAttributedTo"
-    }
+    kwargs = {"color": "pink", "label": "wasAttributedTo"}
     kwargs = clone_style(prov.constants.PROV_ATTRIBUTION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
@@ -683,7 +704,7 @@ WHERE {
     iris_used = set()
     if filter_iris is None:
         for iri in sorted(restricted_nodes):
-                iris_used.add(iri)
+            iris_used.add(iri)
         for iri_1 in sorted(restricted_edges.keys()):
             for iri_2 in sorted(restricted_edges[iri_1].keys()):
                 iris_used.add(iri_1)
@@ -716,6 +737,7 @@ WHERE {
                 dot_graph.add_edge(dot_edge)
 
     dot_graph.write_raw(args.out_dot)
+
 
 if __name__ == "__main__":
     main()

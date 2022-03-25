@@ -27,17 +27,18 @@ all: \
   all-CASE-Examples \
   all-casework.github.io \
   check-CASE-Examples \
+  check-black \
   check-casework.github.io \
   clean-CASE-Examples \
-  clean-casework.github.io
+  clean-casework.github.io \
+  format
 
 .venv.done.log: \
   $(qc_srcdir)/deps/requirements.txt \
   $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt \
   $(top_srcdir)/setup.cfg \
-  $(top_srcdir)/setup.py \
-  requirements.txt
+  $(top_srcdir)/setup.py
 	rm -rf venv
 	$(PYTHON3) -m venv \
 	  venv
@@ -60,9 +61,6 @@ all: \
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(qc_srcdir)/deps/requirements.txt
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement requirements.txt
 	touch $@
 
 all-CASE-Examples: \
@@ -76,6 +74,7 @@ all-casework.github.io: \
 	  --directory casework.github.io/examples
 
 check: \
+  check-black \
   check-CASE-Examples \
   check-casework.github.io
 
@@ -84,6 +83,14 @@ check-CASE-Examples: \
 	$(MAKE) \
 	  --directory CASE-Examples/examples/illustrations \
 	  check
+
+check-black: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && black \
+	    --check \
+	    $(top_srcdir)/case_prov \
+	    $$PWD
 
 check-casework.github.io: \
   .venv.done.log
@@ -108,3 +115,10 @@ clean-casework.github.io:
 	@$(MAKE) \
 	  --directory casework.github.io/examples \
 	  clean
+
+format: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && black \
+	    $(top_srcdir)/case_prov \
+	    $$PWD
