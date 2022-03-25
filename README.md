@@ -12,8 +12,8 @@ Participation by NIST in the creation of the documentation of mentioned software
 This software currently does not install.
 
 The [tests](tests/) directory demonstrates the two standalone scripts run against CASE example JSON-LD data.
-* `case_prov_rdf.py` - This script takes as input a CASE graph file, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
-* `case_prov_dot.py` - This script takes as input a PROV-O graph file, and outputs a Dot render.
+* `case_prov_rdf.py` - This script takes as input one or more CASE graph files, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
+* `case_prov_dot.py` - This script takes as input one or more PROV-O graph files, and outputs a Dot render.
 
 On using `case_prov_rdf.py` to create a PROV-O graph, it is possible to provide that graph to a PROV-O consumer, such as a [PROV-CONSTRAINTS](https://www.w3.org/TR/prov-constraints/) validator.  This CASE project runs a Python package listed on the [W3C 2013 implementations report](https://www.w3.org/TR/2013/NOTE-prov-implementations-20130430/), [`prov-check`](https://github.com/pgroth/prov-check), as part of its sample output.  For instance, the [CASE-Examples repository](https://github.com/casework/CASE-Examples) is analyzed [here](tests/CASE-Examples/examples/prov-constraints.log).
 
@@ -35,7 +35,7 @@ This repository follows [CASE community guidance on describing development statu
 
 The status of this repository is:
 
-3 - Alpha
+4 - Beta
 
 
 ## Versioning
@@ -45,10 +45,10 @@ This project follows [SEMVER 2.0.0](https://semver.org/) where versions are decl
 
 ## Ontology versions supported
 
-This repository supports the CASE and UCO ontology versions that are linked as submodules in the [CASE Examples QC](https://github.com/ajnelson-nist/CASE-Examples-QC) repository.  Currently, those are:
+This repository supports the CASE and UCO ontology versions that are distributed with the [CASE-Utilities-Python repository](https://github.com/casework/CASE-Utilities-Python), at its submodule-tracked state [here](dependencies/CASE-Utilities-Python).  Currently, those ontology versions are:
 
-* CASE 0.3.0
-* UCO 0.5.0
+* CASE 0.6.0
+* UCO 0.8.0
 
 
 ## Repository locations
@@ -64,6 +64,7 @@ Releases and issue tracking will be handled at the [casework location](https://g
 
 Some `make` targets are defined for this repository:
 * `all` - Build PROV-O mapping files based on CASE examples, and generate figures.
+  - **Non-Python dependency** - Figures require [`dot`](https://graphviz.org/) be installed.
 * `check` - Run unit tests.
 * `clean` - Remove built files.
 * `distclean` - Also remove test-installation artifacts.
@@ -92,12 +93,14 @@ The following notes describe visual-design decisions.
 
 ### Visual-design credits
 
-The `case_prov_dot` module adopts the design vocabulary used by Trung Dong Huynh's MIT-licensed Python project [`prov`](https://github.com/trungdong/prov).  `prov`'s [short tutorial landing page](https://trungdong.github.io/prov-python-short-tutorial.html) illustrates the shape and color selections for various nodes, edges, and annotations.  The `case_prov_dot` uses this instead of the W3C's design vocabulary, illustrated in [Figure 1 of the PROV-O documentation page](https://www.w3.org/TR/prov-o/#starting-points-figure), because of the greater color specificity used for the various between-node-class edges.
+The `case_prov_dot` module adopts the design vocabulary used by Trung Dong Huynh's MIT-licensed Python project [`prov`](https://github.com/trungdong/prov).  `prov`'s [short tutorial landing page](https://trungdong.github.io/prov-python-short-tutorial.html) illustrates the shape and color selections for various nodes, edges, and annotations.  The `case_prov_dot` program uses this instead of the W3C's design vocabulary, illustrated in [Figure 1 of the PROV-O documentation page](https://www.w3.org/TR/prov-o/#starting-points-figure), because of the greater color specificity used for the various between-node-class edges.
 
 The version of `prov` that `case_prov_dot` draws its designs from is tracked as a Git submodule.  This tracking is not for any purpose of importing code.  The [`prov.dot` package](https://github.com/trungdong/prov/blob/2.0.0/src/prov/dot.py) is imported as a library for its styling dictionaries, though this CASE project implements its own dot-formatted render to implement some extending design decisions, some of which are specific to CASE concepts.
 
+[Conventions provided by the W3C](https://www.w3.org/2011/prov/wiki/Diagrams) were found after initial design of this section.  Color selection has not been compared, but directional flow has been adopted.  Notably, **time flows from up to down**, and when compared, **left to right**.  *(Note, though, that left-to-right temporal flow is not yet implemented.)*
 
-### Departures from original visual-design vocabulary
+
+### Departures from original visual-design vocabularies
 
 
 #### Activity-activity edges

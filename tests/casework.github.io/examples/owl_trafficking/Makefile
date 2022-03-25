@@ -13,96 +13,16 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd ../../../.. ; pwd)
+all:
+	$(MAKE) \
+	  --file ../src/example.mk
 
-qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
-
-case_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE
-
-example_srcdir := $(qc_srcdir)/dependencies/casework.github.io/examples/owl_trafficking
-
-tests_srcdir := $(top_srcdir)/tests
-
-all: \
-  prov-constraints.log \
-  owl_trafficking-prov.png \
-  owl_trafficking-prov-originals.svg
-
-%.png: \
-  %.dot
-	dot -o _$@ -T png $<
-	mv _$@ $@
-
-%.svg: \
-  %.dot
-	dot -o _$@ -T svg $<
-	mv _$@ $@
-
-check: \
-  prov-constraints.log
+check:
+	$(MAKE) \
+	  --file ../src/example.mk \
+	  check
 
 clean:
-	@rm -f \
-	  *.dot \
-	  *.png \
-	  *.svg \
-	  *.ttl \
-	  prov-constraints.log
-
-owl_trafficking-prov.dot: \
-  owl_trafficking-prov.ttl
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    $< \
-	    _$@
-	mv _$@ $@
-
-owl_trafficking-prov-focus-extracted-file-uuid-1.dot: \
-  owl_trafficking-prov.ttl
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    --entity-ancestry http://example.org/kb/extracted-file-uuid-1 \
-	    $< \
-	    _$@
-	mv _$@ $@
-
-owl_trafficking-prov-originals.dot: \
-  owl_trafficking-prov.ttl
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    --from-empty-set \
-	    $< \
-	    _$@
-	mv _$@ $@
-
-owl_trafficking-prov.ttl: \
-  $(example_srcdir)/owl_trafficking.json \
-  $(tests_srcdir)/.venv.done.log
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_rdf \
-	    --debug \
-	    $(example_srcdir)/owl_trafficking.json \
-	    __$@
-	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
-	  -ibi \
-	  -ibn \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
-	mv _$@ $@
-
-prov-constraints.log: \
-  $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
-  owl_trafficking-prov.ttl
-	source $(tests_srcdir)/venv/bin/activate \
-	  && python3 $(top_srcdir)/dependencies/prov-check/provcheck/provconstraints.py \
-	    --debug \
-	    owl_trafficking-prov.ttl \
-	    > _$@ \
-	    2>&1
-	mv _$@ $@
+	@$(MAKE) \
+	  --file ../src/example.mk \
+	  clean

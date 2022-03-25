@@ -1,4 +1,4 @@
-@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -30,11 +30,21 @@ kb:action-uuid-10
 		a prov:Association ;
 		prov:agent kb:officer-uuid-3 ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-7 ;
-	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:action-uuid-9 ;
+		]
+		;
 	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:extracted-file-uuid-1 ;
+		] ,
 		[
 			a prov:Usage ;
 			prov:entity kb:file2-uuid-1 ;
@@ -42,14 +52,23 @@ kb:action-uuid-10
 		[
 			a prov:Usage ;
 			prov:entity kb:provenance-record-uuid-6 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-6e ;
 		]
 		;
 	prov:used
+		kb:extracted-file-uuid-1 ,
 		kb:file2-uuid-1 ,
-		kb:provenance-record-uuid-6
+		kb:provenance-record-uuid-6 ,
+		kb:provenance-record-uuid-6e
 		;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
-	prov:wasInformedBy kb:action-uuid-7 ;
+	prov:wasInformedBy
+		kb:action-uuid-7 ,
+		kb:action-uuid-9
+		;
 	.
 
 kb:action-uuid-11
@@ -106,16 +125,10 @@ kb:action-uuid-13
 		a prov:Association ;
 		prov:agent kb:officer-uuid-3 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -131,10 +144,7 @@ kb:action-uuid-13
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-2
@@ -205,16 +215,10 @@ kb:action-uuid-4
 		a prov:Association ;
 		prov:agent kb:camera-uuid-1 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -230,10 +234,7 @@ kb:action-uuid-4
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:camera-uuid-1 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-5
@@ -260,16 +261,10 @@ kb:action-uuid-6
 		a prov:Association ;
 		prov:agent kb:camera-uuid-1 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -285,10 +280,7 @@ kb:action-uuid-6
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:camera-uuid-1 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
 kb:action-uuid-7
@@ -299,16 +291,10 @@ kb:action-uuid-7
 		a prov:Association ;
 		prov:agent kb:kiosk-uuid-1 ;
 	] ;
-	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-1 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-3 ;
-		]
-		;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-3 ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -327,13 +313,10 @@ kb:action-uuid-7
 		kb:subject-device-uuid-1
 		;
 	prov:wasAssociatedWith kb:kiosk-uuid-1 ;
-	prov:wasInformedBy
-		kb:action-uuid-1 ,
-		kb:action-uuid-3
-		;
+	prov:wasInformedBy kb:action-uuid-3 ;
 	.
 
-kb:action-uuid-9
+kb:action-uuid-8
 	a prov:Activity ;
 	rdfs:comment "Exhibit Resealed" ;
 	prov:endedAtTime "2019-01-01T15:00:00+00:00"^^xsd:dateTime ;
@@ -347,6 +330,41 @@ kb:action-uuid-9
 	] ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
+	.
+
+kb:action-uuid-9
+	a prov:Activity ;
+	rdfs:comment "Picture selected, via kiosk review screen, from those extracted from exhibit" ;
+	prov:endedAtTime "2019-01-01T15:03:00+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:action-uuid-7 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:extracted-file-uuid-1 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:extracted-file-uuid-2 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-uuid-6 ;
+		]
+		;
+	prov:used
+		kb:extracted-file-uuid-1 ,
+		kb:extracted-file-uuid-2 ,
+		kb:provenance-record-uuid-6
+		;
+	prov:wasAssociatedWith kb:kiosk-uuid-1 ;
+	prov:wasInformedBy kb:action-uuid-7 ;
 	.
 
 kb:camera-uuid-1
@@ -378,12 +396,22 @@ kb:dvd-uuid-1
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
+			prov:entity kb:extracted-file-uuid-1 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:file2-uuid-1 ;
 			prov:hadActivity kb:action-uuid-10 ;
 		] ,
 		[
 			a prov:Derivation ;
 			prov:entity kb:provenance-record-uuid-6 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-6e ;
 			prov:hadActivity kb:action-uuid-10 ;
 		]
 		;
@@ -394,13 +422,77 @@ kb:dvd-uuid-1
 	] ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
+		kb:extracted-file-uuid-1 ,
 		kb:file2-uuid-1 ,
-		kb:provenance-record-uuid-6
+		kb:provenance-record-uuid-6 ,
+		kb:provenance-record-uuid-6e
 		;
 	prov:wasGeneratedBy kb:action-uuid-10 ;
 	.
 
 kb:extracted-file-uuid-1
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-7 ;
+		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:kiosk-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-7 ;
+	.
+
+kb:extracted-file-uuid-2
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-3 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:subject-device-uuid-1 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-7 ;
+		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:kiosk-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:provenance-record-uuid-3 ,
+		kb:subject-device-uuid-1
+		;
+	prov:wasGeneratedBy kb:action-uuid-7 ;
+	.
+
+kb:extracted-file-uuid-3
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
@@ -537,11 +629,18 @@ kb:kiosk-uuid-1
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:officer-uuid-3 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:officer-uuid-3 ;
-		prov:hadActivity kb:action-uuid-7 ;
-	] ;
+	prov:qualifiedDelegation
+		[
+			a prov:Delegation ;
+			prov:agent kb:officer-uuid-3 ;
+			prov:hadActivity kb:action-uuid-7 ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:agent kb:officer-uuid-3 ;
+			prov:hadActivity kb:action-uuid-9 ;
+		]
+		;
 	.
 
 kb:officer-uuid-1
@@ -565,8 +664,12 @@ kb:officer-uuid-3
 		;
 	.
 
-kb:provenance-record-uuid-
-	a prov:Entity ;
+kb:provenance-record-73f59a8a-1c22-41fe-af50-13e8b6a65de9
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:file-uuid-3 ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:officer-uuid-3 ;
@@ -691,7 +794,6 @@ kb:provenance-record-uuid-3
 		kb:subject-device-uuid-1
 		;
 	prov:wasGeneratedBy kb:action-uuid-3 ;
-	case-investigation:exhibitNumber "EXH-20190101-7" ;
 	.
 
 kb:provenance-record-uuid-4
@@ -781,6 +883,8 @@ kb:provenance-record-uuid-6
 		;
 	prov:hadMember
 		kb:extracted-file-uuid-1 ,
+		kb:extracted-file-uuid-2 ,
+		kb:extracted-file-uuid-3 ,
 		kb:file-uuid-2
 		;
 	prov:qualifiedAttribution [
@@ -813,6 +917,48 @@ kb:provenance-record-uuid-6
 	case-investigation:exhibitNumber "EXH-20190101-7-KioskReport" ;
 	.
 
+kb:provenance-record-uuid-6e
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:extracted-file-uuid-1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:kiosk-uuid-1 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:extracted-file-uuid-1 ;
+			prov:hadActivity kb:action-uuid-9 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:extracted-file-uuid-2 ;
+			prov:hadActivity kb:action-uuid-9 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-6 ;
+			prov:hadActivity kb:action-uuid-9 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:action-uuid-9 ;
+		prov:atTime "2019-01-01T15:03:00+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:kiosk-uuid-1 ;
+	prov:wasDerivedFrom
+		kb:extracted-file-uuid-1 ,
+		kb:extracted-file-uuid-2 ,
+		kb:provenance-record-uuid-6
+		;
+	prov:wasGeneratedBy kb:action-uuid-9 ;
+	case-investigation:exhibitNumber "EXH-20190101-7-B" ;
+	.
+
 kb:provenance-record-uuid-7
 	a
 		prov:Collection ,
@@ -826,12 +972,22 @@ kb:provenance-record-uuid-7
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
+			prov:entity kb:extracted-file-uuid-1 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:file2-uuid-1 ;
 			prov:hadActivity kb:action-uuid-10 ;
 		] ,
 		[
 			a prov:Derivation ;
 			prov:entity kb:provenance-record-uuid-6 ;
+			prov:hadActivity kb:action-uuid-10 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-uuid-6e ;
 			prov:hadActivity kb:action-uuid-10 ;
 		]
 		;
@@ -842,8 +998,10 @@ kb:provenance-record-uuid-7
 	] ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
+		kb:extracted-file-uuid-1 ,
 		kb:file2-uuid-1 ,
-		kb:provenance-record-uuid-6
+		kb:provenance-record-uuid-6 ,
+		kb:provenance-record-uuid-6e
 		;
 	prov:wasGeneratedBy kb:action-uuid-10 ;
 	case-investigation:exhibitNumber "EXH-20190101-7-KioskReportDVD" ;

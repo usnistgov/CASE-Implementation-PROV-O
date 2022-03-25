@@ -17,10 +17,6 @@ CONSTRUCT
 WHERE {
   ?nAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
-    .
-
-  ?nActionReferences
     uco-action:object ?nInput ;
     .
 }

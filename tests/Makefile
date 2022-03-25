@@ -19,8 +19,6 @@ top_srcdir := $(shell cd .. ; pwd)
 
 qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
 
-sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
-
 all: \
   all-CASE-Examples \
   all-casework.github.io
@@ -29,43 +27,47 @@ all: \
   all-CASE-Examples \
   all-casework.github.io \
   check-CASE-Examples \
+  check-black \
   check-casework.github.io \
+  check-mypy \
   clean-CASE-Examples \
-  clean-casework.github.io
+  clean-casework.github.io \
+  format
 
 .venv.done.log: \
   $(qc_srcdir)/deps/requirements.txt \
-  $(sparql_files) \
-  $(top_srcdir)/case_prov/__init__.py \
-  $(top_srcdir)/case_prov/case_prov_dot.py \
-  $(top_srcdir)/case_prov/case_prov_rdf.py \
+  $(top_srcdir)/.git_submodule_init.done.log \
+  $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt \
   $(top_srcdir)/setup.cfg \
-  $(top_srcdir)/setup.py \
-  requirements.txt
+  $(top_srcdir)/setup.py
 	rm -rf venv
-	$(PYTHON3) -m virtualenv \
-	  --python=$(PYTHON3) \
+	$(PYTHON3) -m venv \
 	  venv
 	source venv/bin/activate \
 	  && pip install \
 	    --upgrade \
 	    pip \
-	    setuptools
+	    setuptools \
+	    wheel
 	source venv/bin/activate \
-	  && cd $(top_srcdir) \
-	    && python3 setup.py install
+	  && pip install \
+	    $(top_srcdir)/dependencies/CASE-Utilities-Python
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt
+	source venv/bin/activate \
+	  && pip install \
+	    --editable \
+	    $(top_srcdir)
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(qc_srcdir)/deps/requirements.txt
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement requirements.txt
 	touch $@
 
 all-CASE-Examples: \
   .venv.done.log
 	$(MAKE) \
-	  --directory CASE-Examples/examples
+	  --directory CASE-Examples/examples/illustrations
 
 all-casework.github.io: \
   .venv.done.log
@@ -73,20 +75,38 @@ all-casework.github.io: \
 	  --directory casework.github.io/examples
 
 check: \
+  check-black \
+  check-mypy \
   check-CASE-Examples \
   check-casework.github.io
 
 check-CASE-Examples: \
   .venv.done.log
 	$(MAKE) \
-	  --directory CASE-Examples/examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  check
+
+check-black: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && black \
+	    --check \
+	    $(top_srcdir)/case_prov \
+	    $$PWD
 
 check-casework.github.io: \
   .venv.done.log
 	$(MAKE) \
 	  --directory casework.github.io/examples \
 	  check
+
+check-mypy: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && mypy \
+	    --exclude venv \
+	    $(top_srcdir)/case_prov \
+	    .
 
 clean: \
   clean-CASE-Examples \
@@ -98,10 +118,17 @@ clean: \
 
 clean-CASE-Examples:
 	@$(MAKE) \
-	  --directory CASE-Examples/examples \
+	  --directory CASE-Examples/examples/illustrations \
 	  clean
 
 clean-casework.github.io:
 	@$(MAKE) \
 	  --directory casework.github.io/examples \
 	  clean
+
+format: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && black \
+	    $(top_srcdir)/case_prov \
+	    $$PWD

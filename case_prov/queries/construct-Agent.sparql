@@ -18,11 +18,6 @@ CONSTRUCT
 WHERE {
   ?nInvestigativeAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
-    .
-
-  ?nActionReferences
-    a uco-action:ActionReferences ;
     (uco-action:instrument|uco-action:performer) ?nAgent ;
     .
 

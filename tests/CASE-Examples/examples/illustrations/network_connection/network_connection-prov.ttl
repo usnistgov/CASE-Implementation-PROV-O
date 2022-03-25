@@ -3,7 +3,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:extracted-connections-provenancerecord-uuid
 	a
@@ -16,6 +16,10 @@ kb:extracted-connections-provenancerecord-uuid
 		kb:network-connection2-uuid ,
 		kb:network-connection3-uuid
 		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -31,7 +35,9 @@ kb:extracted-connections-provenancerecord-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
+		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
@@ -41,6 +47,11 @@ kb:extracted-connections-provenancerecord-uuid
 
 kb:extraction-action-uuid
 	a prov:Activity ;
+	prov:endedAtTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
@@ -55,10 +66,15 @@ kb:extraction-action-uuid
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
 		;
+	prov:wasAssociatedWith kb:pcap-tool-uuid ;
 	.
 
 kb:network-connection1-uuid
 	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -74,7 +90,9 @@ kb:network-connection1-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
+		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
@@ -84,6 +102,10 @@ kb:network-connection1-uuid
 
 kb:network-connection2-uuid
 	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -99,7 +121,9 @@ kb:network-connection2-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
+		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid
@@ -109,6 +133,10 @@ kb:network-connection2-uuid
 
 kb:network-connection3-uuid
 	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:pcap-tool-uuid ;
+	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
@@ -124,7 +152,9 @@ kb:network-connection3-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:extraction-action-uuid ;
+		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
 	] ;
+	prov:wasAttributedTo kb:pcap-tool-uuid ;
 	prov:wasDerivedFrom
 		kb:pcap-file-uuid ,
 		kb:pcap-provenancerecord-uuid

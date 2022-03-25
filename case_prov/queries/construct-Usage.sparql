@@ -21,11 +21,10 @@ CONSTRUCT
 WHERE {
   ?nAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
     .
 
   OPTIONAL {
-    ?nActionReferences
+    ?nAction
       uco-action:startTime ?lTime ;
       .
   }
@@ -34,24 +33,20 @@ WHERE {
   # When no object is recorded as an action input, instead use
   # prov:EmptyCollection.
   {
-    SELECT ?nActionReferences ?nInput
+    SELECT ?nAction ?nInput
     WHERE {
-      ?nActionReferences
-        a uco-action:ActionReferences ;
+      ?nAction
         uco-action:object ?nInput ;
         .
     }
   }
   UNION
   {
-    SELECT ?nActionReferences ?nInput
+    SELECT ?nAction ?nInput
     WHERE {
-      ?nActionReferences
-        a uco-action:ActionReferences ;
-        .
       BIND ( prov:EmptyCollection AS ?nInput )
       FILTER NOT EXISTS {
-        ?nActionReferences
+        ?nAction
           uco-action:object ?nObject ;
           .
       }

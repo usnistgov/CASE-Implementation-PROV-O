@@ -11,18 +11,18 @@
 
 CONSTRUCT
 {
-  # Augment CASE Identities with SimpleName facets as PROV Person
+  # Augment CASE Identities with a SimpleNameFacet as PROV Person
   # Agents.
   ?nPerson a prov:Person .
 }
 WHERE {
   ?nPerson
-    a uco-identity:Identity ;
-    uco-core:hasFacet ?nSimpleName ;
+    a uco-identity:Person ;
+    uco-core:hasFacet ?nSimpleNameFacet ;
     .
 
-  ?nSimpleName
-    a uco-identity:SimpleName ;
+  ?nSimpleNameFacet
+    a uco-identity:SimpleNameFacet ;
     .
 }
 

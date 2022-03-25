@@ -21,7 +21,7 @@ This script renders PROV-O elements of a graph according to the graphic design e
 # get quoted.  This turns out to be a dot syntax error.  Need to report
 # this upstream to pydot.
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 import argparse
 import collections
@@ -31,22 +31,29 @@ import logging
 import os
 import pprint
 import textwrap
+import typing
 
-import prov.constants
-import prov.dot
-import pydot
+import prov.constants  # type: ignore
+import prov.dot  # type: ignore
+import pydot  # type: ignore
 import rdflib.plugins.sparql
+
+import case_utils
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace("https://caseontology.org/ontology/case/investigation#")
+NS_CASE_INVESTIGATION = rdflib.Namespace(
+    "https://ontology.caseontology.org/case/investigation/"
+)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_RDFS = rdflib.RDFS
 
 # This one isn't among the prov constants.
 PROV_COLLECTION = NS_PROV.Collection
 
-def clone_style(prov_constant):
+
+def clone_style(prov_constant: rdflib.URIRef) -> typing.Dict[str, str]:
+    retval: typing.Dict[str, str]
     if prov_constant == PROV_COLLECTION:
         retval = copy.deepcopy(prov.dot.DOT_PROV_STYLE[prov.constants.PROV_ENTITY])
     else:
@@ -64,55 +71,75 @@ def clone_style(prov_constant):
 
     return retval
 
-def iri_to_gv_node_id(iri):
+
+def iri_to_gv_node_id(iri: str) -> str:
     hasher = hashlib.sha256()
     hasher.update(iri.encode())
     return "_" + hasher.hexdigest()
 
-def iri_to_short_iri(iri):
-    return iri.replace("http://example.org/kb/", "kb:").replace("http://www.w3.org/ns/prov#", "prov:")
 
-def main():
+def iri_to_short_iri(iri: str) -> str:
+    return iri.replace("http://example.org/kb/", "kb:").replace(
+        "http://www.w3.org/ns/prov#", "prov:"
+    )
+
+
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
-    parser.add_argument("--dash-unqualified", action="store_true", help="Use dash-style edges for graph nodes not also related by qualifying Influences.")
-    parser.add_argument("--entity-ancestry", help="Visualize the ancestry of the node with this IRI.  If absent, entire graph is returned.")  #TODO - Add inverse --entity-progeny as well.
+    parser.add_argument(
+        "--dash-unqualified",
+        action="store_true",
+        help="Use dash-style edges for graph nodes not also related by qualifying Influences.",
+    )
+    parser.add_argument(
+        "--entity-ancestry",
+        help="Visualize the ancestry of the node with this IRI.  If absent, entire graph is returned.",
+    )  # TODO - Add inverse --entity-progeny as well.
     parser.add_argument("--from-empty-set", action="store_true")
     parser.add_argument("--omit-empty-set", action="store_true")
-    parser.add_argument("--wrap-comment", type=int, nargs="?", default=60, help="Number of characters to have before a line wrap in rdfs:label renders.")
+    parser.add_argument(
+        "--wrap-comment",
+        type=int,
+        nargs="?",
+        default=60,
+        help="Number of characters to have before a line wrap in rdfs:label renders.",
+    )
     subset_group = parser.add_argument_group()
-    subset_group.add_argument("--activity-informing", action="store_true", help="Only display Activity nodes and wasInformedBy relationships.")
-    subset_group.add_argument("--agent-delegating", action="store_true", help="Only display Agent nodes and actedOnBehalfOf relationships.")
-    subset_group.add_argument("--entity-deriving", action="store_true", help="Only display Entity nodes and wasDerivedBy relationships.")
-    parser.add_argument("in_ttl")
+    subset_group.add_argument(
+        "--activity-informing",
+        action="store_true",
+        help="Only display Activity nodes and wasInformedBy relationships.",
+    )
+    subset_group.add_argument(
+        "--agent-delegating",
+        action="store_true",
+        help="Only display Agent nodes and actedOnBehalfOf relationships.",
+    )
+    subset_group.add_argument(
+        "--entity-deriving",
+        action="store_true",
+        help="Only display Entity nodes and wasDerivedBy relationships.",
+    )
     parser.add_argument("out_dot")
+    parser.add_argument("in_graph", nargs="+")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     graph = rdflib.Graph()
-    graph.parse(args.in_ttl, format="turtle")
+    for in_graph_filename in args.in_graph:
+        graph.parse(in_graph_filename)
 
     graph.bind("case-investigation", NS_CASE_INVESTIGATION)
+    graph.bind("prov", NS_PROV)
 
-    nsdict = {k:v for (k,v) in graph.namespace_manager.namespaces()}
+    nsdict = {k: v for (k, v) in graph.namespace_manager.namespaces()}
 
     # Add a few axioms from PROV-O.
-    graph.add((
-      NS_PROV.Collection,
-      NS_RDFS.subClassOf,
-      NS_PROV.Entity
-    ))
-    graph.add((
-      NS_PROV.Person,
-      NS_RDFS.subClassOf,
-      NS_PROV.Agent
-    ))
-    graph.add((
-      NS_PROV.SoftwareAgent,
-      NS_RDFS.subClassOf,
-      NS_PROV.Agent
-    ))
+    graph.add((NS_PROV.Collection, NS_RDFS.subClassOf, NS_PROV.Entity))
+    graph.add((NS_PROV.Person, NS_RDFS.subClassOf, NS_PROV.Agent))
+    graph.add((NS_PROV.SoftwareAgent, NS_RDFS.subClassOf, NS_PROV.Agent))
 
     # An include-list.
     filter_iris = None
@@ -150,12 +177,14 @@ WHERE {
 }
 """
         for (select_query_label, select_query_text) in [
-          ("activities", select_query_actions_text),
-          ("agents", select_query_agents_text),
-          ("entities", select_query_entities_text)
+            ("activities", select_query_actions_text),
+            ("agents", select_query_agents_text),
+            ("entities", select_query_entities_text),
         ]:
             _logger.debug("Running %s filtering query.", select_query_label)
-            select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+            select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+                select_query_text, initNs=nsdict
+            )
             for record in graph.query(select_query_object):
                 (n_include,) = record
                 filter_iri = n_include.toPython()
@@ -201,13 +230,18 @@ WHERE {
 }
 """
         for (select_query_label, select_query_text) in [
-          ("activities", select_query_actions_text),
-          ("agents", select_query_agents_text),
-          ("entities", select_query_entities_text)
+            ("activities", select_query_actions_text),
+            ("agents", select_query_agents_text),
+            ("entities", select_query_entities_text),
         ]:
             _logger.debug("Running %s filtering query.", select_query_label)
-            select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
-            for record in graph.query(select_query_object, initBindings={"nEndIRI": rdflib.URIRef(args.entity_ancestry)}):
+            select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+                select_query_text, initNs=nsdict
+            )
+            for record in graph.query(
+                select_query_object,
+                initBindings={"nEndIRI": rdflib.URIRef(args.entity_ancestry)},
+            ):
                 (n_include,) = record
                 filter_iri = n_include.toPython()
                 filter_iris.add(filter_iri)
@@ -221,17 +255,29 @@ WHERE {
     nodes_agents = dict()
     nodes_entities = dict()
 
-    # IRI -> IRI -> (pydot.Edge identifier, kwargs)
-    edges = collections.defaultdict(dict)
-    edges_deriving = collections.defaultdict(dict)
-    edges_delegating = collections.defaultdict(dict)
-    edges_informing = collections.defaultdict(dict)
+    # IRI -> IRI -> short predicate -> (pydot.Edge identifier, kwargs)
+    EdgesType = typing.DefaultDict[
+        str,
+        typing.DefaultDict[
+            str, typing.Dict[str, typing.Tuple[str, str, typing.Dict[str, typing.Any]]]
+        ],
+    ]
+    edges: EdgesType = collections.defaultdict(lambda: collections.defaultdict(dict))
+    edges_deriving: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
+    edges_delegating: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
+    edges_informing: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
 
     wrapper = textwrap.TextWrapper(
-      break_long_words=True,
-      drop_whitespace=False,
-      replace_whitespace=False,
-      width=args.wrap_comment
+        break_long_words=True,
+        drop_whitespace=False,
+        replace_whitespace=False,
+        width=args.wrap_comment,
     )
 
     # Render Agents.
@@ -249,7 +295,9 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_agent, l_label, l_comment) = record
         agent_iri = n_agent.toPython()
@@ -260,37 +308,38 @@ WHERE {
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_AGENT)
         kwargs["label"] = dot_label
-        #_logger.debug("Agent %r.", agent_iri)
-        record = (
-          iri_to_gv_node_id(agent_iri),
-          kwargs
-        )
+        # _logger.debug("Agent %r.", agent_iri)
+        record = (iri_to_gv_node_id(agent_iri), kwargs)
         nodes[agent_iri] = record
         nodes_agents[agent_iri] = record
-    #_logger.debug("nodes = %s." % pprint.pformat(nodes))
+    # _logger.debug("nodes = %s." % pprint.pformat(nodes))
 
     # Find Collections, to adjust Entity rendering in the next block.
-    collection_iris = {
-      "http://www.w3.org/ns/prov#EmptyCollection"
-    }
+    collection_iris = {"http://www.w3.org/ns/prov#EmptyCollection"}
     select_query_text = """\
 SELECT ?nCollection
 WHERE {
   ?nCollection a prov:Collection .
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_collection,) = record
         collection_iri = n_collection.toPython()
         collection_iris.add(collection_iri)
-    #_logger.debug("len(collection_iris) = %d.", len(collection_iris))
+    # _logger.debug("len(collection_iris) = %d.", len(collection_iris))
 
     # Render Entities.
     # This loop operates differently from the others, to insert prov:EmptyCollection.
     entity_iri_to_label_comment = dict()
     if not args.omit_empty_set:
-        entity_iri_to_label_comment["http://www.w3.org/ns/prov#EmptyCollection"] = (None, None, None)
+        entity_iri_to_label_comment["http://www.w3.org/ns/prov#EmptyCollection"] = (
+            None,
+            None,
+            None,
+        )
     select_query_text = """\
 SELECT ?nEntity ?lLabel ?lComment ?lExhibitNumber
 WHERE {
@@ -309,7 +358,9 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_entity, l_label, l_comment, l_exhibit_number) = record
         entity_iri = n_entity.toPython()
@@ -328,11 +379,8 @@ WHERE {
         else:
             kwargs = clone_style(prov.constants.PROV_ENTITY)
         kwargs["label"] = dot_label
-        #_logger.debug("Entity %r.", entity_iri)
-        record = (
-          iri_to_gv_node_id(entity_iri),
-          kwargs
-        )
+        # _logger.debug("Entity %r.", entity_iri)
+        record = (iri_to_gv_node_id(entity_iri), kwargs)
         nodes[entity_iri] = record
         nodes_entities[entity_iri] = record
 
@@ -359,7 +407,9 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+        select_query_text, initNs=nsdict
+    )
     for record in graph.query(select_query_object):
         (n_activity, l_label, l_comment, l_start_time, l_end_time) = record
         activity_iri = n_activity.toPython()
@@ -379,30 +429,30 @@ WHERE {
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_ACTIVITY)
         kwargs["label"] = dot_label
-        #_logger.debug("Activity %r.", activity_iri)
-        record = (
-          iri_to_gv_node_id(activity_iri),
-          kwargs
-        )
+        # _logger.debug("Activity %r.", activity_iri)
+        record = (iri_to_gv_node_id(activity_iri), kwargs)
         nodes[activity_iri] = record
         nodes_activities[activity_iri] = record
 
-    def _render_edges(select_query_text, kwargs, supplemental_dict=None):
-        select_query_object = rdflib.plugins.sparql.prepareQuery(select_query_text, initNs=nsdict)
+    def _render_edges(
+        select_query_text: str,
+        short_edge_label: str,
+        kwargs: typing.Dict[str, str],
+        supplemental_dict: typing.Optional[EdgesType] = None,
+    ) -> None:
+        select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+            select_query_text, initNs=nsdict
+        )
         for record in graph.query(select_query_object):
             (n_thing_1, n_thing_2) = record
             thing_1_iri = n_thing_1.toPython()
             thing_2_iri = n_thing_2.toPython()
             gv_node_id_1 = iri_to_gv_node_id(thing_1_iri)
             gv_node_id_2 = iri_to_gv_node_id(thing_2_iri)
-            record = (
-              gv_node_id_1,
-              gv_node_id_2,
-              kwargs
-            )
-            edges[thing_1_iri][thing_2_iri] = record
+            record = (gv_node_id_1, gv_node_id_2, kwargs)
+            edges[thing_1_iri][thing_2_iri][short_edge_label] = record
             if not supplemental_dict is None:
-                supplemental_dict[thing_1_iri][thing_2_iri] = record
+                supplemental_dict[thing_1_iri][thing_2_iri][short_edge_label] = record
 
     # Render actedOnBehalfOf.
     select_query_text = """\
@@ -416,7 +466,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_DELEGATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs, edges_delegating)
+    _render_edges(select_query_text, "actedOnBehalfOf", kwargs, edges_delegating)
     if args.dash_unqualified:
         # Render actedOnBehalfOf, with stronger line from Delegation.
         select_query_text = """\
@@ -432,7 +482,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_DELEGATION)
-        _render_edges(select_query_text, kwargs, edges_delegating)
+        _render_edges(select_query_text, "actedOnBehalfOf", kwargs, edges_delegating)
 
     # Render hadMember.
     select_query_text = """\
@@ -444,7 +494,7 @@ WHERE {
 }
 """
     kwargs = clone_style(prov.constants.PROV_MEMBERSHIP)
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "hadMember", kwargs)
 
     # Render used.
     select_query_text = """\
@@ -458,7 +508,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_USAGE)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "used", kwargs)
     if args.dash_unqualified:
         # Render used, with stronger line from Usage.
         select_query_text = """\
@@ -474,7 +524,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_USAGE)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "used", kwargs)
 
     # Render wasAssociatedWith.
     select_query_text = """\
@@ -488,7 +538,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_ASSOCIATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "wasAssociatedWith", kwargs)
     if args.dash_unqualified:
         # Render wasAssociatedWith, with stronger line from Association.
         select_query_text = """\
@@ -504,7 +554,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_ASSOCIATION)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "wasAssociatedWith", kwargs)
 
     # Render wasAttributedTo.
     select_query_text = """\
@@ -515,14 +565,11 @@ WHERE {
     .
 }
 """
-    kwargs = {
-      "color": "pink",
-      "label": "wasAttributedTo"
-    }
+    kwargs = {"color": "pink", "label": "wasAttributedTo"}
     kwargs = clone_style(prov.constants.PROV_ATTRIBUTION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "wasAttributedTo", kwargs)
     if args.dash_unqualified:
         # Render wasAttributedTo, with stronger line from Attribution.
         select_query_text = """\
@@ -538,7 +585,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_ATTRIBUTION)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "wasAttributedTo", kwargs)
 
     # Render wasDerivedFrom.
     select_query_text = """\
@@ -552,7 +599,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_DERIVATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs, edges_deriving)
+    _render_edges(select_query_text, "wasDerivedFrom", kwargs, edges_deriving)
     if args.dash_unqualified:
         # Render wasDerivedFrom, with stronger line from Derivation.
         # Note that though PROV-O allows using prov:hadUsage and
@@ -588,7 +635,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_DERIVATION)
-        _render_edges(select_query_text, kwargs, edges_deriving)
+        _render_edges(select_query_text, "wasDerivedFrom", kwargs, edges_deriving)
 
     # Render wasGeneratedBy.
     select_query_text = """\
@@ -600,7 +647,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_GENERATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs)
+    _render_edges(select_query_text, "wasGeneratedBy", kwargs)
     if args.dash_unqualified:
         # Render wasGeneratedBy, with stronger line from Generation.
         select_query_text = """\
@@ -616,7 +663,7 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_GENERATION)
-        _render_edges(select_query_text, kwargs)
+        _render_edges(select_query_text, "wasGeneratedBy", kwargs)
 
     # Render wasInformedBy.
     select_query_text = """\
@@ -630,7 +677,7 @@ WHERE {
     kwargs = clone_style(prov.constants.PROV_COMMUNICATION)
     if args.dash_unqualified:
         kwargs["style"] = "dashed"
-    _render_edges(select_query_text, kwargs, edges_informing)
+    _render_edges(select_query_text, "wasInformedBy", kwargs, edges_informing)
     if args.dash_unqualified:
         # Render wasInformedBy, with stronger line from Communication.
         select_query_text = """\
@@ -646,9 +693,9 @@ WHERE {
 }
 """
         kwargs = clone_style(prov.constants.PROV_COMMUNICATION)
-        _render_edges(select_query_text, kwargs, edges_informing)
+        _render_edges(select_query_text, "wasInformedBy", kwargs, edges_informing)
 
-    dot_graph = pydot.Dot("PROV-O render", graph_type="digraph")
+    dot_graph = pydot.Dot("PROV-O render", graph_type="digraph", rankdir="BT")
 
     _logger.debug("len(nodes) = %d.", len(nodes))
     _logger.debug("len(edges) = %d.", len(edges))
@@ -675,7 +722,7 @@ WHERE {
     iris_used = set()
     if filter_iris is None:
         for iri in sorted(restricted_nodes):
-                iris_used.add(iri)
+            iris_used.add(iri)
         for iri_1 in sorted(restricted_edges.keys()):
             for iri_2 in sorted(restricted_edges[iri_1].keys()):
                 iris_used.add(iri_1)
@@ -698,13 +745,17 @@ WHERE {
         for iri_2 in sorted(edges[iri_1].keys()):
             if not iri_2 in iris_used:
                 continue
-            node_id_1 = edges[iri_1][iri_2][0]
-            node_id_2 = edges[iri_1][iri_2][1]
-            kwargs = edges[iri_1][iri_2][2]
-            dot_edge = pydot.Edge(node_id_1, node_id_2, **kwargs)
-            dot_graph.add_edge(dot_edge)
+            for short_edge_label in sorted(edges[iri_1][iri_2]):
+                # short_edge_label is intentionally not used aside from as a selector.  Edge labelling is left to pydot.
+                record = edges[iri_1][iri_2][short_edge_label]
+                node_id_1 = record[0]
+                node_id_2 = record[1]
+                kwargs = record[2]
+                dot_edge = pydot.Edge(node_id_1, node_id_2, **kwargs)
+                dot_graph.add_edge(dot_edge)
 
     dot_graph.write_raw(args.out_dot)
+
 
 if __name__ == "__main__":
     main()

@@ -15,38 +15,49 @@
 This script executes CONSTRUCT queries, returning a supplemental graph.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 import argparse
 import glob
 import logging
 import os
-import importlib
+import importlib.resources
 
 import rdflib.plugins.sparql
+
+import case_utils
 
 from . import queries
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace("https://caseontology.org/ontology/case/investigation#")
+NS_CASE_INVESTIGATION = rdflib.Namespace(
+    "https://ontology.caseontology.org/case/investigation/"
+)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
-NS_UCO_ACTION = rdflib.Namespace("https://unifiedcyberontology.org/ontology/uco/action#")
-NS_UCO_IDENTITY = rdflib.Namespace("https://unifiedcyberontology.org/ontology/uco/identity#")
+NS_UCO_ACTION = rdflib.Namespace(
+    "https://ontology.unifiedcyberontology.org/uco/action/"
+)
+NS_UCO_IDENTITY = rdflib.Namespace(
+    "https://ontology.unifiedcyberontology.org/uco/identity/"
+)
 
-def main():
+
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--debug", action="store_true")
     parser.add_argument("--allow-empty-results", action="store_true")
-    parser.add_argument("in_graph")
     parser.add_argument("out_file")
+    parser.add_argument("in_graph", nargs="+")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     in_graph = rdflib.Graph()
     out_graph = rdflib.Graph()
-    in_graph.parse(args.in_graph, format="json-ld")
+
+    for in_graph_filename in args.in_graph:
+        in_graph.parse(in_graph_filename)
 
     # Guarantee prov: and minimal CASE and UCO prefixes are in input and output contexts.
     in_graph.namespace_manager.bind("case-investigation", NS_CASE_INVESTIGATION)
@@ -55,7 +66,7 @@ def main():
     in_graph.namespace_manager.bind("uco-identity", NS_UCO_IDENTITY)
 
     # Inherit prefixes defined in input context dictionary.
-    nsdict = {k:v for (k,v) in in_graph.namespace_manager.namespaces()}
+    nsdict = {k: v for (k, v) in in_graph.namespace_manager.namespaces()}
     for prefix in nsdict:
         out_graph.namespace_manager.bind(prefix, nsdict[prefix])
 
@@ -74,7 +85,9 @@ def main():
     for query_filename in query_filenames:
         _logger.debug("Running query in %r." % query_filename)
         construct_query_text = importlib.resources.read_text(queries, query_filename)
-        construct_query_object = rdflib.plugins.sparql.prepareQuery(construct_query_text, initNs=nsdict)
+        construct_query_object = rdflib.plugins.sparql.processor.prepareQuery(
+            construct_query_text, initNs=nsdict
+        )
         # https://rdfextras.readthedocs.io/en/latest/working_with.html
         construct_query_result = in_graph.query(construct_query_object)
         _logger.debug("len(construct_query_result) = %d." % len(construct_query_result))
@@ -87,7 +100,8 @@ def main():
         if not args.allow_empty_results:
             raise ValueError("Failed to construct any results.")
 
-    out_graph.serialize(format="turtle", destination=args.out_file)
+    out_graph.serialize(args.out_file)
+
 
 if __name__ == "__main__":
     main()

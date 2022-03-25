@@ -11,13 +11,16 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+import typing
+
 import rdflib
 
-def test_chain_of_communication():
+
+def test_chain_of_communication() -> None:
     graph = rdflib.Graph()
     graph.parse("urgent_evidence-prov.ttl", format="turtle")
-    expected = set()
-    computed = set()
+    expected: typing.Set[str] = set()
+    computed: typing.Set[str] = set()
     computed_all = set()
     computed_linked = set()
     query_all = """\
@@ -39,11 +42,12 @@ WHERE {
     computed = computed_all - computed_linked
     assert expected == computed
 
-def test_chain_of_derivation():
+
+def test_chain_of_derivation() -> None:
     graph = rdflib.Graph()
     graph.parse("urgent_evidence-prov.ttl", format="turtle")
-    expected = set()
-    computed = set()
+    expected: typing.Set[str] = set()
+    computed: typing.Set[str] = set()
     computed_all = set()
     computed_linked = set()
     query_all = """\
@@ -65,11 +69,10 @@ WHERE {
     computed = computed_all - computed_linked
 
     # TODO Correct website example after documenting discovery method.
-    computed_known_errors = {
-      'http://example.org/kb/file2-uuid-1'
-    }
-    assert len(computed & computed_known_errors) > 0, \
-      "One known error not found - has it been corrected already?"
+    computed_known_errors = {"http://example.org/kb/file2-uuid-1"}
+    assert (
+        len(computed & computed_known_errors) > 0
+    ), "One known error not found - has it been corrected already?"
     computed -= computed_known_errors
 
     assert expected == computed

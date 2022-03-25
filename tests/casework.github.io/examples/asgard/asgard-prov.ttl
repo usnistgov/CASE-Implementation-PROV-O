@@ -1,29 +1,27 @@
-@prefix case-investigation: <https://caseontology.org/ontology/case/investigation#> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix kb: <http://example.org/kb#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:219189B6-356C-4D53-A844-F0031E74F156
 	a prov:Activity ;
 	rdfs:comment "Suspect device physical acquisition" ;
+	prov:endedAtTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool-embeddedextractor1-uid ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigative-action1-uuid ;
-	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
 		prov:entity kb:suspect-device-uuid ;
 	] ;
+	prov:startedAtTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
 	prov:used kb:suspect-device-uuid ;
 	prov:wasAssociatedWith kb:tool-embeddedextractor1-uid ;
-	prov:wasInformedBy kb:investigative-action1-uuid ;
 	.
 
 kb:48C0F0E8-9A63-45EE-99BF-23CC354C3252
@@ -40,6 +38,7 @@ kb:48C0F0E8-9A63-45EE-99BF-23CC354C3252
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
 	prov:wasDerivedFrom kb:suspect-device-uuid ;
@@ -60,6 +59,7 @@ kb:90F73123-DB7E-41E5-B6CA-493B96E4B89F
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
 	prov:wasDerivedFrom kb:suspect-device-uuid ;
@@ -80,6 +80,7 @@ kb:97C74753-FCEB-49C8-A611-7A70EF46AB5D
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
 	prov:wasDerivedFrom kb:suspect-device-uuid ;
@@ -100,6 +101,7 @@ kb:B2A7B20E-8307-40CF-ABAF-9733ABBF4335
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
 	prov:wasDerivedFrom kb:suspect-device-uuid ;
@@ -124,6 +126,7 @@ kb:EBAB06EE-7522-42D6-96EA-E3121D67E393
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
 	prov:wasDerivedFrom kb:suspect-device-uuid ;
@@ -138,8 +141,10 @@ kb:investigative-action1-uuid
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2019-03-30T22:36:24.350000+00:00"^^xsd:dateTime ;
 		prov:entity prov:EmptyCollection ;
 	] ;
+	prov:startedAtTime "2019-03-30T22:36:24.350000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:odin-decree13-uuid ;
 	.

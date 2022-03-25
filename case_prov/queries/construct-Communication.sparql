@@ -9,25 +9,57 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+# Extended documentation of the WHERE clause in this query is in
+# construct-wasInformedBy.sparql.
+
 CONSTRUCT
 {
-  ?nActionB
+  ?nUsingAction
     prov:qualifiedCommunication [
       a prov:Communication ;
-      prov:activity ?nActionA ;
+      prov:activity ?nMostRecentAction ;
     ] ;
     .
 }
 WHERE {
-  SELECT DISTINCT ?nActionA ?nActionB
+  SELECT DISTINCT ?nUsingAction ?nMostRecentAction
   WHERE {
-    ?nActionA
+    ?nGeneratingAction
       a case-investigation:InvestigativeAction ;
-      uco-core:hasFacet/uco-action:result ?nResult ;
+      uco-action:result ?nGenerationProvenanceRecord ;
+      uco-action:result ?nResult ;
       .
-    ?nActionB
-      a case-investigation:InvestigativeAction ;
-      uco-core:hasFacet/uco-action:object ?nResult ;
+
+    {
+      SELECT DISTINCT ?nMostRecentAction ?nUsingAction ?nMostRecentProvenanceRecord
+      WHERE {
+        ?nMostRecentAction
+          a case-investigation:InvestigativeAction ;
+          uco-action:result ?nMostRecentProvenanceRecord ;
+          .
+
+        ?nUsingAction
+          a case-investigation:InvestigativeAction ;
+          uco-action:object ?nMostRecentProvenanceRecord ;
+          .
+
+        ?nMostRecentProvenanceRecord
+          a case-investigation:ProvenanceRecord ;
+          .
+      }
+    }
+
+    ?nUsingAction
+      uco-action:object ?nResult ;
+      .
+
+    ?nGenerationProvenanceRecord
+      a case-investigation:ProvenanceRecord ;
+      uco-core:object ?nResult ;
+      .
+
+    ?nMostRecentProvenanceRecord
+      uco-core:object ?nResult ;
       .
   }
 }

@@ -21,31 +21,41 @@ CONSTRUCT
 WHERE {
   ?nInvestigativeAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
-    .
-
-  ?nActionReferences
-    a uco-action:ActionReferences ;
-    uco-action:result ?nResult
+    uco-action:result ?nResult ;
     .
 
   {
-    SELECT ?nActionReferences ?nAgent
+    SELECT ?nInvestigativeAction ?nAgent
     WHERE {
-      ?nActionReferences
-        uco-action:performer ?nAgent ;
+      ?nInvestigativeAction
+        uco-action:instrument ?nAgent ;
         .
       FILTER NOT EXISTS {
-        ?nActionReferences
-          uco-action:instrument ?nInstrument ;
+        ?nInvestigativeAction
+          uco-action:performer ?nPerformer ;
+          .
       }
     }
   }
   UNION
   {
-    SELECT ?nActionReferences ?nAgent
+    SELECT ?nInvestigativeAction ?nAgent
     WHERE {
-      ?nActionReferences
+      ?nInvestigativeAction
+        uco-action:performer ?nAgent ;
+        .
+      FILTER NOT EXISTS {
+        ?nInvestigativeAction
+          uco-action:instrument ?nInstrument ;
+          .
+      }
+    }
+  }
+  UNION
+  {
+    SELECT ?nInvestigativeAction ?nAgent
+    WHERE {
+      ?nInvestigativeAction
         uco-action:performer ?nPerformer ;
         uco-action:instrument ?nAgent ;
         .

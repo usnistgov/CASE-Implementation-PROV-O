@@ -1,0 +1,240 @@
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:F3FD304E-EF6C-4CBD-94CB-425880F82748
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:cellebrite-ufed1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record1-uuid ;
+			prov:hadActivity kb:investigative-action1-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:samsung-device-uuid ;
+			prov:hadActivity kb:investigative-action1-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:wasAttributedTo kb:cellebrite-ufed1-uuid ;
+	prov:wasDerivedFrom
+		kb:provenance-record1-uuid ,
+		kb:samsung-device-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	.
+
+kb:cellebrite-pa1-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigator1-uuid ;
+		prov:hadActivity kb:investigative-action2-uuid ;
+	] ;
+	.
+
+kb:cellebrite-ufed1-uuid
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:investigator1-uuid ;
+		prov:hadActivity kb:investigative-action1-uuid ;
+	] ;
+	.
+
+kb:cellebritexml-report-uuid
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:cellebrite-pa1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record3-uuid ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action2-uuid ;
+	] ;
+	prov:wasAttributedTo kb:cellebrite-pa1-uuid ;
+	prov:wasDerivedFrom
+		kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	.
+
+kb:investigative-action1-uuid
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:cellebrite-ufed1-uuid ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record1-uuid ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:samsung-device-uuid ;
+		]
+		;
+	prov:used
+		kb:provenance-record1-uuid ,
+		kb:samsung-device-uuid
+		;
+	prov:wasAssociatedWith kb:cellebrite-ufed1-uuid ;
+	.
+
+kb:investigative-action2-uuid
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:cellebrite-pa1-uuid ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record3-uuid ;
+		]
+		;
+	prov:used
+		kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasAssociatedWith kb:cellebrite-pa1-uuid ;
+	.
+
+kb:investigator1-uuid
+	a prov:Agent ;
+	.
+
+kb:provenance-record1-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:samsung-device-uuid ;
+	.
+
+kb:provenance-record13-uuid
+	a prov:Collection ;
+	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+	case-investigation:exhibitNumber "002" ;
+	.
+
+kb:provenance-record2-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic duplicate of mobile device used by Ares Lupin" ;
+	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:cellebrite-ufed1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record1-uuid ;
+			prov:hadActivity kb:investigative-action1-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:samsung-device-uuid ;
+			prov:hadActivity kb:investigative-action1-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action1-uuid ;
+	] ;
+	prov:wasAttributedTo kb:cellebrite-ufed1-uuid ;
+	prov:wasDerivedFrom
+		kb:provenance-record1-uuid ,
+		kb:samsung-device-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	case-investigation:exhibitNumber "20181211001-002" ;
+	.
+
+kb:provenance-record3-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+	.
+
+kb:provenance-record4-uuid
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:cellebritexml-report-uuid ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:cellebrite-pa1-uuid ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record3-uuid ;
+			prov:hadActivity kb:investigative-action2-uuid ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action2-uuid ;
+	] ;
+	prov:wasAttributedTo kb:cellebrite-pa1-uuid ;
+	prov:wasDerivedFrom
+		kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ,
+		kb:provenance-record3-uuid
+		;
+	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	.
+
+kb:samsung-device-uuid
+	a prov:Entity ;
+	.
+

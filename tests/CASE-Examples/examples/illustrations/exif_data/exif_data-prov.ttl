@@ -3,7 +3,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:annotation1
 	a prov:Entity ;
@@ -20,6 +20,7 @@ kb:annotation1
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action7 ;
+		prov:atTime "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:annotator_tool1 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
@@ -45,14 +46,17 @@ kb:examiner1
 
 kb:forensic_action7
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:annotator_tool1 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 		prov:entity prov:EmptyCollection ;
 	] ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:annotator_tool1 ;
 	.
