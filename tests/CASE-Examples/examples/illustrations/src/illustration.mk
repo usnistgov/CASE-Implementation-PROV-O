@@ -55,8 +55,8 @@ $(subjectdir_basename)-prov.ttl: \
 	  && case_prov_rdf \
 	    --allow-empty-results \
 	    --debug \
-	    $< \
-	    __$@
+	    __$@ \
+	    $<
 	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
 	  --infer-base-iri \
 	  --inline-blank-nodes \
@@ -75,8 +75,8 @@ $(subjectdir_basename)-prov_activities.dot: \
 	    --activity-informing \
 	    --dash-unqualified \
 	    --debug \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 $(subjectdir_basename)-prov_agents.dot: \
@@ -87,8 +87,8 @@ $(subjectdir_basename)-prov_agents.dot: \
 	    --agent-delegating \
 	    --dash-unqualified \
 	    --debug \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 $(subjectdir_basename)-prov_all.dot: \
@@ -98,8 +98,8 @@ $(subjectdir_basename)-prov_all.dot: \
 	  && case_prov_dot \
 	    --dash-unqualified \
 	    --debug \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 $(subjectdir_basename)-prov_entities.dot: \
@@ -110,8 +110,8 @@ $(subjectdir_basename)-prov_entities.dot: \
 	    --dash-unqualified \
 	    --debug \
 	    --entity-deriving \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 $(subjectdir_basename)-prov_originals.dot: \
@@ -122,8 +122,8 @@ $(subjectdir_basename)-prov_originals.dot: \
 	    --dash-unqualified \
 	    --debug \
 	    --from-empty-set \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 check: \

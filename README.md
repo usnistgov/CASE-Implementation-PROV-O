@@ -12,8 +12,8 @@ Participation by NIST in the creation of the documentation of mentioned software
 This software currently does not install.
 
 The [tests](tests/) directory demonstrates the two standalone scripts run against CASE example JSON-LD data.
-* `case_prov_rdf.py` - This script takes as input a CASE graph file, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
-* `case_prov_dot.py` - This script takes as input a PROV-O graph file, and outputs a Dot render.
+* `case_prov_rdf.py` - This script takes as input one or more CASE graph files, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
+* `case_prov_dot.py` - This script takes as input one or more PROV-O graph files, and outputs a Dot render.
 
 On using `case_prov_rdf.py` to create a PROV-O graph, it is possible to provide that graph to a PROV-O consumer, such as a [PROV-CONSTRAINTS](https://www.w3.org/TR/prov-constraints/) validator.  This CASE project runs a Python package listed on the [W3C 2013 implementations report](https://www.w3.org/TR/2013/NOTE-prov-implementations-20130430/), [`prov-check`](https://github.com/pgroth/prov-check), as part of its sample output.  For instance, the [CASE-Examples repository](https://github.com/casework/CASE-Examples) is analyzed [here](tests/CASE-Examples/examples/prov-constraints.log).
 

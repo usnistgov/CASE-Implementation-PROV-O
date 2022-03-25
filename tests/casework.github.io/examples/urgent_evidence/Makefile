@@ -53,8 +53,8 @@ urgent_evidence-prov-activities-focus-extracted-file-uuid-1.dot: \
 	    --dash-unqualified \
 	    --debug \
 	    --entity-ancestry http://example.org/kb/extracted-file-uuid-1 \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 urgent_evidence-prov-all-focus-extracted-file-uuid-1.dot: \
@@ -65,8 +65,8 @@ urgent_evidence-prov-all-focus-extracted-file-uuid-1.dot: \
 	    --dash-unqualified \
 	    --debug \
 	    --entity-ancestry http://example.org/kb/extracted-file-uuid-1 \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 urgent_evidence-prov-all-initial_investigative_actions.dot: \
@@ -78,8 +78,8 @@ urgent_evidence-prov-all-initial_investigative_actions.dot: \
 	    --dash-unqualified \
 	    --debug \
 	    --from-empty-set \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 urgent_evidence-prov-entities-focus-extracted-file-uuid-1.dot: \
@@ -91,6 +91,6 @@ urgent_evidence-prov-entities-focus-extracted-file-uuid-1.dot: \
 	    --debug \
 	    --entity-deriving \
 	    --entity-ancestry http://example.org/kb/extracted-file-uuid-1 \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@

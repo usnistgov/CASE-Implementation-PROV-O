@@ -121,14 +121,15 @@ def main() -> None:
         action="store_true",
         help="Only display Entity nodes and wasDerivedBy relationships.",
     )
-    parser.add_argument("in_graph")
     parser.add_argument("out_dot")
+    parser.add_argument("in_graph", nargs="+")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     graph = rdflib.Graph()
-    graph.parse(args.in_graph)
+    for in_graph_filename in args.in_graph:
+        graph.parse(in_graph_filename)
 
     graph.bind("case-investigation", NS_CASE_INVESTIGATION)
     graph.bind("prov", NS_PROV)

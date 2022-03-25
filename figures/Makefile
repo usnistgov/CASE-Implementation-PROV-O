@@ -42,8 +42,8 @@ readme-activities.dot: \
 	source $(top_srcdir)/tests/venv/bin/activate \
 	  && case_prov_dot \
 	    --omit-empty-set \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 readme-attribution.dot: \
@@ -54,8 +54,8 @@ readme-attribution.dot: \
 	  && case_prov_dot \
 	    --dash-unqualified \
 	    --omit-empty-set \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 readme-provenance-records.dot: \
@@ -65,6 +65,6 @@ readme-provenance-records.dot: \
 	source $(top_srcdir)/tests/venv/bin/activate \
 	  && case_prov_dot \
 	    --omit-empty-set \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
