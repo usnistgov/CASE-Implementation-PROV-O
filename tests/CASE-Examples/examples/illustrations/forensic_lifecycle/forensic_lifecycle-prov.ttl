@@ -4,7 +4,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:account1
 	a prov:Entity ;
@@ -48,14 +48,17 @@ kb:examiner2
 
 kb:forensic_action1
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:investigator1 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 		prov:entity prov:EmptyCollection ;
 	] ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:investigator1 ;
 	.
@@ -68,42 +71,51 @@ kb:forensic_action2
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 		prov:entity kb:device1 ;
 	] ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:device1 ;
 	prov:wasAssociatedWith kb:examiner1 ;
 	.
 
 kb:forensic_action3
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool1 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 		prov:entity kb:device1 ;
 	] ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:device1 ;
 	prov:wasAssociatedWith kb:tool1 ;
 	.
 
 kb:forensic_action4
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool2 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 		prov:entity kb:sd_card1 ;
 	] ;
+	prov:startedAtTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:sd_card1 ;
 	prov:wasAssociatedWith kb:tool2 ;
 	.
 
 kb:forensic_action5
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool3 ;
@@ -111,13 +123,16 @@ kb:forensic_action5
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:android_image ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:sd_card1_image ;
 		]
 		;
+	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:android_image ,
 		kb:sd_card1_image
@@ -130,6 +145,7 @@ kb:forensic_action6
 		prov:Activity ,
 		prov:Entity
 		;
+	prov:endedAtTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:parser1 ;
@@ -153,21 +169,26 @@ kb:forensic_action6
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance_record10 ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance_record11 ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance_record9 ;
 		]
 		;
+	prov:startedAtTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:provenance_record10 ,
 		kb:provenance_record11 ,
@@ -246,6 +267,7 @@ kb:provenance_record1
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action1 ;
+		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:investigator1 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
@@ -279,6 +301,7 @@ kb:provenance_record10
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom
@@ -315,6 +338,7 @@ kb:provenance_record11
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom
@@ -351,6 +375,7 @@ kb:provenance_record12
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom
@@ -392,6 +417,7 @@ kb:provenance_record13
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -434,6 +460,7 @@ kb:provenance_record14
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -476,6 +503,7 @@ kb:provenance_record15
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -518,6 +546,7 @@ kb:provenance_record16
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -560,6 +589,7 @@ kb:provenance_record17
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -602,6 +632,7 @@ kb:provenance_record18
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -644,6 +675,7 @@ kb:provenance_record19
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -712,6 +744,7 @@ kb:provenance_record20
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -754,6 +787,7 @@ kb:provenance_record21
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action6 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:parser1 ;
 	prov:wasDerivedFrom
@@ -810,6 +844,7 @@ kb:provenance_record4
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action3 ;
+		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool1 ;
 	prov:wasDerivedFrom kb:device1 ;
@@ -836,6 +871,7 @@ kb:provenance_record5
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action4 ;
+		prov:atTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool2 ;
 	prov:wasDerivedFrom kb:sd_card1 ;
@@ -869,6 +905,7 @@ kb:provenance_record6
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom
@@ -905,6 +942,7 @@ kb:provenance_record7
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom
@@ -941,6 +979,7 @@ kb:provenance_record8
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom
@@ -977,6 +1016,7 @@ kb:provenance_record9
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:forensic_action5 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3 ;
 	prov:wasDerivedFrom

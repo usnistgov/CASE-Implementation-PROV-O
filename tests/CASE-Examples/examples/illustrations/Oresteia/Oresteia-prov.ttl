@@ -4,7 +4,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:aeschylus-uuid
 	a prov:Person ;
@@ -31,6 +31,7 @@ kb:argive-elder1-phoneaccnt-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
 	prov:wasDerivedFrom
@@ -61,6 +62,7 @@ kb:argive-elder2-phoneaccnt-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
 	prov:wasDerivedFrom
@@ -91,6 +93,7 @@ kb:argive-elder3-phoneaccnt-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
 	prov:wasDerivedFrom
@@ -164,6 +167,7 @@ kb:cassandra-mobiledevice-forensicduplicate-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action2-uuid ;
+		prov:atTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool1-uuid ;
 	prov:wasDerivedFrom
@@ -194,6 +198,7 @@ kb:cassandra-mobiledevice-mmssms-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action4-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool2-uuid ;
 	prov:wasDerivedFrom
@@ -223,8 +228,10 @@ kb:investigative-action1-uuid
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2017-06-21T22:36:24.350000+00:00"^^xsd:dateTime ;
 		prov:entity prov:EmptyCollection ;
 	] ;
+	prov:startedAtTime "2017-06-21T22:36:24.350000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:athens-warrant1-uuid ;
 	.
@@ -242,13 +249,16 @@ kb:investigative-action10-uuid
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
 			prov:entity kb:cassandra-device-uuid ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance-record1-uuid ;
 		]
 		;
+	prov:startedAtTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:cassandra-device-uuid ,
 		kb:provenance-record1-uuid
@@ -259,6 +269,7 @@ kb:investigative-action10-uuid
 
 kb:investigative-action2-uuid
 	a prov:Activity ;
+	prov:endedAtTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool1-uuid ;
@@ -270,13 +281,16 @@ kb:investigative-action2-uuid
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
 			prov:entity kb:cassandra-device-uuid ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance-record2-uuid ;
 		]
 		;
+	prov:startedAtTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:cassandra-device-uuid ,
 		kb:provenance-record2-uuid
@@ -290,6 +304,7 @@ kb:investigative-action4-uuid
 		prov:Activity ,
 		prov:Agent
 		;
+	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool2-uuid ;
@@ -301,13 +316,16 @@ kb:investigative-action4-uuid
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance-record3-uuid ;
 		]
 		;
+	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
 		kb:provenance-record3-uuid
@@ -321,6 +339,7 @@ kb:investigative-action5-uuid
 		prov:Activity ,
 		prov:Entity
 		;
+	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:tool3-uuid ;
@@ -348,17 +367,21 @@ kb:investigative-action5-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action4-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance-record4-uuid ;
 		]
 		;
+	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:cassandra-mobiledevice-mmssms-uuid ,
 		kb:provenance-record4-uuid
@@ -469,6 +492,7 @@ kb:provenance-record3-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action2-uuid ;
+		prov:atTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool1-uuid ;
 	prov:wasDerivedFrom
@@ -505,6 +529,7 @@ kb:provenance-record4-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action4-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool2-uuid ;
 	prov:wasDerivedFrom
@@ -547,6 +572,7 @@ kb:provenance-record5-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
 	prov:wasDerivedFrom
@@ -578,6 +604,7 @@ kb:sms-message1-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
 	prov:wasDerivedFrom
@@ -608,6 +635,7 @@ kb:sms-message2-uuid
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action5-uuid ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:tool3-uuid ;
 	prov:wasDerivedFrom

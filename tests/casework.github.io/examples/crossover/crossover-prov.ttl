@@ -143,20 +143,26 @@ kb:investigator1-uuid
 	.
 
 kb:provenance-record1-uuid
-	a prov:Entity ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:samsung-device-uuid ;
 	.
 
 kb:provenance-record13-uuid
 	a prov:Collection ;
 	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
-	case-investigation:exhibitNumber
-		"002" ,
-		"20181211001-002"
-		;
+	case-investigation:exhibitNumber "002" ;
 	.
 
 kb:provenance-record2-uuid
-	a prov:Entity ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic duplicate of mobile device used by Ares Lupin" ;
+	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:cellebrite-ufed1-uuid ;
@@ -183,14 +189,23 @@ kb:provenance-record2-uuid
 		kb:samsung-device-uuid
 		;
 	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	case-investigation:exhibitNumber "20181211001-002" ;
 	.
 
 kb:provenance-record3-uuid
-	a prov:Entity ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
 	.
 
 kb:provenance-record4-uuid
-	a prov:Entity ;
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:cellebritexml-report-uuid ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent kb:cellebrite-pa1-uuid ;
