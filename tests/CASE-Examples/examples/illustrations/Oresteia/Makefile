@@ -51,8 +51,8 @@ Oresteia-prov-focus-sms-message1-uuid.dot: \
 	  && case_prov_dot \
 	    --debug \
 	    --entity-ancestry http://example.org/kb/sms-message1-uuid \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@
 
 Oresteia-prov-focus-sms-message2-uuid.dot: \
@@ -62,6 +62,6 @@ Oresteia-prov-focus-sms-message2-uuid.dot: \
 	  && case_prov_dot \
 	    --debug \
 	    --entity-ancestry http://example.org/kb/sms-message2-uuid \
-	    $< \
-	    _$@
+	    _$@ \
+	    $<
 	mv _$@ $@

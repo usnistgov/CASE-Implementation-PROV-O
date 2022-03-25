@@ -47,15 +47,17 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--debug", action="store_true")
     parser.add_argument("--allow-empty-results", action="store_true")
-    parser.add_argument("in_graph")
     parser.add_argument("out_file")
+    parser.add_argument("in_graph", nargs="+")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     in_graph = rdflib.Graph()
     out_graph = rdflib.Graph()
-    in_graph.parse(args.in_graph)
+
+    for in_graph_filename in args.in_graph:
+        in_graph.parse(in_graph_filename)
 
     # Guarantee prov: and minimal CASE and UCO prefixes are in input and output contexts.
     in_graph.namespace_manager.bind("case-investigation", NS_CASE_INVESTIGATION)
