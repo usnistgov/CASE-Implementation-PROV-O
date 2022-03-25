@@ -656,7 +656,7 @@ WHERE {
         kwargs = clone_style(prov.constants.PROV_COMMUNICATION)
         _render_edges(select_query_text, "wasInformedBy", kwargs, edges_informing)
 
-    dot_graph = pydot.Dot("PROV-O render", graph_type="digraph")
+    dot_graph = pydot.Dot("PROV-O render", graph_type="digraph", rankdir="BT")
 
     _logger.debug("len(nodes) = %d.", len(nodes))
     _logger.debug("len(edges) = %d.", len(edges))

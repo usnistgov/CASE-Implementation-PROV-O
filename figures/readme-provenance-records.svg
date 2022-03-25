@@ -12,22 +12,22 @@
 <!-- _4ff8676506e04e724db6c9ed5b76dc39beeefd767b66036056fbce3593ded3dc -->
 <g id="node1" class="node">
 <title>_4ff8676506e04e724db6c9ed5b76dc39beeefd767b66036056fbce3593ded3dc</title>
-<polygon fill="#cdc673" stroke="#808080" points="215.04,-121 212.04,-125 191.04,-125 188.04,-121 15.04,-121 15.04,-83 215.04,-83 215.04,-121"/>
-<text text-anchor="middle" x="115.04" y="-105.8" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:someCollection</text>
-<text text-anchor="middle" x="115.04" y="-90.8" font-family="Times,serif" font-size="14.00">Exhibit &#45; 1234&#45;5</text>
+<polygon fill="#cdc673" stroke="#808080" points="215.04,-38 212.04,-42 191.04,-42 188.04,-38 15.04,-38 15.04,0 215.04,0 215.04,-38"/>
+<text text-anchor="middle" x="115.04" y="-22.8" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:someCollection</text>
+<text text-anchor="middle" x="115.04" y="-7.8" font-family="Times,serif" font-size="14.00">Exhibit &#45; 1234&#45;5</text>
 </g>
 <!-- _75447935a41fb2b4562606fec9bace2054521fecb4e82258780e1adacf20741f -->
 <g id="node2" class="node">
 <title>_75447935a41fb2b4562606fec9bace2054521fecb4e82258780e1adacf20741f</title>
-<ellipse fill="#fff68f" stroke="#808080" cx="115.04" cy="-18" rx="115.08" ry="18"/>
-<text text-anchor="middle" x="115.04" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:someEntity</text>
+<ellipse fill="#fff68f" stroke="#808080" cx="115.04" cy="-103" rx="115.08" ry="18"/>
+<text text-anchor="middle" x="115.04" y="-99.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:someEntity</text>
 </g>
 <!-- _4ff8676506e04e724db6c9ed5b76dc39beeefd767b66036056fbce3593ded3dc&#45;&gt;_75447935a41fb2b4562606fec9bace2054521fecb4e82258780e1adacf20741f -->
 <g id="edge1" class="edge">
 <title>_4ff8676506e04e724db6c9ed5b76dc39beeefd767b66036056fbce3593ded3dc&#45;&gt;_75447935a41fb2b4562606fec9bace2054521fecb4e82258780e1adacf20741f</title>
-<path fill="none" stroke="black" d="M115.04,-82.8C115.04,-72 115.04,-58.1 115.04,-46.04"/>
-<polygon fill="black" stroke="black" points="118.54,-46.03 115.04,-36.03 111.54,-46.03 118.54,-46.03"/>
-<text text-anchor="middle" x="139.54" y="-57" font-family="Times,serif" font-size="10.00">hadMember</text>
+<path fill="none" stroke="black" d="M115.04,-38.2C115.04,-49 115.04,-62.9 115.04,-74.96"/>
+<polygon fill="black" stroke="black" points="111.54,-74.97 115.04,-84.97 118.54,-74.97 111.54,-74.97"/>
+<text text-anchor="middle" x="139.54" y="-59" font-family="Times,serif" font-size="10.00">hadMember</text>
 </g>
 </g>
 </svg>

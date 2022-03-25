@@ -12,9 +12,9 @@
 <!-- _dfa40afa8223607a4487772fe58783fb86ed8b6c03657ebaf7603a06c87ac4cd -->
 <g id="node1" class="node">
 <title>_dfa40afa8223607a4487772fe58783fb86ed8b6c03657ebaf7603a06c87ac4cd</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="279.5,-38 73.5,-38 73.5,0 279.5,0 279.5,-38"/>
-<text text-anchor="middle" x="176.5" y="-22.8" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:activity1</text>
-<text text-anchor="middle" x="176.5" y="-7.8" font-family="Times,serif" font-size="14.00"> [2020&#45;01&#45;02T03:04:05+00:00, ...)</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="279.5,-208 73.5,-208 73.5,-170 279.5,-170 279.5,-208"/>
+<text text-anchor="middle" x="176.5" y="-192.8" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:activity1</text>
+<text text-anchor="middle" x="176.5" y="-177.8" font-family="Times,serif" font-size="14.00"> [2020&#45;01&#45;02T03:04:05+00:00, ...)</text>
 </g>
 <!-- _1dc69e0ebb51673345ae966d7c1ed38f939e9f2a3eb4c3753722e4a4aab66fb1 -->
 <g id="node2" class="node">
@@ -26,23 +26,23 @@
 <!-- _1dc69e0ebb51673345ae966d7c1ed38f939e9f2a3eb4c3753722e4a4aab66fb1&#45;&gt;_dfa40afa8223607a4487772fe58783fb86ed8b6c03657ebaf7603a06c87ac4cd -->
 <g id="edge1" class="edge">
 <title>_1dc69e0ebb51673345ae966d7c1ed38f939e9f2a3eb4c3753722e4a4aab66fb1&#45;&gt;_dfa40afa8223607a4487772fe58783fb86ed8b6c03657ebaf7603a06c87ac4cd</title>
-<path fill="none" stroke="#0000cd" d="M176.5,-84.99C176.5,-74.3 176.5,-60.5 176.5,-48.37"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="180,-48.26 176.5,-38.26 173,-48.26 180,-48.26"/>
-<text text-anchor="middle" x="209" y="-59" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M176.5,-123.01C176.5,-133.7 176.5,-147.5 176.5,-159.63"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="173,-159.74 176.5,-169.74 180,-159.74 173,-159.74"/>
+<text text-anchor="middle" x="209" y="-144" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _526944cfe3743b492c3f7751131a98aa3eb5bc97b4085097a36a0eda13b85b9d -->
 <g id="node3" class="node">
 <title>_526944cfe3743b492c3f7751131a98aa3eb5bc97b4085097a36a0eda13b85b9d</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="279.5,-208 73.5,-208 73.5,-170 279.5,-170 279.5,-208"/>
-<text text-anchor="middle" x="176.5" y="-192.8" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:activity3</text>
-<text text-anchor="middle" x="176.5" y="-177.8" font-family="Times,serif" font-size="14.00"> (..., 2020&#45;01&#45;02T21:00:02+00:00]</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="279.5,-38 73.5,-38 73.5,0 279.5,0 279.5,-38"/>
+<text text-anchor="middle" x="176.5" y="-22.8" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:activity3</text>
+<text text-anchor="middle" x="176.5" y="-7.8" font-family="Times,serif" font-size="14.00"> (..., 2020&#45;01&#45;02T21:00:02+00:00]</text>
 </g>
 <!-- _526944cfe3743b492c3f7751131a98aa3eb5bc97b4085097a36a0eda13b85b9d&#45;&gt;_1dc69e0ebb51673345ae966d7c1ed38f939e9f2a3eb4c3753722e4a4aab66fb1 -->
 <g id="edge2" class="edge">
 <title>_526944cfe3743b492c3f7751131a98aa3eb5bc97b4085097a36a0eda13b85b9d&#45;&gt;_1dc69e0ebb51673345ae966d7c1ed38f939e9f2a3eb4c3753722e4a4aab66fb1</title>
-<path fill="none" stroke="#0000cd" d="M176.5,-169.99C176.5,-159.3 176.5,-145.5 176.5,-133.37"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="180,-133.26 176.5,-123.26 173,-133.26 180,-133.26"/>
-<text text-anchor="middle" x="209" y="-144" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M176.5,-38.01C176.5,-48.7 176.5,-62.5 176.5,-74.63"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="173,-74.74 176.5,-84.74 180,-74.74 173,-74.74"/>
+<text text-anchor="middle" x="209" y="-59" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 </g>
 </svg>
