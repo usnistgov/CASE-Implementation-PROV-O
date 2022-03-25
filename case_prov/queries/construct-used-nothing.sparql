@@ -21,10 +21,6 @@ WHERE {
 
   FILTER NOT EXISTS {
     ?nAction
-      uco-core:hasFacet ?nActionReferences ;
-      .
-
-    ?nActionReferences
       uco-action:object ?nInput ;
       .
   }

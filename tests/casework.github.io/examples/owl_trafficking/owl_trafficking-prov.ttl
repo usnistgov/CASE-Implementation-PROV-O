@@ -4,7 +4,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
 	a prov:Entity ;
@@ -27,6 +27,7 @@ kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+		prov:atTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
 	prov:wasDerivedFrom
@@ -38,6 +39,7 @@ kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
 
 kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1
 	a prov:Activity ;
+	prov:endedAtTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
@@ -45,13 +47,16 @@ kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
 			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
 			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
 		]
 		;
+	prov:startedAtTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ,
 		kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2
@@ -123,6 +128,7 @@ kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+		prov:atTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
 	prov:wasDerivedFrom

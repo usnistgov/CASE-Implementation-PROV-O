@@ -4,7 +4,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:android_image
 	a prov:Entity ;
@@ -48,6 +48,7 @@ kb:data_piece1
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action1 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom kb:android_image ;
@@ -68,6 +69,7 @@ kb:data_piece2
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action1 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom kb:android_image ;
@@ -76,20 +78,24 @@ kb:data_piece2
 
 kb:investigative_action1
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:carving_tool1 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
+		prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 		prov:entity kb:android_image ;
 	] ;
+	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:android_image ;
 	prov:wasAssociatedWith kb:carving_tool1 ;
 	.
 
 kb:investigative_action2
 	a prov:Activity ;
+	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:carving_tool1 ;
@@ -97,17 +103,21 @@ kb:investigative_action2
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:data_piece0 ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:data_piece1 ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 			prov:entity kb:data_piece2 ;
 		]
 		;
+	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used
 		kb:data_piece0 ,
 		kb:data_piece1 ,
@@ -152,6 +162,7 @@ kb:provenance_record1
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action2 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom
@@ -187,6 +198,7 @@ kb:provenance_record2
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action1 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom kb:android_image ;
@@ -226,6 +238,7 @@ kb:reconstructed_file
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action2 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom
@@ -262,6 +275,7 @@ kb:relationship0
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action2 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom
@@ -298,6 +312,7 @@ kb:relationship1
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action2 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom
@@ -334,6 +349,7 @@ kb:relationship2
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action2 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom
@@ -358,6 +374,7 @@ kb:relationship3
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action1 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom kb:android_image ;
@@ -378,6 +395,7 @@ kb:relationship4
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative_action1 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:wasAttributedTo kb:carving_tool1 ;
 	prov:wasDerivedFrom kb:android_image ;

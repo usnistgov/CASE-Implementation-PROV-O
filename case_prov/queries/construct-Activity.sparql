@@ -26,24 +26,14 @@ WHERE {
 
   OPTIONAL {
     ?nAction
-      uco-core:hasFacet ?nActionReferences ;
+      uco-action:endTime ?lEndTime ;
       .
+  }
 
-    ?nActionReferences
-      a uco-action:ActionReferencesFacet ;
+  OPTIONAL {
+    ?nAction
+      uco-action:startTime ?lStartTime ;
       .
-
-    OPTIONAL {
-      ?nActionReferences
-        uco-action:endTime ?lEndTime ;
-        .
-    }
-
-    OPTIONAL {
-      ?nActionReferences
-        uco-action:startTime ?lStartTime ;
-        .
-    }
   }
 
   OPTIONAL {
