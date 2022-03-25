@@ -22,21 +22,16 @@ CONSTRUCT
 WHERE {
   ?nInvestigativeAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
-    .
-
-  ?nActionReferences
-    a uco-action:ActionReferencesFacet ;
     .
 
   {
-    SELECT ?nActionReferences ?nAgent
+    SELECT ?nAction ?nAgent
     WHERE {
-      ?nActionReferences
+      ?nInvestigativeAction
         uco-action:instrument ?nAgent ;
         .
       FILTER NOT EXISTS {
-        ?nActionReferences
+        ?nInvestigativeAction
           uco-action:performer ?nPerformer ;
           .
       }
@@ -44,13 +39,13 @@ WHERE {
   }
   UNION
   {
-    SELECT ?nActionReferences ?nAgent
+    SELECT ?nInvestigativeAction ?nAgent
     WHERE {
-      ?nActionReferences
+      ?nInvestigativeAction
         uco-action:performer ?nAgent ;
         .
       FILTER NOT EXISTS {
-        ?nActionReferences
+        ?nInvestigativeAction
           uco-action:instrument ?nInstrument ;
           .
       }
@@ -58,9 +53,9 @@ WHERE {
   }
   UNION
   {
-    SELECT ?nActionReferences ?nAgent
+    SELECT ?nInvestigativeAction ?nAgent
     WHERE {
-      ?nActionReferences
+      ?nInvestigativeAction
         uco-action:performer ?nPerformer ;
         uco-action:instrument ?nAgent ;
         .

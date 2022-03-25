@@ -22,11 +22,6 @@ CONSTRUCT
 WHERE {
   ?nAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
-    .
-
-  ?nActionReferences
-    a uco-action:ActionReferencesFacet ;
     (uco-action:object|uco-action:result) ?nObject ;
     .
 

@@ -22,16 +22,11 @@ CONSTRUCT
 WHERE {
   ?nAction
     a case-investigation:InvestigativeAction ;
-    uco-core:hasFacet ?nActionReferences ;
-    .
-
-  ?nActionReferences
-    a uco-action:ActionReferencesFacet ;
     uco-action:result ?nObject ;
     .
 
   OPTIONAL {
-    ?nActionReferences
+    ?nAction
       uco-action:endTime ?lTime ;
       .
   }
