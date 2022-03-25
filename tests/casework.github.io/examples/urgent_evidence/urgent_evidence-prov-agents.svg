@@ -12,46 +12,46 @@
 <!-- _397a9e99edc9334a99efac2668700bbb3ceb44a4f2584719710c9c5f82038b67 -->
 <g id="node1" class="node">
 <title>_397a9e99edc9334a99efac2668700bbb3ceb44a4f2584719710c9c5f82038b67</title>
-<polygon fill="#fed37f" stroke="black" points="224.92,-106.56 112.47,-119 0.03,-106.56 0.13,-86.44 224.81,-86.44 224.92,-106.56"/>
-<text text-anchor="middle" x="112.47" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:camera&#45;uuid&#45;1</text>
+<polygon fill="#fed37f" stroke="black" points="224.92,-23.56 112.47,-36 0.03,-23.56 0.13,-3.44 224.81,-3.44 224.92,-23.56"/>
+<text text-anchor="middle" x="112.47" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:camera&#45;uuid&#45;1</text>
 </g>
 <!-- _ffa327987157924d1ae152fdea43f99b98251d8fdd6a67aa829f2bab25e15c91 -->
 <g id="node5" class="node">
 <title>_ffa327987157924d1ae152fdea43f99b98251d8fdd6a67aa829f2bab25e15c91</title>
-<polygon fill="#fed37f" stroke="black" points="337.88,-23.56 229.47,-36 121.06,-23.56 121.16,-3.44 337.78,-3.44 337.88,-23.56"/>
-<text text-anchor="middle" x="229.47" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:officer&#45;uuid&#45;3</text>
+<polygon fill="#fed37f" stroke="black" points="337.88,-106.56 229.47,-119 121.06,-106.56 121.16,-86.44 337.78,-86.44 337.88,-106.56"/>
+<text text-anchor="middle" x="229.47" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:officer&#45;uuid&#45;3</text>
 </g>
 <!-- _397a9e99edc9334a99efac2668700bbb3ceb44a4f2584719710c9c5f82038b67&#45;&gt;_ffa327987157924d1ae152fdea43f99b98251d8fdd6a67aa829f2bab25e15c91 -->
 <g id="edge1" class="edge">
 <title>_397a9e99edc9334a99efac2668700bbb3ceb44a4f2584719710c9c5f82038b67&#45;&gt;_ffa327987157924d1ae152fdea43f99b98251d8fdd6a67aa829f2bab25e15c91</title>
-<path fill="none" stroke="#fed37f" d="M132.32,-86.26C150.89,-73.41 178.85,-54.04 200.02,-39.39"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="202.11,-42.2 208.34,-33.63 198.13,-36.44 202.11,-42.2"/>
+<path fill="none" stroke="#fed37f" d="M133.66,-33.67C152.56,-46.75 180.38,-66.01 201.17,-80.41"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="199.4,-83.44 209.61,-86.25 203.38,-77.68 199.4,-83.44"/>
 <text text-anchor="middle" x="214.97" y="-57" font-family="Times,serif" font-size="10.00">actedOnBehalfOf</text>
 </g>
 <!-- _c74f294e6e5b3b476c50723f525440e37f16bbb4029944635c70f5c4cb0e6d9f -->
 <g id="node2" class="node">
 <title>_c74f294e6e5b3b476c50723f525440e37f16bbb4029944635c70f5c4cb0e6d9f</title>
-<polygon fill="#fed37f" stroke="black" points="450.24,-106.56 346.47,-119 242.7,-106.56 242.8,-86.44 450.15,-86.44 450.24,-106.56"/>
-<text text-anchor="middle" x="346.47" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:kiosk&#45;uuid&#45;1</text>
+<polygon fill="#fed37f" stroke="black" points="450.24,-23.56 346.47,-36 242.7,-23.56 242.8,-3.44 450.15,-3.44 450.24,-23.56"/>
+<text text-anchor="middle" x="346.47" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:kiosk&#45;uuid&#45;1</text>
 </g>
 <!-- _c74f294e6e5b3b476c50723f525440e37f16bbb4029944635c70f5c4cb0e6d9f&#45;&gt;_ffa327987157924d1ae152fdea43f99b98251d8fdd6a67aa829f2bab25e15c91 -->
 <g id="edge2" class="edge">
 <title>_c74f294e6e5b3b476c50723f525440e37f16bbb4029944635c70f5c4cb0e6d9f&#45;&gt;_ffa327987157924d1ae152fdea43f99b98251d8fdd6a67aa829f2bab25e15c91</title>
-<path fill="none" stroke="#fed37f" d="M326.62,-86.26C308.06,-73.41 280.09,-54.04 258.92,-39.39"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="260.82,-36.44 250.6,-33.63 256.83,-42.2 260.82,-36.44"/>
+<path fill="none" stroke="#fed37f" d="M325.28,-33.67C306.38,-46.75 278.57,-66.01 257.77,-80.41"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="255.56,-77.68 249.33,-86.25 259.55,-83.44 255.56,-77.68"/>
 <text text-anchor="middle" x="330.97" y="-57" font-family="Times,serif" font-size="10.00">actedOnBehalfOf</text>
 </g>
 <!-- _ce525c27e32383c04497291d356c30387164d9e98e67466567e244b87e47285c -->
 <g id="node3" class="node">
 <title>_ce525c27e32383c04497291d356c30387164d9e98e67466567e244b87e47285c</title>
-<polygon fill="#fed37f" stroke="black" points="684.88,-106.56 576.47,-119 468.06,-106.56 468.16,-86.44 684.78,-86.44 684.88,-106.56"/>
-<text text-anchor="middle" x="576.47" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:officer&#45;uuid&#45;1</text>
+<polygon fill="#fed37f" stroke="black" points="684.88,-23.56 576.47,-36 468.06,-23.56 468.16,-3.44 684.78,-3.44 684.88,-23.56"/>
+<text text-anchor="middle" x="576.47" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:officer&#45;uuid&#45;1</text>
 </g>
 <!-- _be1ad1d576ff7128a26a59ee6acb2f1a317b5ed42d49655f1e89b3aed160e6c8 -->
 <g id="node4" class="node">
 <title>_be1ad1d576ff7128a26a59ee6acb2f1a317b5ed42d49655f1e89b3aed160e6c8</title>
-<polygon fill="#fed37f" stroke="black" points="919.88,-106.56 811.47,-119 703.06,-106.56 703.16,-86.44 919.78,-86.44 919.88,-106.56"/>
-<text text-anchor="middle" x="811.47" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:officer&#45;uuid&#45;2</text>
+<polygon fill="#fed37f" stroke="black" points="919.88,-23.56 811.47,-36 703.06,-23.56 703.16,-3.44 919.78,-3.44 919.88,-23.56"/>
+<text text-anchor="middle" x="811.47" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:officer&#45;uuid&#45;2</text>
 </g>
 </g>
 </svg>

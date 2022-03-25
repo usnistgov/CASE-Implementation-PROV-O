@@ -12,33 +12,33 @@
 <!-- _b3e54d5a1184906f1df8e89ec65665c571405b0d8a37d02c3a00fbd34397b3df -->
 <g id="node1" class="node">
 <title>_b3e54d5a1184906f1df8e89ec65665c571405b0d8a37d02c3a00fbd34397b3df</title>
-<ellipse fill="#fff68f" stroke="#808080" cx="169.63" cy="-101" rx="169.77" ry="18"/>
-<text text-anchor="middle" x="169.63" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:qualifiablyAttributedEntity</text>
+<ellipse fill="#fff68f" stroke="#808080" cx="169.63" cy="-18" rx="169.77" ry="18"/>
+<text text-anchor="middle" x="169.63" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:qualifiablyAttributedEntity</text>
 </g>
 <!-- _d35f749b2a59a4c852425d8a45c5c57b6daa5cf2eaa3376a61840d5af32e6a4a -->
 <g id="node2" class="node">
 <title>_d35f749b2a59a4c852425d8a45c5c57b6daa5cf2eaa3376a61840d5af32e6a4a</title>
-<polygon fill="#fed37f" stroke="black" points="495.03,-23.56 352.63,-36 210.24,-23.56 210.37,-3.44 494.9,-3.44 495.03,-23.56"/>
-<text text-anchor="middle" x="352.63" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:someAgent</text>
+<polygon fill="#fed37f" stroke="black" points="495.03,-106.56 352.63,-119 210.24,-106.56 210.37,-86.44 494.9,-86.44 495.03,-106.56"/>
+<text text-anchor="middle" x="352.63" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:someAgent</text>
 </g>
 <!-- _b3e54d5a1184906f1df8e89ec65665c571405b0d8a37d02c3a00fbd34397b3df&#45;&gt;_d35f749b2a59a4c852425d8a45c5c57b6daa5cf2eaa3376a61840d5af32e6a4a -->
 <g id="edge1" class="edge">
 <title>_b3e54d5a1184906f1df8e89ec65665c571405b0d8a37d02c3a00fbd34397b3df&#45;&gt;_d35f749b2a59a4c852425d8a45c5c57b6daa5cf2eaa3376a61840d5af32e6a4a</title>
-<path fill="none" stroke="#fed37f" d="M207.11,-83.41C237.34,-70.03 279.83,-51.23 311.09,-37.39"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="312.68,-40.51 320.41,-33.26 309.85,-34.11 312.68,-40.51"/>
+<path fill="none" stroke="#fed37f" d="M207.11,-35.59C237.81,-49.18 281.16,-68.36 312.55,-82.26"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="311.32,-85.54 321.89,-86.39 314.16,-79.14 311.32,-85.54"/>
 <text text-anchor="middle" x="307.63" y="-57" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
 </g>
 <!-- _480bdfd1fe5b252217b8998900a58a6d302338c1e59158f5873f5cd0cafc676e -->
 <g id="node3" class="node">
 <title>_480bdfd1fe5b252217b8998900a58a6d302338c1e59158f5873f5cd0cafc676e</title>
-<ellipse fill="#fff68f" stroke="#808080" cx="535.63" cy="-101" rx="178.97" ry="18"/>
-<text text-anchor="middle" x="535.63" y="-97.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:unqualifiablyAttributedEntity</text>
+<ellipse fill="#fff68f" stroke="#808080" cx="535.63" cy="-18" rx="178.97" ry="18"/>
+<text text-anchor="middle" x="535.63" y="-14.3" font-family="Times,serif" font-size="14.00">ID &#45; urn:example:unqualifiablyAttributedEntity</text>
 </g>
 <!-- _480bdfd1fe5b252217b8998900a58a6d302338c1e59158f5873f5cd0cafc676e&#45;&gt;_d35f749b2a59a4c852425d8a45c5c57b6daa5cf2eaa3376a61840d5af32e6a4a -->
 <g id="edge2" class="edge">
 <title>_480bdfd1fe5b252217b8998900a58a6d302338c1e59158f5873f5cd0cafc676e&#45;&gt;_d35f749b2a59a4c852425d8a45c5c57b6daa5cf2eaa3376a61840d5af32e6a4a</title>
-<path fill="none" stroke="#fed37f" stroke-dasharray="5,2" d="M497.72,-83.22C467.55,-69.86 425.38,-51.2 394.27,-37.43"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="395.56,-34.17 385,-33.33 392.73,-40.57 395.56,-34.17"/>
+<path fill="none" stroke="#fed37f" stroke-dasharray="5,2" d="M497.72,-35.78C467.07,-49.35 424.05,-68.39 392.81,-82.22"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="391.25,-79.08 383.52,-86.33 394.09,-85.48 391.25,-79.08"/>
 <text text-anchor="middle" x="489.63" y="-57" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
 </g>
 </g>

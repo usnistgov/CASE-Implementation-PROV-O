@@ -12,178 +12,178 @@
 <!-- _f69d7472a828b3c904780e8db73164a2b909dfe0ebb831bb1d513ce42cd49721 -->
 <g id="node1" class="node">
 <title>_f69d7472a828b3c904780e8db73164a2b909dfe0ebb831bb1d513ce42cd49721</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="452,-69 211,-69 211,0 452,0 452,-69"/>
-<text text-anchor="middle" x="331.5" y="-53.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;1</text>
-<text text-anchor="middle" x="331.5" y="-38.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:00:00+00:00]</text>
-<text text-anchor="middle" x="331.5" y="-7.8" font-family="Times,serif" font-size="14.00">Exhibit submitted for Kiosk examination</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="452,-679 211,-679 211,-610 452,-610 452,-679"/>
+<text text-anchor="middle" x="331.5" y="-663.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;1</text>
+<text text-anchor="middle" x="331.5" y="-648.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:00:00+00:00]</text>
+<text text-anchor="middle" x="331.5" y="-617.8" font-family="Times,serif" font-size="14.00">Exhibit submitted for Kiosk examination</text>
 </g>
 <!-- _ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf -->
 <g id="node2" class="node">
 <title>_ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1061,-563 800,-563 800,-494 1061,-494 1061,-563"/>
-<text text-anchor="middle" x="930.5" y="-547.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;10</text>
-<text text-anchor="middle" x="930.5" y="-532.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:05:00+00:00]</text>
-<text text-anchor="middle" x="930.5" y="-501.8" font-family="Times,serif" font-size="14.00">Report DVD Generated as associated exhibit</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1061,-185 800,-185 800,-116 1061,-116 1061,-185"/>
+<text text-anchor="middle" x="930.5" y="-169.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;10</text>
+<text text-anchor="middle" x="930.5" y="-154.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:05:00+00:00]</text>
+<text text-anchor="middle" x="930.5" y="-123.8" font-family="Times,serif" font-size="14.00">Report DVD Generated as associated exhibit</text>
 </g>
 <!-- _728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7 -->
 <g id="node11" class="node">
 <title>_728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1159,-316 806,-316 806,-232 1159,-232 1159,-316"/>
-<text text-anchor="middle" x="982.5" y="-300.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;7</text>
-<text text-anchor="middle" x="982.5" y="-285.8" font-family="Times,serif" font-size="14.00"> [2019&#45;01&#45;01T14:25:00+00:00, 2019&#45;01&#45;01T14:55:00+00:00]</text>
-<text text-anchor="middle" x="982.5" y="-254.8" font-family="Times,serif" font-size="14.00">Exhibit Connected to Kiosk &amp; process started; exhibit </text>
-<text text-anchor="middle" x="982.5" y="-239.8" font-family="Times,serif" font-size="14.00">disconnected at conclusion</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1159,-447 806,-447 806,-363 1159,-363 1159,-447"/>
+<text text-anchor="middle" x="982.5" y="-431.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;7</text>
+<text text-anchor="middle" x="982.5" y="-416.8" font-family="Times,serif" font-size="14.00"> [2019&#45;01&#45;01T14:25:00+00:00, 2019&#45;01&#45;01T14:55:00+00:00]</text>
+<text text-anchor="middle" x="982.5" y="-385.8" font-family="Times,serif" font-size="14.00">Exhibit Connected to Kiosk &amp; process started; exhibit </text>
+<text text-anchor="middle" x="982.5" y="-370.8" font-family="Times,serif" font-size="14.00">disconnected at conclusion</text>
 </g>
 <!-- _ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf&#45;&gt;_728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7 -->
 <g id="edge1" class="edge">
 <title>_ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf&#45;&gt;_728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7</title>
-<path fill="none" stroke="#0000cd" d="M922.67,-493.91C916.25,-460.07 910.19,-406.76 923.5,-363 927.55,-349.69 934.36,-336.56 941.94,-324.67"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="944.92,-326.51 947.57,-316.25 939.1,-322.62 944.92,-326.51"/>
-<text text-anchor="middle" x="956" y="-402.5" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M922.67,-185.09C916.25,-218.93 910.19,-272.24 923.5,-316 927.55,-329.31 934.36,-342.44 941.94,-354.33"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="939.1,-356.38 947.57,-362.75 944.92,-352.49 939.1,-356.38"/>
+<text text-anchor="middle" x="956" y="-271.5" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _941a648d460e10f52ae5cc7f6eb5db5c86c6ed72a0c34236d8581d5862aaedc5 -->
 <g id="node13" class="node">
 <title>_941a648d460e10f52ae5cc7f6eb5db5c86c6ed72a0c34236d8581d5862aaedc5</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1305.5,-447 997.5,-447 997.5,-363 1305.5,-363 1305.5,-447"/>
-<text text-anchor="middle" x="1151.5" y="-431.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;9</text>
-<text text-anchor="middle" x="1151.5" y="-416.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:03:00+00:00]</text>
-<text text-anchor="middle" x="1151.5" y="-385.8" font-family="Times,serif" font-size="14.00">Picture selected, via kiosk review screen, from those </text>
-<text text-anchor="middle" x="1151.5" y="-370.8" font-family="Times,serif" font-size="14.00">extracted from exhibit</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1305.5,-316 997.5,-316 997.5,-232 1305.5,-232 1305.5,-316"/>
+<text text-anchor="middle" x="1151.5" y="-300.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;9</text>
+<text text-anchor="middle" x="1151.5" y="-285.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:03:00+00:00]</text>
+<text text-anchor="middle" x="1151.5" y="-254.8" font-family="Times,serif" font-size="14.00">Picture selected, via kiosk review screen, from those </text>
+<text text-anchor="middle" x="1151.5" y="-239.8" font-family="Times,serif" font-size="14.00">extracted from exhibit</text>
 </g>
 <!-- _ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf&#45;&gt;_941a648d460e10f52ae5cc7f6eb5db5c86c6ed72a0c34236d8581d5862aaedc5 -->
 <g id="edge2" class="edge">
 <title>_ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf&#45;&gt;_941a648d460e10f52ae5cc7f6eb5db5c86c6ed72a0c34236d8581d5862aaedc5</title>
-<path fill="none" stroke="#0000cd" d="M991.47,-493.98C1015.02,-481.03 1042.34,-466.01 1067.68,-452.08"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="1069.47,-455.09 1076.55,-447.21 1066.1,-448.96 1069.47,-455.09"/>
-<text text-anchor="middle" x="1073" y="-468" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M991.47,-185.02C1015.02,-197.97 1042.34,-212.99 1067.68,-226.92"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="1066.1,-230.04 1076.55,-231.79 1069.47,-223.91 1066.1,-230.04"/>
+<text text-anchor="middle" x="1073" y="-206" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _753f23f085ba053a1cef5bc11a3966f236ce4b8988665c637e11a4e390141490 -->
 <g id="node3" class="node">
 <title>_753f23f085ba053a1cef5bc11a3966f236ce4b8988665c637e11a4e390141490</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1257.5,-679 1051.5,-679 1051.5,-610 1257.5,-610 1257.5,-679"/>
-<text text-anchor="middle" x="1154.5" y="-663.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;11</text>
-<text text-anchor="middle" x="1154.5" y="-648.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:10:00+00:00]</text>
-<text text-anchor="middle" x="1154.5" y="-617.8" font-family="Times,serif" font-size="14.00">DVD Report sealed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1257.5,-69 1051.5,-69 1051.5,0 1257.5,0 1257.5,-69"/>
+<text text-anchor="middle" x="1154.5" y="-53.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;11</text>
+<text text-anchor="middle" x="1154.5" y="-38.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:10:00+00:00]</text>
+<text text-anchor="middle" x="1154.5" y="-7.8" font-family="Times,serif" font-size="14.00">DVD Report sealed</text>
 </g>
 <!-- _b367090120b789a413530191b095fe7b7477e0a0b0cc65a7b18a796aa780ef17 -->
 <g id="node4" class="node">
 <title>_b367090120b789a413530191b095fe7b7477e0a0b0cc65a7b18a796aa780ef17</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1033.5,-679 827.5,-679 827.5,-610 1033.5,-610 1033.5,-679"/>
-<text text-anchor="middle" x="930.5" y="-663.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;12</text>
-<text text-anchor="middle" x="930.5" y="-648.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:15:00+00:00]</text>
-<text text-anchor="middle" x="930.5" y="-617.8" font-family="Times,serif" font-size="14.00">Witness statement completed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1033.5,-69 827.5,-69 827.5,0 1033.5,0 1033.5,-69"/>
+<text text-anchor="middle" x="930.5" y="-53.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;12</text>
+<text text-anchor="middle" x="930.5" y="-38.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:15:00+00:00]</text>
+<text text-anchor="middle" x="930.5" y="-7.8" font-family="Times,serif" font-size="14.00">Witness statement completed</text>
 </g>
 <!-- _b367090120b789a413530191b095fe7b7477e0a0b0cc65a7b18a796aa780ef17&#45;&gt;_ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf -->
 <g id="edge3" class="edge">
 <title>_b367090120b789a413530191b095fe7b7477e0a0b0cc65a7b18a796aa780ef17&#45;&gt;_ec0cb8088f36a6d530964f849bcd494db43ffc891f124b195c953806366280bf</title>
-<path fill="none" stroke="#0000cd" d="M930.5,-609.91C930.5,-598.53 930.5,-585.65 930.5,-573.58"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="934,-573.24 930.5,-563.24 927,-573.24 934,-573.24"/>
-<text text-anchor="middle" x="963" y="-584" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M930.5,-69.09C930.5,-80.47 930.5,-93.35 930.5,-105.42"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="927,-105.76 930.5,-115.76 934,-105.76 927,-105.76"/>
+<text text-anchor="middle" x="963" y="-90" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _0bcbe477b1432ed8c27180001859454a9d58edf142d4f08ced342c22a32f04d9 -->
 <g id="node5" class="node">
 <title>_0bcbe477b1432ed8c27180001859454a9d58edf142d4f08ced342c22a32f04d9</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="339,-316 0,-316 0,-232 339,-232 339,-316"/>
-<text text-anchor="middle" x="169.5" y="-300.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;13</text>
-<text text-anchor="middle" x="169.5" y="-285.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:20:00+00:00]</text>
-<text text-anchor="middle" x="169.5" y="-254.8" font-family="Times,serif" font-size="14.00">Sealed Exhibit handed the OIC &amp; Transfer documentation </text>
-<text text-anchor="middle" x="169.5" y="-239.8" font-family="Times,serif" font-size="14.00">signed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="339,-447 0,-447 0,-363 339,-363 339,-447"/>
+<text text-anchor="middle" x="169.5" y="-431.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;13</text>
+<text text-anchor="middle" x="169.5" y="-416.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:20:00+00:00]</text>
+<text text-anchor="middle" x="169.5" y="-385.8" font-family="Times,serif" font-size="14.00">Sealed Exhibit handed the OIC &amp; Transfer documentation </text>
+<text text-anchor="middle" x="169.5" y="-370.8" font-family="Times,serif" font-size="14.00">signed</text>
 </g>
 <!-- _4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b -->
 <g id="node7" class="node">
 <title>_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="680.5,-185 464.5,-185 464.5,-116 680.5,-116 680.5,-185"/>
-<text text-anchor="middle" x="572.5" y="-169.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;3</text>
-<text text-anchor="middle" x="572.5" y="-154.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:05:30+00:00]</text>
-<text text-anchor="middle" x="572.5" y="-123.8" font-family="Times,serif" font-size="14.00">Exhibit assigned to Kiosk technician</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="680.5,-563 464.5,-563 464.5,-494 680.5,-494 680.5,-563"/>
+<text text-anchor="middle" x="572.5" y="-547.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;3</text>
+<text text-anchor="middle" x="572.5" y="-532.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:05:30+00:00]</text>
+<text text-anchor="middle" x="572.5" y="-501.8" font-family="Times,serif" font-size="14.00">Exhibit assigned to Kiosk technician</text>
 </g>
 <!-- _0bcbe477b1432ed8c27180001859454a9d58edf142d4f08ced342c22a32f04d9&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b -->
 <g id="edge4" class="edge">
 <title>_0bcbe477b1432ed8c27180001859454a9d58edf142d4f08ced342c22a32f04d9&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b</title>
-<path fill="none" stroke="#0000cd" d="M305.66,-231.95C353.96,-217.39 407.88,-201.13 454.54,-187.06"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="455.82,-190.33 464.38,-184.1 453.8,-183.63 455.82,-190.33"/>
-<text text-anchor="middle" x="428" y="-206" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M305.66,-447.05C353.96,-461.61 407.88,-477.87 454.54,-491.94"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="453.8,-495.37 464.38,-494.9 455.82,-488.67 453.8,-495.37"/>
+<text text-anchor="middle" x="428" y="-468" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _16dd34a8048eca99a315b5a0099fa706f30ea216d66af3f4a0fef75f42d67efd -->
 <g id="node6" class="node">
 <title>_16dd34a8048eca99a315b5a0099fa706f30ea216d66af3f4a0fef75f42d67efd</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="446,-185 129,-185 129,-116 446,-116 446,-185"/>
-<text text-anchor="middle" x="287.5" y="-169.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;2</text>
-<text text-anchor="middle" x="287.5" y="-154.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:05:00+00:00]</text>
-<text text-anchor="middle" x="287.5" y="-123.8" font-family="Times,serif" font-size="14.00">Exhibit seal checks (passed) &amp; Exhibit receipted in lab</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="446,-563 129,-563 129,-494 446,-494 446,-563"/>
+<text text-anchor="middle" x="287.5" y="-547.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;2</text>
+<text text-anchor="middle" x="287.5" y="-532.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:05:00+00:00]</text>
+<text text-anchor="middle" x="287.5" y="-501.8" font-family="Times,serif" font-size="14.00">Exhibit seal checks (passed) &amp; Exhibit receipted in lab</text>
 </g>
 <!-- _16dd34a8048eca99a315b5a0099fa706f30ea216d66af3f4a0fef75f42d67efd&#45;&gt;_f69d7472a828b3c904780e8db73164a2b909dfe0ebb831bb1d513ce42cd49721 -->
 <g id="edge5" class="edge">
 <title>_16dd34a8048eca99a315b5a0099fa706f30ea216d66af3f4a0fef75f42d67efd&#45;&gt;_f69d7472a828b3c904780e8db73164a2b909dfe0ebb831bb1d513ce42cd49721</title>
-<path fill="none" stroke="#0000cd" d="M300.46,-115.91C304.94,-104.3 310.03,-91.13 314.77,-78.85"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="318.14,-79.83 318.48,-69.24 311.61,-77.31 318.14,-79.83"/>
-<text text-anchor="middle" x="344" y="-90" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M300.46,-563.09C304.94,-574.7 310.03,-587.87 314.77,-600.15"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="311.61,-601.69 318.48,-609.76 318.14,-599.17 311.61,-601.69"/>
+<text text-anchor="middle" x="344" y="-584" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b&#45;&gt;_f69d7472a828b3c904780e8db73164a2b909dfe0ebb831bb1d513ce42cd49721 -->
 <g id="edge6" class="edge">
 <title>_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b&#45;&gt;_f69d7472a828b3c904780e8db73164a2b909dfe0ebb831bb1d513ce42cd49721</title>
-<path fill="none" stroke="#0000cd" d="M501.5,-115.91C473.31,-102.58 440.74,-87.17 411.71,-73.44"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="412.95,-70.16 402.41,-69.04 409.96,-76.48 412.95,-70.16"/>
-<text text-anchor="middle" x="492" y="-90" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M501.5,-563.09C473.31,-576.42 440.74,-591.83 411.71,-605.56"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="409.96,-602.52 402.41,-609.96 412.95,-608.84 409.96,-602.52"/>
+<text text-anchor="middle" x="492" y="-584" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _a4cd5e32ce07b45de21d91f6242aad329c8121fde920cfcfebb4d6da141f49f5 -->
 <g id="node8" class="node">
 <title>_a4cd5e32ce07b45de21d91f6242aad329c8121fde920cfcfebb4d6da141f49f5</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="563.5,-308.5 357.5,-308.5 357.5,-239.5 563.5,-239.5 563.5,-308.5"/>
-<text text-anchor="middle" x="460.5" y="-293.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;4</text>
-<text text-anchor="middle" x="460.5" y="-278.3" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:15:00+00:00]</text>
-<text text-anchor="middle" x="460.5" y="-247.3" font-family="Times,serif" font-size="14.00">Sealed Exhibit Photographed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="563.5,-439.5 357.5,-439.5 357.5,-370.5 563.5,-370.5 563.5,-439.5"/>
+<text text-anchor="middle" x="460.5" y="-424.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;4</text>
+<text text-anchor="middle" x="460.5" y="-409.3" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:15:00+00:00]</text>
+<text text-anchor="middle" x="460.5" y="-378.3" font-family="Times,serif" font-size="14.00">Sealed Exhibit Photographed</text>
 </g>
 <!-- _a4cd5e32ce07b45de21d91f6242aad329c8121fde920cfcfebb4d6da141f49f5&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b -->
 <g id="edge7" class="edge">
 <title>_a4cd5e32ce07b45de21d91f6242aad329c8121fde920cfcfebb4d6da141f49f5&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b</title>
-<path fill="none" stroke="#0000cd" d="M491.4,-239.48C504.63,-225.12 520.22,-208.21 534.18,-193.07"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="537.11,-195.06 541.31,-185.33 531.96,-190.31 537.11,-195.06"/>
-<text text-anchor="middle" x="556" y="-206" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M491.4,-439.52C504.63,-453.88 520.22,-470.79 534.18,-485.93"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="531.96,-488.69 541.31,-493.67 537.11,-483.94 531.96,-488.69"/>
+<text text-anchor="middle" x="556" y="-468" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _3608809be4f97a4bf692c2d8f136b7b50753b36f464063c601296926456e1654 -->
 <g id="node9" class="node">
 <title>_3608809be4f97a4bf692c2d8f136b7b50753b36f464063c601296926456e1654</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1481.5,-679 1275.5,-679 1275.5,-610 1481.5,-610 1481.5,-679"/>
-<text text-anchor="middle" x="1378.5" y="-663.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;5</text>
-<text text-anchor="middle" x="1378.5" y="-648.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:20:00+00:00]</text>
-<text text-anchor="middle" x="1378.5" y="-617.8" font-family="Times,serif" font-size="14.00">Exhibit Unsealed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1481.5,-69 1275.5,-69 1275.5,0 1481.5,0 1481.5,-69"/>
+<text text-anchor="middle" x="1378.5" y="-53.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;5</text>
+<text text-anchor="middle" x="1378.5" y="-38.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:20:00+00:00]</text>
+<text text-anchor="middle" x="1378.5" y="-7.8" font-family="Times,serif" font-size="14.00">Exhibit Unsealed</text>
 </g>
 <!-- _fbc4cac489edf2b11ef60f73c6fd5f8f7bf7013dc9b901754a6c1b02ac026c4d -->
 <g id="node10" class="node">
 <title>_fbc4cac489edf2b11ef60f73c6fd5f8f7bf7013dc9b901754a6c1b02ac026c4d</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="787.5,-308.5 581.5,-308.5 581.5,-239.5 787.5,-239.5 787.5,-308.5"/>
-<text text-anchor="middle" x="684.5" y="-293.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;6</text>
-<text text-anchor="middle" x="684.5" y="-278.3" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:21:00+00:00]</text>
-<text text-anchor="middle" x="684.5" y="-247.3" font-family="Times,serif" font-size="14.00">Unsealed Exhibit Photographed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="787.5,-439.5 581.5,-439.5 581.5,-370.5 787.5,-370.5 787.5,-439.5"/>
+<text text-anchor="middle" x="684.5" y="-424.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;6</text>
+<text text-anchor="middle" x="684.5" y="-409.3" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T14:21:00+00:00]</text>
+<text text-anchor="middle" x="684.5" y="-378.3" font-family="Times,serif" font-size="14.00">Unsealed Exhibit Photographed</text>
 </g>
 <!-- _fbc4cac489edf2b11ef60f73c6fd5f8f7bf7013dc9b901754a6c1b02ac026c4d&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b -->
 <g id="edge8" class="edge">
 <title>_fbc4cac489edf2b11ef60f73c6fd5f8f7bf7013dc9b901754a6c1b02ac026c4d&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b</title>
-<path fill="none" stroke="#0000cd" d="M653.6,-239.48C640.37,-225.12 624.78,-208.21 610.82,-193.07"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="613.04,-190.31 603.69,-185.33 607.89,-195.06 613.04,-190.31"/>
-<text text-anchor="middle" x="661" y="-206" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M653.6,-439.52C640.37,-453.88 624.78,-470.79 610.82,-485.93"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="607.89,-483.94 603.69,-493.67 613.04,-488.69 607.89,-483.94"/>
+<text text-anchor="middle" x="661" y="-468" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b -->
 <g id="edge9" class="edge">
 <title>_728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7&#45;&gt;_4fff92433990a9c7d101f2962972eeee4ef83c4b30e26db77fece7989bf9265b</title>
-<path fill="none" stroke="#0000cd" d="M843.98,-231.95C794.08,-217.16 738.29,-200.63 690.33,-186.42"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="691.11,-183 680.53,-183.51 689.12,-189.71 691.11,-183"/>
-<text text-anchor="middle" x="810" y="-206" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
+<path fill="none" stroke="#0000cd" d="M843.98,-447.05C794.08,-461.84 738.29,-478.37 690.33,-492.58"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="689.12,-489.29 680.53,-495.49 691.11,-496 689.12,-489.29"/>
+<text text-anchor="middle" x="810" y="-468" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 <!-- _c2d2c936c49ff4c98e5030252a5f1b219d026d517ab25a6ac2298fa3112d962e -->
 <g id="node12" class="node">
 <title>_c2d2c936c49ff4c98e5030252a5f1b219d026d517ab25a6ac2298fa3112d962e</title>
-<polygon fill="#9fb1fc" stroke="#0000ff" points="1705.5,-679 1499.5,-679 1499.5,-610 1705.5,-610 1705.5,-679"/>
-<text text-anchor="middle" x="1602.5" y="-663.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;8</text>
-<text text-anchor="middle" x="1602.5" y="-648.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:00:00+00:00]</text>
-<text text-anchor="middle" x="1602.5" y="-617.8" font-family="Times,serif" font-size="14.00">Exhibit Resealed</text>
+<polygon fill="#9fb1fc" stroke="#0000ff" points="1705.5,-69 1499.5,-69 1499.5,0 1705.5,0 1705.5,-69"/>
+<text text-anchor="middle" x="1602.5" y="-53.8" font-family="Times,serif" font-size="14.00">ID &#45; kb:action&#45;uuid&#45;8</text>
+<text text-anchor="middle" x="1602.5" y="-38.8" font-family="Times,serif" font-size="14.00"> (..., 2019&#45;01&#45;01T15:00:00+00:00]</text>
+<text text-anchor="middle" x="1602.5" y="-7.8" font-family="Times,serif" font-size="14.00">Exhibit Resealed</text>
 </g>
 <!-- _941a648d460e10f52ae5cc7f6eb5db5c86c6ed72a0c34236d8581d5862aaedc5&#45;&gt;_728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7 -->
 <g id="edge10" class="edge">
 <title>_941a648d460e10f52ae5cc7f6eb5db5c86c6ed72a0c34236d8581d5862aaedc5&#45;&gt;_728161ffc6ebe8725602a10a1e900a5e8f082d454ee552e12d53701fd976c7c7</title>
-<path fill="none" stroke="#0000cd" d="M1097.56,-362.83C1080.71,-349.97 1061.98,-335.67 1044.62,-322.41"/>
-<polygon fill="#0000cd" stroke="#0000cd" points="1046.29,-319.29 1036.21,-316 1042.04,-324.85 1046.29,-319.29"/>
+<path fill="none" stroke="#0000cd" d="M1097.56,-316.17C1080.71,-329.03 1061.98,-343.33 1044.62,-356.59"/>
+<polygon fill="#0000cd" stroke="#0000cd" points="1042.04,-354.15 1036.21,-363 1046.29,-359.71 1042.04,-354.15"/>
 <text text-anchor="middle" x="1104" y="-337" font-family="Times,serif" font-size="10.00">wasInformedBy</text>
 </g>
 </g>
