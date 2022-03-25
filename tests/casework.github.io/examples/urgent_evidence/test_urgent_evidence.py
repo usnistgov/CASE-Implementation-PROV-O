@@ -11,14 +11,16 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+import typing
+
 import rdflib
 
 
-def test_chain_of_communication():
+def test_chain_of_communication() -> None:
     graph = rdflib.Graph()
     graph.parse("urgent_evidence-prov.ttl", format="turtle")
-    expected = set()
-    computed = set()
+    expected: typing.Set[str] = set()
+    computed: typing.Set[str] = set()
     computed_all = set()
     computed_linked = set()
     query_all = """\
@@ -41,11 +43,11 @@ WHERE {
     assert expected == computed
 
 
-def test_chain_of_derivation():
+def test_chain_of_derivation() -> None:
     graph = rdflib.Graph()
     graph.parse("urgent_evidence-prov.ttl", format="turtle")
-    expected = set()
-    computed = set()
+    expected: typing.Set[str] = set()
+    computed: typing.Set[str] = set()
     computed_all = set()
     computed_linked = set()
     query_all = """\

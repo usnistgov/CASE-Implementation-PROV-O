@@ -31,10 +31,11 @@ import logging
 import os
 import pprint
 import textwrap
+import typing
 
-import prov.constants
-import prov.dot
-import pydot
+import prov.constants  # type: ignore
+import prov.dot  # type: ignore
+import pydot  # type: ignore
 import rdflib.plugins.sparql
 
 import case_utils
@@ -51,7 +52,8 @@ NS_RDFS = rdflib.RDFS
 PROV_COLLECTION = NS_PROV.Collection
 
 
-def clone_style(prov_constant):
+def clone_style(prov_constant: rdflib.URIRef) -> typing.Dict[str, str]:
+    retval: typing.Dict[str, str]
     if prov_constant == PROV_COLLECTION:
         retval = copy.deepcopy(prov.dot.DOT_PROV_STYLE[prov.constants.PROV_ENTITY])
     else:
@@ -70,19 +72,19 @@ def clone_style(prov_constant):
     return retval
 
 
-def iri_to_gv_node_id(iri):
+def iri_to_gv_node_id(iri: str) -> str:
     hasher = hashlib.sha256()
     hasher.update(iri.encode())
     return "_" + hasher.hexdigest()
 
 
-def iri_to_short_iri(iri):
+def iri_to_short_iri(iri: str) -> str:
     return iri.replace("http://example.org/kb/", "kb:").replace(
         "http://www.w3.org/ns/prov#", "prov:"
     )
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
     parser.add_argument(
@@ -179,7 +181,7 @@ WHERE {
             ("entities", select_query_entities_text),
         ]:
             _logger.debug("Running %s filtering query.", select_query_label)
-            select_query_object = rdflib.plugins.sparql.prepareQuery(
+            select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
                 select_query_text, initNs=nsdict
             )
             for record in graph.query(select_query_object):
@@ -232,7 +234,7 @@ WHERE {
             ("entities", select_query_entities_text),
         ]:
             _logger.debug("Running %s filtering query.", select_query_label)
-            select_query_object = rdflib.plugins.sparql.prepareQuery(
+            select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
                 select_query_text, initNs=nsdict
             )
             for record in graph.query(
@@ -253,10 +255,22 @@ WHERE {
     nodes_entities = dict()
 
     # IRI -> IRI -> short predicate -> (pydot.Edge identifier, kwargs)
-    edges = collections.defaultdict(lambda: collections.defaultdict(dict))
-    edges_deriving = collections.defaultdict(lambda: collections.defaultdict(dict))
-    edges_delegating = collections.defaultdict(lambda: collections.defaultdict(dict))
-    edges_informing = collections.defaultdict(lambda: collections.defaultdict(dict))
+    EdgesType = typing.DefaultDict[
+        str,
+        typing.DefaultDict[
+            str, typing.Dict[str, typing.Tuple[str, str, typing.Dict[str, typing.Any]]]
+        ],
+    ]
+    edges: EdgesType = collections.defaultdict(lambda: collections.defaultdict(dict))
+    edges_deriving: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
+    edges_delegating: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
+    edges_informing: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
 
     wrapper = textwrap.TextWrapper(
         break_long_words=True,
@@ -280,7 +294,7 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
         select_query_text, initNs=nsdict
     )
     for record in graph.query(select_query_object):
@@ -307,7 +321,7 @@ WHERE {
   ?nCollection a prov:Collection .
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
         select_query_text, initNs=nsdict
     )
     for record in graph.query(select_query_object):
@@ -343,7 +357,7 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
         select_query_text, initNs=nsdict
     )
     for record in graph.query(select_query_object):
@@ -392,7 +406,7 @@ WHERE {
   }
 }
 """
-    select_query_object = rdflib.plugins.sparql.prepareQuery(
+    select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
         select_query_text, initNs=nsdict
     )
     for record in graph.query(select_query_object):
@@ -420,9 +434,12 @@ WHERE {
         nodes_activities[activity_iri] = record
 
     def _render_edges(
-        select_query_text: str, short_edge_label: str, kwargs, supplemental_dict=None
+        select_query_text: str,
+        short_edge_label: str,
+        kwargs: typing.Dict[str, str],
+        supplemental_dict: typing.Optional[EdgesType] = None,
     ) -> None:
-        select_query_object = rdflib.plugins.sparql.prepareQuery(
+        select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
             select_query_text, initNs=nsdict
         )
         for record in graph.query(select_query_object):

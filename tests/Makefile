@@ -29,6 +29,7 @@ all: \
   check-CASE-Examples \
   check-black \
   check-casework.github.io \
+  check-mypy \
   clean-CASE-Examples \
   clean-casework.github.io \
   format
@@ -75,6 +76,7 @@ all-casework.github.io: \
 
 check: \
   check-black \
+  check-mypy \
   check-CASE-Examples \
   check-casework.github.io
 
@@ -97,6 +99,14 @@ check-casework.github.io: \
 	$(MAKE) \
 	  --directory casework.github.io/examples \
 	  check
+
+check-mypy: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && mypy \
+	    --exclude venv \
+	    $(top_srcdir)/case_prov \
+	    .
 
 clean: \
   clean-CASE-Examples \

@@ -43,7 +43,7 @@ NS_UCO_IDENTITY = rdflib.Namespace(
 )
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--debug", action="store_true")
     parser.add_argument("--allow-empty-results", action="store_true")
@@ -83,7 +83,7 @@ def main():
     for query_filename in query_filenames:
         _logger.debug("Running query in %r." % query_filename)
         construct_query_text = importlib.resources.read_text(queries, query_filename)
-        construct_query_object = rdflib.plugins.sparql.prepareQuery(
+        construct_query_object = rdflib.plugins.sparql.processor.prepareQuery(
             construct_query_text, initNs=nsdict
         )
         # https://rdfextras.readthedocs.io/en/latest/working_with.html
