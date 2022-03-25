@@ -35,7 +35,7 @@ This repository follows [CASE community guidance on describing development statu
 
 The status of this repository is:
 
-3 - Alpha
+4 - Beta
 
 
 ## Versioning
