@@ -13,6 +13,7 @@
 
 import rdflib
 
+
 def test_chain_of_communication():
     graph = rdflib.Graph()
     graph.parse("urgent_evidence-prov.ttl", format="turtle")
@@ -38,6 +39,7 @@ WHERE {
         computed_linked.add(result[0].toPython())
     computed = computed_all - computed_linked
     assert expected == computed
+
 
 def test_chain_of_derivation():
     graph = rdflib.Graph()
@@ -65,11 +67,10 @@ WHERE {
     computed = computed_all - computed_linked
 
     # TODO Correct website example after documenting discovery method.
-    computed_known_errors = {
-      'http://example.org/kb/file2-uuid-1'
-    }
-    assert len(computed & computed_known_errors) > 0, \
-      "One known error not found - has it been corrected already?"
+    computed_known_errors = {"http://example.org/kb/file2-uuid-1"}
+    assert (
+        len(computed & computed_known_errors) > 0
+    ), "One known error not found - has it been corrected already?"
     computed -= computed_known_errors
 
     assert expected == computed

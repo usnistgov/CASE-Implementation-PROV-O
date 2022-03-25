@@ -31,10 +31,17 @@ from . import queries
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace("https://ontology.caseontology.org/case/investigation/")
+NS_CASE_INVESTIGATION = rdflib.Namespace(
+    "https://ontology.caseontology.org/case/investigation/"
+)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
-NS_UCO_ACTION = rdflib.Namespace("https://ontology.unifiedcyberontology.org/uco/action/")
-NS_UCO_IDENTITY = rdflib.Namespace("https://ontology.unifiedcyberontology.org/uco/identity/")
+NS_UCO_ACTION = rdflib.Namespace(
+    "https://ontology.unifiedcyberontology.org/uco/action/"
+)
+NS_UCO_IDENTITY = rdflib.Namespace(
+    "https://ontology.unifiedcyberontology.org/uco/identity/"
+)
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -57,7 +64,7 @@ def main():
     in_graph.namespace_manager.bind("uco-identity", NS_UCO_IDENTITY)
 
     # Inherit prefixes defined in input context dictionary.
-    nsdict = {k:v for (k,v) in in_graph.namespace_manager.namespaces()}
+    nsdict = {k: v for (k, v) in in_graph.namespace_manager.namespaces()}
     for prefix in nsdict:
         out_graph.namespace_manager.bind(prefix, nsdict[prefix])
 
@@ -76,7 +83,9 @@ def main():
     for query_filename in query_filenames:
         _logger.debug("Running query in %r." % query_filename)
         construct_query_text = importlib.resources.read_text(queries, query_filename)
-        construct_query_object = rdflib.plugins.sparql.prepareQuery(construct_query_text, initNs=nsdict)
+        construct_query_object = rdflib.plugins.sparql.prepareQuery(
+            construct_query_text, initNs=nsdict
+        )
         # https://rdfextras.readthedocs.io/en/latest/working_with.html
         construct_query_result = in_graph.query(construct_query_object)
         _logger.debug("len(construct_query_result) = %d." % len(construct_query_result))
@@ -90,6 +99,7 @@ def main():
             raise ValueError("Failed to construct any results.")
 
     out_graph.serialize(args.out_file)
+
 
 if __name__ == "__main__":
     main()
