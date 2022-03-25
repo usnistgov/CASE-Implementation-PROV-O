@@ -74,6 +74,7 @@ all-casework.github.io: \
 	  --directory casework.github.io/examples
 
 check: \
+  check-black \
   check-CASE-Examples \
   check-casework.github.io
 
