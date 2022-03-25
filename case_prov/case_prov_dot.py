@@ -31,10 +31,11 @@ import logging
 import os
 import pprint
 import textwrap
+import typing
 
-import prov.constants
-import prov.dot
-import pydot
+import prov.constants  # type: ignore
+import prov.dot  # type: ignore
+import pydot  # type: ignore
 import rdflib.plugins.sparql
 
 import case_utils
@@ -82,7 +83,7 @@ def iri_to_short_iri(iri):
     )
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
     parser.add_argument(
@@ -253,10 +254,22 @@ WHERE {
     nodes_entities = dict()
 
     # IRI -> IRI -> short predicate -> (pydot.Edge identifier, kwargs)
-    edges = collections.defaultdict(lambda: collections.defaultdict(dict))
-    edges_deriving = collections.defaultdict(lambda: collections.defaultdict(dict))
-    edges_delegating = collections.defaultdict(lambda: collections.defaultdict(dict))
-    edges_informing = collections.defaultdict(lambda: collections.defaultdict(dict))
+    EdgesType = typing.DefaultDict[
+        str,
+        typing.DefaultDict[
+            str, typing.Dict[str, typing.Tuple[str, str, typing.Dict[str, typing.Any]]]
+        ],
+    ]
+    edges: EdgesType = collections.defaultdict(lambda: collections.defaultdict(dict))
+    edges_deriving: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
+    edges_delegating: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
+    edges_informing: EdgesType = collections.defaultdict(
+        lambda: collections.defaultdict(dict)
+    )
 
     wrapper = textwrap.TextWrapper(
         break_long_words=True,

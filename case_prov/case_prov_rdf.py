@@ -43,7 +43,7 @@ NS_UCO_IDENTITY = rdflib.Namespace(
 )
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--debug", action="store_true")
     parser.add_argument("--allow-empty-results", action="store_true")
