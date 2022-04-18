@@ -13,7 +13,7 @@
 
 SHELL := /bin/bash
 
-PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
+PYTHON3 ?= which python3
 
 top_srcdir := $(shell cd .. ; pwd)
 

@@ -34,4 +34,4 @@ jobs:
     - name: Start from clean state
       run: make clean
     - name: Run tests
-      run: make check
+      run: make PYTHON3=python check
