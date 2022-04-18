@@ -5,6 +5,7 @@
 *.svg
 *.swp
 .DS_Store
+.venv-pre-commit
 _*
 build
 dist
