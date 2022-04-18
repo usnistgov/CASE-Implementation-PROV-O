@@ -13,9 +13,12 @@
 
 SHELL := /bin/bash
 
+PYTHON3 ?= python3
+
 all: \
   .git_submodule_init.done.log
 	$(MAKE) \
+	  PYTHON3=$(PYTHON3) \
 	  --directory tests
 	$(MAKE) \
 	  --directory figures
@@ -29,6 +32,7 @@ all: \
 	git submodule init
 	git submodule update
 	$(MAKE) \
+	  PYTHON3=$(PYTHON3) \
 	  --directory dependencies/CASE-Examples-QC \
 	  .git_submodule_init.done.log
 	touch $@
@@ -36,6 +40,7 @@ all: \
 check: \
   .git_submodule_init.done.log
 	$(MAKE) \
+	  PYTHON3=$(PYTHON3) \
 	  --directory tests \
 	  check
 
