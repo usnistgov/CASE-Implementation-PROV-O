@@ -27,7 +27,6 @@ all: \
   all-CASE-Examples \
   all-casework.github.io \
   check-CASE-Examples \
-  check-black \
   check-casework.github.io \
   check-mypy \
   clean-CASE-Examples \
@@ -75,7 +74,6 @@ all-casework.github.io: \
 	  --directory casework.github.io/examples
 
 check: \
-  check-black \
   check-mypy \
   check-CASE-Examples \
   check-casework.github.io
@@ -85,14 +83,6 @@ check-CASE-Examples: \
 	$(MAKE) \
 	  --directory CASE-Examples/examples/illustrations \
 	  check
-
-check-black: \
-  .venv.done.log
-	source venv/bin/activate \
-	  && black \
-	    --check \
-	    $(top_srcdir)/case_prov \
-	    $$PWD
 
 check-casework.github.io: \
   .venv.done.log
@@ -125,10 +115,3 @@ clean-casework.github.io:
 	@$(MAKE) \
 	  --directory casework.github.io/examples \
 	  clean
-
-format: \
-  .venv.done.log
-	source venv/bin/activate \
-	  && black \
-	    $(top_srcdir)/case_prov \
-	    $$PWD
