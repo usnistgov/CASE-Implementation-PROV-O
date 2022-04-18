@@ -38,6 +38,7 @@ NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_UCO_ACTION = rdflib.Namespace(
     "https://ontology.unifiedcyberontology.org/uco/action/"
 )
+NS_UCO_CORE = rdflib.Namespace("https://ontology.unifiedcyberontology.org/uco/core/")
 NS_UCO_IDENTITY = rdflib.Namespace(
     "https://ontology.unifiedcyberontology.org/uco/identity/"
 )
@@ -63,6 +64,7 @@ def main() -> None:
     in_graph.namespace_manager.bind("case-investigation", NS_CASE_INVESTIGATION)
     in_graph.namespace_manager.bind("prov", NS_PROV)
     in_graph.namespace_manager.bind("uco-action", NS_UCO_ACTION)
+    in_graph.namespace_manager.bind("uco-core", NS_UCO_CORE)
     in_graph.namespace_manager.bind("uco-identity", NS_UCO_IDENTITY)
 
     # Inherit prefixes defined in input context dictionary.
