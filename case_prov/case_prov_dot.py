@@ -93,6 +93,10 @@ def main() -> None:
         help="Use dash-style edges for graph nodes not also related by qualifying Influences.",
     )
     parser.add_argument(
+        "--query-ancestry",
+        help="Visualize the ancestry of the nodes returned by the SPARQL query in this file.  Query must be a SELECT that returns non-blank nodes.",
+    )
+    parser.add_argument(
         "--entity-ancestry",
         help="Visualize the ancestry of the node with this IRI.  If absent, entire graph is returned.",
     )  # TODO - Add inverse --entity-progeny as well.
@@ -142,7 +146,7 @@ def main() -> None:
     graph.add((NS_PROV.SoftwareAgent, NS_RDFS.subClassOf, NS_PROV.Agent))
 
     # An include-list.
-    filter_iris = None
+    filter_iris: typing.Optional[typing.Set[str]] = None
     if args.from_empty_set:
         filter_iris = set()
         filter_iris.add("http://www.w3.org/ns/prov#EmptyCollection")
@@ -190,9 +194,31 @@ WHERE {
                 filter_iri = n_include.toPython()
                 filter_iris.add(filter_iri)
             _logger.debug("len(filter_iris) = %d.", len(filter_iris))
-    elif args.entity_ancestry:
+    elif args.entity_ancestry or args.query_ancestry:
         filter_iris = set()
-        filter_iris.add(args.entity_ancestry)
+        terminal_iris: typing.Set[str] = set()
+        if args.entity_ancestry:
+            filter_iris.add(args.entity_ancestry)
+            terminal_iris.add(args.entity_ancestry)
+        elif args.query_ancestry:
+            query_ancestry_text: typing.Optional[str] = None
+            with open(args.query_ancestry, "r") as in_fh:
+                query_ancestry_text = in_fh.read(2**22)  # 4KiB
+            assert not query_ancestry_text is None
+            _logger.debug("query_ancestry_text = %r.", query_ancestry_text)
+            query_ancestry_object = rdflib.plugins.sparql.processor.prepareQuery(
+                query_ancestry_text, initNs=nsdict
+            )
+            for result in graph.query(query_ancestry_object):
+                for result_member in result:
+                    if not isinstance(result_member, rdflib.URIRef):
+                        raise ValueError(
+                            "Query in file %r must return URIRefs."
+                            % args.query_ancestry
+                        )
+                    terminal_iris.add(str(result_member))
+        _logger.debug("len(terminal_iris) = %d.", len(terminal_iris))
+
         select_query_actions_text = """\
 SELECT ?nDerivingAction
 WHERE {
@@ -238,13 +264,15 @@ WHERE {
             select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
                 select_query_text, initNs=nsdict
             )
-            for record in graph.query(
-                select_query_object,
-                initBindings={"nEndIRI": rdflib.URIRef(args.entity_ancestry)},
-            ):
-                (n_include,) = record
-                filter_iri = n_include.toPython()
-                filter_iris.add(filter_iri)
+
+            for terminal_iri in terminal_iris:
+                for record in graph.query(
+                    select_query_object,
+                    initBindings={"nEndIRI": rdflib.URIRef(terminal_iri)},
+                ):
+                    (n_include,) = record
+                    filter_iri = n_include.toPython()
+                    filter_iris.add(filter_iri)
             _logger.debug("len(filter_iris) = %d.", len(filter_iris))
     _logger.debug("filter_iris = %s.", pprint.pformat(filter_iris))
 
