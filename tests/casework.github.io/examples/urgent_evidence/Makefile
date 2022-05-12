@@ -17,12 +17,15 @@ top_srcdir := $(shell cd ../../../.. ; pwd)
 
 tests_srcdir := $(top_srcdir)/tests
 
+urgent_evidence_json := $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/casework.github.io/examples/urgent_evidence/urgent_evidence.json
+
 all:
 	$(MAKE) \
 	  --file ../src/example.mk
 	$(MAKE) \
 	  urgent_evidence-prov-activities-focus-extracted-file-uuid-1.svg \
 	  urgent_evidence-prov-all-focus-extracted-file-uuid-1.svg \
+	  urgent_evidence-prov-all-focus-jpegs.svg \
 	  urgent_evidence-prov-all-initial_investigative_actions.svg \
 	  urgent_evidence-prov-entities-focus-extracted-file-uuid-1.svg
 
@@ -67,6 +70,20 @@ urgent_evidence-prov-all-focus-extracted-file-uuid-1.dot: \
 	    --entity-ancestry http://example.org/kb/extracted-file-uuid-1 \
 	    _$@ \
 	    $<
+	mv _$@ $@
+
+urgent_evidence-prov-all-focus-jpegs.dot: \
+  select-jpegs.sparql \
+  urgent_evidence-prov.ttl \
+  $(top_srcdir)/case_prov/case_prov_dot.py
+	source $(tests_srcdir)/venv/bin/activate \
+	  && case_prov_dot \
+	    --dash-unqualified \
+	    --debug \
+	    --query-ancestry select-jpegs.sparql \
+	    _$@ \
+  	    urgent_evidence-prov.ttl \
+  	    $(urgent_evidence_json)
 	mv _$@ $@
 
 urgent_evidence-prov-all-initial_investigative_actions.dot: \
