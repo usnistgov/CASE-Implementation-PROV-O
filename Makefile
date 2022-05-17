@@ -43,7 +43,7 @@ all: \
 .venv-pre-commit/var/.pre-commit-built.log:
 	rm -rf .venv-pre-commit
 	test -r .pre-commit-config.yaml \
-	  || (echo "ERROR:Makefile:pre-commit is expected to install for this repository, but .pre-commit-config.yaml does not expect to exist." >&2 ; exit 1)
+	  || (echo "ERROR:Makefile:pre-commit is expected to install for this repository, but .pre-commit-config.yaml does not seem to exist." >&2 ; exit 1)
 	$(PYTHON3) -m venv \
 	  .venv-pre-commit
 	source .venv-pre-commit/bin/activate \
