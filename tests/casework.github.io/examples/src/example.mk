@@ -54,16 +54,8 @@ $(subjectdir_basename)-prov.ttl: \
 	  && case_prov_rdf \
 	    --allow-empty-results \
 	    --debug \
-	    __$@ \
+	    _$@ \
 	    $<
-	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
-	  -ibi \
-	  -ibn \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
 	mv _$@ $@
 
 $(subjectdir_basename)-prov-activities.dot: \

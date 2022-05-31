@@ -1,6 +1,7 @@
 *.done.log
 *.dot
 *.egg-info
+*.jar
 *.png
 *.svg
 *.swp
