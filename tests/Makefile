@@ -36,9 +36,9 @@ all: \
 .venv.done.log: \
   $(qc_srcdir)/deps/requirements.txt \
   $(top_srcdir)/.git_submodule_init.done.log \
-  $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt \
   $(top_srcdir)/setup.cfg \
-  $(top_srcdir)/setup.py
+  $(top_srcdir)/setup.py \
+  requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
 	  venv
@@ -50,17 +50,14 @@ all: \
 	    wheel
 	source venv/bin/activate \
 	  && pip install \
-	    $(top_srcdir)/dependencies/CASE-Utilities-Python
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt
-	source venv/bin/activate \
-	  && pip install \
 	    --editable \
 	    $(top_srcdir)
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(qc_srcdir)/deps/requirements.txt
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement requirements.txt
 	touch $@
 
 all-CASE-Examples: \
