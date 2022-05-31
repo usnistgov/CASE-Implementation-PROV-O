@@ -33,12 +33,11 @@ import pprint
 import textwrap
 import typing
 
+import case_utils
 import prov.constants  # type: ignore
 import prov.dot  # type: ignore
 import pydot  # type: ignore
 import rdflib.plugins.sparql
-
-import case_utils
 
 _logger = logging.getLogger(os.path.basename(__file__))
 

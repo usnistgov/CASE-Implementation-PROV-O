@@ -19,13 +19,12 @@ __version__ = "0.2.0"
 
 import argparse
 import glob
+import importlib.resources
 import logging
 import os
-import importlib.resources
-
-import rdflib.plugins.sparql
 
 import case_utils
+import rdflib.plugins.sparql
 
 from . import queries
 
