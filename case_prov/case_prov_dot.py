@@ -33,17 +33,14 @@ import pprint
 import textwrap
 import typing
 
-import case_utils
 import prov.constants  # type: ignore
 import prov.dot  # type: ignore
 import pydot  # type: ignore
 import rdflib.plugins.sparql
+from case_utils.namespace import NS_CASE_INVESTIGATION
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace(
-    "https://ontology.caseontology.org/case/investigation/"
-)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_RDFS = rdflib.RDFS
 
@@ -203,7 +200,7 @@ WHERE {
             query_ancestry_text: typing.Optional[str] = None
             with open(args.query_ancestry, "r") as in_fh:
                 query_ancestry_text = in_fh.read(2**22)  # 4KiB
-            assert not query_ancestry_text is None
+            assert query_ancestry_text is not None
             _logger.debug("query_ancestry_text = %r.", query_ancestry_text)
             query_ancestry_object = rdflib.plugins.sparql.processor.prepareQuery(
                 query_ancestry_text, initNs=nsdict
@@ -329,9 +326,9 @@ WHERE {
         (n_agent, l_label, l_comment) = record
         agent_iri = n_agent.toPython()
         dot_label = "ID - " + iri_to_short_iri(agent_iri)
-        if not l_label is None:
+        if l_label is not None:
             dot_label += "\n" + l_label.toPython()
-        if not l_comment is None:
+        if l_comment is not None:
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_AGENT)
         kwargs["label"] = dot_label
@@ -395,11 +392,11 @@ WHERE {
     for entity_iri in sorted(entity_iri_to_label_comment):
         (l_label, l_comment, l_exhibit_number) = entity_iri_to_label_comment[entity_iri]
         dot_label = "ID - " + iri_to_short_iri(entity_iri)
-        if not l_exhibit_number is None:
+        if l_exhibit_number is not None:
             dot_label += "\nExhibit - " + l_exhibit_number.toPython()
-        if not l_label is None:
+        if l_label is not None:
             dot_label += "\n" + l_label.toPython()
-        if not l_comment is None:
+        if l_comment is not None:
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         if entity_iri in collection_iris:
             kwargs = clone_style(PROV_COLLECTION)
@@ -441,9 +438,9 @@ WHERE {
         (n_activity, l_label, l_comment, l_start_time, l_end_time) = record
         activity_iri = n_activity.toPython()
         dot_label = "ID - " + iri_to_short_iri(activity_iri)
-        if not l_label is None:
+        if l_label is not None:
             dot_label += "\n" + l_label.toPython()
-        if not l_start_time is None or not l_end_time is None:
+        if l_start_time is not None or l_end_time is not None:
             if l_start_time is None:
                 dot_label += "\n (..., "
             else:
@@ -452,7 +449,7 @@ WHERE {
                 dot_label += "...)"
             else:
                 dot_label += "%s]" % l_end_time
-        if not l_comment is None:
+        if l_comment is not None:
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_ACTIVITY)
         kwargs["label"] = dot_label
@@ -478,7 +475,7 @@ WHERE {
             gv_node_id_2 = iri_to_gv_node_id(thing_2_iri)
             record = (gv_node_id_1, gv_node_id_2, kwargs)
             edges[thing_1_iri][thing_2_iri][short_edge_label] = record
-            if not supplemental_dict is None:
+            if supplemental_dict is not None:
                 supplemental_dict[thing_1_iri][thing_2_iri][short_edge_label] = record
 
     # Render actedOnBehalfOf.
@@ -770,7 +767,7 @@ WHERE {
         dot_graph.add_node(dot_node)
     for iri_1 in sorted(iris_used):
         for iri_2 in sorted(edges[iri_1].keys()):
-            if not iri_2 in iris_used:
+            if iri_2 not in iris_used:
                 continue
             for short_edge_label in sorted(edges[iri_1][iri_2]):
                 # short_edge_label is intentionally not used aside from as a selector.  Edge labelling is left to pydot.

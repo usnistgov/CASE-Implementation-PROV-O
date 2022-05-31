@@ -18,29 +18,23 @@ This script executes CONSTRUCT queries, returning a supplemental graph.
 __version__ = "0.2.0"
 
 import argparse
-import glob
 import importlib.resources
 import logging
 import os
 
-import case_utils
 import rdflib.plugins.sparql
+from case_utils.namespace import (
+    NS_CASE_INVESTIGATION,
+    NS_UCO_ACTION,
+    NS_UCO_CORE,
+    NS_UCO_IDENTITY,
+)
 
 from . import queries
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace(
-    "https://ontology.caseontology.org/case/investigation/"
-)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
-NS_UCO_ACTION = rdflib.Namespace(
-    "https://ontology.unifiedcyberontology.org/uco/action/"
-)
-NS_UCO_CORE = rdflib.Namespace("https://ontology.unifiedcyberontology.org/uco/core/")
-NS_UCO_IDENTITY = rdflib.Namespace(
-    "https://ontology.unifiedcyberontology.org/uco/identity/"
-)
 
 
 def main() -> None:
