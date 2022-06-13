@@ -168,3 +168,9 @@ On the other hand, there may be times when the CASE mapping into PROV-O can prov
 To illustrate the difference in projective capability of the subject CASE instance data, a solid line is used to represent when a qualified relationship was constructed from the CASE instance data.  A dashed line is used to represent when a direct relationship was constructed, but the qualified relationship could not be constructed.  This figure presents a variant on the above example, with the source data in [`readme-attribution.ttl`](figures/readme-attribution.ttl):
 
 ![Qualified vs. unqualified relationship illustration](figures/readme-attribution.svg)
+
+## Licensing
+
+This repository is licensed under the Apache 2.0 License.  See [LICENSE](LICENSE).
+
+Portions of this repository contributed by NIST are governed by the [NIST Software Licensing Statement](THIRD_PARTY_LICENSES.md#nist-software-licensing-statement).
