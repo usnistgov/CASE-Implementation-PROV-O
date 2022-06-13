@@ -1,3 +1,6 @@
+Portions of this repository contributed by NIST are governed by
+the following license.
+
 # NIST Software Licensing Statement
 
 NIST-developed software is provided by NIST as a public service.
