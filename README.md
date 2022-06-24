@@ -48,8 +48,8 @@ This project follows [SEMVER 2.0.0](https://semver.org/) where versions are decl
 
 This repository supports the CASE and UCO ontology versions that are distributed with the [CASE-Utilities-Python repository](https://github.com/casework/CASE-Utilities-Python), at the newest version below a ceiling-pin in [setup.cfg](setup.cfg).  Currently, those ontology versions are:
 
-* CASE 0.6.0
-* UCO 0.8.0
+* CASE 0.7.0
+* UCO 0.9.0
 
 
 ## Repository locations
