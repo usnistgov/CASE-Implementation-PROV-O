@@ -82,8 +82,8 @@ urgent_evidence-prov-all-focus-jpegs.dot: \
 	    --debug \
 	    --query-ancestry select-jpegs.sparql \
 	    _$@ \
-  	    urgent_evidence-prov.ttl \
-  	    $(urgent_evidence_json)
+	    urgent_evidence-prov.ttl \
+	    $(urgent_evidence_json)
 	mv _$@ $@
 
 urgent_evidence-prov-all-initial_investigative_actions.dot: \

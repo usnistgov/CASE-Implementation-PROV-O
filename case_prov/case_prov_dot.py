@@ -21,7 +21,7 @@ This script renders PROV-O elements of a graph according to the graphic design e
 # get quoted.  This turns out to be a dot syntax error.  Need to report
 # this upstream to pydot.
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 import argparse
 import collections
