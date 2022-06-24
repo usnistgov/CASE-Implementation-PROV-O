@@ -73,5 +73,5 @@ jobs:
     # If this commit is the result of a Git tag, push the wheel and tar packages
     # to the PyPi registry
     - name: Publish to PyPI
-      if: github.event_name == 'release' && github.event.action == 'created'
+      if: github.event_name == 'release' && github.event.action == 'published'
       run: twine upload --repository-url https://upload.pypi.org/legacy/ -u __token__ -p ${{ secrets.PYPI_API_TOKEN }} --skip-existing --verbose dist/*
