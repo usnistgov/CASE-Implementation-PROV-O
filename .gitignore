@@ -1,10 +1,12 @@
 *.done.log
 *.dot
 *.egg-info
+*.jar
 *.png
 *.svg
 *.swp
 .DS_Store
+.venv-pre-commit
 _*
 build
 dist

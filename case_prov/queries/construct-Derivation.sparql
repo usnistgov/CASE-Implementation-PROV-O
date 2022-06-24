@@ -13,6 +13,10 @@ CONSTRUCT
 {
   # A lengthy explanation on why Generation and Usage are not made here
   # is inlined in case_prov_dot.py.
+  # Also note that this query intentionally creates a Derivation node
+  # per ?nObjectA binding.  A test done in prov-check raises a
+  # PROV-CONSTRAINTs error (though, the test ID has not yet been
+  # determined) if a Derivation houses two prov:entity values.
   ?nObjectB
     prov:qualifiedDerivation [
       a prov:Derivation ;

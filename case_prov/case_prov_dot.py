@@ -21,7 +21,7 @@ This script renders PROV-O elements of a graph according to the graphic design e
 # get quoted.  This turns out to be a dot syntax error.  Need to report
 # this upstream to pydot.
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 import argparse
 import collections
@@ -37,14 +37,10 @@ import prov.constants  # type: ignore
 import prov.dot  # type: ignore
 import pydot  # type: ignore
 import rdflib.plugins.sparql
-
-import case_utils
+from case_utils.namespace import NS_CASE_INVESTIGATION
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace(
-    "https://ontology.caseontology.org/case/investigation/"
-)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
 NS_RDFS = rdflib.RDFS
 
@@ -91,6 +87,10 @@ def main() -> None:
         "--dash-unqualified",
         action="store_true",
         help="Use dash-style edges for graph nodes not also related by qualifying Influences.",
+    )
+    parser.add_argument(
+        "--query-ancestry",
+        help="Visualize the ancestry of the nodes returned by the SPARQL query in this file.  Query must be a SELECT that returns non-blank nodes.",
     )
     parser.add_argument(
         "--entity-ancestry",
@@ -142,7 +142,7 @@ def main() -> None:
     graph.add((NS_PROV.SoftwareAgent, NS_RDFS.subClassOf, NS_PROV.Agent))
 
     # An include-list.
-    filter_iris = None
+    filter_iris: typing.Optional[typing.Set[str]] = None
     if args.from_empty_set:
         filter_iris = set()
         filter_iris.add("http://www.w3.org/ns/prov#EmptyCollection")
@@ -190,9 +190,31 @@ WHERE {
                 filter_iri = n_include.toPython()
                 filter_iris.add(filter_iri)
             _logger.debug("len(filter_iris) = %d.", len(filter_iris))
-    elif args.entity_ancestry:
+    elif args.entity_ancestry or args.query_ancestry:
         filter_iris = set()
-        filter_iris.add(args.entity_ancestry)
+        terminal_iris: typing.Set[str] = set()
+        if args.entity_ancestry:
+            filter_iris.add(args.entity_ancestry)
+            terminal_iris.add(args.entity_ancestry)
+        elif args.query_ancestry:
+            query_ancestry_text: typing.Optional[str] = None
+            with open(args.query_ancestry, "r") as in_fh:
+                query_ancestry_text = in_fh.read(2**22)  # 4KiB
+            assert query_ancestry_text is not None
+            _logger.debug("query_ancestry_text = %r.", query_ancestry_text)
+            query_ancestry_object = rdflib.plugins.sparql.processor.prepareQuery(
+                query_ancestry_text, initNs=nsdict
+            )
+            for result in graph.query(query_ancestry_object):
+                for result_member in result:
+                    if not isinstance(result_member, rdflib.URIRef):
+                        raise ValueError(
+                            "Query in file %r must return URIRefs."
+                            % args.query_ancestry
+                        )
+                    terminal_iris.add(str(result_member))
+        _logger.debug("len(terminal_iris) = %d.", len(terminal_iris))
+
         select_query_actions_text = """\
 SELECT ?nDerivingAction
 WHERE {
@@ -238,13 +260,15 @@ WHERE {
             select_query_object = rdflib.plugins.sparql.processor.prepareQuery(
                 select_query_text, initNs=nsdict
             )
-            for record in graph.query(
-                select_query_object,
-                initBindings={"nEndIRI": rdflib.URIRef(args.entity_ancestry)},
-            ):
-                (n_include,) = record
-                filter_iri = n_include.toPython()
-                filter_iris.add(filter_iri)
+
+            for terminal_iri in terminal_iris:
+                for record in graph.query(
+                    select_query_object,
+                    initBindings={"nEndIRI": rdflib.URIRef(terminal_iri)},
+                ):
+                    (n_include,) = record
+                    filter_iri = n_include.toPython()
+                    filter_iris.add(filter_iri)
             _logger.debug("len(filter_iris) = %d.", len(filter_iris))
     _logger.debug("filter_iris = %s.", pprint.pformat(filter_iris))
 
@@ -302,9 +326,9 @@ WHERE {
         (n_agent, l_label, l_comment) = record
         agent_iri = n_agent.toPython()
         dot_label = "ID - " + iri_to_short_iri(agent_iri)
-        if not l_label is None:
+        if l_label is not None:
             dot_label += "\n" + l_label.toPython()
-        if not l_comment is None:
+        if l_comment is not None:
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_AGENT)
         kwargs["label"] = dot_label
@@ -368,11 +392,11 @@ WHERE {
     for entity_iri in sorted(entity_iri_to_label_comment):
         (l_label, l_comment, l_exhibit_number) = entity_iri_to_label_comment[entity_iri]
         dot_label = "ID - " + iri_to_short_iri(entity_iri)
-        if not l_exhibit_number is None:
+        if l_exhibit_number is not None:
             dot_label += "\nExhibit - " + l_exhibit_number.toPython()
-        if not l_label is None:
+        if l_label is not None:
             dot_label += "\n" + l_label.toPython()
-        if not l_comment is None:
+        if l_comment is not None:
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         if entity_iri in collection_iris:
             kwargs = clone_style(PROV_COLLECTION)
@@ -414,9 +438,9 @@ WHERE {
         (n_activity, l_label, l_comment, l_start_time, l_end_time) = record
         activity_iri = n_activity.toPython()
         dot_label = "ID - " + iri_to_short_iri(activity_iri)
-        if not l_label is None:
+        if l_label is not None:
             dot_label += "\n" + l_label.toPython()
-        if not l_start_time is None or not l_end_time is None:
+        if l_start_time is not None or l_end_time is not None:
             if l_start_time is None:
                 dot_label += "\n (..., "
             else:
@@ -425,7 +449,7 @@ WHERE {
                 dot_label += "...)"
             else:
                 dot_label += "%s]" % l_end_time
-        if not l_comment is None:
+        if l_comment is not None:
             dot_label += "\n\n" + "\n".join(wrapper.wrap((l_comment.toPython())))
         kwargs = clone_style(prov.constants.PROV_ACTIVITY)
         kwargs["label"] = dot_label
@@ -451,7 +475,7 @@ WHERE {
             gv_node_id_2 = iri_to_gv_node_id(thing_2_iri)
             record = (gv_node_id_1, gv_node_id_2, kwargs)
             edges[thing_1_iri][thing_2_iri][short_edge_label] = record
-            if not supplemental_dict is None:
+            if supplemental_dict is not None:
                 supplemental_dict[thing_1_iri][thing_2_iri][short_edge_label] = record
 
     # Render actedOnBehalfOf.
@@ -743,7 +767,7 @@ WHERE {
         dot_graph.add_node(dot_node)
     for iri_1 in sorted(iris_used):
         for iri_2 in sorted(edges[iri_1].keys()):
-            if not iri_2 in iris_used:
+            if iri_2 not in iris_used:
                 continue
             for short_edge_label in sorted(edges[iri_1][iri_2]):
                 # short_edge_label is intentionally not used aside from as a selector.  Edge labelling is left to pydot.

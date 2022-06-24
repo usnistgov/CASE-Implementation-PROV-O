@@ -19,9 +19,9 @@ subjectdir_basename := $(shell basename $$PWD)
 
 qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
 
-case_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE-Utilities-Python/dependencies/CASE
-
 example_srcdir := $(qc_srcdir)/dependencies/CASE-Examples/examples/illustrations/$(subjectdir_basename)
+
+rdf_toolkit_jar := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/UCO-develop/lib/rdf-toolkit.jar
 
 subject_json := $(example_srcdir)/$(subjectdir_basename).json
 
@@ -57,8 +57,7 @@ $(subjectdir_basename)-prov.ttl: \
 	    --debug \
 	    __$@ \
 	    $<
-	java -jar $(case_srcdir)/lib/rdf-toolkit.jar \
-	  --infer-base-iri \
+	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source __$@ \
 	  --source-format turtle \

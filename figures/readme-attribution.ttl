@@ -1,23 +1,27 @@
 @prefix kb: <urn:example:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:qualifiablyAttributedEntity
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:someAttribution ;
+	prov:wasAttributedTo kb:someAgent ;
+	.
 
 kb:someAgent
 	a prov:Agent ;
 	.
 
-kb:unqualifiablyAttributedEntity
-	a prov:Entity ;
-	prov:wasAttributedTo kb:someAgent ;
-	.
-
-kb:qualifiablyAttributedEntity
-	a prov:Entity ;
-	prov:wasAttributedTo kb:someAgent ;
-	prov:qualifiedAttribution kb:someAttribution ;
-	.
-
 kb:someAttribution
 	a prov:Attribution ;
 	prov:agent kb:someAgent ;
+	.
+
+kb:unqualifiablyAttributedEntity
+	a prov:Entity ;
+	prov:wasAttributedTo kb:someAgent ;
 	.
 

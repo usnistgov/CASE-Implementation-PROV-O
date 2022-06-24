@@ -15,51 +15,27 @@
 CONSTRUCT
 {
   ?nUsingAction
-    prov:qualifiedCommunication [
-      a prov:Communication ;
-      prov:activity ?nMostRecentAction ;
-    ] ;
+    prov:qualifiedCommunication ?nCommunication ;
+    .
+  ?nCommunication
+    a prov:Communication ;
+    prov:activity ?nMostRecentAction ;
     .
 }
 WHERE {
-  SELECT DISTINCT ?nUsingAction ?nMostRecentAction
-  WHERE {
-    ?nGeneratingAction
-      a case-investigation:InvestigativeAction ;
-      uco-action:result ?nGenerationProvenanceRecord ;
-      uco-action:result ?nResult ;
-      .
+  ?nMostRecentProvenanceRecord a case-investigation:ProvenanceRecord .
 
-    {
-      SELECT DISTINCT ?nMostRecentAction ?nUsingAction ?nMostRecentProvenanceRecord
-      WHERE {
-        ?nMostRecentAction
-          a case-investigation:InvestigativeAction ;
-          uco-action:result ?nMostRecentProvenanceRecord ;
-          .
+  {
+    ?nMostRecentAction uco-action:result ?nMostRecentProvenanceRecord .
+    ?nUsingAction uco-action:object ?nMostRecentProvenanceRecord .
 
-        ?nUsingAction
-          a case-investigation:InvestigativeAction ;
-          uco-action:object ?nMostRecentProvenanceRecord ;
-          .
-
-        ?nMostRecentProvenanceRecord
-          a case-investigation:ProvenanceRecord ;
-          .
-      }
-    }
-
-    ?nUsingAction
-      uco-action:object ?nResult ;
-      .
-
-    ?nGenerationProvenanceRecord
-      a case-investigation:ProvenanceRecord ;
-      uco-core:object ?nResult ;
-      .
-
-    ?nMostRecentProvenanceRecord
-      uco-core:object ?nResult ;
-      .
+    # Create only one prov:Communication blank node per pair of
+    # nUsingAction--nMostRecentAction values, even if multiple ?nResult
+    # solutions are found.
+    # https://stackoverflow.com/a/46155992
+    BIND(BNODE() AS ?nCommunication)
   }
+
+  ?nUsingAction uco-action:object ?nResult .
+  ?nMostRecentProvenanceRecord uco-core:object ?nResult .
 }

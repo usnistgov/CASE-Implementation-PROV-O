@@ -15,32 +15,26 @@
 This script executes CONSTRUCT queries, returning a supplemental graph.
 """
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 import argparse
-import glob
+import importlib.resources
 import logging
 import os
-import importlib.resources
 
 import rdflib.plugins.sparql
-
-import case_utils
+from case_utils.namespace import (
+    NS_CASE_INVESTIGATION,
+    NS_UCO_ACTION,
+    NS_UCO_CORE,
+    NS_UCO_IDENTITY,
+)
 
 from . import queries
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_CASE_INVESTIGATION = rdflib.Namespace(
-    "https://ontology.caseontology.org/case/investigation/"
-)
 NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
-NS_UCO_ACTION = rdflib.Namespace(
-    "https://ontology.unifiedcyberontology.org/uco/action/"
-)
-NS_UCO_IDENTITY = rdflib.Namespace(
-    "https://ontology.unifiedcyberontology.org/uco/identity/"
-)
 
 
 def main() -> None:
@@ -63,6 +57,7 @@ def main() -> None:
     in_graph.namespace_manager.bind("case-investigation", NS_CASE_INVESTIGATION)
     in_graph.namespace_manager.bind("prov", NS_PROV)
     in_graph.namespace_manager.bind("uco-action", NS_UCO_ACTION)
+    in_graph.namespace_manager.bind("uco-core", NS_UCO_CORE)
     in_graph.namespace_manager.bind("uco-identity", NS_UCO_IDENTITY)
 
     # Inherit prefixes defined in input context dictionary.

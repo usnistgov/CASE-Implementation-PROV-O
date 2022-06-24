@@ -2,6 +2,7 @@
 
 This repository maps [CASE](https://caseontology.org/) to [W3C PROV-O](https://www.w3.org/TR/prov-o/).  Note that contrary to other CASE implementations, this maps CASE out to another data model, instead of mapping another data model or tool into CASE.
 
+
 ## Disclaimer
 
 Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
@@ -9,16 +10,35 @@ Participation by NIST in the creation of the documentation of mentioned software
 
 ## Usage
 
-This software currently does not install.
+This repository can be installed from PyPI or from source.
+
+
+### Installing from PyPI
+
+```bash
+pip install case-prov
+```
+
+
+### Installing from source
+
+Users who wish to install pre-release versions and/or make improvements to the code base should install in this manner.
+
+1. Clone this repository.
+2. (Optional) Create and activate a virtual environment.
+3. (Optional) Upgrade `pip` with `pip install --upgrade pip`.  (This can speed installation of some dependent packages.)
+4. Run `pip install $x`, where `$x` is the path to the cloned repository.
+
+Local installation is demonstrated in the `.venv.done.log` target of the `tests/` directory's [`Makefile`](tests/Makefile).
+
+
+### Usage and testing
 
 The [tests](tests/) directory demonstrates the two standalone scripts run against CASE example JSON-LD data.
-* `case_prov_rdf.py` - This script takes as input one or more CASE graph files, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
-* `case_prov_dot.py` - This script takes as input one or more PROV-O graph files, and outputs a Dot render.
+* `case_prov_rdf` - This script takes as input one or more CASE graph files, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
+* `case_prov_dot` - This script takes as input one or more PROV-O graph files, and outputs a Dot render.
 
 On using `case_prov_rdf.py` to create a PROV-O graph, it is possible to provide that graph to a PROV-O consumer, such as a [PROV-CONSTRAINTS](https://www.w3.org/TR/prov-constraints/) validator.  This CASE project runs a Python package listed on the [W3C 2013 implementations report](https://www.w3.org/TR/2013/NOTE-prov-implementations-20130430/), [`prov-check`](https://github.com/pgroth/prov-check), as part of its sample output.  For instance, the [CASE-Examples repository](https://github.com/casework/CASE-Examples) is analyzed [here](tests/CASE-Examples/examples/prov-constraints.log).
-
-
-### Running
 
 All of the demonstration rendering (to PROV-O and to SVG images) can be run by cloning this repository and running (optionally with `-j`):
 
@@ -45,10 +65,10 @@ This project follows [SEMVER 2.0.0](https://semver.org/) where versions are decl
 
 ## Ontology versions supported
 
-This repository supports the CASE and UCO ontology versions that are distributed with the [CASE-Utilities-Python repository](https://github.com/casework/CASE-Utilities-Python), at its submodule-tracked state [here](dependencies/CASE-Utilities-Python).  Currently, those ontology versions are:
+This repository supports the CASE and UCO ontology versions that are distributed with the [CASE-Utilities-Python repository](https://github.com/casework/CASE-Utilities-Python), at the newest version below a ceiling-pin in [setup.cfg](setup.cfg).  Currently, those ontology versions are:
 
-* CASE 0.6.0
-* UCO 0.8.0
+* CASE 0.7.0
+* UCO 0.9.0
 
 
 ## Repository locations
@@ -167,3 +187,9 @@ On the other hand, there may be times when the CASE mapping into PROV-O can prov
 To illustrate the difference in projective capability of the subject CASE instance data, a solid line is used to represent when a qualified relationship was constructed from the CASE instance data.  A dashed line is used to represent when a direct relationship was constructed, but the qualified relationship could not be constructed.  This figure presents a variant on the above example, with the source data in [`readme-attribution.ttl`](figures/readme-attribution.ttl):
 
 ![Qualified vs. unqualified relationship illustration](figures/readme-attribution.svg)
+
+## Licensing
+
+This repository is licensed under the Apache 2.0 License.  See [LICENSE](LICENSE).
+
+Portions of this repository contributed by NIST are governed by the [NIST Software Licensing Statement](THIRD_PARTY_LICENSES.md#nist-software-licensing-statement).

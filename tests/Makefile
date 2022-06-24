@@ -13,7 +13,7 @@
 
 SHELL := /bin/bash
 
-PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
+PYTHON3 ?= which python3
 
 top_srcdir := $(shell cd .. ; pwd)
 
@@ -27,7 +27,6 @@ all: \
   all-CASE-Examples \
   all-casework.github.io \
   check-CASE-Examples \
-  check-black \
   check-casework.github.io \
   check-mypy \
   clean-CASE-Examples \
@@ -37,9 +36,9 @@ all: \
 .venv.done.log: \
   $(qc_srcdir)/deps/requirements.txt \
   $(top_srcdir)/.git_submodule_init.done.log \
-  $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt \
   $(top_srcdir)/setup.cfg \
-  $(top_srcdir)/setup.py
+  $(top_srcdir)/setup.py \
+  requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
 	  venv
@@ -51,17 +50,14 @@ all: \
 	    wheel
 	source venv/bin/activate \
 	  && pip install \
-	    $(top_srcdir)/dependencies/CASE-Utilities-Python
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement $(top_srcdir)/dependencies/CASE-Utilities-Python/tests/requirements.txt
-	source venv/bin/activate \
-	  && pip install \
 	    --editable \
 	    $(top_srcdir)
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement $(qc_srcdir)/deps/requirements.txt
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement requirements.txt
 	touch $@
 
 all-CASE-Examples: \
@@ -75,7 +71,6 @@ all-casework.github.io: \
 	  --directory casework.github.io/examples
 
 check: \
-  check-black \
   check-mypy \
   check-CASE-Examples \
   check-casework.github.io
@@ -85,14 +80,6 @@ check-CASE-Examples: \
 	$(MAKE) \
 	  --directory CASE-Examples/examples/illustrations \
 	  check
-
-check-black: \
-  .venv.done.log
-	source venv/bin/activate \
-	  && black \
-	    --check \
-	    $(top_srcdir)/case_prov \
-	    $$PWD
 
 check-casework.github.io: \
   .venv.done.log
@@ -125,10 +112,3 @@ clean-casework.github.io:
 	@$(MAKE) \
 	  --directory casework.github.io/examples \
 	  clean
-
-format: \
-  .venv.done.log
-	source venv/bin/activate \
-	  && black \
-	    $(top_srcdir)/case_prov \
-	    $$PWD
