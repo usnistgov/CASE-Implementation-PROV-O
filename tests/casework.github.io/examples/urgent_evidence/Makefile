@@ -38,9 +38,6 @@ check:
 	$(MAKE) \
 	  --file ../src/example.mk \
 	  check
-	source $(tests_srcdir)/venv/bin/activate \
-	  && pytest \
-	    --log-level=DEBUG
 
 clean:
 	@$(MAKE) \

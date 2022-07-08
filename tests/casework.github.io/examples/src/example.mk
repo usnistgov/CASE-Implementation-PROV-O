@@ -38,7 +38,8 @@ all: \
   prov-constraints.log
 
 .PHONY: \
-  check-prov-constraints
+  check-prov-constraints \
+  check-pytest
 
 %.svg: \
   %.dot
@@ -128,12 +129,21 @@ $(subjectdir_basename)-prov-originals.dot: \
 	mv _$@ $@
 
 check: \
-  check-prov-constraints
+  check-prov-constraints \
+  check-pytest
 
 check-prov-constraints: \
   prov-constraints.log
 	@test 1 -eq $$(tail -n1 $< | grep 'True' | wc -l) \
 	  || (echo "ERROR:example.mk:$(subjectdir_basename):prov-constraints reported a constraint error." >&2 ; exit 1)
+
+check-pytest:
+	test 0 -eq $$(ls test_*.py 2>/dev/null | wc -l) \
+	  || ( \
+	    source $(tests_srcdir)/venv/bin/activate \
+	      && pytest \
+	        --log-level=DEBUG \
+	  )
 
 clean:
 	@rm -f \
