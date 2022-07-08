@@ -1,0 +1,57 @@
+# imports: http://www.w3.org/ns/prov-20130430
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prov-shapes: <http://example.org/ontology/prov-shapes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/prov-shapes>
+	a owl:Ontology ;
+	owl:imports <http://www.w3.org/ns/prov-20130430> ;
+	.
+
+prov-shapes:activity-entity-disjointedness
+	a sh:NodeShape ;
+	sh:sparql [
+		a sh:SparqlConstraint ;
+		sh:message "prov:Activity and prov:Entity are disjoint classes."@en ;
+		sh:select """
+			SELECT DISTINCT $this
+			WHERE {
+				$this a/rdfs:subClassOf* prov:Entity .
+			}
+		""" ;
+	] ;
+	sh:targetClass prov:Activity ;
+	.
+
+prov-shapes:entity-instantaneous-event-disjointedness
+	a sh:NodeShape ;
+	sh:sparql [
+		a sh:SparqlConstraint ;
+		sh:message "prov:Entity and prov:InstantaneousEvent are disjoint classes."@en ;
+		sh:select """
+			SELECT DISTINCT $this
+			WHERE {
+				$this a/rdfs:subClassOf* prov:InstantaneousEvent .
+			}
+		""" ;
+	] ;
+	sh:targetClass prov:Entity ;
+	.
+
+prov:Collection
+	rdfs:subClassOf prov:Entity ;
+	.
+
+[]
+	a owl:Axiom ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
+	owl:annotatedProperty rdfs:subClassOf ;
+	owl:annotatedSource prov:Collection ;
+	owl:annotatedTarget prov:Entity ;
+	.
+

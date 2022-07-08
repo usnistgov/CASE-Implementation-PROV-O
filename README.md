@@ -1,6 +1,6 @@
 # CASE Implementation: PROV-O
 
-This repository maps [CASE](https://caseontology.org/) to [W3C PROV-O](https://www.w3.org/TR/prov-o/).  Note that contrary to other CASE implementations, this maps CASE out to another data model, instead of mapping another data model or tool into CASE.
+This repository maps [CASE](https://caseontology.org/) to [W3C PROV-O](https://www.w3.org/TR/prov-o/), and provides a provenance review mechanism.  Note that contrary to other CASE implementations, this maps CASE out to another data model, instead of mapping another data model or tool into CASE.
 
 
 ## Disclaimer
@@ -34,9 +34,10 @@ Local installation is demonstrated in the `.venv.done.log` target of the `tests/
 
 ### Usage and testing
 
-The [tests](tests/) directory demonstrates the two standalone scripts run against CASE example JSON-LD data.
+The [tests](tests/) directory demonstrates the three standalone scripts run against CASE example JSON-LD data.
 * `case_prov_rdf` - This script takes as input one or more CASE graph files, and outputs a graph file that adds annotations to the CASE nodes that serve as a standalone PROV-O graph.
 * `case_prov_dot` - This script takes as input one or more PROV-O graph files, and outputs a Dot render.
+* `case_prov_check` - This script takes as input one or more graph files, and reviews data for OWL consistency according to PROV-O (e.g. ensuring no one graph individual is a member of two PROV-O disjoint sets), and for breaks in chain of custody.
 
 On using `case_prov_rdf.py` to create a PROV-O graph, it is possible to provide that graph to a PROV-O consumer, such as a [PROV-CONSTRAINTS](https://www.w3.org/TR/prov-constraints/) validator.  This CASE project runs a Python package listed on the [W3C 2013 implementations report](https://www.w3.org/TR/2013/NOTE-prov-implementations-20130430/), [`prov-check`](https://github.com/pgroth/prov-check), as part of its sample output.  For instance, the [CASE-Examples repository](https://github.com/casework/CASE-Examples) is analyzed [here](tests/CASE-Examples/examples/prov-constraints.log).
 

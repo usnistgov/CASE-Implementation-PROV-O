@@ -36,11 +36,9 @@ all:
 
 check:
 	$(MAKE) \
+	  CASE_PROV_CHECK_STRICT=no \
 	  --file ../src/example.mk \
 	  check
-	source $(tests_srcdir)/venv/bin/activate \
-	  && pytest \
-	    --log-level=DEBUG
 
 clean:
 	@$(MAKE) \

@@ -1,0 +1,119 @@
+# imports: http://www.w3.org/ns/prov-20130430
+
+@prefix case-prov: <http://example.org/ontology/case-prov/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/case-prov>
+	a owl:Ontology ;
+	owl:imports <http://www.w3.org/ns/prov-20130430> ;
+	.
+
+case-prov:chain-of-communication-shape
+	a sh:NodeShape ;
+	rdfs:comment '''Note that an alternative implementation of this SPARQL constraint could use a path construction, e.g.:
+
+     SELECT $this
+     WHERE {
+       $this prov:wasInformedBy*/prov:used prov:EmptyCollection .
+     }
+
+However, a break in the middle of the chain would report all activities "Downstream" from the break, potentially making it more difficult to identify the break.  The implemented query instead focuses on break points.'''@en ;
+	sh:severity sh:Warning ;
+	sh:sparql [
+		a sh:SparqlConstraint ;
+		sh:message "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity."@en ;
+		sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:used prov:EmptyCollection .
+				}
+				FILTER NOT EXISTS {
+					$this prov:wasInformedBy ?nOtherActivity .
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass prov:Activity ;
+	.
+
+case-prov:chain-of-derivation-shape
+	a sh:NodeShape ;
+	sh:severity sh:Warning ;
+	sh:sparql [
+		a sh:SparqlConstraint ;
+		sh:message "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links."@en ;
+		sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this prov:wasDerivedFrom ?nOtherEntity .
+				}
+				FILTER ($this != prov:EmptyCollection)
+			}
+		""" ;
+	] ;
+	sh:targetClass prov:Entity ;
+	.
+
+case-prov:derivation-empty-nonempty-shape
+	a sh:NodeShape ;
+	sh:severity sh:Warning ;
+	sh:sparql [
+		a sh:SparqlConstraint ;
+		sh:message "focusNode was derived from an empty collection and another Entity."@en ;
+		sh:select """
+			SELECT $this
+			WHERE {
+				$this
+					prov:wasDerivedFrom ?nOtherEntity ;
+					prov:wasDerivedFrom prov:EmptyCollection ;
+					.
+				FILTER (?nOtherEntity != prov:EmptyCollection)
+			}
+		""" ;
+	] ;
+	sh:targetClass prov:Entity ;
+	.
+
+prov:Collection
+	rdfs:subClassOf prov:Entity ;
+	.
+
+prov:Person
+	rdfs:subClassOf prov:Agent ;
+	.
+
+prov:SoftwareAgent
+	rdfs:subClassOf prov:Agent ;
+	.
+
+[]
+	a owl:Axiom ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
+	owl:annotatedProperty rdfs:subClassOf ;
+	owl:annotatedSource prov:Collection ;
+	owl:annotatedTarget prov:Entity ;
+	.
+
+[]
+	a owl:Axiom ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
+	owl:annotatedProperty rdfs:subClassOf ;
+	owl:annotatedSource prov:Person ;
+	owl:annotatedTarget prov:Agent ;
+	.
+
+[]
+	a owl:Axiom ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
+	owl:annotatedProperty rdfs:subClassOf ;
+	owl:annotatedSource prov:SoftwareAgent ;
+	owl:annotatedTarget prov:Agent ;
+	.
+
