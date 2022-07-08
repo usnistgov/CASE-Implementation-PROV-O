@@ -38,6 +38,9 @@ all: \
   $(subjectdir_basename)-prov_entities.svg \
   $(subjectdir_basename)-prov_originals.svg
 
+.PHONY: \
+  check-prov-constraints
+
 %.svg: \
   %.dot
 	dot \
@@ -126,6 +129,9 @@ $(subjectdir_basename)-prov_originals.dot: \
 	mv _$@ $@
 
 check: \
+  check-prov-constraints
+
+check-prov-constraints: \
   prov-constraints.log
 	@test 1 -eq $$(tail -n1 $< | grep 'True' | wc -l) \
 	  || (echo "ERROR:illustration.mk:prov-constraints reported a constraint error." >&2 ; exit 1)
