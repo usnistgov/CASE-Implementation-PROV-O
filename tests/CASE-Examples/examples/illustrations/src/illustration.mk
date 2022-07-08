@@ -25,10 +25,20 @@ rdf_toolkit_jar := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/UCO-deve
 
 subject_json := $(example_srcdir)/$(subjectdir_basename).json
 
-sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
+check_shape_files := $(wildcard $(top_srcdir)/case_prov/shapes/*.ttl)
+
+construct_sparql_files := $(wildcard $(top_srcdir)/case_prov/queries/construct-*.sparql)
 
 tests_srcdir := $(top_srcdir)/tests
 
+# Pass "no" to have case_prov_check pass on finding breakages in provenance chains.
+# TODO - When provenance issues are resolved, remove this flag.
+CASE_PROV_CHECK_STRICT ?=
+ifeq ($(CASE_PROV_CHECK_STRICT),no)
+case_prov_check_strict_flag := --allow-warnings
+else
+case_prov_check_strict_flag :=
+endif
 
 all: \
   prov-constraints.log \
@@ -52,7 +62,7 @@ all: \
 
 $(subjectdir_basename)-prov.ttl: \
   $(subject_json) \
-  $(sparql_files) \
+  $(construct_sparql_files) \
   $(tests_srcdir)/.venv.done.log \
   $(top_srcdir)/case_prov/case_prov_rdf.py
 	source $(tests_srcdir)/venv/bin/activate \
@@ -129,6 +139,26 @@ $(subjectdir_basename)-prov_originals.dot: \
 	    $<
 	mv _$@ $@
 
+case_prov_check.ttl: \
+  $(check_shape_files) \
+  $(top_srcdir)/case_prov/case_prov_check.py \
+  $(subjectdir_basename)-prov.ttl
+	rm -f _$@
+	source $(tests_srcdir)/venv/bin/activate \
+	  && case_prov_check \
+	    --format turtle \
+	    $(case_prov_check_strict_flag) \
+	    $(subjectdir_basename)-prov.ttl \
+	    > __$@
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
 check: \
   check-prov-constraints \
   check-pytest
@@ -138,7 +168,8 @@ check-prov-constraints: \
 	@test 1 -eq $$(tail -n1 $< | grep 'True' | wc -l) \
 	  || (echo "ERROR:illustration.mk:prov-constraints reported a constraint error." >&2 ; exit 1)
 
-check-pytest:
+check-pytest: \
+  case_prov_check.ttl
 	test 0 -eq $$(ls test_*.py 2>/dev/null | wc -l) \
 	  || ( \
 	    source $(tests_srcdir)/venv/bin/activate \
