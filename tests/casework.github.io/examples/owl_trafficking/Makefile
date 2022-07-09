@@ -19,6 +19,7 @@ all:
 
 check:
 	$(MAKE) \
+	  CASE_PROV_CHECK_STRICT=no \
 	  --file ../src/example.mk \
 	  check
 

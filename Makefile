@@ -65,6 +65,9 @@ check: \
   .git_submodule_init.done.log \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
+	  --directory case_prov/shapes \
+	  check
+	$(MAKE) \
 	  PYTHON3=$(PYTHON3) \
 	  --directory tests \
 	  check
@@ -72,6 +75,9 @@ check: \
 clean: \
   clean-figures \
   clean-tests
+	@$(MAKE) \
+	  --directory case_prov/shapes \
+	  clean
 	@rm -f \
 	  dependencies/CASE-Examples-QC/.git_submodule_init.done.log
 	@rm -f \
