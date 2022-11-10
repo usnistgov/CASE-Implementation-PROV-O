@@ -74,12 +74,6 @@ def iri_to_gv_node_id(iri: str) -> str:
     return "_" + hasher.hexdigest()
 
 
-def iri_to_short_iri(iri: str) -> str:
-    return iri.replace("http://example.org/kb/", "kb:").replace(
-        "http://www.w3.org/ns/prov#", "prov:"
-    )
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
@@ -325,7 +319,7 @@ WHERE {
     for record in graph.query(select_query_object):
         (n_agent, l_label, l_comment) = record
         agent_iri = n_agent.toPython()
-        dot_label = "ID - " + iri_to_short_iri(agent_iri)
+        dot_label = "ID - " + graph.namespace_manager.qname(agent_iri)
         if l_label is not None:
             dot_label += "\n" + l_label.toPython()
         if l_comment is not None:
@@ -391,7 +385,7 @@ WHERE {
         entity_iri_to_label_comment[entity_iri] = (l_label, l_comment, l_exhibit_number)
     for entity_iri in sorted(entity_iri_to_label_comment):
         (l_label, l_comment, l_exhibit_number) = entity_iri_to_label_comment[entity_iri]
-        dot_label = "ID - " + iri_to_short_iri(entity_iri)
+        dot_label = "ID - " + graph.namespace_manager.qname(entity_iri)
         if l_exhibit_number is not None:
             dot_label += "\nExhibit - " + l_exhibit_number.toPython()
         if l_label is not None:
@@ -437,7 +431,7 @@ WHERE {
     for record in graph.query(select_query_object):
         (n_activity, l_label, l_comment, l_start_time, l_end_time) = record
         activity_iri = n_activity.toPython()
-        dot_label = "ID - " + iri_to_short_iri(activity_iri)
+        dot_label = "ID - " + graph.namespace_manager.qname(activity_iri)
         if l_label is not None:
             dot_label += "\n" + l_label.toPython()
         if l_start_time is not None or l_end_time is not None:
