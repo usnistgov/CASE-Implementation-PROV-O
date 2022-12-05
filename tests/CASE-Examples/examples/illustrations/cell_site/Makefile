@@ -21,6 +21,7 @@ all:
 
 check:
 	$(MAKE) \
+	  CASE_PROV_CHECK_STRICT=no \
 	  --file ../src/illustration.mk \
 	  check
 

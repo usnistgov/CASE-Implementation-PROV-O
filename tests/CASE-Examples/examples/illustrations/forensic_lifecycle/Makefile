@@ -19,12 +19,11 @@ all:
 	$(MAKE) \
 	  --file ../src/illustration.mk
 
-# TODO: Fix constraints errors, then uncomment the recipe to enforce unit testing.
 check:
-	@echo "ERROR:PROV constraints reports errors for Oresteia.json, which need fixing." >&2
-#	$(MAKE) \
-#	  --file ../src/illustration.mk \
-#	  check
+	$(MAKE) \
+	  CASE_PROV_CHECK_STRICT=no \
+	  --file ../src/illustration.mk \
+	  check
 
 clean:
 	@$(MAKE) \

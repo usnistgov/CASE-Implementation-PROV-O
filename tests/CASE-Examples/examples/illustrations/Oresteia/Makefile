@@ -32,12 +32,10 @@ all:
 	  $<
 	mv _$@ $@
 
-# TODO: Fix constraints errors, then uncomment the recipe to enforce unit testing.
 check:
-	@echo "ERROR:PROV constraints reports errors for forensic_lifecycle.json, which need fixing." >&2
-#	$(MAKE) \
-#	  --file ../src/illustration.mk \
-#	  check
+	$(MAKE) \
+	  --file ../src/illustration.mk \
+	  check
 
 clean:
 	@$(MAKE) \
