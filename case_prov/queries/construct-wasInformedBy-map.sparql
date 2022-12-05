@@ -11,6 +11,8 @@
 
 CONSTRUCT {
   ?x prov:wasInformedBy ?y .
+  ?x a prov:Activity .
+  ?y a prov:Activity .
 }
 WHERE {
   ?x case-investigation:wasInformedBy ?y .
