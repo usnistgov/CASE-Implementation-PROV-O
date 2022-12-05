@@ -1,10 +1,1 @@
-DEBUG:provconstraints.py:(rdflib.term.URIRef('http://example.org/kb/forensic_action6'),)
-DEBUG:provconstraints.py:
-    PREFIX prov: <http://www.w3.org/ns/prov#>
-
-    select ?e where {
-        ?e a prov:Entity, prov:Activity .
-    }
-
-impossibility
-forensic_lifecycle-prov.ttl False
+forensic_lifecycle-prov.ttl True

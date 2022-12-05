@@ -5,7 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:actor-0058fc60-4b1b-4ad4-ba7e-231d00d40973
-	a prov:Person ;
+kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b
+	a prov:Entity ;
+	.
+
+kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4
+	a prov:Entity ;
+	prov:wasDerivedFrom kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b ;
 	.
 

@@ -15,22 +15,9 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../../../.. ; pwd)
 
-tests_srcdir := $(top_srcdir)/tests
-
 all:
 	$(MAKE) \
 	  --file ../src/illustration.mk
-	$(MAKE) \
-	  Oresteia-prov-focus-sms-message1-uuid.svg \
-	  Oresteia-prov-focus-sms-message2-uuid.svg
-
-%.svg: \
-  %.dot
-	dot \
-	  -o _$@ \
-	  -T svg \
-	  $<
-	mv _$@ $@
 
 check:
 	$(MAKE) \
@@ -41,25 +28,3 @@ clean:
 	@$(MAKE) \
 	  --file ../src/illustration.mk \
 	  clean
-
-Oresteia-prov-focus-sms-message1-uuid.dot: \
-  Oresteia-prov.ttl \
-  $(top_srcdir)/case_prov/case_prov_dot.py
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    --entity-ancestry http://example.org/kb/sms-message1-uuid \
-	    _$@ \
-	    $<
-	mv _$@ $@
-
-Oresteia-prov-focus-sms-message2-uuid.dot: \
-  Oresteia-prov.ttl \
-  $(top_srcdir)/case_prov/case_prov_dot.py
-	source $(tests_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --debug \
-	    --entity-ancestry http://example.org/kb/sms-message2-uuid \
-	    _$@ \
-	    $<
-	mv _$@ $@

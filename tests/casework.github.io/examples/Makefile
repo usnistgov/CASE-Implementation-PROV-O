@@ -13,92 +13,39 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd ../../../.. ; pwd)
+top_srcdir := $(shell cd ../../.. ; pwd)
+
+examples_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/casework.github.io/examples
+
+exdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
+
+all_targets       := $(foreach exdir,$(exdirs),all-$(exdir))
+check_targets     := $(foreach exdir,$(exdirs),check-$(exdir))
+clean_targets     := $(foreach exdir,$(exdirs),clean-$(exdir))
 
 all: \
-  all-asgard \
-  all-crossover_wmd \
-  all-owl_trafficking \
-  all-urgent_evidence
+  $(all_targets)
 
-.PHONY: \
-  all-asgard \
-  all-crossover_wmd \
-  all-owl_trafficking \
-  all-urgent_evidence \
-  check-asgard \
-  check-crossover_wmd \
-  check-owl_trafficking \
-  check-urgent_evidence \
-  clean-asgard \
-  clean-crossover_wmd \
-  clean-owl_trafficking \
-  clean-urgent_evidence
-
-all-asgard:
+all-%:
 	$(MAKE) \
-	  --directory asgard
-
-all-crossover_wmd:
-	$(MAKE) \
-	  --directory crossover_wmd
-
-all-owl_trafficking:
-	$(MAKE) \
-	  --directory owl_trafficking
-
-all-urgent_evidence:
-	$(MAKE) \
-	  --directory urgent_evidence
+	  --directory $$(echo $@ | sed -e 's/^all-//')
 
 check: \
-  check-asgard \
-  check-crossover_wmd \
-  check-owl_trafficking \
-  check-urgent_evidence
+  $(check_targets)
+	@diff \
+	  <(ls */prov-constraints.log | while read x; do dirname $$x ; done) \
+	  <(cd $(examples_srcdir) ; ls */*.json | while read x; do dirname $$x ; done | sort | uniq) \
+	  || (echo "ERROR:Makefile:The illustrations listed above do not have evaluation directories under $(top_srcdir)/tests/casework.github.io/examples." >&2 ; exit 1)
 
-check-asgard:
+check-%:
 	$(MAKE) \
-	  --directory asgard \
-	  check
-
-check-crossover_wmd:
-	$(MAKE) \
-	  --directory crossover_wmd \
-	  check
-
-check-owl_trafficking:
-	$(MAKE) \
-	  --directory owl_trafficking \
-	  check
-
-check-urgent_evidence:
-	$(MAKE) \
-	  --directory urgent_evidence \
+	  --directory $$(echo $@ | sed -e 's/^check-//') \
 	  check
 
 clean: \
-  clean-asgard \
-  clean-crossover_wmd \
-  clean-owl_trafficking \
-  clean-urgent_evidence
+  $(clean_targets)
 
-clean-asgard:
+clean-%:
 	@$(MAKE) \
-	  --directory asgard \
-	  clean
-
-clean-crossover_wmd:
-	@$(MAKE) \
-	  --directory crossover_wmd \
-	  clean
-
-clean-owl_trafficking:
-	@$(MAKE) \
-	  --directory owl_trafficking \
-	  clean
-
-clean-urgent_evidence:
-	@$(MAKE) \
-	  --directory urgent_evidence \
+	  --directory $$(echo $@ | sed -e 's/^clean-//') \
 	  clean

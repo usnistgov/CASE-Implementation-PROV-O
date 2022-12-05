@@ -11,7 +11,7 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/extraction-action-uuid> ;
+			sh:focusNode <http://example.org/kb/extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6> ;
 			sh:resultMessage "Chain of communication for focusNode links back to neither prov:EmptyCollection, nor to another activity." ;
 			sh:resultSeverity sh:Warning ;
 			sh:sourceConstraint [
@@ -31,11 +31,11 @@
 			] ;
 			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
 			sh:sourceShape case-prov:chain-of-communication-shape ;
-			sh:value <http://example.org/kb/extraction-action-uuid> ;
+			sh:value <http://example.org/kb/extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6> ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/pcap-file-uuid> ;
+			sh:focusNode <http://example.org/kb/pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1> ;
 			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
 			sh:resultSeverity sh:Warning ;
 			sh:sourceConstraint [
@@ -53,11 +53,11 @@
 			] ;
 			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
 			sh:sourceShape case-prov:chain-of-derivation-shape ;
-			sh:value <http://example.org/kb/pcap-file-uuid> ;
+			sh:value <http://example.org/kb/pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/pcap-provenancerecord-uuid> ;
+			sh:focusNode <http://example.org/kb/pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe> ;
 			sh:resultMessage "Chain of derivation for focusNode does not link back to prov:EmptyCollection.  Please review the generating InvestigativeAction (if found) for any incomplete ProvenanceRecord links." ;
 			sh:resultSeverity sh:Warning ;
 			sh:sourceConstraint [
@@ -75,7 +75,7 @@
 			] ;
 			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
 			sh:sourceShape case-prov:chain-of-derivation-shape ;
-			sh:value <http://example.org/kb/pcap-provenancerecord-uuid> ;
+			sh:value <http://example.org/kb/pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe> ;
 		]
 		;
 	.

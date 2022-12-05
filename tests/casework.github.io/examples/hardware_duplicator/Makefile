@@ -13,19 +13,19 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd ../../../../.. ; pwd)
+top_srcdir := $(shell cd ../../../.. ; pwd)
 
 all:
 	$(MAKE) \
-	  --file ../src/illustration.mk
+	  --file ../src/example.mk
 
 check:
 	$(MAKE) \
 	  CASE_PROV_CHECK_STRICT=no \
-	  --file ../src/illustration.mk \
+	  --file ../src/example.mk \
 	  check
 
 clean:
 	@$(MAKE) \
-	  --file ../src/illustration.mk \
+	  --file ../src/example.mk \
 	  clean
