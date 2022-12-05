@@ -1,0 +1,25 @@
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B
+	a prov:Entity ;
+	.
+
+kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879
+	a prov:Entity ;
+	.
+
+kb:ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b
+	a prov:Collection ;
+	prov:hadMember kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879 ;
+	.
+
+kb:ProvenanceRecord-d628b0f6-686d-4d22-a577-ec737e5947bc
+	a prov:Collection ;
+	prov:hadMember kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B ;
+	.
+
