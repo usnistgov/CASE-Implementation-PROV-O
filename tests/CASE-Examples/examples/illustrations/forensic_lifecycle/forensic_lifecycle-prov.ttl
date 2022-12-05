@@ -47,35 +47,11 @@ kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3
 	.
 
 kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889
-	a
-		prov:Activity ,
-		prov:Entity
-		;
+	a prov:Activity ;
 	prov:endedAtTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
 	prov:qualifiedUsage
 		[
@@ -101,12 +77,6 @@ kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889
 		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
 		;
 	prov:wasAssociatedWith kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	prov:wasDerivedFrom
-		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
-		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
-		;
-	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 	.
 
 kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138
@@ -406,6 +376,41 @@ kb:provenance_record-3eb9c278-376d-4184-98b6-3a82e99b1ad1
 		;
 	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 	case-investigation:exhibitNumber "DFL-20140712-0024" ;
+	.
+
+kb:provenance_record-5c8060e6-cb05-4dac-91ee-657568f429bf
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 	.
 
 kb:provenance_record-5d88a49b-2a98-4bde-873a-bcc5d314b9de
@@ -1025,6 +1030,37 @@ kb:provenance_record-fc4fad81-fd0d-47ac-abe0-dabc52b9b8ec
 	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
 	prov:wasGeneratedBy kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
 	case-investigation:exhibitNumber "DFL-20140712-001C" ;
+	.
+
+kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 	.
 
 kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8
