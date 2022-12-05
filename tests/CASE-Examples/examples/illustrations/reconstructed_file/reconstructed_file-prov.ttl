@@ -6,403 +6,478 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:android_image
+kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8
 	a prov:Entity ;
-	.
-
-kb:carving_tool1
-	a
-		prov:Agent ,
-		prov:SoftwareAgent
-		;
-	prov:actedOnBehalfOf kb:role4 ;
-	prov:qualifiedDelegation
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	] ;
+	prov:qualifiedDerivation
 		[
-			a prov:Delegation ;
-			prov:agent kb:role4 ;
-			prov:hadActivity kb:investigative_action1 ;
+			a prov:Derivation ;
+			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
-			a prov:Delegation ;
-			prov:agent kb:role4 ;
-			prov:hadActivity kb:investigative_action2 ;
+			a prov:Derivation ;
+			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		]
 		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
+		;
+	prov:wasGeneratedBy kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 	.
 
-kb:data_piece0
-	a prov:Entity ;
-	.
-
-kb:data_piece1
+kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
-		prov:entity kb:android_image ;
-		prov:hadActivity kb:investigative_action1 ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action1 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
-	prov:wasDerivedFrom kb:android_image ;
-	prov:wasGeneratedBy kb:investigative_action1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	.
 
-kb:data_piece2
+kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
-		prov:entity kb:android_image ;
-		prov:hadActivity kb:investigative_action1 ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action1 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
-	prov:wasDerivedFrom kb:android_image ;
-	prov:wasGeneratedBy kb:investigative_action1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	.
 
-kb:investigative_action1
+kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49
 	a prov:Activity ;
-	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:endedAtTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
-		prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:android_image ;
+		prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	] ;
-	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:used kb:android_image ;
-	prov:wasAssociatedWith kb:carving_tool1 ;
+	prov:startedAtTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+	prov:used kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasAssociatedWith kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	.
 
-kb:investigative_action2
+kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d
 	a prov:Activity ;
-	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:endedAtTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:data_piece0 ;
+			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
 		] ,
 		[
 			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:data_piece1 ;
+			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
 		] ,
 		[
 			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:data_piece2 ;
+			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
 		]
 		;
-	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:startedAtTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
 	prov:used
-		kb:data_piece0 ,
-		kb:data_piece1 ,
-		kb:data_piece2
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 		;
-	prov:wasAssociatedWith kb:carving_tool1 ;
+	prov:wasAssociatedWith kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasInformedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	.
 
-kb:provenance_record1
+kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac
+	a prov:Entity ;
+	.
+
+kb:provenancerecord1-ae596806-cbe5-4c4c-8f54-33630f178eeb
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Reconstructed JPG File" ;
 	prov:hadMember
-		kb:reconstructed_file ,
-		kb:relationship0 ,
-		kb:relationship1 ,
-		kb:relationship2
+		kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8 ,
+		kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697 ,
+		kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070 ,
+		kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f
 		;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece0 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece1 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece2 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action2 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
-		kb:data_piece0 ,
-		kb:data_piece1 ,
-		kb:data_piece2
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 		;
-	prov:wasGeneratedBy kb:investigative_action2 ;
-	case-investigation:exhibitNumber "ACME-676553402357-00" ;
+	prov:wasGeneratedBy kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	case-investigation:exhibitNumber "ESC-976553402389-01" ;
 	.
 
-kb:provenance_record2
+kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Carved data fragments" ;
 	prov:hadMember
-		kb:data_piece1 ,
-		kb:data_piece2 ,
-		kb:relationship3 ,
-		kb:relationship4
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1 ,
+		kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342 ,
+		kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0
 		;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
-		prov:entity kb:android_image ;
-		prov:hadActivity kb:investigative_action1 ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action1 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
-	prov:wasDerivedFrom kb:android_image ;
-	prov:wasGeneratedBy kb:investigative_action1 ;
-	case-investigation:exhibitNumber "ACME-676553402357-01" ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	case-investigation:exhibitNumber "ESC-976553402389-02" ;
 	.
 
-kb:provenance_record3
-	a prov:Collection ;
-	prov:hadMember kb:data_piece0 ;
-	case-investigation:exhibitNumber "ACME-676553402357-02" ;
-	.
-
-kb:reconstructed_file
+kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece0 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece1 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece2 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action2 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
-		kb:data_piece0 ,
-		kb:data_piece1 ,
-		kb:data_piece2
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 		;
-	prov:wasGeneratedBy kb:investigative_action2 ;
+	prov:wasGeneratedBy kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 	.
 
-kb:relationship0
+kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece0 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece1 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece2 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action2 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
-		kb:data_piece0 ,
-		kb:data_piece1 ,
-		kb:data_piece2
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 		;
-	prov:wasGeneratedBy kb:investigative_action2 ;
+	prov:wasGeneratedBy kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 	.
 
-kb:relationship1
+kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece0 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece1 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:data_piece2 ;
-			prov:hadActivity kb:investigative_action2 ;
+			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action2 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
-		kb:data_piece0 ,
-		kb:data_piece1 ,
-		kb:data_piece2
+		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
+		kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ,
+		kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ,
+		kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 		;
-	prov:wasGeneratedBy kb:investigative_action2 ;
+	prov:wasGeneratedBy kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
 	.
 
-kb:relationship2
+kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:data_piece0 ;
-			prov:hadActivity kb:investigative_action2 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:data_piece1 ;
-			prov:hadActivity kb:investigative_action2 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:data_piece2 ;
-			prov:hadActivity kb:investigative_action2 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigative_action2 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
-	prov:wasDerivedFrom
-		kb:data_piece0 ,
-		kb:data_piece1 ,
-		kb:data_piece2
-		;
-	prov:wasGeneratedBy kb:investigative_action2 ;
-	.
-
-kb:relationship3
-	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
-		prov:entity kb:android_image ;
-		prov:hadActivity kb:investigative_action1 ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action1 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
-	prov:wasDerivedFrom kb:android_image ;
-	prov:wasGeneratedBy kb:investigative_action1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	.
 
-kb:relationship4
+kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:carving_tool1 ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
-		prov:entity kb:android_image ;
-		prov:hadActivity kb:investigative_action1 ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative_action1 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:carving_tool1 ;
-	prov:wasDerivedFrom kb:android_image ;
-	prov:wasGeneratedBy kb:investigative_action1 ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
 	.
 
-kb:role4
+kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:role-7e760175-f38a-4d36-a70f-591668769538
 	a prov:Agent ;
+	.
+
+kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+	prov:qualifiedDelegation
+		[
+			a prov:Delegation ;
+			prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+			prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+		]
+		;
 	.
 

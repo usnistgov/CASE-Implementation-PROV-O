@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:actor1
+kb:actor-0058fc60-4b1b-4ad4-ba7e-231d00d40973
 	a prov:Person ;
 	.
 

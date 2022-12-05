@@ -1,143 +1,84 @@
 @prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
-@prefix kb: <http://example.org/kb#> .
+@prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:219189B6-356C-4D53-A844-F0031E74F156
-	a prov:Activity ;
-	rdfs:comment "Suspect device physical acquisition" ;
-	prov:endedAtTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool-embeddedextractor1-uid ;
+kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f ;
+		prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
 	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
-		prov:entity kb:suspect-device-uuid ;
-	] ;
-	prov:startedAtTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
-	prov:used kb:suspect-device-uuid ;
-	prov:wasAssociatedWith kb:tool-embeddedextractor1-uid ;
 	.
 
-kb:48C0F0E8-9A63-45EE-99BF-23CC354C3252
+kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool-embeddedextractor1-uid ;
+		prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
-		prov:entity kb:suspect-device-uuid ;
-		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
 	] ;
-	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
-	prov:wasDerivedFrom kb:suspect-device-uuid ;
-	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	prov:wasAttributedTo kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
 	.
 
-kb:90F73123-DB7E-41E5-B6CA-493B96E4B89F
-	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-embeddedextractor1-uid ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:suspect-device-uuid ;
-		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
-	prov:wasDerivedFrom kb:suspect-device-uuid ;
-	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	.
-
-kb:97C74753-FCEB-49C8-A611-7A70EF46AB5D
-	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-embeddedextractor1-uid ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:suspect-device-uuid ;
-		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
-	prov:wasDerivedFrom kb:suspect-device-uuid ;
-	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	.
-
-kb:B2A7B20E-8307-40CF-ABAF-9733ABBF4335
-	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-embeddedextractor1-uid ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:suspect-device-uuid ;
-		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
-	prov:wasDerivedFrom kb:suspect-device-uuid ;
-	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	.
-
-kb:E9AA4F26-D187-4F32-A602-86A6DF4B8528
+kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f
 	a prov:Agent ;
 	.
 
-kb:EBAB06EE-7522-42D6-96EA-E3121D67E393
+kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool-embeddedextractor1-uid ;
+		prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:suspect-device-uuid ;
-		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
+			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
+			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+		prov:activity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
 		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool-embeddedextractor1-uid ;
-	prov:wasDerivedFrom kb:suspect-device-uuid ;
-	prov:wasGeneratedBy kb:219189B6-356C-4D53-A844-F0031E74F156 ;
+	prov:wasAttributedTo kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	prov:wasDerivedFrom
+		kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ,
+		kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
+		;
+	prov:wasGeneratedBy kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
 	.
 
-kb:investigative-action1-uuid
+kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd
 	a prov:Activity ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:odin-decree13-uuid ;
+		prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
@@ -146,82 +87,119 @@ kb:investigative-action1-uuid
 	] ;
 	prov:startedAtTime "2019-03-30T22:36:24.350000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
-	prov:wasAssociatedWith kb:odin-decree13-uuid ;
+	prov:wasAssociatedWith kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	.
 
-kb:investigator2-uuid
+kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49
+	a prov:Activity ;
+	rdfs:comment "Suspect device physical acquisition" ;
+	prov:endedAtTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
+			prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
+		]
+		;
+	prov:startedAtTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ,
+		kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
+		;
+	prov:wasAssociatedWith kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	prov:wasInformedBy kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da
 	a prov:Agent ;
 	.
 
-kb:odin-decree13-uuid
+kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:investigator2-uuid ;
+	prov:actedOnBehalfOf kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:investigator2-uuid ;
-		prov:hadActivity kb:investigative-action1-uuid ;
+		prov:agent kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da ;
+		prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
 	] ;
 	.
 
-kb:provenance-record1-uuid
+kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Suspect device found near Bifrost Bridge after disruption" ;
-	prov:hadMember kb:suspect-device-uuid ;
+	prov:hadMember kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07 ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:odin-decree13-uuid ;
+		prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action1-uuid ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
+			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
+			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:odin-decree13-uuid ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
-	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	prov:wasAttributedTo kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	prov:wasDerivedFrom
+		kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ,
+		kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
+		;
+	prov:wasGeneratedBy kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
 	case-investigation:exhibitNumber "AsgardPD-20190330-001A" ;
 	.
 
-kb:suspect-device-uuid
-	a prov:Entity ;
+kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Suspect device found near Bifrost Bridge after disruption" ;
+	prov:hadMember kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:odin-decree13-uuid ;
+		prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
 		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action1-uuid ;
+		prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
 	] ;
-	prov:wasAttributedTo kb:odin-decree13-uuid ;
+	prov:wasAttributedTo kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
-	prov:wasGeneratedBy kb:investigative-action1-uuid ;
-	.
-
-kb:tool-embeddedextractor1-uid
-	a
-		prov:Agent ,
-		prov:SoftwareAgent
-		;
-	prov:actedOnBehalfOf kb:E9AA4F26-D187-4F32-A602-86A6DF4B8528 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:E9AA4F26-D187-4F32-A602-86A6DF4B8528 ;
-		prov:hadActivity kb:219189B6-356C-4D53-A844-F0031E74F156 ;
-	] ;
+	prov:wasGeneratedBy kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	case-investigation:exhibitNumber "AsgardPD-20190330-001A" ;
 	.
 

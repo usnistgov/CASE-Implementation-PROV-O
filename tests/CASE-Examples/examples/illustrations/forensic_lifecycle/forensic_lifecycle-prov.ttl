@@ -6,52 +6,192 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:account1
+kb:account-799bd0b8-8b1e-483f-88be-d3a22d886e6e
 	a prov:Entity ;
 	.
 
-kb:account2
+kb:account-cc8408d1-09b8-4941-95c4-a3390f7648b1
 	a prov:Entity ;
 	.
 
-kb:android_image
+kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3
 	a prov:Entity ;
 	.
 
-kb:attachment_file
+kb:attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced
 	a prov:Entity ;
 	.
 
-kb:chat_messages_report
+kb:chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78
 	a prov:Entity ;
 	.
 
-kb:decoded_blob
+kb:decoded_blob-428d56c2-be79-472c-bb51-cc46376aeba7
 	a prov:Entity ;
 	.
 
-kb:decrypted_blob
+kb:decrypted_blob-2d5f2cf9-2fb4-45d5-a0d7-52f990d2a1e6
 	a prov:Entity ;
 	.
 
-kb:device1
+kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226
 	a prov:Entity ;
 	.
 
-kb:examiner1
+kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789
 	a prov:Agent ;
 	.
 
-kb:examiner2
+kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3
 	a prov:Agent ;
 	.
 
-kb:forensic_action1
+kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889
+	a
+		prov:Activity ,
+		prov:Entity
+		;
+	prov:endedAtTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+		]
+		;
+	prov:startedAtTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasAssociatedWith kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138
 	a prov:Activity ;
 	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:investigator1 ;
+		prov:agent kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	] ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:used kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:wasAssociatedWith kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
+	.
+
+kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44
+	a prov:Activity ;
+	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+		]
+		;
+	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasAssociatedWith kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44
+	a prov:Activity ;
+	prov:endedAtTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:atTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:entity kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+	] ;
+	prov:startedAtTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:used kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+	prov:wasAssociatedWith kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
+	.
+
+kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	] ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:used kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:wasAssociatedWith kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	.
+
+kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0
+	a prov:Activity ;
+	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
@@ -60,1029 +200,889 @@ kb:forensic_action1
 	] ;
 	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
-	prov:wasAssociatedWith kb:investigator1 ;
+	prov:wasAssociatedWith kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
 	.
 
-kb:forensic_action2
-	a prov:Activity ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:examiner1 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:device1 ;
-	] ;
-	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:used kb:device1 ;
-	prov:wasAssociatedWith kb:examiner1 ;
-	.
-
-kb:forensic_action3
-	a prov:Activity ;
-	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool1 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:device1 ;
-	] ;
-	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:used kb:device1 ;
-	prov:wasAssociatedWith kb:tool1 ;
-	.
-
-kb:forensic_action4
-	a prov:Activity ;
-	prov:endedAtTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool2 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:sd_card1 ;
-	] ;
-	prov:startedAtTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:used kb:sd_card1 ;
-	prov:wasAssociatedWith kb:tool2 ;
-	.
-
-kb:forensic_action5
-	a prov:Activity ;
-	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:android_image ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:sd_card1_image ;
-		]
-		;
-	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:used
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasAssociatedWith kb:tool3 ;
-	.
-
-kb:forensic_action6
-	a
-		prov:Activity ,
-		prov:Entity
-		;
-	prov:endedAtTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance_record10 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance_record11 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance_record9 ;
-		]
-		;
-	prov:startedAtTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:used
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasAssociatedWith kb:parser1 ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	.
-
-kb:image_partition
+kb:image_partition-99c962b9-f70f-418c-9b58-6dd04eb3e2a4
 	a prov:Entity ;
 	.
 
-kb:investigator1
+kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2
 	a prov:Agent ;
 	.
 
-kb:location1
+kb:location-48a4e0ae-7141-4570-a04e-c47260c06e4b
 	a prov:Entity ;
 	.
 
-kb:message1
+kb:message-f221413c-9f32-46ca-96c9-3825d04eb932
 	a prov:Entity ;
 	.
 
-kb:message_action1
+kb:message_action-f7078adf-066a-4f55-831e-a10feb8054fb
 	a prov:Entity ;
 	.
 
-kb:message_database
+kb:message_database-60459e4c-5730-4551-b621-2d6a7baaae14
 	a prov:Entity ;
 	.
 
-kb:os1
+kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e
 	a prov:Entity ;
 	.
 
-kb:parser1
+kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:examiner2 ;
+	prov:actedOnBehalfOf kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:examiner2 ;
-		prov:hadActivity kb:forensic_action6 ;
+		prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
+		prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
 	] ;
 	.
 
-kb:plaso_storage_file
+kb:plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38
 	a prov:Entity ;
 	.
 
-kb:provenance_record1
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Android Smartphone" ;
-	prov:hadMember kb:device1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:investigator1 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:forensic_action1 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action1 ;
-		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:investigator1 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
-	prov:wasGeneratedBy kb:forensic_action1 ;
-	case-investigation:exhibitNumber "ACME-676553402357" ;
-	.
-
-kb:provenance_record10
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "WhatsApp message database" ;
-	prov:hadMember kb:message_database ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	case-investigation:exhibitNumber "DFL-20140712-0022" ;
-	.
-
-kb:provenance_record11
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "WhatsApp thumbnail database" ;
-	prov:hadMember kb:thumbnail_database ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	case-investigation:exhibitNumber "DFL-20140712-0023" ;
-	.
-
-kb:provenance_record12
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Android data partition" ;
-	prov:hadMember kb:image_partition ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	case-investigation:exhibitNumber "DFL-20140712-0024" ;
-	.
-
-kb:provenance_record13
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "WhatsApp message being sent from subject to victim" ;
-	prov:hadMember kb:message_action1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-0025" ;
-	.
-
-kb:provenance_record14
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "WhatsApp chat message thread between subject and victim" ;
-	prov:hadMember kb:thread1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-0026" ;
-	.
-
-kb:provenance_record15
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "WhatsApp chat message containing contraband attachment" ;
-	prov:hadMember kb:message1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-0027" ;
-	.
-
-kb:provenance_record16
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Location of subject when using WhatsApp" ;
-	prov:hadMember kb:location1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-0028" ;
-	.
-
-kb:provenance_record17
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Subject's WhatsApp account" ;
-	prov:hadMember kb:account1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-0029" ;
-	.
-
-kb:provenance_record18
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Victim's WhatsApp account" ;
-	prov:hadMember kb:account2 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-002A" ;
-	.
-
-kb:provenance_record19
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Thumbnail of contraband picture" ;
-	prov:hadMember kb:decoded_blob ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-002B" ;
-	.
-
-kb:provenance_record2
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Android Smartphone" ;
-	prov:hadMember kb:device1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:examiner1 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:device1 ;
-		prov:hadActivity kb:forensic_action2 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action2 ;
-	] ;
-	prov:wasAttributedTo kb:examiner1 ;
-	prov:wasDerivedFrom kb:device1 ;
-	prov:wasGeneratedBy kb:forensic_action2 ;
-	case-investigation:exhibitNumber "DFL-20140712-001A" ;
-	.
-
-kb:provenance_record20
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Encoded thumbnail of contraband picture" ;
-	prov:hadMember kb:decrypted_blob ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-002C" ;
-	.
-
-kb:provenance_record21
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Encrypted thumbnail of contraband picture" ;
-	prov:hadMember kb:sqlite_blob ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser1 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record10 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record11 ;
-			prov:hadActivity kb:forensic_action6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record9 ;
-			prov:hadActivity kb:forensic_action6 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action6 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:parser1 ;
-	prov:wasDerivedFrom
-		kb:provenance_record10 ,
-		kb:provenance_record11 ,
-		kb:provenance_record9
-		;
-	prov:wasGeneratedBy kb:forensic_action6 ;
-	case-investigation:exhibitNumber "DFL-20140712-002D" ;
-	.
-
-kb:provenance_record3
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "SD Card" ;
-	prov:hadMember kb:sd_card1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:examiner1 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:device1 ;
-		prov:hadActivity kb:forensic_action2 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action2 ;
-	] ;
-	prov:wasAttributedTo kb:examiner1 ;
-	prov:wasDerivedFrom kb:device1 ;
-	prov:wasGeneratedBy kb:forensic_action2 ;
-	case-investigation:exhibitNumber "DFL-20140712-001B" ;
-	.
-
-kb:provenance_record4
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Forensic image of Android Smartphone" ;
-	prov:hadMember kb:android_image ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool1 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:device1 ;
-		prov:hadActivity kb:forensic_action3 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action3 ;
-		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool1 ;
-	prov:wasDerivedFrom kb:device1 ;
-	prov:wasGeneratedBy kb:forensic_action3 ;
-	case-investigation:exhibitNumber "DFL-20140712-001C" ;
-	.
-
-kb:provenance_record5
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Forensic image of SD Card" ;
-	prov:hadMember kb:sd_card1_image ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool2 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:sd_card1 ;
-		prov:hadActivity kb:forensic_action4 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action4 ;
-		prov:atTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool2 ;
-	prov:wasDerivedFrom kb:sd_card1 ;
-	prov:wasGeneratedBy kb:forensic_action4 ;
-	case-investigation:exhibitNumber "DFL-20140712-001D" ;
-	.
-
-kb:provenance_record6
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Chat Messages Report" ;
-	prov:hadMember kb:chat_messages_report ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	case-investigation:exhibitNumber "DFL-20140712-001E" ;
-	.
-
-kb:provenance_record7
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Plaso Storage File" ;
-	prov:hadMember kb:plaso_storage_file ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	case-investigation:exhibitNumber "DFL-20140712-001F" ;
-	.
-
-kb:provenance_record8
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Android OS Information" ;
-	prov:hadMember kb:os1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool3 ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool3 ;
-	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
-		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
-	case-investigation:exhibitNumber "DFL-20140712-0020" ;
-	.
-
-kb:provenance_record9
+kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Contraband photograph" ;
-	prov:hadMember kb:attachment_file ;
+	prov:hadMember kb:attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3 ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:android_image ;
-			prov:hadActivity kb:forensic_action5 ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:sd_card1_image ;
-			prov:hadActivity kb:forensic_action5 ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:forensic_action5 ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3 ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
-		kb:android_image ,
-		kb:sd_card1_image
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
 		;
-	prov:wasGeneratedBy kb:forensic_action5 ;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 	case-investigation:exhibitNumber "DFL-20140712-0021" ;
 	.
 
-kb:sd_card1
+kb:provenance_record-25d18278-7f25-4142-8bd4-62807eec2680
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Encrypted thumbnail of contraband picture" ;
+	prov:hadMember kb:sqlite_blob-bd34a27d-f872-461f-a6da-a83767c544b5 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-002D" ;
+	.
+
+kb:provenance_record-3493ecb5-2561-48d2-9944-07e06ce150b3
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "WhatsApp chat message containing contraband attachment" ;
+	prov:hadMember kb:message-f221413c-9f32-46ca-96c9-3825d04eb932 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-0027" ;
+	.
+
+kb:provenance_record-3eb9c278-376d-4184-98b6-3a82e99b1ad1
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Android data partition" ;
+	prov:hadMember kb:image_partition-99c962b9-f70f-418c-9b58-6dd04eb3e2a4 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	case-investigation:exhibitNumber "DFL-20140712-0024" ;
+	.
+
+kb:provenance_record-5d88a49b-2a98-4bde-873a-bcc5d314b9de
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "WhatsApp chat message thread between subject and victim" ;
+	prov:hadMember kb:thread-2d8e20e9-37b2-4766-9aab-f5b9facd9b8a ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-0026" ;
+	.
+
+kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "WhatsApp thumbnail database" ;
+	prov:hadMember kb:thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	case-investigation:exhibitNumber "DFL-20140712-0023" ;
+	.
+
+kb:provenance_record-6c0fda21-5670-4e4c-9d37-ce848a44aefb
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Android Smartphone" ;
+	prov:hadMember kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
+		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
+	case-investigation:exhibitNumber "ACME-676553402357" ;
+	.
+
+kb:provenance_record-6cfa58c8-b0de-41ac-882d-7b8566801426
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Subject's WhatsApp account" ;
+	prov:hadMember kb:account-cc8408d1-09b8-4941-95c4-a3390f7648b1 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-0029" ;
+	.
+
+kb:provenance_record-6f6eb950-9ae7-42d5-a3b7-f8e4e89cb991
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Victim's WhatsApp account" ;
+	prov:hadMember kb:account-799bd0b8-8b1e-483f-88be-d3a22d886e6e ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-002A" ;
+	.
+
+kb:provenance_record-75b2b4a1-6b97-40bb-880b-58c99273af00
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Android Smartphone" ;
+	prov:hadMember kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+		prov:hadActivity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	] ;
+	prov:wasAttributedTo kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:wasGeneratedBy kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	case-investigation:exhibitNumber "DFL-20140712-001A" ;
+	.
+
+kb:provenance_record-88c56289-5d13-4912-887c-ee9cd939d60d
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "SD Card" ;
+	prov:hadMember kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+		prov:hadActivity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	] ;
+	prov:wasAttributedTo kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:wasGeneratedBy kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	case-investigation:exhibitNumber "DFL-20140712-001B" ;
+	.
+
+kb:provenance_record-9b9b6701-9231-4f3e-a0c2-afca4cd71acf
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Chat Messages Report" ;
+	prov:hadMember kb:chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	case-investigation:exhibitNumber "DFL-20140712-001E" ;
+	.
+
+kb:provenance_record-a59bb4bd-969a-482b-8a76-0d820f557f91
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Android OS Information" ;
+	prov:hadMember kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	case-investigation:exhibitNumber "DFL-20140712-0020" ;
+	.
+
+kb:provenance_record-bc31ff48-0cd7-467d-b0b9-da44cdeb0822
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Location of subject when using WhatsApp" ;
+	prov:hadMember kb:location-48a4e0ae-7141-4570-a04e-c47260c06e4b ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-0028" ;
+	.
+
+kb:provenance_record-c878d1ad-bd17-419c-be4d-ce6cc2be23d8
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Thumbnail of contraband picture" ;
+	prov:hadMember kb:decoded_blob-428d56c2-be79-472c-bb51-cc46376aeba7 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-002B" ;
+	.
+
+kb:provenance_record-ca85393c-9fc7-4fe9-9c88-9a7d3b73bc0b
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "WhatsApp message being sent from subject to victim" ;
+	prov:hadMember kb:message_action-f7078adf-066a-4f55-831e-a10feb8054fb ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-0025" ;
+	.
+
+kb:provenance_record-d64a1670-d751-489d-b3ef-a3f7e216ac18
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Encoded thumbnail of contraband picture" ;
+	prov:hadMember kb:decrypted_blob-2d5f2cf9-2fb4-45d5-a0d7-52f990d2a1e6 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	prov:wasDerivedFrom
+		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
+		kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ,
+		kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+		;
+	prov:wasGeneratedBy kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	case-investigation:exhibitNumber "DFL-20140712-002C" ;
+	.
+
+kb:provenance_record-de12ffbf-78a4-43d1-be6c-96596bb48cd5
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Plaso Storage File" ;
+	prov:hadMember kb:plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	case-investigation:exhibitNumber "DFL-20140712-001F" ;
+	.
+
+kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "WhatsApp message database" ;
+	prov:hadMember kb:message_database-60459e4c-5730-4551-b621-2d6a7baaae14 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	prov:wasDerivedFrom
+		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
+		kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
+		;
+	prov:wasGeneratedBy kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	case-investigation:exhibitNumber "DFL-20140712-0022" ;
+	.
+
+kb:provenance_record-f20e9224-ce1d-4dc2-b809-30fcae30e8a6
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic image of SD Card" ;
+	prov:hadMember kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+		prov:hadActivity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
+		prov:atTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
+	prov:wasDerivedFrom kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+	prov:wasGeneratedBy kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
+	case-investigation:exhibitNumber "DFL-20140712-001D" ;
+	.
+
+kb:provenance_record-fc4fad81-fd0d-47ac-abe0-dabc52b9b8ec
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic image of Android Smartphone" ;
+	prov:hadMember kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+		prov:hadActivity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
+		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
+	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:wasGeneratedBy kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
+	case-investigation:exhibitNumber "DFL-20140712-001C" ;
+	.
+
+kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8
 	a prov:Entity ;
 	.
 
-kb:sd_card1_image
+kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183
 	a prov:Entity ;
 	.
 
-kb:sqlite_blob
+kb:sqlite_blob-bd34a27d-f872-461f-a6da-a83767c544b5
 	a prov:Entity ;
 	.
 
-kb:thread1
+kb:thread-2d8e20e9-37b2-4766-9aab-f5b9facd9b8a
 	a prov:Entity ;
 	.
 
-kb:thumbnail_database
+kb:thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689
 	a prov:Entity ;
 	.
 
-kb:tool1
+kb:tool-005be9da-ea83-456f-a44f-a63610586bd4
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:examiner1 ;
+	prov:actedOnBehalfOf kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:examiner1 ;
-		prov:hadActivity kb:forensic_action3 ;
+		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+		prov:hadActivity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
 	] ;
 	.
 
-kb:tool2
+kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:examiner1 ;
+	prov:actedOnBehalfOf kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:examiner1 ;
-		prov:hadActivity kb:forensic_action4 ;
+		prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
+		prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
 	] ;
 	.
 
-kb:tool3
+kb:tool-fd95457e-864b-4b89-bb66-09215558733f
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:examiner2 ;
+	prov:actedOnBehalfOf kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:examiner2 ;
-		prov:hadActivity kb:forensic_action5 ;
+		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+		prov:hadActivity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
 	] ;
 	.
 

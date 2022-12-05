@@ -5,51 +5,51 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:annotation1
+kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b
 	a prov:Entity ;
 	rdfs:comment "Photo was taken by a Canon digital camera." ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:annotator_tool1 ;
+		prov:agent kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
 		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:forensic_action7 ;
+		prov:hadActivity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:forensic_action7 ;
+		prov:activity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
 		prov:atTime "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:annotator_tool1 ;
+	prov:wasAttributedTo kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
-	prov:wasGeneratedBy kb:forensic_action7 ;
+	prov:wasGeneratedBy kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
 	.
 
-kb:annotator_tool1
+kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:examiner1 ;
+	prov:actedOnBehalfOf kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:examiner1 ;
-		prov:hadActivity kb:forensic_action7 ;
+		prov:agent kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d ;
+		prov:hadActivity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
 	] ;
 	.
 
-kb:examiner1
+kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d
 	a prov:Agent ;
 	.
 
-kb:forensic_action7
+kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3
 	a prov:Activity ;
 	prov:endedAtTime "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:annotator_tool1 ;
+		prov:agent kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
@@ -58,6 +58,6 @@ kb:forensic_action7
 	] ;
 	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
-	prov:wasAssociatedWith kb:annotator_tool1 ;
+	prov:wasAssociatedWith kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
 	.
 
