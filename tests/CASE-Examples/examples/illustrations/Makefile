@@ -13,6 +13,10 @@
 
 SHELL := /bin/bash
 
+top_srcdir := $(shell cd ../../../.. ; pwd)
+
+illustrations_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/CASE-Examples/examples/illustrations
+
 illdirs := $(shell find * -maxdepth 0 -type d | sort | egrep -v '^src$$')
 
 all_targets       := $(foreach illdir,$(illdirs),all-$(illdir))
@@ -28,6 +32,10 @@ all-%:
 
 check: \
   $(check_targets)
+	@diff \
+	  <(ls */prov-constraints.log | while read x; do dirname $$x ; done) \
+	  <(cd $(illustrations_srcdir) ; ls */*.json | while read x; do dirname $$x ; done | sort | uniq) \
+	  || (echo "ERROR:Makefile:The illustrations listed above do not have evaluation directories under $(top_srcdir)/tests/CASE-Examples/examples/illustrations." >&2 ; exit 1)
 
 check-%:
 	$(MAKE) \
