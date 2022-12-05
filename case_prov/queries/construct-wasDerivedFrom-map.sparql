@@ -11,6 +11,8 @@
 
 CONSTRUCT {
   ?x prov:wasDerivedFrom ?y .
+  ?x a prov:Entity .
+  ?y a prov:Entity .
 }
 WHERE {
   ?x case-investigation:wasDerivedFrom ?y .
