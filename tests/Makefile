@@ -13,7 +13,7 @@
 
 SHELL := /bin/bash
 
-PYTHON3 ?= which python3
+PYTHON3 ?= python3
 
 top_srcdir := $(shell cd .. ; pwd)
 
