@@ -6,235 +6,226 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:F3FD304E-EF6C-4CBD-94CB-425880F82748
+kb:cellebritexml-report-ab6beb0b-2fcc-4326-8685-1159c7ea6deb
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:cellebrite-ufed1-uuid ;
+		prov:agent kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record1-uuid ;
-			prov:hadActivity kb:investigative-action1-uuid ;
+			prov:entity kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
+			prov:hadActivity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:samsung-device-uuid ;
-			prov:hadActivity kb:investigative-action1-uuid ;
+			prov:entity kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2 ;
+			prov:hadActivity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 	] ;
-	prov:wasAttributedTo kb:cellebrite-ufed1-uuid ;
+	prov:wasAttributedTo kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53 ;
 	prov:wasDerivedFrom
-		kb:provenance-record1-uuid ,
-		kb:samsung-device-uuid
+		kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ,
+		kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2
 		;
-	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	prov:wasGeneratedBy kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 	.
 
-kb:cellebrite-pa1-uuid
+kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:actedOnBehalfOf kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:investigator1-uuid ;
-		prov:hadActivity kb:investigative-action2-uuid ;
+		prov:agent kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b ;
+		prov:hadActivity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 	] ;
 	.
 
-kb:cellebrite-ufed1-uuid
+kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:actedOnBehalfOf kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:investigator1-uuid ;
-		prov:hadActivity kb:investigative-action1-uuid ;
+		prov:agent kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b ;
+		prov:hadActivity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	] ;
 	.
 
-kb:cellebritexml-report-uuid
+kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:cellebrite-pa1-uuid ;
+		prov:agent kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
-			prov:hadActivity kb:investigative-action2-uuid ;
+			prov:entity kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ;
+			prov:hadActivity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record3-uuid ;
-			prov:hadActivity kb:investigative-action2-uuid ;
+			prov:entity kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563 ;
+			prov:hadActivity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action2-uuid ;
+		prov:activity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	] ;
-	prov:wasAttributedTo kb:cellebrite-pa1-uuid ;
+	prov:wasAttributedTo kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609 ;
 	prov:wasDerivedFrom
-		kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ,
-		kb:provenance-record3-uuid
+		kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ,
+		kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563
 		;
-	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	.
 
-kb:investigative-action1-uuid
+kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f
 	a prov:Activity ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:cellebrite-ufed1-uuid ;
+		prov:agent kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609 ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
-			prov:entity kb:provenance-record1-uuid ;
+			prov:entity kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ;
 		] ,
 		[
 			a prov:Usage ;
-			prov:entity kb:samsung-device-uuid ;
+			prov:entity kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563 ;
 		]
 		;
 	prov:used
-		kb:provenance-record1-uuid ,
-		kb:samsung-device-uuid
+		kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ,
+		kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563
 		;
-	prov:wasAssociatedWith kb:cellebrite-ufed1-uuid ;
+	prov:wasAssociatedWith kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609 ;
 	.
 
-kb:investigative-action2-uuid
+kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30
 	a prov:Activity ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:cellebrite-pa1-uuid ;
+		prov:agent kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
-			prov:entity kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+			prov:entity kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
 		] ,
 		[
 			a prov:Usage ;
-			prov:entity kb:provenance-record3-uuid ;
+			prov:entity kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2 ;
 		]
 		;
 	prov:used
-		kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ,
-		kb:provenance-record3-uuid
+		kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ,
+		kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2
 		;
-	prov:wasAssociatedWith kb:cellebrite-pa1-uuid ;
+	prov:wasAssociatedWith kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53 ;
+	prov:wasInformedBy kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	.
 
-kb:investigator1-uuid
+kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b
 	a prov:Agent ;
 	.
 
-kb:provenance-record1-uuid
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	prov:hadMember kb:samsung-device-uuid ;
+kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4
+	a prov:Entity ;
 	.
 
-kb:provenance-record13-uuid
-	a prov:Collection ;
-	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
-	case-investigation:exhibitNumber "002" ;
-	.
-
-kb:provenance-record2-uuid
+kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Forensic duplicate of mobile device used by Ares Lupin" ;
-	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
+	prov:hadMember kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:cellebrite-ufed1-uuid ;
+		prov:agent kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record1-uuid ;
-			prov:hadActivity kb:investigative-action1-uuid ;
+			prov:entity kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ;
+			prov:hadActivity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:samsung-device-uuid ;
-			prov:hadActivity kb:investigative-action1-uuid ;
+			prov:entity kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563 ;
+			prov:hadActivity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	] ;
-	prov:wasAttributedTo kb:cellebrite-ufed1-uuid ;
+	prov:wasAttributedTo kb:configuredtool-aadfa022-0916-497d-aba5-ff8a4033f609 ;
 	prov:wasDerivedFrom
-		kb:provenance-record1-uuid ,
-		kb:samsung-device-uuid
+		kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ,
+		kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563
 		;
-	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-99a5c94f-e6cd-4b7c-b189-ea998ee0b31f ;
 	case-investigation:exhibitNumber "20181211001-002" ;
 	.
 
-kb:provenance-record3-uuid
+kb:provenancerecord-4dee4ff5-bc77-4dad-a785-05b147149678
 	a
 		prov:Collection ,
 		prov:Entity
 		;
-	prov:hadMember kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
-	.
-
-kb:provenance-record4-uuid
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	prov:hadMember kb:cellebritexml-report-uuid ;
+	prov:hadMember kb:cellebritexml-report-ab6beb0b-2fcc-4326-8685-1159c7ea6deb ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:cellebrite-pa1-uuid ;
+		prov:agent kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ;
-			prov:hadActivity kb:investigative-action2-uuid ;
+			prov:entity kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
+			prov:hadActivity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record3-uuid ;
-			prov:hadActivity kb:investigative-action2-uuid ;
+			prov:entity kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2 ;
+			prov:hadActivity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action2-uuid ;
+		prov:activity kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 	] ;
-	prov:wasAttributedTo kb:cellebrite-pa1-uuid ;
+	prov:wasAttributedTo kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53 ;
 	prov:wasDerivedFrom
-		kb:F3FD304E-EF6C-4CBD-94CB-425880F82748 ,
-		kb:provenance-record3-uuid
+		kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748 ,
+		kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2
 		;
-	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	prov:wasGeneratedBy kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30 ;
 	.
 
-kb:samsung-device-uuid
-	a prov:Entity ;
+kb:provenancerecord-9326149a-31c5-4d20-ada3-b97743d3e563
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4 ;
 	.
 

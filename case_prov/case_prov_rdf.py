@@ -15,7 +15,7 @@
 This script executes CONSTRUCT queries, returning a supplemental graph.
 """
 
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 import argparse
 import importlib.resources
@@ -34,7 +34,7 @@ from . import queries
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
+NS_PROV = rdflib.PROV
 
 
 def main() -> None:

@@ -21,7 +21,7 @@ This script renders PROV-O elements of a graph according to the graphic design e
 # get quoted.  This turns out to be a dot syntax error.  Need to report
 # this upstream to pydot.
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 import argparse
 import collections
@@ -41,7 +41,7 @@ from case_utils.namespace import NS_CASE_INVESTIGATION
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
+NS_PROV = rdflib.PROV
 NS_RDFS = rdflib.RDFS
 
 # This one isn't among the prov constants.
@@ -72,12 +72,6 @@ def iri_to_gv_node_id(iri: str) -> str:
     hasher = hashlib.sha256()
     hasher.update(iri.encode())
     return "_" + hasher.hexdigest()
-
-
-def iri_to_short_iri(iri: str) -> str:
-    return iri.replace("http://example.org/kb/", "kb:").replace(
-        "http://www.w3.org/ns/prov#", "prov:"
-    )
 
 
 def main() -> None:
@@ -145,7 +139,7 @@ def main() -> None:
     filter_iris: typing.Optional[typing.Set[str]] = None
     if args.from_empty_set:
         filter_iris = set()
-        filter_iris.add("http://www.w3.org/ns/prov#EmptyCollection")
+        filter_iris.add(str(NS_PROV.EmptyCollection))
         select_query_actions_text = """\
 SELECT ?nDerivingAction
 WHERE {
@@ -325,7 +319,7 @@ WHERE {
     for record in graph.query(select_query_object):
         (n_agent, l_label, l_comment) = record
         agent_iri = n_agent.toPython()
-        dot_label = "ID - " + iri_to_short_iri(agent_iri)
+        dot_label = "ID - " + graph.namespace_manager.qname(agent_iri)
         if l_label is not None:
             dot_label += "\n" + l_label.toPython()
         if l_comment is not None:
@@ -339,7 +333,7 @@ WHERE {
     # _logger.debug("nodes = %s." % pprint.pformat(nodes))
 
     # Find Collections, to adjust Entity rendering in the next block.
-    collection_iris = {"http://www.w3.org/ns/prov#EmptyCollection"}
+    collection_iris: typing.Set[str] = {str(NS_PROV.EmptyCollection)}
     select_query_text = """\
 SELECT ?nCollection
 WHERE {
@@ -357,9 +351,16 @@ WHERE {
 
     # Render Entities.
     # This loop operates differently from the others, to insert prov:EmptyCollection.
-    entity_iri_to_label_comment = dict()
+    entity_iri_to_label_comment: typing.Dict[
+        str,
+        typing.Tuple[
+            typing.Optional[str],
+            typing.Optional[str],
+            typing.Optional[str],
+        ],
+    ] = dict()
     if not args.omit_empty_set:
-        entity_iri_to_label_comment["http://www.w3.org/ns/prov#EmptyCollection"] = (
+        entity_iri_to_label_comment[str(NS_PROV.EmptyCollection)] = (
             None,
             None,
             None,
@@ -391,7 +392,7 @@ WHERE {
         entity_iri_to_label_comment[entity_iri] = (l_label, l_comment, l_exhibit_number)
     for entity_iri in sorted(entity_iri_to_label_comment):
         (l_label, l_comment, l_exhibit_number) = entity_iri_to_label_comment[entity_iri]
-        dot_label = "ID - " + iri_to_short_iri(entity_iri)
+        dot_label = "ID - " + graph.namespace_manager.qname(entity_iri)
         if l_exhibit_number is not None:
             dot_label += "\nExhibit - " + l_exhibit_number.toPython()
         if l_label is not None:
@@ -437,7 +438,7 @@ WHERE {
     for record in graph.query(select_query_object):
         (n_activity, l_label, l_comment, l_start_time, l_end_time) = record
         activity_iri = n_activity.toPython()
-        dot_label = "ID - " + iri_to_short_iri(activity_iri)
+        dot_label = "ID - " + graph.namespace_manager.qname(activity_iri)
         if l_label is not None:
             dot_label += "\n" + l_label.toPython()
         if l_start_time is not None or l_end_time is not None:

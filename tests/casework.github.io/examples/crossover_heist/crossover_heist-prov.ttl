@@ -1,0 +1,135 @@
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81 ;
+		prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	] ;
+	.
+
+kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1
+	a prov:Entity ;
+	.
+
+kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c
+	a prov:Activity ;
+	rdfs:comment "Acquisition of Kingston DataTraveler 2.0" ;
+	prov:endedAtTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
+			prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
+			prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
+		]
+		;
+	prov:startedAtTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ,
+		kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
+		;
+	prov:wasAssociatedWith kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	.
+
+kb:ProvenanceRecord-0ff68932-2abc-433c-91b0-5af1ca34b470
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic image with E01Capture" ;
+	prov:hadMember kb:usb-b2dbb227-06ec-432d-9f63-058e8ab73944 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
+			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+		prov:atTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	prov:wasDerivedFrom
+		kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ,
+		kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
+		;
+	prov:wasGeneratedBy kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	case-investigation:exhibitNumber "20181119-001-001-01" ;
+	.
+
+kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Kingston DataTraveler 2.0" ;
+	prov:hadMember kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+	case-investigation:exhibitNumber "20181119-001-001" ;
+	.
+
+kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81
+	a prov:Agent ;
+	.
+
+kb:usb-b2dbb227-06ec-432d-9f63-058e8ab73944
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
+			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+		prov:atTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	prov:wasDerivedFrom
+		kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ,
+		kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89
+		;
+	prov:wasGeneratedBy kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+

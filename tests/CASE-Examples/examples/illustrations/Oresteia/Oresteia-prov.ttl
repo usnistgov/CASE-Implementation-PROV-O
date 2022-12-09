@@ -6,225 +6,225 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:aeschylus-uuid
+kb:aeschylus-1ab8a80e-39fb-4209-9781-b10bdbc5d0c2
 	a prov:Person ;
 	.
 
-kb:argive-elder1-phoneaccnt-uuid
+kb:argive-elder1-phoneaccnt-10ecce02-71b9-4623-8fbc-1f2914c79362
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3-uuid ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record4-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action5-uuid ;
+		prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
 		;
-	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 	.
 
-kb:argive-elder2-phoneaccnt-uuid
+kb:argive-elder2-phoneaccnt-7d296cea-00aa-4f42-b357-281a64df01e6
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3-uuid ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record4-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action5-uuid ;
+		prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
 		;
-	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 	.
 
-kb:argive-elder3-phoneaccnt-uuid
+kb:argive-elder3-phoneaccnt-93b32564-9b02-497e-a58f-1b4f1c03c41e
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3-uuid ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record4-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action5-uuid ;
+		prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
 		;
-	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 	.
 
-kb:athens-warrant1-uuid
+kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf
-		kb:investigator1-uuid ,
-		kb:investigator2-uuid
+		kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ,
+		kb:investigator-72986b46-69f5-4767-878c-d4894be9069e
 		;
 	prov:qualifiedDelegation
 		[
 			a prov:Delegation ;
-			prov:agent kb:investigator1-uuid ;
-			prov:hadActivity kb:investigative-action10-uuid ;
+			prov:agent kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ;
+			prov:hadActivity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 		] ,
 		[
 			a prov:Delegation ;
-			prov:agent kb:investigator2-uuid ;
-			prov:hadActivity kb:investigative-action1-uuid ;
+			prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+			prov:hadActivity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 		]
 		;
 	.
 
-kb:cassandra-device-uuid
+kb:cassandra-1b38d28a-f88f-471f-8f83-16877dedacc0
+	a prov:Person ;
+	.
+
+kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:athens-warrant1-uuid ;
+		prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
 		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action1-uuid ;
+		prov:hadActivity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 	] ;
-	prov:wasAttributedTo kb:athens-warrant1-uuid ;
+	prov:wasAttributedTo kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
-	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 	.
 
-kb:cassandra-mobiledevice-forensicduplicate-uuid
+kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool1-uuid ;
+		prov:agent kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-device-uuid ;
-			prov:hadActivity kb:investigative-action2-uuid ;
+			prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+			prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record2-uuid ;
-			prov:hadActivity kb:investigative-action2-uuid ;
+			prov:entity kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ;
+			prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action2-uuid ;
+		prov:activity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 		prov:atTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool1-uuid ;
+	prov:wasAttributedTo kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
 	prov:wasDerivedFrom
-		kb:cassandra-device-uuid ,
-		kb:provenance-record2-uuid
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
 		;
-	prov:wasGeneratedBy kb:investigative-action2-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 	.
 
-kb:cassandra-mobiledevice-mmssms-uuid
+kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535
 	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool2-uuid ;
+		prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
-			prov:hadActivity kb:investigative-action4-uuid ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+			prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record3-uuid ;
-			prov:hadActivity kb:investigative-action4-uuid ;
+			prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+			prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action4-uuid ;
+		prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool2-uuid ;
+	prov:wasAttributedTo kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
-		kb:provenance-record3-uuid
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
 		;
-	prov:wasGeneratedBy kb:investigative-action4-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 	.
 
-kb:cassandra-uuid
+kb:electra-a960648e-c88e-4728-9853-7b7f06de8caa
 	a prov:Person ;
 	.
 
-kb:electra-uuid
+kb:euripides-3696c710-161f-47af-9ae8-61b178611773
 	a prov:Person ;
 	.
 
-kb:euripides-uuid
-	a prov:Person ;
-	.
-
-kb:investigative-action1-uuid
+kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95
 	a prov:Activity ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:athens-warrant1-uuid ;
+		prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
@@ -233,73 +233,105 @@ kb:investigative-action1-uuid
 	] ;
 	prov:startedAtTime "2017-06-21T22:36:24.350000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
-	prov:wasAssociatedWith kb:athens-warrant1-uuid ;
+	prov:wasAssociatedWith kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	.
 
-kb:investigative-action10-uuid
+kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89
 	a prov:Activity ;
+	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:athens-warrant1-uuid ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	] ;
 	prov:qualifiedCommunication [
 		a prov:Communication ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
-			prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
-			prov:entity kb:cassandra-device-uuid ;
+			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
 		] ,
 		[
 			a prov:Usage ;
-			prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance-record1-uuid ;
+			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
 		]
 		;
-	prov:startedAtTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
+	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 	prov:used
-		kb:cassandra-device-uuid ,
-		kb:provenance-record1-uuid
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
 		;
-	prov:wasAssociatedWith kb:athens-warrant1-uuid ;
-	prov:wasInformedBy kb:investigative-action1-uuid ;
+	prov:wasAssociatedWith kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasInformedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 	.
 
-kb:investigative-action2-uuid
+kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997
 	a prov:Activity ;
 	prov:endedAtTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:tool1-uuid ;
+		prov:agent kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
 	] ;
 	prov:qualifiedCommunication [
 		a prov:Communication ;
-		prov:activity kb:investigative-action10-uuid ;
+		prov:activity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
 			prov:atTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
-			prov:entity kb:cassandra-device-uuid ;
+			prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
 		] ,
 		[
 			a prov:Usage ;
 			prov:atTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance-record2-uuid ;
+			prov:entity kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ;
 		]
 		;
 	prov:startedAtTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
 	prov:used
-		kb:cassandra-device-uuid ,
-		kb:provenance-record2-uuid
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
 		;
-	prov:wasAssociatedWith kb:tool1-uuid ;
-	prov:wasInformedBy kb:investigative-action10-uuid ;
+	prov:wasAssociatedWith kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	prov:wasInformedBy kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 	.
 
-kb:investigative-action4-uuid
+kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
+			prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
+			prov:entity kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792 ;
+		]
+		;
+	prov:startedAtTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792
+		;
+	prov:wasAssociatedWith kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	prov:wasInformedBy kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe
 	a
 		prov:Activity ,
 		prov:Agent
@@ -307,384 +339,356 @@ kb:investigative-action4-uuid
 	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
-		prov:agent kb:tool2-uuid ;
+		prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	] ;
 	prov:qualifiedCommunication [
 		a prov:Communication ;
-		prov:activity kb:investigative-action2-uuid ;
+		prov:activity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 	] ;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
 			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
-			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
 		] ,
 		[
 			a prov:Usage ;
 			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance-record3-uuid ;
+			prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
 		]
 		;
 	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
 	prov:used
-		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
-		kb:provenance-record3-uuid
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
 		;
-	prov:wasAssociatedWith kb:tool2-uuid ;
-	prov:wasInformedBy kb:investigative-action2-uuid ;
+	prov:wasAssociatedWith kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	prov:wasInformedBy kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 	.
 
-kb:investigative-action5-uuid
-	a
-		prov:Activity ,
-		prov:Entity
-		;
-	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool3-uuid ;
-	] ;
+kb:investigative-action-relationship-97b9d9ac-deeb-45ea-8f81-6acda53c9b3e
+	a prov:Entity ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool2-uuid ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigative-action4-uuid ;
+		prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
-			prov:hadActivity kb:investigative-action4-uuid ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+			prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record3-uuid ;
-			prov:hadActivity kb:investigative-action4-uuid ;
+			prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+			prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action4-uuid ;
+		prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance-record4-uuid ;
-		]
-		;
-	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
-	prov:used
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
-		;
-	prov:wasAssociatedWith kb:tool3-uuid ;
-	prov:wasAttributedTo kb:tool2-uuid ;
+	prov:wasAttributedTo kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
-		kb:provenance-record3-uuid
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
 		;
-	prov:wasGeneratedBy kb:investigative-action4-uuid ;
-	prov:wasInformedBy kb:investigative-action4-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 	.
 
-kb:investigator1-uuid
+kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196
 	a prov:Agent ;
 	.
 
-kb:investigator2-uuid
+kb:investigator-72986b46-69f5-4767-878c-d4894be9069e
 	a prov:Agent ;
 	.
 
-kb:provenance-record1-uuid
+kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Mobile device used by murder victim Cassandra" ;
-	prov:hadMember kb:cassandra-device-uuid ;
+	prov:hadMember kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:athens-warrant1-uuid ;
+		prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	] ;
 	prov:qualifiedDerivation [
 		a prov:Derivation ;
 		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action1-uuid ;
+		prov:hadActivity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 	] ;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action1-uuid ;
+		prov:activity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 	] ;
-	prov:wasAttributedTo kb:athens-warrant1-uuid ;
+	prov:wasAttributedTo kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
-	prov:wasGeneratedBy kb:investigative-action1-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
 	case-investigation:exhibitNumber "ArgosPD-20170622-001A" ;
 	.
 
-kb:provenance-record2-uuid
+kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Android smartphone seized by Argos PD" ;
-	prov:hadMember kb:cassandra-device-uuid ;
+	prov:hadMember kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:athens-warrant1-uuid ;
+		prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-device-uuid ;
-			prov:hadActivity kb:investigative-action10-uuid ;
+			prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+			prov:hadActivity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record1-uuid ;
-			prov:hadActivity kb:investigative-action10-uuid ;
+			prov:entity kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792 ;
+			prov:hadActivity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action10-uuid ;
+		prov:activity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 	] ;
-	prov:wasAttributedTo kb:athens-warrant1-uuid ;
+	prov:wasAttributedTo kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
 	prov:wasDerivedFrom
-		kb:cassandra-device-uuid ,
-		kb:provenance-record1-uuid
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792
 		;
-	prov:wasGeneratedBy kb:investigative-action10-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
 	case-investigation:exhibitNumber "AthensPD-2017220601" ;
 	.
 
-kb:provenance-record3-uuid
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "Forensic duplicate of mobile device used by murder victim Cassandra" ;
-	prov:hadMember kb:cassandra-mobiledevice-forensicduplicate-uuid ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool1-uuid ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:cassandra-device-uuid ;
-			prov:hadActivity kb:investigative-action2-uuid ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record2-uuid ;
-			prov:hadActivity kb:investigative-action2-uuid ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigative-action2-uuid ;
-		prov:atTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool1-uuid ;
-	prov:wasDerivedFrom
-		kb:cassandra-device-uuid ,
-		kb:provenance-record2-uuid
-		;
-	prov:wasGeneratedBy kb:investigative-action2-uuid ;
-	case-investigation:exhibitNumber "AthensPD-2017220601-02" ;
-	.
-
-kb:provenance-record4-uuid
-	a
-		prov:Collection ,
-		prov:Entity
-		;
-	rdfs:comment "SMS SQLite database on mobile device used by murder victim Cassandra" ;
-	prov:hadMember kb:cassandra-mobiledevice-mmssms-uuid ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool2-uuid ;
-	] ;
-	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-forensicduplicate-uuid ;
-			prov:hadActivity kb:investigative-action4-uuid ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record3-uuid ;
-			prov:hadActivity kb:investigative-action4-uuid ;
-		]
-		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigative-action4-uuid ;
-		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
-	] ;
-	prov:wasAttributedTo kb:tool2-uuid ;
-	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
-		kb:provenance-record3-uuid
-		;
-	prov:wasGeneratedBy kb:investigative-action4-uuid ;
-	case-investigation:exhibitNumber "AthensPD-2017220601-02-03" ;
-	.
-
-kb:provenance-record5-uuid
+kb:provenance-record-9a1b4927-15e7-4985-8bd6-734c160d1503
 	a
 		prov:Collection ,
 		prov:Entity
 		;
 	rdfs:comment "Parsed messages from mobile device used by murder victim Cassandra" ;
 	prov:hadMember
-		kb:argive-elder1-phoneaccnt-uuid ,
-		kb:argive-elder2-phoneaccnt-uuid ,
-		kb:argive-elder3-phoneaccnt-uuid ,
-		kb:sms-message1-uuid ,
-		kb:sms-message2-uuid
+		kb:argive-elder1-phoneaccnt-10ecce02-71b9-4623-8fbc-1f2914c79362 ,
+		kb:argive-elder2-phoneaccnt-7d296cea-00aa-4f42-b357-281a64df01e6 ,
+		kb:argive-elder3-phoneaccnt-93b32564-9b02-497e-a58f-1b4f1c03c41e ,
+		kb:sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6 ,
+		kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba
 		;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3-uuid ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record4-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action5-uuid ;
+		prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
 		;
-	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 	case-investigation:exhibitNumber "ArgosPD-20170622-001A-100" ;
 	.
 
-kb:sms-message1-uuid
-	a prov:Entity ;
+kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Forensic duplicate of mobile device used by murder victim Cassandra" ;
+	prov:hadMember kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3-uuid ;
+		prov:agent kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+			prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record4-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ;
+			prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action5-uuid ;
-		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+		prov:activity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+		prov:atTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
 		;
-	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02" ;
 	.
 
-kb:sms-message2-uuid
-	a prov:Entity ;
+kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "SMS SQLite database on mobile device used by murder victim Cassandra" ;
+	prov:hadMember
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:investigative-action-relationship-97b9d9ac-deeb-45ea-8f81-6acda53c9b3e
+		;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
-		prov:agent kb:tool3-uuid ;
+		prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	] ;
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
-			prov:entity kb:cassandra-mobiledevice-mmssms-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+			prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record4-uuid ;
-			prov:hadActivity kb:investigative-action5-uuid ;
+			prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+			prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		]
 		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
-		prov:activity kb:investigative-action5-uuid ;
+		prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
 	] ;
-	prov:wasAttributedTo kb:tool3-uuid ;
+	prov:wasAttributedTo kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
 	prov:wasDerivedFrom
-		kb:cassandra-mobiledevice-mmssms-uuid ,
-		kb:provenance-record4-uuid
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
 		;
-	prov:wasGeneratedBy kb:investigative-action5-uuid ;
+	prov:wasGeneratedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02-03" ;
 	.
 
-kb:thyestes-uuid
+kb:sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+			prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+		prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+	] ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45
 	a prov:Person ;
 	.
 
-kb:tool1-uuid
+kb:tool-5316a112-dcd3-4515-a14e-06396126ed98
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:actedOnBehalfOf kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:investigator1-uuid ;
-		prov:hadActivity kb:investigative-action2-uuid ;
+		prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+		prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 	] ;
 	.
 
-kb:tool2-uuid
+kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:investigator1-uuid ;
+	prov:actedOnBehalfOf kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:investigator1-uuid ;
-		prov:hadActivity kb:investigative-action4-uuid ;
+		prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+		prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
 	] ;
 	.
 
-kb:tool3-uuid
+kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
-	prov:actedOnBehalfOf kb:investigative-action4-uuid ;
+	prov:actedOnBehalfOf kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
 	prov:qualifiedDelegation [
 		a prov:Delegation ;
-		prov:agent kb:investigative-action4-uuid ;
-		prov:hadActivity kb:investigative-action5-uuid ;
+		prov:agent kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+		prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
 	] ;
 	.
 
