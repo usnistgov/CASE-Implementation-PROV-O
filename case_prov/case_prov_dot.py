@@ -41,7 +41,7 @@ from case_utils.namespace import NS_CASE_INVESTIGATION
 
 _logger = logging.getLogger(os.path.basename(__file__))
 
-NS_PROV = rdflib.Namespace("http://www.w3.org/ns/prov#")
+NS_PROV = rdflib.PROV
 NS_RDFS = rdflib.RDFS
 
 # This one isn't among the prov constants.
@@ -139,7 +139,7 @@ def main() -> None:
     filter_iris: typing.Optional[typing.Set[str]] = None
     if args.from_empty_set:
         filter_iris = set()
-        filter_iris.add("http://www.w3.org/ns/prov#EmptyCollection")
+        filter_iris.add(str(NS_PROV.EmptyCollection))
         select_query_actions_text = """\
 SELECT ?nDerivingAction
 WHERE {
@@ -333,7 +333,7 @@ WHERE {
     # _logger.debug("nodes = %s." % pprint.pformat(nodes))
 
     # Find Collections, to adjust Entity rendering in the next block.
-    collection_iris = {"http://www.w3.org/ns/prov#EmptyCollection"}
+    collection_iris: typing.Set[str] = {str(NS_PROV.EmptyCollection)}
     select_query_text = """\
 SELECT ?nCollection
 WHERE {
@@ -351,9 +351,16 @@ WHERE {
 
     # Render Entities.
     # This loop operates differently from the others, to insert prov:EmptyCollection.
-    entity_iri_to_label_comment = dict()
+    entity_iri_to_label_comment: typing.Dict[
+        str,
+        typing.Tuple[
+            typing.Optional[str],
+            typing.Optional[str],
+            typing.Optional[str],
+        ],
+    ] = dict()
     if not args.omit_empty_set:
-        entity_iri_to_label_comment["http://www.w3.org/ns/prov#EmptyCollection"] = (
+        entity_iri_to_label_comment[str(NS_PROV.EmptyCollection)] = (
             None,
             None,
             None,
