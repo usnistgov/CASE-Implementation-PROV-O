@@ -86,7 +86,7 @@ def main() -> None:
         # https://rdfextras.readthedocs.io/en/latest/working_with.html
         construct_query_result = in_graph.query(construct_query_object)
         _logger.debug("len(construct_query_result) = %d." % len(construct_query_result))
-        for (row_no, row) in enumerate(construct_query_result):
+        for row_no, row in enumerate(construct_query_result):
             if row_no == 0:
                 _logger.debug("row[0] = %r." % (row,))
             tally = row_no + 1

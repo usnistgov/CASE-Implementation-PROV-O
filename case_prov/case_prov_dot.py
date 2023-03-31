@@ -170,7 +170,7 @@ WHERE {
   ?nEntity prov:wasDerivedFrom prov:EmptyCollection .
 }
 """
-        for (select_query_label, select_query_text) in [
+        for select_query_label, select_query_text in [
             ("activities", select_query_actions_text),
             ("agents", select_query_agents_text),
             ("entities", select_query_entities_text),
@@ -245,7 +245,7 @@ WHERE {
   ?nEndIRI prov:wasDerivedFrom* ?nPrecedingEntity .
 }
 """
-        for (select_query_label, select_query_text) in [
+        for select_query_label, select_query_text in [
             ("activities", select_query_actions_text),
             ("agents", select_query_agents_text),
             ("entities", select_query_entities_text),
