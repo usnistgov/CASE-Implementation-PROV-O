@@ -30,6 +30,8 @@ WHERE {
 }
 """
     for result in graph.query(query_all):
+        assert isinstance(result, rdflib.query.ResultRow)
+        assert isinstance(result[0], rdflib.term.IdentifiedNode)
         computed_all.add(result[0].toPython())
     query_linked = """\
 SELECT ?nActivity
@@ -38,6 +40,8 @@ WHERE {
 }
 """
     for result in graph.query(query_linked):
+        assert isinstance(result, rdflib.query.ResultRow)
+        assert isinstance(result[0], rdflib.term.IdentifiedNode)
         computed_linked.add(result[0].toPython())
     computed = computed_all - computed_linked
     assert expected == computed
@@ -57,6 +61,8 @@ WHERE {
 }
 """
     for result in graph.query(query_all):
+        assert isinstance(result, rdflib.query.ResultRow)
+        assert isinstance(result[0], rdflib.term.IdentifiedNode)
         computed_all.add(result[0].toPython())
     query_linked = """\
 SELECT ?nEntity
@@ -65,6 +71,8 @@ WHERE {
 }
 """
     for result in graph.query(query_linked):
+        assert isinstance(result, rdflib.query.ResultRow)
+        assert isinstance(result[0], rdflib.term.IdentifiedNode)
         computed_linked.add(result[0].toPython())
     computed = computed_all - computed_linked
 

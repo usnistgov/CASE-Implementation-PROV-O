@@ -90,7 +90,9 @@ def main() -> None:
             if row_no == 0:
                 _logger.debug("row[0] = %r." % (row,))
             tally = row_no + 1
-            out_graph.add(row)
+            # TODO: Handle type review with implementation to RDFLib Issue 2283.
+            # https://github.com/RDFLib/rdflib/issues/2283
+            out_graph.add(row)  # type: ignore
     if tally == 0:
         if not args.allow_empty_results:
             raise ValueError("Failed to construct any results.")
