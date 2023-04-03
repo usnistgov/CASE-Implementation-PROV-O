@@ -21,7 +21,7 @@ qc_srcdir := $(top_srcdir)/dependencies/CASE-Examples-QC
 
 example_srcdir := $(qc_srcdir)/dependencies/casework.github.io/examples/$(subjectdir_basename)
 
-rdf_toolkit_jar := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/UCO-develop/lib/rdf-toolkit.jar
+rdf_toolkit_jar := $(qc_srcdir)/dependencies/CASE-Examples/dependencies/CASE-develop/dependencies/UCO/lib/rdf-toolkit.jar
 
 subject_json := $(example_srcdir)/$(subjectdir_basename).json
 
