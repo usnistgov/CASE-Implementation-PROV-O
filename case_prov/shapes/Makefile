@@ -31,7 +31,7 @@ all: \
 .%.ttl-check: \
   %.ttl \
   $(top_srcdir)/.git_submodule_init.done.log
-	java -jar $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/CASE-Examples/dependencies/UCO-develop/lib/rdf-toolkit.jar \
+	java -jar $(top_srcdir)/dependencies/CASE-Examples-QC/dependencies/CASE-Examples/dependencies/CASE-develop/dependencies/UCO/lib/rdf-toolkit.jar \
 	  --inline-blank-nodes \
 	  --source $< \
 	  --source-format turtle \
