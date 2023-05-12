@@ -34,11 +34,9 @@ all: \
   format
 
 .venv.done.log: \
-  $(qc_srcdir)/deps/requirements.txt \
   $(top_srcdir)/.git_submodule_init.done.log \
   $(top_srcdir)/setup.cfg \
-  $(top_srcdir)/setup.py \
-  requirements.txt
+  $(top_srcdir)/setup.py
 	rm -rf venv
 	$(PYTHON3) -m venv \
 	  venv
@@ -51,13 +49,7 @@ all: \
 	source venv/bin/activate \
 	  && pip install \
 	    --editable \
-	    $(top_srcdir)
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement $(qc_srcdir)/deps/requirements.txt
-	source venv/bin/activate \
-	  && pip install \
-	    --requirement requirements.txt
+	    $(top_srcdir)[testing]
 	touch $@
 
 all-CASE-Examples: \
