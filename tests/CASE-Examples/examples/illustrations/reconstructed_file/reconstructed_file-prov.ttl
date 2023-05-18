@@ -6,39 +6,380 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-0561cf99-f18b-548f-bde1-45cd35fc20a2
+	a prov:Association ;
+	prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+	.
+
+kb:Association-28c100d8-3bca-5c04-901c-2c02192fcbc7
+	a prov:Association ;
+	prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+	.
+
+kb:Association-42638d71-3455-528b-bb93-87af8564cbf7
+	a prov:Association ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Association-566440af-7d47-5013-8d9f-6070f44c6df5
+	a prov:Association ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-0482c1c6-9628-5a90-a406-1b0d7065353b
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-06783352-7d88-5a10-ab10-c3fc3fb13d5b
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-2954b2c9-1c60-5a5d-9e0b-c29e7d7cc18e
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-3112a0f9-214f-51c5-93c5-4eaa3076c53d
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-35aa8807-1bc6-56a9-aca6-51b01e4d8b11
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-3c3f7c47-129b-5608-a53e-0e57d743856e
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-3d2bd25a-3153-5c16-840d-dd3347907d47
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-3e624e22-c283-51f2-85d8-bebbb7a9d814
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-4cd763ed-2fcf-5743-9efa-18a37e353b76
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-b4fa69b9-268c-5ac0-98e4-93c495194310
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-cf62a075-702c-5fb9-bc82-51b13f5bc29c
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Attribution-f3cacd3a-59d8-5512-9a16-2a697b0a6e23
+	a prov:Attribution ;
+	prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
+	.
+
+kb:Communication-c864b1d8-386e-596a-a16f-59be0f680e00
+	a prov:Communication ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Delegation-508b7176-3333-5147-8d7a-099b5620c8b0
+	a prov:Delegation ;
+	prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Delegation-8d63a0ec-66d6-57e4-9d9b-a032d9e336f0
+	a prov:Delegation ;
+	prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-04aea353-1536-54c8-b717-4e7bd2bd6818
+	a prov:Derivation ;
+	prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-07dbca16-dd14-58f0-9bf8-5998dc935f09
+	a prov:Derivation ;
+	prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-1c459fa7-21b5-54a3-bd13-b3340343085b
+	a prov:Derivation ;
+	prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-2042d856-7dd4-5481-8c2b-84bb95209fd1
+	a prov:Derivation ;
+	prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-2466ab3f-c35c-5531-8619-f334fa998382
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-306b35bb-83bb-50c0-8a4a-7af766beb94e
+	a prov:Derivation ;
+	prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-3682dbb8-4998-538e-8dd4-39613aeace2f
+	a prov:Derivation ;
+	prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-36a489b9-58a9-5b46-8b51-e29047ae5d64
+	a prov:Derivation ;
+	prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-3b14d133-173a-5f05-ba8a-47bdc2f5dc86
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-4564b80a-344b-56e3-9cb0-7a0e524744a1
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-4ee91b58-5897-5286-aeaf-eeb1868e38cd
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-5c4bfd05-3628-5745-bf7d-358bafd4eda6
+	a prov:Derivation ;
+	prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-64e34c1f-f3dd-5d51-865e-0ed39646e6d8
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-6ce6581a-2c7f-5560-91a3-a77bec9adea6
+	a prov:Derivation ;
+	prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-813531a1-a82b-5969-8501-f0f257a023b9
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-896c41be-40f8-5949-b399-bd34ed072020
+	a prov:Derivation ;
+	prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-8e3c2e41-af9b-5649-9613-163d1015bb9e
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-9342d855-cccd-5c34-9710-b00438134ef2
+	a prov:Derivation ;
+	prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-995e7aa6-8b6c-5a79-8df8-8a41beb4b7f1
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-a1499fab-f967-5092-a60c-7750504a801a
+	a prov:Derivation ;
+	prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-a4f3d74e-5d97-5cb5-a5bb-ccdab6b67f7a
+	a prov:Derivation ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Derivation-b6ad15ff-d528-51f9-b88c-3a6ac6b9ea29
+	a prov:Derivation ;
+	prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-b786564e-b330-5067-8a97-b7f3c6a5fa75
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-be9bd686-1c3c-5bcb-a689-02dae7911437
+	a prov:Derivation ;
+	prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-e4563559-2ce1-55c4-95a4-d4ae64d9feeb
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-fbbc1b6d-be49-5bb1-a03f-a28fb72cbefe
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Derivation-fff045ab-c1c3-5aa1-a8fc-d83d8602aa2e
+	a prov:Derivation ;
+	prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+	prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:End-38622335-5b82-5fbd-808f-bff4e7363425
+	a prov:End ;
+	prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-d130e30c-b4c9-543e-835b-4ca366a5fb86
+	a prov:End ;
+	prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-25c48588-93da-510a-a029-45650577258e
+	a prov:Generation ;
+	prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Generation-3cb48046-ec62-523b-9eec-4cae016bbc00
+	a prov:Generation ;
+	prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Generation-54fee21f-5a8e-5aae-a55b-a998c6d6f485
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Generation-772274b7-aca6-58a0-8c96-0aac0d398164
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Generation-79d40076-0ecf-53c6-babb-93984e35aadb
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Generation-924738ed-5f74-52fb-9463-6c017426603d
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Generation-9cfd76f5-5565-5b55-93f9-6fbc797a5e39
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Generation-a12290bf-6e71-53ab-8cee-398b42841e64
+	a prov:Generation ;
+	prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Generation-bc2a5414-a648-5193-8c5e-f47081b07ae3
+	a prov:Generation ;
+	prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Generation-c9c0b473-38aa-5b72-bf79-0d01f97198c8
+	a prov:Generation ;
+	prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
+	.
+
+kb:Generation-d823a2e4-21a7-536f-8718-a7f1efb58fce
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Generation-e4c3f9be-2b20-536b-8fd7-1ecbd8d2b4d7
+	a prov:Generation ;
+	prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
+	.
+
+kb:Start-79209f75-e342-5dfa-ac7c-a256ec93d2a1
+	a prov:Start ;
+	prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-b664c5d9-47cb-5088-92a8-c2829580a609
+	a prov:Start ;
+	prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-61e1f9b1-f773-518c-af14-e0e1f04a6415
+	a prov:Usage ;
+	prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
+	.
+
+kb:Usage-72b1ba35-788a-5c6d-ae86-aaad6b356924
+	a prov:Usage ;
+	prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
+	.
+
+kb:Usage-8637a3f4-7ac8-5389-84dc-2a980bf5bd5e
+	a prov:Usage ;
+	prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
+	.
+
+kb:Usage-b9a7d80d-765a-585a-9f86-a349e926e5c6
+	a prov:Usage ;
+	prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
+	.
+
+kb:Usage-cff1b20f-6dae-54db-8624-82554f8e1f7d
+	a prov:Usage ;
+	prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
+	.
+
 kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-3c3f7c47-129b-5608-a53e-0e57d743856e ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		]
+		kb:Derivation-07dbca16-dd14-58f0-9bf8-5998dc935f09 ,
+		kb:Derivation-36a489b9-58a9-5b46-8b51-e29047ae5d64 ,
+		kb:Derivation-b786564e-b330-5067-8a97-b7f3c6a5fa75 ,
+		kb:Derivation-fff045ab-c1c3-5aa1-a8fc-d83d8602aa2e
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-25c48588-93da-510a-a029-45650577258e ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
 		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
@@ -51,20 +392,9 @@ kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8
 
 kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-b4fa69b9-268c-5ac0-98e4-93c495194310 ;
+	prov:qualifiedDerivation kb:Derivation-a4f3d74e-5d97-5cb5-a5bb-ccdab6b67f7a ;
+	prov:qualifiedGeneration kb:Generation-79d40076-0ecf-53c6-babb-93984e35aadb ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -72,20 +402,9 @@ kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15
 
 kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-35aa8807-1bc6-56a9-aca6-51b01e4d8b11 ;
+	prov:qualifiedDerivation kb:Derivation-4ee91b58-5897-5286-aeaf-eeb1868e38cd ;
+	prov:qualifiedGeneration kb:Generation-d823a2e4-21a7-536f-8718-a7f1efb58fce ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -93,20 +412,9 @@ kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad
 
 kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-4cd763ed-2fcf-5743-9efa-18a37e353b76 ;
+	prov:qualifiedDerivation kb:Derivation-813531a1-a82b-5969-8501-f0f257a023b9 ;
+	prov:qualifiedGeneration kb:Generation-772274b7-aca6-58a0-8c96-0aac0d398164 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -115,15 +423,13 @@ kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8
 kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49
 	a prov:Activity ;
 	prov:endedAtTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-28c100d8-3bca-5c04-901c-2c02192fcbc7 ,
+		kb:Association-42638d71-3455-528b-bb93-87af8564cbf7
+		;
+	prov:qualifiedEnd kb:End-d130e30c-b4c9-543e-835b-4ca366a5fb86 ;
+	prov:qualifiedStart kb:Start-79209f75-e342-5dfa-ac7c-a256ec93d2a1 ;
+	prov:qualifiedUsage kb:Usage-61e1f9b1-f773-518c-af14-e0e1f04a6415 ;
 	prov:startedAtTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
 	prov:used kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasAssociatedWith kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
@@ -132,35 +438,18 @@ kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49
 kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d
 	a prov:Activity ;
 	prov:endedAtTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-0561cf99-f18b-548f-bde1-45cd35fc20a2 ,
+		kb:Association-566440af-7d47-5013-8d9f-6070f44c6df5
+		;
+	prov:qualifiedCommunication kb:Communication-c864b1d8-386e-596a-a16f-59be0f680e00 ;
+	prov:qualifiedEnd kb:End-38622335-5b82-5fbd-808f-bff4e7363425 ;
+	prov:qualifiedStart kb:Start-b664c5d9-47cb-5088-92a8-c2829580a609 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
-			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
-			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
-			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
-		]
+		kb:Usage-72b1ba35-788a-5c6d-ae86-aaad6b356924 ,
+		kb:Usage-8637a3f4-7ac8-5389-84dc-2a980bf5bd5e ,
+		kb:Usage-b9a7d80d-765a-585a-9f86-a349e926e5c6 ,
+		kb:Usage-cff1b20f-6dae-54db-8624-82554f8e1f7d
 		;
 	prov:startedAtTime "2013-05-12T17:14:45.100000+00:00"^^xsd:dateTime ;
 	prov:used
@@ -189,37 +478,14 @@ kb:provenancerecord1-ae596806-cbe5-4c4c-8f54-33630f178eeb
 		kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070 ,
 		kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f
 		;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-3e624e22-c283-51f2-85d8-bebbb7a9d814 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		]
+		kb:Derivation-2042d856-7dd4-5481-8c2b-84bb95209fd1 ,
+		kb:Derivation-306b35bb-83bb-50c0-8a4a-7af766beb94e ,
+		kb:Derivation-3682dbb8-4998-538e-8dd4-39613aeace2f ,
+		kb:Derivation-64e34c1f-f3dd-5d51-865e-0ed39646e6d8
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-a12290bf-6e71-53ab-8cee-398b42841e64 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
 		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
@@ -245,20 +511,9 @@ kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 		kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342 ,
 		kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0
 		;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-f3cacd3a-59d8-5512-9a16-2a697b0a6e23 ;
+	prov:qualifiedDerivation kb:Derivation-8e3c2e41-af9b-5649-9613-163d1015bb9e ;
+	prov:qualifiedGeneration kb:Generation-e4c3f9be-2b20-536b-8fd7-1ecbd8d2b4d7 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -267,37 +522,14 @@ kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109
 
 kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-06783352-7d88-5a10-ab10-c3fc3fb13d5b ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		]
+		kb:Derivation-04aea353-1536-54c8-b717-4e7bd2bd6818 ,
+		kb:Derivation-6ce6581a-2c7f-5560-91a3-a77bec9adea6 ,
+		kb:Derivation-896c41be-40f8-5949-b399-bd34ed072020 ,
+		kb:Derivation-fbbc1b6d-be49-5bb1-a03f-a28fb72cbefe
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-c9c0b473-38aa-5b72-bf79-0d01f97198c8 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
 		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
@@ -310,37 +542,14 @@ kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697
 
 kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-cf62a075-702c-5fb9-bc82-51b13f5bc29c ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		]
+		kb:Derivation-5c4bfd05-3628-5745-bf7d-358bafd4eda6 ,
+		kb:Derivation-9342d855-cccd-5c34-9710-b00438134ef2 ,
+		kb:Derivation-be9bd686-1c3c-5bcb-a689-02dae7911437 ,
+		kb:Derivation-e4563559-2ce1-55c4-95a4-d4ae64d9feeb
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-bc2a5414-a648-5193-8c5e-f47081b07ae3 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
 		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
@@ -353,37 +562,14 @@ kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070
 
 kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-3d2bd25a-3153-5c16-840d-dd3347907d47 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		]
+		kb:Derivation-1c459fa7-21b5-54a3-bd13-b3340343085b ,
+		kb:Derivation-995e7aa6-8b6c-5a79-8df8-8a41beb4b7f1 ,
+		kb:Derivation-a1499fab-f967-5092-a60c-7750504a801a ,
+		kb:Derivation-b6ad15ff-d528-51f9-b88c-3a6ac6b9ea29
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-3cb48046-ec62-523b-9eec-4cae016bbc00 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom
 		kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15 ,
@@ -396,20 +582,9 @@ kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f
 
 kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-3112a0f9-214f-51c5-93c5-4eaa3076c53d ;
+	prov:qualifiedDerivation kb:Derivation-4564b80a-344b-56e3-9cb0-7a0e524744a1 ;
+	prov:qualifiedGeneration kb:Generation-54fee21f-5a8e-5aae-a55b-a998c6d6f485 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -417,20 +592,9 @@ kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1
 
 kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-2954b2c9-1c60-5a5d-9e0b-c29e7d7cc18e ;
+	prov:qualifiedDerivation kb:Derivation-3b14d133-173a-5f05-ba8a-47bdc2f5dc86 ;
+	prov:qualifiedGeneration kb:Generation-924738ed-5f74-52fb-9463-6c017426603d ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -438,20 +602,9 @@ kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342
 
 kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
-		prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		prov:atTime "2013-05-12T17:36:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-0482c1c6-9628-5a90-a406-1b0d7065353b ;
+	prov:qualifiedDerivation kb:Derivation-2466ab3f-c35c-5531-8619-f334fa998382 ;
+	prov:qualifiedGeneration kb:Generation-9cfd76f5-5565-5b55-93f9-6fbc797a5e39 ;
 	prov:wasAttributedTo kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc ;
 	prov:wasDerivedFrom kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac ;
 	prov:wasGeneratedBy kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
@@ -468,16 +621,8 @@ kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc
 		;
 	prov:actedOnBehalfOf kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
 	prov:qualifiedDelegation
-		[
-			a prov:Delegation ;
-			prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
-			prov:hadActivity kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49 ;
-		] ,
-		[
-			a prov:Delegation ;
-			prov:agent kb:role-7e760175-f38a-4d36-a70f-591668769538 ;
-			prov:hadActivity kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d ;
-		]
+		kb:Delegation-508b7176-3333-5147-8d7a-099b5620c8b0 ,
+		kb:Delegation-8d63a0ec-66d6-57e4-9d9b-a032d9e336f0
 		;
 	.
 

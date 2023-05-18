@@ -6,29 +6,94 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-1696bf17-a3f4-5583-85d4-3d3a84638374
+	a prov:Association ;
+	prov:agent kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
+	.
+
+kb:Association-6619a163-19ee-5361-a035-6c5508766bcc
+	a prov:Association ;
+	prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	.
+
+kb:Attribution-1a851888-418b-5448-b2df-7845569aaac8
+	a prov:Attribution ;
+	prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	.
+
+kb:Attribution-c1b6edc7-6c57-5e3d-b4cb-d764ad673841
+	a prov:Attribution ;
+	prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
+	.
+
+kb:Delegation-8dccc705-00f6-5127-b13b-7e43393fb86d
+	a prov:Delegation ;
+	prov:agent kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
+	prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:Derivation-6bedd539-7bb1-5edf-83be-86041c047c19
+	a prov:Derivation ;
+	prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+	prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:Derivation-ad5fe4b4-22e6-5176-992b-4ff41bebdca2
+	a prov:Derivation ;
+	prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+	prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:Derivation-e6e89695-987e-5eb2-b874-0e7e13478659
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
+	prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:Derivation-f8fbd307-a564-55d3-aac5-676d05969557
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
+	prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:End-484e8afe-eea3-5c44-99a0-965077374829
+	a prov:End ;
+	prov:atTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-90a27089-f501-5bd4-811a-12de6f36cef3
+	a prov:Generation ;
+	prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:Generation-d7a7db01-1ef3-5f86-a12d-28984842700c
+	a prov:Generation ;
+	prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
+	.
+
+kb:Start-d4f48397-5ce5-52b9-b407-a3aa95af7743
+	a prov:Start ;
+	prov:atTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-3dc7ce36-f0db-5f5d-836f-bd13378fd07e
+	a prov:Usage ;
+	prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
+	.
+
+kb:Usage-d3203198-15a5-510c-8bb5-05a3bb35b5e7
+	a prov:Usage ;
+	prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
+	.
+
 kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-1a851888-418b-5448-b2df-7845569aaac8 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
-			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
-			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-		]
+		kb:Derivation-ad5fe4b4-22e6-5176-992b-4ff41bebdca2 ,
+		kb:Derivation-f8fbd307-a564-55d3-aac5-676d05969557
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-		prov:atTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-d7a7db01-1ef3-5f86-a12d-28984842700c ;
 	prov:wasAttributedTo kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
 	prov:wasDerivedFrom
 		kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ,
@@ -40,21 +105,15 @@ kb:f3fd304e-ef6c-4cbd-94cb-425880f82748
 kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1
 	a prov:Activity ;
 	prov:endedAtTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-1696bf17-a3f4-5583-85d4-3d3a84638374 ,
+		kb:Association-6619a163-19ee-5361-a035-6c5508766bcc
+		;
+	prov:qualifiedEnd kb:End-484e8afe-eea3-5c44-99a0-965077374829 ;
+	prov:qualifiedStart kb:Start-d4f48397-5ce5-52b9-b407-a3aa95af7743 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
-			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
-		]
+		kb:Usage-3dc7ce36-f0db-5f5d-836f-bd13378fd07e ,
+		kb:Usage-d3203198-15a5-510c-8bb5-05a3bb35b5e7
 		;
 	prov:startedAtTime "2017-02-06T20:51:09+00:00"^^xsd:dateTime ;
 	prov:used
@@ -81,11 +140,7 @@ kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43 ;
-		prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-8dccc705-00f6-5127-b13b-7e43393fb86d ;
 	.
 
 kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f
@@ -109,27 +164,12 @@ kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8
 		;
 	rdfs:comment "Forensic duplicate of smartphone used by subject" ;
 	prov:hadMember kb:f3fd304e-ef6c-4cbd-94cb-425880f82748 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-c1b6edc7-6c57-5e3d-b4cb-d764ad673841 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ;
-			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2 ;
-			prov:hadActivity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-		]
+		kb:Derivation-6bedd539-7bb1-5edf-83be-86041c047c19 ,
+		kb:Derivation-e6e89695-987e-5eb2-b874-0e7e13478659
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1 ;
-		prov:atTime "2017-02-06T22:13:08+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-90a27089-f501-5bd4-811a-12de6f36cef3 ;
 	prov:wasAttributedTo kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1 ;
 	prov:wasDerivedFrom
 		kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168 ,

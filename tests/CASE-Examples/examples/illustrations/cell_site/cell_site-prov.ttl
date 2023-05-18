@@ -5,12 +5,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Derivation-72944ef9-2ecb-5342-b817-ee892a3d36e4
+	a prov:Derivation ;
+	prov:entity kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b ;
+	.
+
 kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b
 	a prov:Entity ;
 	.
 
 kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4
 	a prov:Entity ;
+	prov:qualifiedDerivation kb:Derivation-72944ef9-2ecb-5342-b817-ee892a3d36e4 ;
 	prov:wasDerivedFrom kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b ;
 	.
 
