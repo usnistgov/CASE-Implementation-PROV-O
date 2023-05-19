@@ -6,6 +6,714 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-1d6bc8e6-e863-5ce8-9159-b9d80410a76c
+	a prov:Association ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Association-320c763d-bc9f-559c-adb5-0a504e8d9cfd
+	a prov:Association ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	.
+
+kb:Association-3cd521a7-50a3-5ad1-a3ee-4f5e54c28259
+	a prov:Association ;
+	prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
+	.
+
+kb:Association-401a6459-36cc-5986-9cad-830685162f0a
+	a prov:Association ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	.
+
+kb:Association-6284e558-e6c3-5db9-8cff-69848b097670
+	a prov:Association ;
+	prov:agent kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
+	.
+
+kb:Association-9c8d07c9-7e15-5209-80ff-f02393d8bc52
+	a prov:Association ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	.
+
+kb:Association-bc802313-9d21-521a-86a0-309f6e0f5462
+	a prov:Association ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Association-ca7fdbdf-9202-5c0c-a9f2-321f43ebf2d3
+	a prov:Association ;
+	prov:agent kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
+	.
+
+kb:Association-cda5bd09-eea5-5fb6-80e4-f7a905ab6c4d
+	a prov:Association ;
+	prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
+	.
+
+kb:Association-eef90151-fb7a-5ca2-9b2c-a009b5021c18
+	a prov:Association ;
+	prov:agent kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
+	.
+
+kb:Attribution-01d66712-e7a2-5b5d-8eef-4d4a07031f68
+	a prov:Attribution ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	.
+
+kb:Attribution-0b9370b7-f748-5187-80b6-7db152bfd88e
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-0ec6d40b-913c-517d-b8b3-f13cb7e54199
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-2c4fe9ae-e49f-54c7-8f8a-ad6f25ad6e60
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-33a25ed0-c7a8-574a-94a3-4968573bdc01
+	a prov:Attribution ;
+	prov:agent kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
+	.
+
+kb:Attribution-40306477-c6de-5060-9a48-225930c93a9f
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-45b3567d-284f-5cca-a797-12c6bff4b0ea
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-469925f8-7e52-5cd9-b305-4fc6625aa018
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-47f790d5-7cdf-53c9-ae0c-762b4294697e
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-4a1ddf9e-8291-5a92-a74d-cf09944d9f84
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-5d73995e-38f5-5ad7-98fa-4714deb4580d
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-5e9831c6-7954-5c26-8004-1cd9992835ef
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-5ff6132b-637e-5114-a93c-a5a2b97b4f69
+	a prov:Attribution ;
+	prov:agent kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
+	.
+
+kb:Attribution-7a6d3174-b3c5-5179-98d8-d2a86ef2907b
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-7ee77d58-bf1e-55e8-8da3-64737c2693f4
+	a prov:Attribution ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	.
+
+kb:Attribution-802b28c5-be7b-5349-85d2-87acaeb5c9e8
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-84952a7b-65e7-5559-bbb9-e98a0b066693
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-8638429e-6329-5803-bcfd-1c55f5c40232
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-996e28cf-0b07-549b-bf9d-2a649c9732d5
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-a06946eb-4aa3-57d6-8684-f5b000d51851
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-cea383ef-f15e-510b-9936-806e7567b9f9
+	a prov:Attribution ;
+	prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
+	.
+
+kb:Attribution-dc163ec3-a88d-5f1b-a8be-1de4b9903cc8
+	a prov:Attribution ;
+	prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
+	.
+
+kb:Attribution-f32f3135-a16c-500d-9a99-3af560aa3a15
+	a prov:Attribution ;
+	prov:agent kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
+	.
+
+kb:Delegation-406ee913-6855-5486-81cf-beebeb03d21a
+	a prov:Delegation ;
+	prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Delegation-7f4f89d3-7fb8-59c0-9743-98d4ed14885f
+	a prov:Delegation ;
+	prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Delegation-9552d8f9-908d-5af8-8356-628c32e46aca
+	a prov:Delegation ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	prov:hadActivity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
+	.
+
+kb:Delegation-bfd3aed1-08a6-5f3c-8e2c-cc13b424c2b4
+	a prov:Delegation ;
+	prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
+	prov:hadActivity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
+	.
+
+kb:Derivation-0c7bcfe9-8a79-5a33-85bd-85e9ccc18d9a
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-0db3d34f-e065-51fb-b372-0188b3672566
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-0f169b80-cf58-53fe-8c4f-a09dc1be7ac3
+	a prov:Derivation ;
+	prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:hadActivity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	.
+
+kb:Derivation-12630fe9-44ae-52aa-932c-cda6bcf19861
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-13852062-ed36-5463-9977-5d788d323f8d
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-14fc3f9e-d03a-5860-b734-b52482969c0b
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-1c233723-2964-5d3b-a636-e66d57737da7
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-2084d4ce-72d8-5c88-b54e-1e9a1dace6a4
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-21093784-be0d-5f8d-8d2b-77789e75c4d4
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-2119823a-ae6d-5079-aa15-06d8c261bf0a
+	a prov:Derivation ;
+	prov:entity kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+	prov:hadActivity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
+	.
+
+kb:Derivation-223693e0-c08e-5da7-ba7f-24195152f92b
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-24760f4f-bc44-581b-b345-03161ce33da6
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-24ff3744-6c6e-5f27-af83-a7ecb7fe0799
+	a prov:Derivation ;
+	prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:hadActivity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	.
+
+kb:Derivation-3482c1c8-81b5-5cce-945f-cbe40609de06
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-42524453-13b6-5311-b31a-054f66b02a0d
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-43638781-63c4-5a97-a38d-9341af7de4ac
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-440b25ee-3247-59de-8a97-daffec2d84f4
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-4c916cfe-e0b4-5487-a9da-f8b90dcb9f78
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-56f05705-6660-5df3-b46c-c0941bc60c88
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-57a5ac33-464a-5656-ae5d-36f9a3ed7557
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
+	.
+
+kb:Derivation-62000917-5324-51eb-8740-574232c92dd2
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-75706cc4-4901-5e28-9d09-7ea1b4d75e2f
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-790e106e-4bb3-5f91-9ecf-51133eee557f
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-79ac786c-e07c-5103-9401-3537e9439b42
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-7f00e646-efb2-50ae-a857-8d735ca616eb
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-7f00ffc4-ec3f-53ea-9ac2-bde475932476
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-85d14f5f-21b0-543a-a244-984ec38318a5
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-8bf72644-ba75-573c-b21b-08e064bbed00
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-8d262949-0582-59be-bf7b-8beea95d08c3
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-91c0f257-bd88-50de-841c-96f347d6a62c
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-94cc9a64-3d2f-5e0e-8040-9fc2c106651e
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-9573a639-0daf-5b63-b3f5-0276b0c0d0cb
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-9866b650-5495-55ce-af9d-3edf607de981
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-9951e9af-2cfe-544f-b243-8700c97998a5
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-9a443d4c-81a9-52f3-905d-cbaab3680616
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-a2372229-0411-5e49-88fa-ae32478b152a
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-a314aa5c-bb69-52fd-8ce3-e099af6b51bc
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-b5edf04a-21a4-5a53-968d-c2c175ed7b4f
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-c0cee9c1-47b5-5171-97e7-eecad20aedb8
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-c3d85b8d-1b8f-5875-8f53-e964b5e563c7
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-c637d3bd-c034-53a9-9343-75b52fc83bc2
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-c674a1f7-a528-539f-a25c-15753e586978
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-cc84dece-26ad-521b-a7f9-b406404a3667
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-d95f41ee-b2e6-5381-ae52-829a93817579
+	a prov:Derivation ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-d9b5a419-9326-5b34-a763-7d0a864107cf
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Derivation-daac470a-0017-5bd7-9a59-4951373bb395
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-e452bb79-d57a-53b9-9e03-47524a64c061
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-ec18a902-153f-5d7f-9616-0d348f05687b
+	a prov:Derivation ;
+	prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	prov:hadActivity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
+	.
+
+kb:Derivation-f7cbfb11-c370-5a5f-8f17-53460a84f13f
+	a prov:Derivation ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Derivation-fb9d5f5b-bf39-5d91-bec8-0e0ced7ae0ba
+	a prov:Derivation ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:End-338827d7-0c4a-5eb1-80de-765e5fa5b844
+	a prov:End ;
+	prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-5a2d0764-78e0-5908-96d9-965a0689c672
+	a prov:End ;
+	prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-6df61d02-7d15-592d-9e81-a6ae44c7a52b
+	a prov:End ;
+	prov:atTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-ca8e1eef-bfac-59f5-8d24-4c7008239af2
+	a prov:End ;
+	prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-f203f645-0630-5a9f-bd74-80b3d89643b0
+	a prov:End ;
+	prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-fbda0a0d-8c42-53ce-acae-8af9748542a5
+	a prov:End ;
+	.
+
+kb:Generation-09d9ce11-d91b-5879-93f9-187c1f2d3ffa
+	a prov:Generation ;
+	prov:activity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
+	.
+
+kb:Generation-18ec793d-1cc5-5e98-967c-d6270ea4f536
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-1b672675-9711-5edc-9cb5-7c7981e81ecc
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-23eacfe4-d83b-59ac-9518-4e3e3e350544
+	a prov:Generation ;
+	prov:activity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
+	.
+
+kb:Generation-358c8913-bead-5d0c-be9f-7d64c3614059
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-5498c805-97ba-5dbc-9bfa-b2de41df3c3a
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-68c0bcd4-827e-587c-84b8-3e38f6d45ed9
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-6a5a23ae-7443-595c-96bb-79c0b2d5ddf7
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-6dfd8768-6397-5981-bb44-a51ba7af3539
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-7883c791-643c-54e8-9931-11be8ba42c4a
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-9a849468-b1ee-579b-bf0e-586352671c32
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-a100bf9c-1855-52d9-ae2d-fc9bf10ca65d
+	a prov:Generation ;
+	prov:activity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	.
+
+kb:Generation-a24329ff-3442-5e98-92a2-04820495618c
+	a prov:Generation ;
+	prov:activity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
+	.
+
+kb:Generation-aa4e7ea6-c32a-5990-b099-e2cb275b784a
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-af69987d-0c96-5eea-b78e-41c9e71c7629
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-b2ebff7f-59dc-5d03-98c8-2f06f43c1508
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-bf2f7f7d-a755-5fdd-b0fc-835435cbbe00
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-c1f71e3c-ca3f-53b2-b7cf-39c8cbecf5fc
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Generation-c2c05292-23e5-5b3f-ad99-7a1dc614062a
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-c3837b35-dfd6-50f7-9a25-98172e7955b1
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-c7b8f9d5-6750-5a17-87e5-601aa6230ddb
+	a prov:Generation ;
+	prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
+	.
+
+kb:Generation-e1468c4c-178e-5b44-9fe6-586fb0beab1d
+	a prov:Generation ;
+	prov:activity kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
+	.
+
+kb:Generation-e1f058c5-e6be-503f-8ce2-a002633632cf
+	a prov:Generation ;
+	prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
+	.
+
+kb:Start-2633754f-5cff-552b-a4b2-0e22d683ef06
+	a prov:Start ;
+	prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-2fa7bcf3-71f3-5194-aade-fefd46cd0a02
+	a prov:Start ;
+	prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-52a8f4b3-1da2-56ff-a247-4651277a9e0c
+	a prov:Start ;
+	prov:atTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-697d895d-a310-5c48-bd6e-caa3ca909574
+	a prov:Start ;
+	prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-7876a25f-68dc-5f25-a2c2-67cf26e9b46f
+	a prov:Start ;
+	prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-86cda1ed-abec-53f6-8f94-d1ffae6c8fd5
+	a prov:Start ;
+	prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-4cee771b-61bb-56d3-b45e-fc5f0af56359
+	a prov:Usage ;
+	prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
+	.
+
+kb:Usage-4f4d8e9a-59d4-5275-9a6f-cf3ab7dec5a9
+	a prov:Usage ;
+	prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	.
+
+kb:Usage-52537643-826c-5fca-a5fa-9acf29913e6c
+	a prov:Usage ;
+	prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
+	.
+
+kb:Usage-8759ab97-1450-551d-ae21-ec6817dd2cec
+	a prov:Usage ;
+	prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
+	.
+
+kb:Usage-8c67cfa9-12e6-503f-96e8-1e2f7757557f
+	a prov:Usage ;
+	prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
+	.
+
+kb:Usage-923c8670-65dc-5cd9-b7b2-b26cb478ce0f
+	a prov:Usage ;
+	prov:entity kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
+	.
+
+kb:Usage-a2001556-3e30-5c4b-9b6b-51eb96f53925
+	a prov:Usage ;
+	prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
+	.
+
+kb:Usage-a235c9ed-9e3d-5d7d-8bc4-ab6bcb0f5f82
+	a prov:Usage ;
+	prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
+	.
+
+kb:Usage-c3dc5741-8064-5e21-86ce-5dbcd1a0b224
+	a prov:Usage ;
+	prov:entity prov:EmptyCollection ;
+	.
+
 kb:account-799bd0b8-8b1e-483f-88be-d3a22d886e6e
 	a prov:Entity ;
 	.
@@ -49,26 +757,16 @@ kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3
 kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889
 	a prov:Activity ;
 	prov:endedAtTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-1d6bc8e6-e863-5ce8-9159-b9d80410a76c ,
+		kb:Association-3cd521a7-50a3-5ad1-a3ee-4f5e54c28259
+		;
+	prov:qualifiedEnd kb:End-338827d7-0c4a-5eb1-80de-765e5fa5b844 ;
+	prov:qualifiedStart kb:Start-7876a25f-68dc-5f25-a2c2-67cf26e9b46f ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-		]
+		kb:Usage-52537643-826c-5fca-a5fa-9acf29913e6c ,
+		kb:Usage-8c67cfa9-12e6-503f-96e8-1e2f7757557f ,
+		kb:Usage-a2001556-3e30-5c4b-9b6b-51eb96f53925
 		;
 	prov:startedAtTime "2010-02-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used
@@ -82,15 +780,13 @@ kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889
 kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138
 	a prov:Activity ;
 	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-320c763d-bc9f-559c-adb5-0a504e8d9cfd ,
+		kb:Association-ca7fdbdf-9202-5c0c-a9f2-321f43ebf2d3
+		;
+	prov:qualifiedEnd kb:End-f203f645-0630-5a9f-bd74-80b3d89643b0 ;
+	prov:qualifiedStart kb:Start-697d895d-a310-5c48-bd6e-caa3ca909574 ;
+	prov:qualifiedUsage kb:Usage-4f4d8e9a-59d4-5275-9a6f-cf3ab7dec5a9 ;
 	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
 	prov:wasAssociatedWith kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
@@ -99,21 +795,15 @@ kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138
 kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44
 	a prov:Activity ;
 	prov:endedAtTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-bc802313-9d21-521a-86a0-309f6e0f5462 ,
+		kb:Association-cda5bd09-eea5-5fb6-80e4-f7a905ab6c4d
+		;
+	prov:qualifiedEnd kb:End-ca8e1eef-bfac-59f5-8d24-4c7008239af2 ;
+	prov:qualifiedStart kb:Start-86cda1ed-abec-53f6-8f94-d1ffae6c8fd5 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-		]
+		kb:Usage-4cee771b-61bb-56d3-b45e-fc5f0af56359 ,
+		kb:Usage-8759ab97-1450-551d-ae21-ec6817dd2cec
 		;
 	prov:startedAtTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used
@@ -126,15 +816,13 @@ kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44
 kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44
 	a prov:Activity ;
 	prov:endedAtTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-6284e558-e6c3-5db9-8cff-69848b097670 ,
+		kb:Association-9c8d07c9-7e15-5209-80ff-f02393d8bc52
+		;
+	prov:qualifiedEnd kb:End-6df61d02-7d15-592d-9e81-a6ae44c7a52b ;
+	prov:qualifiedStart kb:Start-52a8f4b3-1da2-56ff-a247-4651277a9e0c ;
+	prov:qualifiedUsage kb:Usage-923c8670-65dc-5cd9-b7b2-b26cb478ce0f ;
 	prov:startedAtTime "2010-01-16T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
 	prov:wasAssociatedWith kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
@@ -142,15 +830,10 @@ kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44
 
 kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40
 	a prov:Activity ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-	] ;
+	prov:qualifiedAssociation kb:Association-401a6459-36cc-5986-9cad-830685162f0a ;
+	prov:qualifiedEnd kb:End-fbda0a0d-8c42-53ce-acae-8af9748542a5 ;
+	prov:qualifiedStart kb:Start-2633754f-5cff-552b-a4b2-0e22d683ef06 ;
+	prov:qualifiedUsage kb:Usage-a235c9ed-9e3d-5d7d-8bc4-ab6bcb0f5f82 ;
 	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
 	prov:wasAssociatedWith kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
@@ -159,15 +842,10 @@ kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40
 kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0
 	a prov:Activity ;
 	prov:endedAtTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-		prov:entity prov:EmptyCollection ;
-	] ;
+	prov:qualifiedAssociation kb:Association-eef90151-fb7a-5ca2-9b2c-a009b5021c18 ;
+	prov:qualifiedEnd kb:End-5a2d0764-78e0-5908-96d9-965a0689c672 ;
+	prov:qualifiedStart kb:Start-2fa7bcf3-71f3-5194-aade-fefd46cd0a02 ;
+	prov:qualifiedUsage kb:Usage-c3dc5741-8064-5e21-86ce-5dbcd1a0b224 ;
 	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
@@ -207,11 +885,7 @@ kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
-		prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-7f4f89d3-7fb8-59c0-9743-98d4ed14885f ;
 	.
 
 kb:plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38
@@ -225,27 +899,12 @@ kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd
 		;
 	rdfs:comment "Contraband photograph" ;
 	prov:hadMember kb:attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-40306477-c6de-5060-9a48-225930c93a9f ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-d95f41ee-b2e6-5381-ae52-829a93817579 ,
+		kb:Derivation-fb9d5f5b-bf39-5d91-bec8-0e0ced7ae0ba
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-6a5a23ae-7443-595c-96bb-79c0b2d5ddf7 ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -262,32 +921,13 @@ kb:provenance_record-25d18278-7f25-4142-8bd4-62807eec2680
 		;
 	rdfs:comment "Encrypted thumbnail of contraband picture" ;
 	prov:hadMember kb:sqlite_blob-bd34a27d-f872-461f-a6da-a83767c544b5 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-45b3567d-284f-5cca-a797-12c6bff4b0ea ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-24760f4f-bc44-581b-b345-03161ce33da6 ,
+		kb:Derivation-42524453-13b6-5311-b31a-054f66b02a0d ,
+		kb:Derivation-43638781-63c4-5a97-a38d-9341af7de4ac
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-b2ebff7f-59dc-5d03-98c8-2f06f43c1508 ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -305,32 +945,13 @@ kb:provenance_record-3493ecb5-2561-48d2-9944-07e06ce150b3
 		;
 	rdfs:comment "WhatsApp chat message containing contraband attachment" ;
 	prov:hadMember kb:message-f221413c-9f32-46ca-96c9-3825d04eb932 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-dc163ec3-a88d-5f1b-a8be-1de4b9903cc8 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-62000917-5324-51eb-8740-574232c92dd2 ,
+		kb:Derivation-9951e9af-2cfe-544f-b243-8700c97998a5 ,
+		kb:Derivation-daac470a-0017-5bd7-9a59-4951373bb395
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-6dfd8768-6397-5981-bb44-a51ba7af3539 ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -348,27 +969,12 @@ kb:provenance_record-3eb9c278-376d-4184-98b6-3a82e99b1ad1
 		;
 	rdfs:comment "Android data partition" ;
 	prov:hadMember kb:image_partition-99c962b9-f70f-418c-9b58-6dd04eb3e2a4 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-cea383ef-f15e-510b-9936-806e7567b9f9 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-12630fe9-44ae-52aa-932c-cda6bcf19861 ,
+		kb:Derivation-9a443d4c-81a9-52f3-905d-cbaab3680616
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-c3837b35-dfd6-50f7-9a25-98172e7955b1 ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -384,27 +990,12 @@ kb:provenance_record-5c8060e6-cb05-4dac-91ee-657568f429bf
 		prov:Entity
 		;
 	prov:hadMember kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-8638429e-6329-5803-bcfd-1c55f5c40232 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-21093784-be0d-5f8d-8d2b-77789e75c4d4 ,
+		kb:Derivation-4c916cfe-e0b4-5487-a9da-f8b90dcb9f78
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-c7b8f9d5-6750-5a17-87e5-601aa6230ddb ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -420,32 +1011,13 @@ kb:provenance_record-5d88a49b-2a98-4bde-873a-bcc5d314b9de
 		;
 	rdfs:comment "WhatsApp chat message thread between subject and victim" ;
 	prov:hadMember kb:thread-2d8e20e9-37b2-4766-9aab-f5b9facd9b8a ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-996e28cf-0b07-549b-bf9d-2a649c9732d5 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-7f00e646-efb2-50ae-a857-8d735ca616eb ,
+		kb:Derivation-91c0f257-bd88-50de-841c-96f347d6a62c ,
+		kb:Derivation-e452bb79-d57a-53b9-9e03-47524a64c061
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-e1f058c5-e6be-503f-8ce2-a002633632cf ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -463,27 +1035,12 @@ kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26
 		;
 	rdfs:comment "WhatsApp thumbnail database" ;
 	prov:hadMember kb:thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-5e9831c6-7954-5c26-8004-1cd9992835ef ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-14fc3f9e-d03a-5860-b734-b52482969c0b ,
+		kb:Derivation-b5edf04a-21a4-5a53-968d-c2c175ed7b4f
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-1b672675-9711-5edc-9cb5-7c7981e81ecc ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -500,20 +1057,9 @@ kb:provenance_record-6c0fda21-5670-4e4c-9d37-ce848a44aefb
 		;
 	rdfs:comment "Android Smartphone" ;
 	prov:hadMember kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
-		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-f32f3135-a16c-500d-9a99-3af560aa3a15 ;
+	prov:qualifiedDerivation kb:Derivation-57a5ac33-464a-5656-ae5d-36f9a3ed7557 ;
+	prov:qualifiedGeneration kb:Generation-e1468c4c-178e-5b44-9fe6-586fb0beab1d ;
 	prov:wasAttributedTo kb:investigator-ae05a88b-780c-45c9-897b-6fdf84b055a2 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:forensic_action-e482197e-50d4-4ce6-8240-9ada303e65c0 ;
@@ -527,32 +1073,13 @@ kb:provenance_record-6cfa58c8-b0de-41ac-882d-7b8566801426
 		;
 	rdfs:comment "Subject's WhatsApp account" ;
 	prov:hadMember kb:account-cc8408d1-09b8-4941-95c4-a3390f7648b1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-5d73995e-38f5-5ad7-98fa-4714deb4580d ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-2084d4ce-72d8-5c88-b54e-1e9a1dace6a4 ,
+		kb:Derivation-223693e0-c08e-5da7-ba7f-24195152f92b ,
+		kb:Derivation-9573a639-0daf-5b63-b3f5-0276b0c0d0cb
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-af69987d-0c96-5eea-b78e-41c9e71c7629 ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -570,32 +1097,13 @@ kb:provenance_record-6f6eb950-9ae7-42d5-a3b7-f8e4e89cb991
 		;
 	rdfs:comment "Victim's WhatsApp account" ;
 	prov:hadMember kb:account-799bd0b8-8b1e-483f-88be-d3a22d886e6e ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-0b9370b7-f748-5187-80b6-7db152bfd88e ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-13852062-ed36-5463-9977-5d788d323f8d ,
+		kb:Derivation-7f00ffc4-ec3f-53ea-9ac2-bde475932476 ,
+		kb:Derivation-a2372229-0411-5e49-88fa-ae32478b152a
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-bf2f7f7d-a755-5fdd-b0fc-835435cbbe00 ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -613,19 +1121,9 @@ kb:provenance_record-75b2b4a1-6b97-40bb-880b-58c99273af00
 		;
 	rdfs:comment "Android Smartphone" ;
 	prov:hadMember kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-		prov:hadActivity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-01d66712-e7a2-5b5d-8eef-4d4a07031f68 ;
+	prov:qualifiedDerivation kb:Derivation-0f169b80-cf58-53fe-8c4f-a09dc1be7ac3 ;
+	prov:qualifiedGeneration kb:Generation-a100bf9c-1855-52d9-ae2d-fc9bf10ca65d ;
 	prov:wasAttributedTo kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
 	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
 	prov:wasGeneratedBy kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
@@ -639,19 +1137,9 @@ kb:provenance_record-88c56289-5d13-4912-887c-ee9cd939d60d
 		;
 	rdfs:comment "SD Card" ;
 	prov:hadMember kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-		prov:hadActivity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-7ee77d58-bf1e-55e8-8da3-64737c2693f4 ;
+	prov:qualifiedDerivation kb:Derivation-24ff3744-6c6e-5f27-af83-a7ecb7fe0799 ;
+	prov:qualifiedGeneration kb:Generation-a24329ff-3442-5e98-92a2-04820495618c ;
 	prov:wasAttributedTo kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
 	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
 	prov:wasGeneratedBy kb:forensic_action-cca47fae-305c-402d-a094-2b7acd61ed40 ;
@@ -665,27 +1153,12 @@ kb:provenance_record-9b9b6701-9231-4f3e-a0c2-afca4cd71acf
 		;
 	rdfs:comment "Chat Messages Report" ;
 	prov:hadMember kb:chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-469925f8-7e52-5cd9-b305-4fc6625aa018 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-75706cc4-4901-5e28-9d09-7ea1b4d75e2f ,
+		kb:Derivation-8d262949-0582-59be-bf7b-8beea95d08c3
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-aa4e7ea6-c32a-5990-b099-e2cb275b784a ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -702,27 +1175,12 @@ kb:provenance_record-a59bb4bd-969a-482b-8a76-0d820f557f91
 		;
 	rdfs:comment "Android OS Information" ;
 	prov:hadMember kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-47f790d5-7cdf-53c9-ae0c-762b4294697e ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-56f05705-6660-5df3-b46c-c0941bc60c88 ,
+		kb:Derivation-94cc9a64-3d2f-5e0e-8040-9fc2c106651e
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-7883c791-643c-54e8-9931-11be8ba42c4a ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -739,32 +1197,13 @@ kb:provenance_record-bc31ff48-0cd7-467d-b0b9-da44cdeb0822
 		;
 	rdfs:comment "Location of subject when using WhatsApp" ;
 	prov:hadMember kb:location-48a4e0ae-7141-4570-a04e-c47260c06e4b ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-2c4fe9ae-e49f-54c7-8f8a-ad6f25ad6e60 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-85d14f5f-21b0-543a-a244-984ec38318a5 ,
+		kb:Derivation-cc84dece-26ad-521b-a7f9-b406404a3667 ,
+		kb:Derivation-f7cbfb11-c370-5a5f-8f17-53460a84f13f
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-9a849468-b1ee-579b-bf0e-586352671c32 ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -782,32 +1221,13 @@ kb:provenance_record-c878d1ad-bd17-419c-be4d-ce6cc2be23d8
 		;
 	rdfs:comment "Thumbnail of contraband picture" ;
 	prov:hadMember kb:decoded_blob-428d56c2-be79-472c-bb51-cc46376aeba7 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-84952a7b-65e7-5559-bbb9-e98a0b066693 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-0c7bcfe9-8a79-5a33-85bd-85e9ccc18d9a ,
+		kb:Derivation-79ac786c-e07c-5103-9401-3537e9439b42 ,
+		kb:Derivation-9866b650-5495-55ce-af9d-3edf607de981
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-5498c805-97ba-5dbc-9bfa-b2de41df3c3a ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -825,32 +1245,13 @@ kb:provenance_record-ca85393c-9fc7-4fe9-9c88-9a7d3b73bc0b
 		;
 	rdfs:comment "WhatsApp message being sent from subject to victim" ;
 	prov:hadMember kb:message_action-f7078adf-066a-4f55-831e-a10feb8054fb ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-7a6d3174-b3c5-5179-98d8-d2a86ef2907b ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-3482c1c8-81b5-5cce-945f-cbe40609de06 ,
+		kb:Derivation-440b25ee-3247-59de-8a97-daffec2d84f4 ,
+		kb:Derivation-a314aa5c-bb69-52fd-8ce3-e099af6b51bc
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-c1f71e3c-ca3f-53b2-b7cf-39c8cbecf5fc ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -868,32 +1269,13 @@ kb:provenance_record-d64a1670-d751-489d-b3ef-a3f7e216ac18
 		;
 	rdfs:comment "Encoded thumbnail of contraband picture" ;
 	prov:hadMember kb:decrypted_blob-2d5f2cf9-2fb4-45d5-a0d7-52f990d2a1e6 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-a06946eb-4aa3-57d6-8684-f5b000d51851 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-68669de1-9070-4d99-b93b-e59405848c26 ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd ;
-			prov:hadActivity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		]
+		kb:Derivation-1c233723-2964-5d3b-a636-e66d57737da7 ,
+		kb:Derivation-c637d3bd-c034-53a9-9343-75b52fc83bc2 ,
+		kb:Derivation-c674a1f7-a528-539f-a25c-15753e586978
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889 ;
-		prov:atTime "2010-02-16T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-18ec793d-1cc5-5e98-967c-d6270ea4f536 ;
 	prov:wasAttributedTo kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b ;
 	prov:wasDerivedFrom
 		kb:provenance_record-0d6e3fe9-6cfd-4de8-a920-735bedeba8bd ,
@@ -911,27 +1293,12 @@ kb:provenance_record-de12ffbf-78a4-43d1-be6c-96596bb48cd5
 		;
 	rdfs:comment "Plaso Storage File" ;
 	prov:hadMember kb:plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-0ec6d40b-913c-517d-b8b3-f13cb7e54199 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-c0cee9c1-47b5-5171-97e7-eecad20aedb8 ,
+		kb:Derivation-c3d85b8d-1b8f-5875-8f53-e964b5e563c7
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-358c8913-bead-5d0c-be9f-7d64c3614059 ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -948,27 +1315,12 @@ kb:provenance_record-e28c33af-7d77-4fe4-b656-2de902a73acd
 		;
 	rdfs:comment "WhatsApp message database" ;
 	prov:hadMember kb:message_database-60459e4c-5730-4551-b621-2d6a7baaae14 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-4a1ddf9e-8291-5a92-a74d-cf09944d9f84 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-0db3d34f-e065-51fb-b372-0188b3672566 ,
+		kb:Derivation-790e106e-4bb3-5f91-9ecf-51133eee557f
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-68c0bcd4-827e-587c-84b8-3e38f6d45ed9 ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -985,20 +1337,9 @@ kb:provenance_record-f20e9224-ce1d-4dc2-b809-30fcae30e8a6
 		;
 	rdfs:comment "Forensic image of SD Card" ;
 	prov:hadMember kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
-		prov:hadActivity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
-		prov:atTime "2010-01-16T19:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-33a25ed0-c7a8-574a-94a3-4968573bdc01 ;
+	prov:qualifiedDerivation kb:Derivation-2119823a-ae6d-5079-aa15-06d8c261bf0a ;
+	prov:qualifiedGeneration kb:Generation-09d9ce11-d91b-5879-93f9-187c1f2d3ffa ;
 	prov:wasAttributedTo kb:tool-fd95457e-864b-4b89-bb66-09215558733f ;
 	prov:wasDerivedFrom kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8 ;
 	prov:wasGeneratedBy kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
@@ -1012,20 +1353,9 @@ kb:provenance_record-fc4fad81-fd0d-47ac-abe0-dabc52b9b8ec
 		;
 	rdfs:comment "Forensic image of Android Smartphone" ;
 	prov:hadMember kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
-		prov:hadActivity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
-		prov:atTime "2010-01-15T19:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-5ff6132b-637e-5114-a93c-a5a2b97b4f69 ;
+	prov:qualifiedDerivation kb:Derivation-ec18a902-153f-5d7f-9616-0d348f05687b ;
+	prov:qualifiedGeneration kb:Generation-23eacfe4-d83b-59ac-9518-4e3e3e350544 ;
 	prov:wasAttributedTo kb:tool-005be9da-ea83-456f-a44f-a63610586bd4 ;
 	prov:wasDerivedFrom kb:device-9112a8a8-b2e8-4991-b68a-c40c7f716226 ;
 	prov:wasGeneratedBy kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
@@ -1034,27 +1364,12 @@ kb:provenance_record-fc4fad81-fd0d-47ac-abe0-dabc52b9b8ec
 
 kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-802b28c5-be7b-5349-85d2-87acaeb5c9e8 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183 ;
-			prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		]
+		kb:Derivation-8bf72644-ba75-573c-b21b-08e064bbed00 ,
+		kb:Derivation-d9b5a419-9326-5b34-a763-7d0a864107cf
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-		prov:atTime "2010-01-21T17:59:43.250000+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-c2c05292-23e5-5b3f-ad99-7a1dc614062a ;
 	prov:wasAttributedTo kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f ;
 	prov:wasDerivedFrom
 		kb:android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3 ,
@@ -1089,11 +1404,7 @@ kb:tool-005be9da-ea83-456f-a44f-a63610586bd4
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-		prov:hadActivity kb:forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138 ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-bfd3aed1-08a6-5f3c-8e2c-cc13b424c2b4 ;
 	.
 
 kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f
@@ -1102,11 +1413,7 @@ kb:tool-e83069e3-9bba-4142-8cf0-619bed501a5f
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:examiner-e65595df-67f1-4fed-99aa-e277afe88789 ;
-		prov:hadActivity kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44 ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-406ee913-6855-5486-81cf-beebeb03d21a ;
 	.
 
 kb:tool-fd95457e-864b-4b89-bb66-09215558733f
@@ -1115,10 +1422,6 @@ kb:tool-fd95457e-864b-4b89-bb66-09215558733f
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:examiner-fef59198-4752-4ec0-9ce1-00aec96eacc3 ;
-		prov:hadActivity kb:forensic_action-9c7cbad0-bbb4-4975-b095-96b32c13fe44 ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-9552d8f9-908d-5af8-8356-628c32e46aca ;
 	.
 

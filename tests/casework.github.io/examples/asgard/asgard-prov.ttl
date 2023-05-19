@@ -6,34 +6,167 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-166a48b0-8086-5484-a950-d18ee9c731da
+	a prov:Association ;
+	prov:agent kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da ;
+	.
+
+kb:Association-899eb981-02fd-557f-bb92-108eb1d97066
+	a prov:Association ;
+	prov:agent kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f ;
+	.
+
+kb:Association-9bfda757-819c-5a8e-8625-bc4a2554bdbf
+	a prov:Association ;
+	prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	.
+
+kb:Association-ac0c946d-71df-5b7e-bf98-d4fe10aa3eb2
+	a prov:Association ;
+	prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
+	.
+
+kb:Attribution-30d6d3ac-29cb-5d7a-9214-8382ac4b82b9
+	a prov:Attribution ;
+	prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
+	.
+
+kb:Attribution-489dabd9-2109-5b34-8566-f4ed2cce9ae5
+	a prov:Attribution ;
+	prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	.
+
+kb:Attribution-b6251b8d-f6d1-5d49-aebe-d925d6f3ed97
+	a prov:Attribution ;
+	prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
+	.
+
+kb:Attribution-c1053f1d-b4f0-5d72-a4a2-ef2a67987eda
+	a prov:Attribution ;
+	prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
+	.
+
+kb:Communication-ae01e4d9-1e64-5c58-a536-54d1e0625a15
+	a prov:Communication ;
+	prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:Delegation-58830fbc-a096-5407-8312-388e758bf6ed
+	a prov:Delegation ;
+	prov:agent kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da ;
+	prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:Delegation-95c33170-fdf6-50ea-b6ea-f4908fc6615f
+	a prov:Delegation ;
+	prov:agent kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f ;
+	prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:Derivation-0190a193-d9f4-5cbb-b660-4832446f197f
+	a prov:Derivation ;
+	prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
+	prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:Derivation-4def118b-6bd8-5a14-ac82-90701019c5c9
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:Derivation-8b248171-5dbe-53ea-9de3-bb733fb6aa24
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
+	prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:Derivation-9de07ade-3efe-52b9-9c9e-25214aec367a
+	a prov:Derivation ;
+	prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
+	prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:Derivation-c6b5212c-76e7-5dff-a47b-167ee05facd6
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:Derivation-cca3f143-b4e7-5d68-ad97-172f031b7da6
+	a prov:Derivation ;
+	prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
+	prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:End-8e1eb70f-0773-5ded-8e53-a2cc3f7f1b24
+	a prov:End ;
+	.
+
+kb:End-c21c802b-1ef3-5bc5-a856-8de8dc164c99
+	a prov:End ;
+	prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-356ee4b0-db2e-5eca-81a7-4056c426ebb5
+	a prov:Generation ;
+	prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:Generation-45ae8137-f5d6-51bd-b08a-fd0153af1934
+	a prov:Generation ;
+	prov:activity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:Generation-80facc0f-0d47-5a9f-aeec-af40a25bf5f0
+	a prov:Generation ;
+	prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
+	.
+
+kb:Generation-a2819157-37e9-5e99-81b6-9e957f20df0c
+	a prov:Generation ;
+	prov:activity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
+	.
+
+kb:Start-7e0658c0-29c5-553c-ac0f-564f6bd82ad0
+	a prov:Start ;
+	prov:atTime "2019-03-30T22:36:24.350000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-a80277f8-b5fd-5cfd-b732-aab017544ab9
+	a prov:Start ;
+	prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-52ebb769-e03a-5f86-b783-30babfed39ea
+	a prov:Usage ;
+	prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
+	.
+
+kb:Usage-683712a8-abd3-5469-ab16-8e2816e7006d
+	a prov:Usage ;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:Usage-bae52a41-ccc8-555a-ac24-e78205d20299
+	a prov:Usage ;
+	prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
+	.
+
 kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f ;
-		prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-95c33170-fdf6-50ea-b6ea-f4908fc6615f ;
 	.
 
 kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-30d6d3ac-29cb-5d7a-9214-8382ac4b82b9 ;
+	prov:qualifiedDerivation kb:Derivation-4def118b-6bd8-5a14-ac82-90701019c5c9 ;
+	prov:qualifiedGeneration kb:Generation-356ee4b0-db2e-5eca-81a7-4056c426ebb5 ;
 	prov:wasAttributedTo kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
@@ -45,27 +178,12 @@ kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f
 
 kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-489dabd9-2109-5b34-8566-f4ed2cce9ae5 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
-			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
-			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-		]
+		kb:Derivation-0190a193-d9f4-5cbb-b660-4832446f197f ,
+		kb:Derivation-8b248171-5dbe-53ea-9de3-bb733fb6aa24
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-a2819157-37e9-5e99-81b6-9e957f20df0c ;
 	prov:wasAttributedTo kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
 	prov:wasDerivedFrom
 		kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ,
@@ -76,15 +194,13 @@ kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07
 
 kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd
 	a prov:Activity ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2019-03-30T22:36:24.350000+00:00"^^xsd:dateTime ;
-		prov:entity prov:EmptyCollection ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-166a48b0-8086-5484-a950-d18ee9c731da ,
+		kb:Association-ac0c946d-71df-5b7e-bf98-d4fe10aa3eb2
+		;
+	prov:qualifiedEnd kb:End-8e1eb70f-0773-5ded-8e53-a2cc3f7f1b24 ;
+	prov:qualifiedStart kb:Start-7e0658c0-29c5-553c-ac0f-564f6bd82ad0 ;
+	prov:qualifiedUsage kb:Usage-683712a8-abd3-5469-ab16-8e2816e7006d ;
 	prov:startedAtTime "2019-03-30T22:36:24.350000+00:00"^^xsd:dateTime ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
@@ -94,25 +210,16 @@ kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49
 	a prov:Activity ;
 	rdfs:comment "Suspect device physical acquisition" ;
 	prov:endedAtTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-899eb981-02fd-557f-bb92-108eb1d97066 ,
+		kb:Association-9bfda757-819c-5a8e-8625-bc4a2554bdbf
+		;
+	prov:qualifiedCommunication kb:Communication-ae01e4d9-1e64-5c58-a536-54d1e0625a15 ;
+	prov:qualifiedEnd kb:End-c21c802b-1ef3-5bc5-a856-8de8dc164c99 ;
+	prov:qualifiedStart kb:Start-a80277f8-b5fd-5cfd-b732-aab017544ab9 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
-			prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
-		]
+		kb:Usage-52ebb769-e03a-5f86-b783-30babfed39ea ,
+		kb:Usage-bae52a41-ccc8-555a-ac24-e78205d20299
 		;
 	prov:startedAtTime "2019-03-30T22:17:31+00:00"^^xsd:dateTime ;
 	prov:used
@@ -133,11 +240,7 @@ kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da ;
-		prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-58830fbc-a096-5407-8312-388e758bf6ed ;
 	.
 
 kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53
@@ -147,27 +250,12 @@ kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53
 		;
 	rdfs:comment "Suspect device found near Bifrost Bridge after disruption" ;
 	prov:hadMember kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-c1053f1d-b4f0-5d72-a4a2-ef2a67987eda ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
-			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa ;
-			prov:hadActivity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-		]
+		kb:Derivation-9de07ade-3efe-52b9-9c9e-25214aec367a ,
+		kb:Derivation-cca3f143-b4e7-5d68-ad97-172f031b7da6
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49 ;
-		prov:atTime "2019-03-30T22:47:32+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-45ae8137-f5d6-51bd-b08a-fd0153af1934 ;
 	prov:wasAttributedTo kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516 ;
 	prov:wasDerivedFrom
 		kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ,
@@ -184,19 +272,9 @@ kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa
 		;
 	rdfs:comment "Suspect device found near Bifrost Bridge after disruption" ;
 	prov:hadMember kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-b6251b8d-f6d1-5d49-aebe-d925d6f3ed97 ;
+	prov:qualifiedDerivation kb:Derivation-c6b5212c-76e7-5dff-a47b-167ee05facd6 ;
+	prov:qualifiedGeneration kb:Generation-80facc0f-0d47-5a9f-aeec-af40a25bf5f0 ;
 	prov:wasAttributedTo kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd ;

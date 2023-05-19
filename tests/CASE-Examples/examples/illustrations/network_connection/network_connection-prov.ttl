@@ -5,6 +5,118 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-7c34e5ea-ff99-5c63-a5d5-c0747d532e6e
+	a prov:Association ;
+	prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
+	.
+
+kb:Attribution-33d98638-d39f-5524-97ca-54e2694d0165
+	a prov:Attribution ;
+	prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
+	.
+
+kb:Attribution-4a1d6131-c023-5787-943d-4409df1aefd1
+	a prov:Attribution ;
+	prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
+	.
+
+kb:Attribution-aa8ef6fd-6bbd-5bf9-baf7-b092c9550900
+	a prov:Attribution ;
+	prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
+	.
+
+kb:Attribution-f7fceb29-ba2f-5226-8d25-3375200d0307
+	a prov:Attribution ;
+	prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
+	.
+
+kb:Derivation-33a461cf-df37-546c-af5d-fe08ac65249f
+	a prov:Derivation ;
+	prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-48a01268-8c16-549c-b5ba-37eb33417447
+	a prov:Derivation ;
+	prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-5de56de1-57f2-50da-992c-053f455216fb
+	a prov:Derivation ;
+	prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-a4b31254-4d1f-54ed-8296-0685acafac84
+	a prov:Derivation ;
+	prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-b4d639c9-f263-56ea-90e4-cd9fbc1796ea
+	a prov:Derivation ;
+	prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-d48aebdf-9721-5562-abf5-ed65e9149d75
+	a prov:Derivation ;
+	prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-f7f69e05-de44-5752-8266-115f14a62927
+	a prov:Derivation ;
+	prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Derivation-fc138cee-3f5f-5c6d-9e30-689e7da94aba
+	a prov:Derivation ;
+	prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
+	prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:End-9fcc3893-e514-5cfb-aff7-4cf345c8f728
+	a prov:End ;
+	prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-375b6eee-be9c-520d-850c-25206e789823
+	a prov:Generation ;
+	prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Generation-892d0658-1a2f-507a-8fc8-8847a91d06b1
+	a prov:Generation ;
+	prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Generation-b8619da4-0187-5d2a-abcf-d63052a199c9
+	a prov:Generation ;
+	prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Generation-bdfa2e12-8278-59f4-9f27-83f4e1323bad
+	a prov:Generation ;
+	prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
+	.
+
+kb:Start-d822844e-ff42-5d7b-817b-25a498f36d55
+	a prov:Start ;
+	.
+
+kb:Usage-26593650-771b-52b7-a568-5f8ab46624e2
+	a prov:Usage ;
+	prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
+	.
+
+kb:Usage-8b9069ca-2924-54bc-a11e-27d423900233
+	a prov:Usage ;
+	prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
+	.
+
 kb:extracted-connections-provenancerecord-55d66280-aa96-4806-a60f-303acdc0c078
 	a
 		prov:Collection ,
@@ -16,27 +128,12 @@ kb:extracted-connections-provenancerecord-55d66280-aa96-4806-a60f-303acdc0c078
 		kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18 ,
 		kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60
 		;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-33d98638-d39f-5524-97ca-54e2694d0165 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		]
+		kb:Derivation-5de56de1-57f2-50da-992c-053f455216fb ,
+		kb:Derivation-f7f69e05-de44-5752-8266-115f14a62927
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-375b6eee-be9c-520d-850c-25206e789823 ;
 	prov:wasAttributedTo kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
 	prov:wasDerivedFrom
 		kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ,
@@ -48,19 +145,12 @@ kb:extracted-connections-provenancerecord-55d66280-aa96-4806-a60f-303acdc0c078
 kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6
 	a prov:Activity ;
 	prov:endedAtTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
-	] ;
+	prov:qualifiedAssociation kb:Association-7c34e5ea-ff99-5c63-a5d5-c0747d532e6e ;
+	prov:qualifiedEnd kb:End-9fcc3893-e514-5cfb-aff7-4cf345c8f728 ;
+	prov:qualifiedStart kb:Start-d822844e-ff42-5d7b-817b-25a498f36d55 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
-		]
+		kb:Usage-26593650-771b-52b7-a568-5f8ab46624e2 ,
+		kb:Usage-8b9069ca-2924-54bc-a11e-27d423900233
 		;
 	prov:used
 		kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ,
@@ -71,27 +161,12 @@ kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6
 
 kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-f7fceb29-ba2f-5226-8d25-3375200d0307 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		]
+		kb:Derivation-b4d639c9-f263-56ea-90e4-cd9fbc1796ea ,
+		kb:Derivation-fc138cee-3f5f-5c6d-9e30-689e7da94aba
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-bdfa2e12-8278-59f4-9f27-83f4e1323bad ;
 	prov:wasAttributedTo kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
 	prov:wasDerivedFrom
 		kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ,
@@ -102,27 +177,12 @@ kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d
 
 kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-4a1d6131-c023-5787-943d-4409df1aefd1 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		]
+		kb:Derivation-33a461cf-df37-546c-af5d-fe08ac65249f ,
+		kb:Derivation-d48aebdf-9721-5562-abf5-ed65e9149d75
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-b8619da4-0187-5d2a-abcf-d63052a199c9 ;
 	prov:wasAttributedTo kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
 	prov:wasDerivedFrom
 		kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ,
@@ -133,27 +193,12 @@ kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18
 
 kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-aa8ef6fd-6bbd-5bf9-baf7-b092c9550900 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe ;
-			prov:hadActivity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		]
+		kb:Derivation-48a01268-8c16-549c-b5ba-37eb33417447 ,
+		kb:Derivation-a4b31254-4d1f-54ed-8296-0685acafac84
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6 ;
-		prov:atTime "2017-09-29T11:47:54.288992+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-892d0658-1a2f-507a-8fc8-8847a91d06b1 ;
 	prov:wasAttributedTo kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b ;
 	prov:wasDerivedFrom
 		kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1 ,

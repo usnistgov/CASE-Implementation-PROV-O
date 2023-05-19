@@ -6,18 +6,962 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-04eb3476-a17f-5c07-ac57-1100809aed02
+	a prov:Association ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Association-123a16d8-9793-56cb-a8aa-40df74ccdbd8
+	a prov:Association ;
+	prov:agent kb:officer-uuid-2 ;
+	.
+
+kb:Association-22c19332-a26b-5f7a-b8bd-9392e001f13d
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-2d74acd2-f231-578a-9995-301ade08a37e
+	a prov:Association ;
+	prov:agent kb:officer-uuid-2 ;
+	.
+
+kb:Association-30baa5cc-e7bd-5924-9ce5-3b1b74a1ece8
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-3d156b08-fa03-5bc6-9297-b665046a29f2
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-422cf694-1778-5fb0-8e8c-8bdab0a86a33
+	a prov:Association ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Association-662e7d7e-0102-553d-a116-f87129653e0f
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-6eff4464-ec23-5beb-86ee-c5f7ccbd7d11
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-7ec9e20b-0f0c-5f23-9a4b-cc8c413001f3
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-b802fafe-0a0c-5842-b392-d3f4f5c4b78e
+	a prov:Association ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Association-be77f131-4518-591e-ab61-60f182b0019c
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-c184254d-231d-5a83-979c-4052f4f42ac4
+	a prov:Association ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Association-cdf69915-4135-5158-a0d1-a6a39460b5dd
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-d0b67037-e7dc-5d2a-88a5-c65c5d13384c
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Association-d482b418-e457-5a1b-aba9-c41cb5ab8c82
+	a prov:Association ;
+	prov:agent kb:officer-uuid-1 ;
+	.
+
+kb:Association-fd84559b-636b-558b-a057-1d933aca72ba
+	a prov:Association ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Attribution-03cecf24-6d3f-5ca0-9ad5-2bbdaf55e51c
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-2 ;
+	.
+
+kb:Attribution-0aa3bd97-34f3-5373-a439-8d4c6bf1dcab
+	a prov:Attribution ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Attribution-1721c0bc-82e6-54ab-863c-c5596755177c
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-1bae2651-cfdf-5cc7-85bf-0c286f7da3c4
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-1 ;
+	.
+
+kb:Attribution-2736638a-e487-5d31-a67e-f0cf18c72ac1
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-2c417348-8f05-53d7-a88f-f65e7ddfbf22
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-2 ;
+	.
+
+kb:Attribution-3244efe8-c8da-53e5-b843-9a8005ffe732
+	a prov:Attribution ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Attribution-36f3592f-852f-5aa5-948c-d4765c08f603
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-2 ;
+	.
+
+kb:Attribution-3fa2733c-3b26-52cf-87d6-15d30176ada2
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-4df7568d-0316-5979-920b-d0e3fefe9e7c
+	a prov:Attribution ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Attribution-4fa8db38-d38f-5165-8181-46b3ff4a8006
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Attribution-73f87ad6-f596-5d02-86b3-bcafa7fbb8dd
+	a prov:Attribution ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Attribution-ab4259ee-27ca-501b-95d2-3e947aa7b9ff
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Attribution-ab76e635-1089-5bf1-aa04-844762a0f020
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Attribution-b0769bf2-f150-5dc5-8c83-e79339dff466
+	a prov:Attribution ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Attribution-b6df39c0-7419-544a-aaa0-985528888f7d
+	a prov:Attribution ;
+	prov:agent kb:kiosk-uuid-1 ;
+	.
+
+kb:Attribution-c0a09019-5c01-530d-8a93-9e0ab80655b5
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-c991493f-d968-5eb2-a8dd-207a7acaf6d5
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-1 ;
+	.
+
+kb:Attribution-e24f8c1d-1366-5507-b3a2-6e884cd6c178
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-e63b9846-109e-5983-a4fb-27023c7d257a
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Attribution-eadba839-fb53-50c9-b655-b51e6a2ee039
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-f094c5b3-c310-5708-8531-9797e164dcb1
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-f651d01a-4bfc-527a-b5bb-a8ea297b92d7
+	a prov:Attribution ;
+	prov:agent kb:camera-uuid-1 ;
+	.
+
+kb:Attribution-fcb37c3f-44d7-5deb-b18d-f307a797ae6c
+	a prov:Attribution ;
+	prov:agent kb:officer-uuid-3 ;
+	.
+
+kb:Communication-0b205983-b9eb-5c70-b0e0-e874cae809cc
+	a prov:Communication ;
+	prov:activity kb:action-uuid-3 ;
+	.
+
+kb:Communication-0fd4fb9f-0a84-5085-a4bd-27c469847464
+	a prov:Communication ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Communication-1439bfce-b632-5814-8a26-b2461a10f462
+	a prov:Communication ;
+	prov:activity kb:action-uuid-9 ;
+	.
+
+kb:Communication-2ea6d41f-0c72-5155-91f6-ed7eef9f63ae
+	a prov:Communication ;
+	prov:activity kb:action-uuid-10 ;
+	.
+
+kb:Communication-5c0513fa-3f96-5d27-8486-ba022162db26
+	a prov:Communication ;
+	prov:activity kb:action-uuid-3 ;
+	.
+
+kb:Communication-661c4b54-3e3b-5f41-9213-8d4e441e84ae
+	a prov:Communication ;
+	prov:activity kb:action-uuid-1 ;
+	.
+
+kb:Communication-76f4a901-35cb-5aad-9fa6-02b838448bb4
+	a prov:Communication ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Communication-7b3ba65f-879f-54f6-85d8-b03f2080cdee
+	a prov:Communication ;
+	prov:activity kb:action-uuid-3 ;
+	.
+
+kb:Communication-aed5baff-ff26-5caa-beea-c73e7f3b6c6e
+	a prov:Communication ;
+	prov:activity kb:action-uuid-1 ;
+	.
+
+kb:Communication-c20fe5a7-8d67-573a-b6f9-036286f53ef3
+	a prov:Communication ;
+	prov:activity kb:action-uuid-3 ;
+	.
+
+kb:Delegation-06e27a98-9961-525c-a6fa-7ba48746856f
+	a prov:Delegation ;
+	prov:agent kb:officer-uuid-3 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Delegation-7634939a-90c7-559c-a1a8-7a5a9dc3b23c
+	a prov:Delegation ;
+	prov:agent kb:officer-uuid-3 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Delegation-84ef74e4-2a15-5f97-b79d-1dbe36aabce2
+	a prov:Delegation ;
+	prov:agent kb:officer-uuid-3 ;
+	prov:hadActivity kb:action-uuid-9 ;
+	.
+
+kb:Delegation-d51f5665-d7f0-542c-916a-5248722982cb
+	a prov:Delegation ;
+	prov:agent kb:officer-uuid-3 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-010c83cb-fdb4-5f07-9090-74838db7875e
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-6 ;
+	prov:hadActivity kb:action-uuid-9 ;
+	.
+
+kb:Derivation-02c16cf9-d4ae-5d37-b1b8-932f6ec79da4
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-0bf7c055-f656-5cc6-997b-69fbc61e9c91
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-13b0d26d-7e96-5bf1-9ccb-a1cd83e46407
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-1a2e6940-bbdc-53f4-adbe-28947fa2af7f
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-1d03a1bc-420f-51b7-b620-7a510da6f28a
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-2 ;
+	.
+
+kb:Derivation-1f5050af-caba-5e80-a0a4-ca0d57e548df
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-2710a9ff-74b4-56bc-a8c1-f8f07612ef64
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-27557de3-7de2-5151-a355-1792eb7415bc
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-2d6d0074-b346-5da4-8891-2eb894652605
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-2e71f6a0-b6db-51ea-a284-9e2e3d27fbfb
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-1 ;
+	prov:hadActivity kb:action-uuid-2 ;
+	.
+
+kb:Derivation-3c4bdff3-c268-5c0a-ade6-95fde358590f
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-6 ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-3c95b155-e720-52d1-92f2-84d1b281ae1a
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-4454b361-5390-57f1-a59e-a88212dc8ab4
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-4b72f9fd-b110-5b15-b260-f0bba4299a80
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-4e2ac581-3fe1-5245-938a-679788dae099
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-4fdfc6f4-a934-51a6-9ad6-e7cbdea0d60d
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:action-uuid-1 ;
+	.
+
+kb:Derivation-4fe12039-4fe6-538b-a45e-41384a7fbf92
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-13 ;
+	.
+
+kb:Derivation-572f416a-608a-5eea-821a-8fb4727fc6f8
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-5cb4bdad-fba7-5bb5-b6e4-53ded4da331a
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-1 ;
+	prov:hadActivity kb:action-uuid-3 ;
+	.
+
+kb:Derivation-6010d619-305d-5544-aebe-2b795b4a1c00
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-6e ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-6b792516-7126-55be-8bc7-f3365bd8c552
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-2 ;
+	.
+
+kb:Derivation-6c198817-76db-56db-8832-ade81e3bbc1d
+	a prov:Derivation ;
+	prov:entity kb:extracted-file-uuid-1 ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-73ffa395-9e96-52a6-840b-a25bb2678196
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-78515675-ad46-5f1d-917b-95329065b399
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-3 ;
+	.
+
+kb:Derivation-79ade09f-f720-532e-a268-989541b74d20
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-7f5b1c49-64d8-519a-a2c7-19e5028e8391
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-81ed67e0-6387-5177-8226-afcb7b418cfb
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-88e22b7f-48d3-55db-9404-329c8e97cd52
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-8cc11842-a5cb-5773-b291-6d2573c4e2f5
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-8dfe3f6e-1792-52a2-b4d6-28457a2a68e1
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-13 ;
+	.
+
+kb:Derivation-8e573c6a-cd6d-568c-b345-5b6f174c89c9
+	a prov:Derivation ;
+	prov:entity kb:file2-uuid-1 ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-95dfb30f-e8fe-556b-a6c0-a67ed68c8e10
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-99b14de5-0698-510a-8dbe-3c7ecdb209be
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-7 ;
+	prov:hadActivity kb:action-uuid-12 ;
+	.
+
+kb:Derivation-9df74fae-43e2-5f59-bc8a-1420b3e7d7b0
+	a prov:Derivation ;
+	prov:entity kb:extracted-file-uuid-2 ;
+	prov:hadActivity kb:action-uuid-9 ;
+	.
+
+kb:Derivation-bb412752-490e-537e-83b5-0534691190c3
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-bea2e4c6-dc85-5f9c-9348-54329f734f1d
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-c11eda20-b5e8-5f3e-b962-ed9dbd8ea720
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-7 ;
+	prov:hadActivity kb:action-uuid-12 ;
+	.
+
+kb:Derivation-c29a7c80-60c3-5de4-81f9-d3d8fe0fcacc
+	a prov:Derivation ;
+	prov:entity kb:extracted-file-uuid-1 ;
+	prov:hadActivity kb:action-uuid-9 ;
+	.
+
+kb:Derivation-c2c26b0b-3d4a-52af-9c9d-59e888d50694
+	a prov:Derivation ;
+	prov:entity kb:extracted-file-uuid-1 ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-c3c9f28f-07d3-562d-81d1-c15f3f00ba79
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:action-uuid-1 ;
+	.
+
+kb:Derivation-c7933ec9-6b24-5578-8116-5539f79c8b7e
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-caadbfc6-70bf-53c2-88e6-5129955fec1e
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-6 ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-cd886bda-56f1-5cce-9232-8c5ee17158a0
+	a prov:Derivation ;
+	prov:entity kb:file2-uuid-1 ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:Derivation-ce9ba645-3134-5ef1-8640-c15de91a6121
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-4 ;
+	.
+
+kb:Derivation-dbd4d159-d3f2-5f83-a154-5974980bdb24
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-1 ;
+	prov:hadActivity kb:action-uuid-2 ;
+	.
+
+kb:Derivation-def22d33-dcb7-597a-aa37-3f445bc6d61e
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-6 ;
+	.
+
+kb:Derivation-e351b5c2-689b-5da3-9bbe-38b211d9823c
+	a prov:Derivation ;
+	prov:entity kb:dvd-uuid-1 ;
+	prov:hadActivity kb:action-uuid-12 ;
+	.
+
+kb:Derivation-f4e071ae-3a38-5b27-b413-3dc9e90a0efe
+	a prov:Derivation ;
+	prov:entity kb:dvd-uuid-1 ;
+	prov:hadActivity kb:action-uuid-12 ;
+	.
+
+kb:Derivation-f4f1b253-dcad-532d-905d-f3463725c497
+	a prov:Derivation ;
+	prov:entity kb:subject-device-uuid-1 ;
+	prov:hadActivity kb:action-uuid-7 ;
+	.
+
+kb:Derivation-f65e6674-4415-5632-9e20-19c7ecd79c14
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-uuid-6e ;
+	prov:hadActivity kb:action-uuid-10 ;
+	.
+
+kb:End-04a9d0cc-ff01-5988-94bf-bf8c4580d582
+	a prov:End ;
+	prov:atTime "2019-01-01T15:00:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-09ef4b50-e763-568a-b52b-590cbab8540c
+	a prov:End ;
+	prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-0bf4eb72-e60e-56c3-ad45-a039046bc6d5
+	a prov:End ;
+	prov:atTime "2019-01-01T15:03:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-19d25fe9-ae1a-5596-b3a3-0070d7fc8ffc
+	a prov:End ;
+	prov:atTime "2019-01-01T15:20:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-1cde7fe2-690b-5cd1-8636-cecc1eb25abb
+	a prov:End ;
+	prov:atTime "2019-01-01T14:20:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-1ebaffe2-5315-5f32-98f3-b503c73825da
+	a prov:End ;
+	prov:atTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-31764af5-0e93-5954-93c9-5d7c33047356
+	a prov:End ;
+	prov:atTime "2019-01-01T14:05:30+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-4bed3f73-208a-5c20-8574-d6cbbf9e2d4c
+	a prov:End ;
+	prov:atTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-604080c9-3ea8-59fb-8f4c-1ccfa1e73495
+	a prov:End ;
+	prov:atTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-894c1ab4-9b4a-54ef-9f25-baca59e26fb3
+	a prov:End ;
+	prov:atTime "2019-01-01T15:10:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-8b553cd2-3fd1-5e88-a0a6-915cd5e67e8e
+	a prov:End ;
+	prov:atTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-e88c0c83-6fcb-5bd6-ac8e-78e37f20bf68
+	a prov:End ;
+	prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-f1ee6cda-bd2c-5924-a007-018de2f3fc2b
+	a prov:End ;
+	prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-00915cbc-e0d9-575c-8690-61f1eb494ac6
+	a prov:Generation ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Generation-0d767eac-a7d5-5409-b87b-b3bbc0b785e3
+	a prov:Generation ;
+	prov:activity kb:action-uuid-4 ;
+	.
+
+kb:Generation-130da2fc-4be8-51a9-943f-bcc800c6c1d6
+	a prov:Generation ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Generation-199e4034-0746-5b15-8d20-8c1934eb51b4
+	a prov:Generation ;
+	prov:activity kb:action-uuid-4 ;
+	.
+
+kb:Generation-1e0177a7-74b6-5e6e-aa93-30c94e0bf36a
+	a prov:Generation ;
+	prov:activity kb:action-uuid-4 ;
+	.
+
+kb:Generation-1ea0f51f-3da9-5ac6-830f-128736c8e7ad
+	a prov:Generation ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Generation-20863384-aa9b-5ef7-ab8a-a20ec24fe289
+	a prov:Generation ;
+	prov:activity kb:action-uuid-9 ;
+	.
+
+kb:Generation-2196a71d-79ab-540f-b1d2-523cb3792848
+	a prov:Generation ;
+	prov:activity kb:action-uuid-10 ;
+	.
+
+kb:Generation-3a4c3d26-6390-5e50-add7-47c9a3070e01
+	a prov:Generation ;
+	prov:activity kb:action-uuid-2 ;
+	.
+
+kb:Generation-48e01b98-7100-5f28-821b-793319f9fdd6
+	a prov:Generation ;
+	prov:activity kb:action-uuid-13 ;
+	.
+
+kb:Generation-56fc8f86-62bb-5aa4-8039-05a59f29f487
+	a prov:Generation ;
+	prov:activity kb:action-uuid-6 ;
+	.
+
+kb:Generation-6afe5aa6-d823-5e35-8252-fb469cf935e2
+	a prov:Generation ;
+	prov:activity kb:action-uuid-1 ;
+	.
+
+kb:Generation-7a5e1399-551c-594e-82bc-74e4e667516f
+	a prov:Generation ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Generation-7e06dc33-1a2f-5ffb-9c65-17dfd8df70a2
+	a prov:Generation ;
+	prov:activity kb:action-uuid-7 ;
+	.
+
+kb:Generation-7e206cb9-cd4e-5edd-a0d3-59221463ad1c
+	a prov:Generation ;
+	prov:activity kb:action-uuid-12 ;
+	.
+
+kb:Generation-8647dc38-8cd3-5512-b8e1-309e6e8c75c4
+	a prov:Generation ;
+	prov:activity kb:action-uuid-4 ;
+	.
+
+kb:Generation-9246885f-170a-5d97-9fbb-8f6e7fd537c3
+	a prov:Generation ;
+	prov:activity kb:action-uuid-10 ;
+	.
+
+kb:Generation-94659186-beea-5f0e-838b-8f43c1a44910
+	a prov:Generation ;
+	prov:activity kb:action-uuid-2 ;
+	.
+
+kb:Generation-c089cd32-5d68-5457-a0a1-e4a56ff1b366
+	a prov:Generation ;
+	prov:activity kb:action-uuid-6 ;
+	.
+
+kb:Generation-d01d5054-2b2c-5450-b058-07c0709d19fb
+	a prov:Generation ;
+	prov:activity kb:action-uuid-12 ;
+	.
+
+kb:Generation-d5163342-08cc-54fa-bbc2-f7bf01aa7941
+	a prov:Generation ;
+	prov:activity kb:action-uuid-1 ;
+	.
+
+kb:Generation-dfa68ba5-48c4-5213-9f11-bc9a0e9c7b79
+	a prov:Generation ;
+	prov:activity kb:action-uuid-6 ;
+	.
+
+kb:Generation-e59dc07a-7c3e-585c-b302-49589802c3ef
+	a prov:Generation ;
+	prov:activity kb:action-uuid-3 ;
+	.
+
+kb:Generation-fd4e1edf-d058-5daf-b0a9-adce85ee52a8
+	a prov:Generation ;
+	prov:activity kb:action-uuid-6 ;
+	.
+
+kb:Start-1c90956c-e17a-5f22-938d-2479a75c110c
+	a prov:Start ;
+	.
+
+kb:Start-1f191753-8f2b-5471-908c-663b4f61f691
+	a prov:Start ;
+	.
+
+kb:Start-612062f6-fd54-5f33-bb41-1d1a2768d685
+	a prov:Start ;
+	.
+
+kb:Start-65db0fc4-690b-582d-b2e9-cbc9aa75ce70
+	a prov:Start ;
+	.
+
+kb:Start-81f4d9c6-b4df-54f7-8403-cd90a0136923
+	a prov:Start ;
+	.
+
+kb:Start-8ea56a88-720f-5697-8d2e-89d68cc930f1
+	a prov:Start ;
+	.
+
+kb:Start-9e3ee06d-8708-5a08-8a8f-ccc8f8d1bdfa
+	a prov:Start ;
+	prov:atTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-bcfe441e-db6b-543f-ab6a-59da5df89ab9
+	a prov:Start ;
+	.
+
+kb:Start-bd7bd16e-6386-5df2-b70f-c008b548eec1
+	a prov:Start ;
+	.
+
+kb:Start-cef68541-ac3a-595f-9fca-d702e97730b3
+	a prov:Start ;
+	.
+
+kb:Start-d230e5cd-4594-54f9-88f1-fca4639aa0a2
+	a prov:Start ;
+	.
+
+kb:Start-db2694df-de4d-5dd2-a923-797a49f4c1b2
+	a prov:Start ;
+	.
+
+kb:Start-f01440ac-45dd-50ba-8a87-5bd932f64fbe
+	a prov:Start ;
+	.
+
+kb:Usage-000d5736-7150-5abe-b8d1-baae58d68dea
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-1 ;
+	.
+
+kb:Usage-08c96165-d757-5d24-9098-a8068368a763
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-6 ;
+	.
+
+kb:Usage-230ea0dd-8b2d-5546-9f9f-422c7a3f779f
+	a prov:Usage ;
+	prov:entity kb:subject-device-uuid-1 ;
+	.
+
+kb:Usage-3f02ab35-d0a2-5312-a5de-8aaa8da6812d
+	a prov:Usage ;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:Usage-414895b1-e40e-5168-9e22-88fd27a7116c
+	a prov:Usage ;
+	prov:entity kb:subject-device-uuid-1 ;
+	.
+
+kb:Usage-4208984e-17d2-52f0-a48e-21a32c00e3d3
+	a prov:Usage ;
+	prov:entity kb:subject-device-uuid-1 ;
+	.
+
+kb:Usage-4f8089f9-9bf8-55a0-825a-ea1e8675405e
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	.
+
+kb:Usage-551e4494-be9b-5b7b-980f-02cabe397896
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	.
+
+kb:Usage-57758c94-24d4-5186-8c67-94292966a982
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-6 ;
+	.
+
+kb:Usage-59e9740a-765f-54af-ac62-ddce059f9b77
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-6e ;
+	.
+
+kb:Usage-5c376dcf-a272-5c27-b233-a7b948ee07be
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	.
+
+kb:Usage-666c7f49-231f-5866-8ea8-820f125e0a6e
+	a prov:Usage ;
+	prov:entity kb:extracted-file-uuid-1 ;
+	.
+
+kb:Usage-668b6ffe-3cb4-526d-a4af-ef34dd77cc83
+	a prov:Usage ;
+	prov:entity kb:subject-device-uuid-1 ;
+	.
+
+kb:Usage-71fc2006-ba1b-5fa3-9815-72e6b382f695
+	a prov:Usage ;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:Usage-76381af4-8823-55c7-ae24-3333f827681f
+	a prov:Usage ;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:Usage-82e90348-861c-5f3e-8389-fb13edc60e5a
+	a prov:Usage ;
+	prov:entity kb:dvd-uuid-1 ;
+	.
+
+kb:Usage-85bd0f05-742a-5da2-a40f-c8845cc5ebde
+	a prov:Usage ;
+	prov:entity kb:extracted-file-uuid-2 ;
+	.
+
+kb:Usage-a5cfa998-37a3-55d9-a086-f330dd926375
+	a prov:Usage ;
+	prov:entity kb:subject-device-uuid-1 ;
+	.
+
+kb:Usage-aea1118d-815a-5b4b-a75c-95d2dfa34283
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-1 ;
+	.
+
+kb:Usage-d1aff435-6037-5171-ab87-88907445afda
+	a prov:Usage ;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:Usage-eb580b46-193a-5c33-a9a4-15927d2473aa
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-3 ;
+	.
+
+kb:Usage-edbbbf4f-74a9-56fa-98d8-f4dfec328dad
+	a prov:Usage ;
+	prov:entity kb:provenance-record-uuid-7 ;
+	.
+
+kb:Usage-f06cbf2d-2441-58cb-9e1f-1b7e917cba13
+	a prov:Usage ;
+	prov:entity kb:file2-uuid-1 ;
+	.
+
+kb:Usage-f2eb760b-2d63-57dd-bd1a-b835a10a78ae
+	a prov:Usage ;
+	prov:entity kb:extracted-file-uuid-1 ;
+	.
+
+kb:Usage-f5c18d5b-87cf-55bd-beb4-6d916c59c3dc
+	a prov:Usage ;
+	prov:entity kb:subject-device-uuid-1 ;
+	.
+
 kb:action-uuid-1
 	a prov:Activity ;
 	rdfs:comment "Exhibit submitted for Kiosk examination" ;
 	prov:endedAtTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-1 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
-	] ;
+	prov:qualifiedAssociation kb:Association-d482b418-e457-5a1b-aba9-c41cb5ab8c82 ;
+	prov:qualifiedEnd kb:End-4bed3f73-208a-5c20-8574-d6cbbf9e2d4c ;
+	prov:qualifiedStart kb:Start-cef68541-ac3a-595f-9fca-d702e97730b3 ;
+	prov:qualifiedUsage kb:Usage-d1aff435-6037-5171-ab87-88907445afda ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:officer-uuid-1 ;
 	.
@@ -26,37 +970,18 @@ kb:action-uuid-10
 	a prov:Activity ;
 	rdfs:comment "Report DVD Generated as associated exhibit" ;
 	prov:endedAtTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
+	prov:qualifiedAssociation kb:Association-662e7d7e-0102-553d-a116-f87129653e0f ;
 	prov:qualifiedCommunication
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Communication ;
-			prov:activity kb:action-uuid-9 ;
-		]
+		kb:Communication-0fd4fb9f-0a84-5085-a4bd-27c469847464 ,
+		kb:Communication-1439bfce-b632-5814-8a26-b2461a10f462
 		;
+	prov:qualifiedEnd kb:End-604080c9-3ea8-59fb-8f4c-1ccfa1e73495 ;
+	prov:qualifiedStart kb:Start-bd7bd16e-6386-5df2-b70f-c008b548eec1 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:extracted-file-uuid-1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:file2-uuid-1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-6 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-6e ;
-		]
+		kb:Usage-08c96165-d757-5d24-9098-a8068368a763 ,
+		kb:Usage-59e9740a-765f-54af-ac62-ddce059f9b77 ,
+		kb:Usage-f06cbf2d-2441-58cb-9e1f-1b7e917cba13 ,
+		kb:Usage-f2eb760b-2d63-57dd-bd1a-b835a10a78ae
 		;
 	prov:used
 		kb:extracted-file-uuid-1 ,
@@ -75,14 +1000,10 @@ kb:action-uuid-11
 	a prov:Activity ;
 	rdfs:comment "DVD Report sealed" ;
 	prov:endedAtTime "2019-01-01T15:10:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
-	] ;
+	prov:qualifiedAssociation kb:Association-7ec9e20b-0f0c-5f23-9a4b-cc8c413001f3 ;
+	prov:qualifiedEnd kb:End-894c1ab4-9b4a-54ef-9f25-baca59e26fb3 ;
+	prov:qualifiedStart kb:Start-1f191753-8f2b-5471-908c-663b4f61f691 ;
+	prov:qualifiedUsage kb:Usage-71fc2006-ba1b-5fa3-9815-72e6b382f695 ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
 	.
@@ -91,23 +1012,13 @@ kb:action-uuid-12
 	a prov:Activity ;
 	rdfs:comment "Witness statement completed" ;
 	prov:endedAtTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-10 ;
-	] ;
+	prov:qualifiedAssociation kb:Association-fd84559b-636b-558b-a057-1d933aca72ba ;
+	prov:qualifiedCommunication kb:Communication-2ea6d41f-0c72-5155-91f6-ed7eef9f63ae ;
+	prov:qualifiedEnd kb:End-8b553cd2-3fd1-5e88-a0a6-915cd5e67e8e ;
+	prov:qualifiedStart kb:Start-1c90956c-e17a-5f22-938d-2479a75c110c ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:dvd-uuid-1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-7 ;
-		]
+		kb:Usage-82e90348-861c-5f3e-8389-fb13edc60e5a ,
+		kb:Usage-edbbbf4f-74a9-56fa-98d8-f4dfec328dad
 		;
 	prov:used
 		kb:dvd-uuid-1 ,
@@ -121,23 +1032,13 @@ kb:action-uuid-13
 	a prov:Activity ;
 	rdfs:comment "Sealed Exhibit handed the OIC & Transfer documentation signed" ;
 	prov:endedAtTime "2019-01-01T15:20:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-3 ;
-	] ;
+	prov:qualifiedAssociation kb:Association-be77f131-4518-591e-ab61-60f182b0019c ;
+	prov:qualifiedCommunication kb:Communication-7b3ba65f-879f-54f6-85d8-b03f2080cdee ;
+	prov:qualifiedEnd kb:End-19d25fe9-ae1a-5596-b3a3-0070d7fc8ffc ;
+	prov:qualifiedStart kb:Start-612062f6-fd54-5f33-bb41-1d1a2768d685 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-3 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:subject-device-uuid-1 ;
-		]
+		kb:Usage-a5cfa998-37a3-55d9-a086-f330dd926375 ,
+		kb:Usage-eb580b46-193a-5c33-a9a4-15927d2473aa
 		;
 	prov:used
 		kb:provenance-record-uuid-3 ,
@@ -151,23 +1052,13 @@ kb:action-uuid-2
 	a prov:Activity ;
 	rdfs:comment "Exhibit seal checks (passed) & Exhibit receipted in lab" ;
 	prov:endedAtTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-2 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-1 ;
-	] ;
+	prov:qualifiedAssociation kb:Association-123a16d8-9793-56cb-a8aa-40df74ccdbd8 ;
+	prov:qualifiedCommunication kb:Communication-aed5baff-ff26-5caa-beea-c73e7f3b6c6e ;
+	prov:qualifiedEnd kb:End-1ebaffe2-5315-5f32-98f3-b503c73825da ;
+	prov:qualifiedStart kb:Start-65db0fc4-690b-582d-b2e9-cbc9aa75ce70 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:subject-device-uuid-1 ;
-		]
+		kb:Usage-000d5736-7150-5abe-b8d1-baae58d68dea ,
+		kb:Usage-4208984e-17d2-52f0-a48e-21a32c00e3d3
 		;
 	prov:used
 		kb:provenance-record-uuid-1 ,
@@ -181,23 +1072,13 @@ kb:action-uuid-3
 	a prov:Activity ;
 	rdfs:comment "Exhibit assigned to Kiosk technician" ;
 	prov:endedAtTime "2019-01-01T14:05:30+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-2 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-1 ;
-	] ;
+	prov:qualifiedAssociation kb:Association-2d74acd2-f231-578a-9995-301ade08a37e ;
+	prov:qualifiedCommunication kb:Communication-661c4b54-3e3b-5f41-9213-8d4e441e84ae ;
+	prov:qualifiedEnd kb:End-31764af5-0e93-5954-93c9-5d7c33047356 ;
+	prov:qualifiedStart kb:Start-8ea56a88-720f-5697-8d2e-89d68cc930f1 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:subject-device-uuid-1 ;
-		]
+		kb:Usage-230ea0dd-8b2d-5546-9f9f-422c7a3f779f ,
+		kb:Usage-aea1118d-815a-5b4b-a75c-95d2dfa34283
 		;
 	prov:used
 		kb:provenance-record-uuid-1 ,
@@ -211,23 +1092,16 @@ kb:action-uuid-4
 	a prov:Activity ;
 	rdfs:comment "Sealed Exhibit Photographed" ;
 	prov:endedAtTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-3 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-30baa5cc-e7bd-5924-9ce5-3b1b74a1ece8 ,
+		kb:Association-c184254d-231d-5a83-979c-4052f4f42ac4
+		;
+	prov:qualifiedCommunication kb:Communication-0b205983-b9eb-5c70-b0e0-e874cae809cc ;
+	prov:qualifiedEnd kb:End-e88c0c83-6fcb-5bd6-ac8e-78e37f20bf68 ;
+	prov:qualifiedStart kb:Start-f01440ac-45dd-50ba-8a87-5bd932f64fbe ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-3 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:subject-device-uuid-1 ;
-		]
+		kb:Usage-551e4494-be9b-5b7b-980f-02cabe397896 ,
+		kb:Usage-668b6ffe-3cb4-526d-a4af-ef34dd77cc83
 		;
 	prov:used
 		kb:provenance-record-uuid-3 ,
@@ -241,14 +1115,10 @@ kb:action-uuid-5
 	a prov:Activity ;
 	rdfs:comment "Exhibit Unsealed" ;
 	prov:endedAtTime "2019-01-01T14:20:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
-	] ;
+	prov:qualifiedAssociation kb:Association-3d156b08-fa03-5bc6-9297-b665046a29f2 ;
+	prov:qualifiedEnd kb:End-1cde7fe2-690b-5cd1-8636-cecc1eb25abb ;
+	prov:qualifiedStart kb:Start-bcfe441e-db6b-543f-ab6a-59da5df89ab9 ;
+	prov:qualifiedUsage kb:Usage-3f02ab35-d0a2-5312-a5de-8aaa8da6812d ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
 	.
@@ -257,23 +1127,16 @@ kb:action-uuid-6
 	a prov:Activity ;
 	rdfs:comment "Unsealed Exhibit Photographed" ;
 	prov:endedAtTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-3 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-6eff4464-ec23-5beb-86ee-c5f7ccbd7d11 ,
+		kb:Association-b802fafe-0a0c-5842-b392-d3f4f5c4b78e
+		;
+	prov:qualifiedCommunication kb:Communication-5c0513fa-3f96-5d27-8486-ba022162db26 ;
+	prov:qualifiedEnd kb:End-09ef4b50-e763-568a-b52b-590cbab8540c ;
+	prov:qualifiedStart kb:Start-d230e5cd-4594-54f9-88f1-fca4639aa0a2 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-3 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:subject-device-uuid-1 ;
-		]
+		kb:Usage-414895b1-e40e-5168-9e22-88fd27a7116c ,
+		kb:Usage-4f8089f9-9bf8-55a0-825a-ea1e8675405e
 		;
 	prov:used
 		kb:provenance-record-uuid-3 ,
@@ -287,25 +1150,16 @@ kb:action-uuid-7
 	a prov:Activity ;
 	rdfs:comment "Exhibit Connected to Kiosk & process started; exhibit disconnected at conclusion" ;
 	prov:endedAtTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-3 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-22c19332-a26b-5f7a-b8bd-9392e001f13d ,
+		kb:Association-422cf694-1778-5fb0-8e8c-8bdab0a86a33
+		;
+	prov:qualifiedCommunication kb:Communication-c20fe5a7-8d67-573a-b6f9-036286f53ef3 ;
+	prov:qualifiedEnd kb:End-f1ee6cda-bd2c-5924-a007-018de2f3fc2b ;
+	prov:qualifiedStart kb:Start-9e3ee06d-8708-5a08-8a8f-ccc8f8d1bdfa ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
-			prov:entity kb:provenance-record-uuid-3 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
-			prov:entity kb:subject-device-uuid-1 ;
-		]
+		kb:Usage-5c376dcf-a272-5c27-b233-a7b948ee07be ,
+		kb:Usage-f5c18d5b-87cf-55bd-beb4-6d916c59c3dc
 		;
 	prov:startedAtTime "2019-01-01T14:25:00+00:00"^^xsd:dateTime ;
 	prov:used
@@ -320,14 +1174,10 @@ kb:action-uuid-8
 	a prov:Activity ;
 	rdfs:comment "Exhibit Resealed" ;
 	prov:endedAtTime "2019-01-01T15:00:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
-	] ;
+	prov:qualifiedAssociation kb:Association-cdf69915-4135-5158-a0d1-a6a39460b5dd ;
+	prov:qualifiedEnd kb:End-04a9d0cc-ff01-5988-94bf-bf8c4580d582 ;
+	prov:qualifiedStart kb:Start-81f4d9c6-b4df-54f7-8403-cd90a0136923 ;
+	prov:qualifiedUsage kb:Usage-76381af4-8823-55c7-ae24-3333f827681f ;
 	prov:used prov:EmptyCollection ;
 	prov:wasAssociatedWith kb:officer-uuid-3 ;
 	.
@@ -336,27 +1186,17 @@ kb:action-uuid-9
 	a prov:Activity ;
 	rdfs:comment "Picture selected, via kiosk review screen, from those extracted from exhibit" ;
 	prov:endedAtTime "2019-01-01T15:03:00+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:action-uuid-7 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-04eb3476-a17f-5c07-ac57-1100809aed02 ,
+		kb:Association-d0b67037-e7dc-5d2a-88a5-c65c5d13384c
+		;
+	prov:qualifiedCommunication kb:Communication-76f4a901-35cb-5aad-9fa6-02b838448bb4 ;
+	prov:qualifiedEnd kb:End-0bf4eb72-e60e-56c3-ad45-a039046bc6d5 ;
+	prov:qualifiedStart kb:Start-db2694df-de4d-5dd2-a923-797a49f4c1b2 ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:entity kb:extracted-file-uuid-1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:extracted-file-uuid-2 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:entity kb:provenance-record-uuid-6 ;
-		]
+		kb:Usage-57758c94-24d4-5186-8c67-94292966a982 ,
+		kb:Usage-666c7f49-231f-5866-8ea8-820f125e0a6e ,
+		kb:Usage-85bd0f05-742a-5da2-a40f-c8845cc5ebde
 		;
 	prov:used
 		kb:extracted-file-uuid-1 ,
@@ -374,52 +1214,21 @@ kb:camera-uuid-1
 		;
 	prov:actedOnBehalfOf kb:officer-uuid-3 ;
 	prov:qualifiedDelegation
-		[
-			a prov:Delegation ;
-			prov:agent kb:officer-uuid-3 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		] ,
-		[
-			a prov:Delegation ;
-			prov:agent kb:officer-uuid-3 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		]
+		kb:Delegation-06e27a98-9961-525c-a6fa-7ba48746856f ,
+		kb:Delegation-d51f5665-d7f0-542c-916a-5248722982cb
 		;
 	.
 
 kb:dvd-uuid-1
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-fcb37c3f-44d7-5deb-b18d-f307a797ae6c ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:extracted-file-uuid-1 ;
-			prov:hadActivity kb:action-uuid-10 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:file2-uuid-1 ;
-			prov:hadActivity kb:action-uuid-10 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-6 ;
-			prov:hadActivity kb:action-uuid-10 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-6e ;
-			prov:hadActivity kb:action-uuid-10 ;
-		]
+		kb:Derivation-6c198817-76db-56db-8832-ade81e3bbc1d ,
+		kb:Derivation-8e573c6a-cd6d-568c-b345-5b6f174c89c9 ,
+		kb:Derivation-caadbfc6-70bf-53c2-88e6-5129955fec1e ,
+		kb:Derivation-f65e6674-4415-5632-9e20-19c7ecd79c14
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-10 ;
-		prov:atTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-2196a71d-79ab-540f-b1d2-523cb3792848 ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
 		kb:extracted-file-uuid-1 ,
@@ -432,27 +1241,12 @@ kb:dvd-uuid-1
 
 kb:extracted-file-uuid-1
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-4df7568d-0316-5979-920b-d0e3fefe9e7c ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		]
+		kb:Derivation-1f5050af-caba-5e80-a0a4-ca0d57e548df ,
+		kb:Derivation-8cc11842-a5cb-5773-b291-6d2573c4e2f5
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-7 ;
-		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-00915cbc-e0d9-575c-8690-61f1eb494ac6 ;
 	prov:wasAttributedTo kb:kiosk-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -463,27 +1257,12 @@ kb:extracted-file-uuid-1
 
 kb:extracted-file-uuid-2
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-b0769bf2-f150-5dc5-8c83-e79339dff466 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		]
+		kb:Derivation-7f5b1c49-64d8-519a-a2c7-19e5028e8391 ,
+		kb:Derivation-f4f1b253-dcad-532d-905d-f3463725c497
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-7 ;
-		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-1ea0f51f-3da9-5ac6-830f-128736c8e7ad ;
 	prov:wasAttributedTo kb:kiosk-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -494,27 +1273,12 @@ kb:extracted-file-uuid-2
 
 kb:extracted-file-uuid-3
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-73f87ad6-f596-5d02-86b3-bcafa7fbb8dd ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		]
+		kb:Derivation-3c95b155-e720-52d1-92f2-84d1b281ae1a ,
+		kb:Derivation-81ed67e0-6387-5177-8226-afcb7b418cfb
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-7 ;
-		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-7a5e1399-551c-594e-82bc-74e4e667516f ;
 	prov:wasAttributedTo kb:kiosk-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -526,27 +1290,12 @@ kb:extracted-file-uuid-3
 kb:file-uuid-1
 	a prov:Entity ;
 	rdfs:comment "Intake Form" ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-2 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-2c417348-8f05-53d7-a88f-f65e7ddfbf22 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-1 ;
-			prov:hadActivity kb:action-uuid-2 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-2 ;
-		]
+		kb:Derivation-1d03a1bc-420f-51b7-b620-7a510da6f28a ,
+		kb:Derivation-dbd4d159-d3f2-5f83-a154-5974980bdb24
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-2 ;
-		prov:atTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-94659186-beea-5f0e-838b-8f43c1a44910 ;
 	prov:wasAttributedTo kb:officer-uuid-2 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-1 ,
@@ -558,27 +1307,12 @@ kb:file-uuid-1
 kb:file-uuid-2
 	a prov:Entity ;
 	rdfs:comment "Kiosk report" ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-3244efe8-c8da-53e5-b843-9a8005ffe732 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		]
+		kb:Derivation-4454b361-5390-57f1-a59e-a88212dc8ab4 ,
+		kb:Derivation-95dfb30f-e8fe-556b-a6c0-a67ed68c8e10
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-7 ;
-		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-7e06dc33-1a2f-5ffb-9c65-17dfd8df70a2 ;
 	prov:wasAttributedTo kb:kiosk-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -590,27 +1324,12 @@ kb:file-uuid-2
 kb:file-uuid-3
 	a prov:Entity ;
 	rdfs:comment "Witness statement" ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-e63b9846-109e-5983-a4fb-27023c7d257a ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:dvd-uuid-1 ;
-			prov:hadActivity kb:action-uuid-12 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-7 ;
-			prov:hadActivity kb:action-uuid-12 ;
-		]
+		kb:Derivation-99b14de5-0698-510a-8dbe-3c7ecdb209be ,
+		kb:Derivation-f4e071ae-3a38-5b27-b413-3dc9e90a0efe
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-12 ;
-		prov:atTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-7e206cb9-cd4e-5edd-a0d3-59221463ad1c ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
 		kb:dvd-uuid-1 ,
@@ -630,16 +1349,8 @@ kb:kiosk-uuid-1
 		;
 	prov:actedOnBehalfOf kb:officer-uuid-3 ;
 	prov:qualifiedDelegation
-		[
-			a prov:Delegation ;
-			prov:agent kb:officer-uuid-3 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Delegation ;
-			prov:agent kb:officer-uuid-3 ;
-			prov:hadActivity kb:action-uuid-9 ;
-		]
+		kb:Delegation-7634939a-90c7-559c-a1a8-7a5a9dc3b23c ,
+		kb:Delegation-84ef74e4-2a15-5f97-b79d-1dbe36aabce2
 		;
 	.
 
@@ -670,27 +1381,12 @@ kb:provenance-record-73f59a8a-1c22-41fe-af50-13e8b6a65de9
 		prov:Entity
 		;
 	prov:hadMember kb:file-uuid-3 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-4fa8db38-d38f-5165-8181-46b3ff4a8006 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:dvd-uuid-1 ;
-			prov:hadActivity kb:action-uuid-12 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-7 ;
-			prov:hadActivity kb:action-uuid-12 ;
-		]
+		kb:Derivation-c11eda20-b5e8-5f3e-b962-ed9dbd8ea720 ,
+		kb:Derivation-e351b5c2-689b-5da3-9bbe-38b211d9823c
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-12 ;
-		prov:atTime "2019-01-01T15:15:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-d01d5054-2b2c-5450-b058-07c0709d19fb ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
 		kb:dvd-uuid-1 ,
@@ -705,20 +1401,9 @@ kb:provenance-record-uuid-1
 		prov:Entity
 		;
 	prov:hadMember kb:subject-device-uuid-1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-1 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:action-uuid-1 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-1 ;
-		prov:atTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-c991493f-d968-5eb2-a8dd-207a7acaf6d5 ;
+	prov:qualifiedDerivation kb:Derivation-c3c9f28f-07d3-562d-81d1-c15f3f00ba79 ;
+	prov:qualifiedGeneration kb:Generation-6afe5aa6-d823-5e35-8252-fb469cf935e2 ;
 	prov:wasAttributedTo kb:officer-uuid-1 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:action-uuid-1 ;
@@ -731,27 +1416,12 @@ kb:provenance-record-uuid-2
 		prov:Entity
 		;
 	prov:hadMember kb:file-uuid-1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-2 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-03cecf24-6d3f-5ca0-9ad5-2bbdaf55e51c ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-1 ;
-			prov:hadActivity kb:action-uuid-2 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-2 ;
-		]
+		kb:Derivation-2e71f6a0-b6db-51ea-a284-9e2e3d27fbfb ,
+		kb:Derivation-6b792516-7126-55be-8bc7-f3365bd8c552
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-2 ;
-		prov:atTime "2019-01-01T14:05:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-3a4c3d26-6390-5e50-add7-47c9a3070e01 ;
 	prov:wasAttributedTo kb:officer-uuid-2 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-1 ,
@@ -767,27 +1437,12 @@ kb:provenance-record-uuid-3
 		prov:Entity
 		;
 	prov:hadMember kb:subject-device-uuid-1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-2 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-36f3592f-852f-5aa5-948c-d4765c08f603 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-1 ;
-			prov:hadActivity kb:action-uuid-3 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-3 ;
-		]
+		kb:Derivation-5cb4bdad-fba7-5bb5-b6e4-53ded4da331a ,
+		kb:Derivation-78515675-ad46-5f1d-917b-95329065b399
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-3 ;
-		prov:atTime "2019-01-01T14:05:30+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-e59dc07a-7c3e-585c-b302-49589802c3ef ;
 	prov:wasAttributedTo kb:officer-uuid-2 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-1 ,
@@ -806,27 +1461,12 @@ kb:provenance-record-uuid-4
 		kb:subject-device-photograph-uuid-2 ,
 		kb:subject-device-photograph-uuid-3
 		;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-2736638a-e487-5d31-a67e-f0cf18c72ac1 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		]
+		kb:Derivation-2d6d0074-b346-5da4-8891-2eb894652605 ,
+		kb:Derivation-73ffa395-9e96-52a6-840b-a25bb2678196
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-4 ;
-		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-199e4034-0746-5b15-8d20-8c1934eb51b4 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -846,27 +1486,12 @@ kb:provenance-record-uuid-5
 		kb:subject-device-photograph-uuid-5 ,
 		kb:subject-device-photograph-uuid-6
 		;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-1721c0bc-82e6-54ab-863c-c5596755177c ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		]
+		kb:Derivation-0bf7c055-f656-5cc6-997b-69fbc61e9c91 ,
+		kb:Derivation-572f416a-608a-5eea-821a-8fb4727fc6f8
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-6 ;
-		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-c089cd32-5d68-5457-a0a1-e4a56ff1b366 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -887,27 +1512,12 @@ kb:provenance-record-uuid-6
 		kb:extracted-file-uuid-3 ,
 		kb:file-uuid-2
 		;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-0aa3bd97-34f3-5373-a439-8d4c6bf1dcab ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-7 ;
-		]
+		kb:Derivation-2710a9ff-74b4-56bc-a8c1-f8f07612ef64 ,
+		kb:Derivation-4e2ac581-3fe1-5245-938a-679788dae099
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-7 ;
-		prov:atTime "2019-01-01T14:55:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-130da2fc-4be8-51a9-943f-bcc800c6c1d6 ;
 	prov:wasAttributedTo kb:kiosk-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -923,32 +1533,13 @@ kb:provenance-record-uuid-6e
 		prov:Entity
 		;
 	prov:hadMember kb:extracted-file-uuid-1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:kiosk-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-b6df39c0-7419-544a-aaa0-985528888f7d ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:extracted-file-uuid-1 ;
-			prov:hadActivity kb:action-uuid-9 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:extracted-file-uuid-2 ;
-			prov:hadActivity kb:action-uuid-9 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-6 ;
-			prov:hadActivity kb:action-uuid-9 ;
-		]
+		kb:Derivation-010c83cb-fdb4-5f07-9090-74838db7875e ,
+		kb:Derivation-9df74fae-43e2-5f59-bc8a-1420b3e7d7b0 ,
+		kb:Derivation-c29a7c80-60c3-5de4-81f9-d3d8fe0fcacc
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-9 ;
-		prov:atTime "2019-01-01T15:03:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-20863384-aa9b-5ef7-ab8a-a20ec24fe289 ;
 	prov:wasAttributedTo kb:kiosk-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:extracted-file-uuid-1 ,
@@ -965,37 +1556,14 @@ kb:provenance-record-uuid-7
 		prov:Entity
 		;
 	prov:hadMember kb:dvd-uuid-1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-ab4259ee-27ca-501b-95d2-3e947aa7b9ff ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:extracted-file-uuid-1 ;
-			prov:hadActivity kb:action-uuid-10 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:file2-uuid-1 ;
-			prov:hadActivity kb:action-uuid-10 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-6 ;
-			prov:hadActivity kb:action-uuid-10 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-6e ;
-			prov:hadActivity kb:action-uuid-10 ;
-		]
+		kb:Derivation-3c4bdff3-c268-5c0a-ade6-95fde358590f ,
+		kb:Derivation-6010d619-305d-5544-aebe-2b795b4a1c00 ,
+		kb:Derivation-c2c26b0b-3d4a-52af-9c9d-59e888d50694 ,
+		kb:Derivation-cd886bda-56f1-5cce-9232-8c5ee17158a0
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-10 ;
-		prov:atTime "2019-01-01T15:05:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-9246885f-170a-5d97-9fbb-8f6e7fd537c3 ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
 		kb:extracted-file-uuid-1 ,
@@ -1013,27 +1581,12 @@ kb:provenance-record-uuid-8
 		prov:Entity
 		;
 	prov:hadMember kb:subject-device-uuid-1 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-ab76e635-1089-5bf1-aa04-844762a0f020 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-13 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-13 ;
-		]
+		kb:Derivation-4fe12039-4fe6-538b-a45e-41384a7fbf92 ,
+		kb:Derivation-8dfe3f6e-1792-52a2-b4d6-28457a2a68e1
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-13 ;
-		prov:atTime "2019-01-01T15:20:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-48e01b98-7100-5f28-821b-793319f9fdd6 ;
 	prov:wasAttributedTo kb:officer-uuid-3 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1045,27 +1598,12 @@ kb:provenance-record-uuid-8
 
 kb:subject-device-photograph-uuid-1
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-e24f8c1d-1366-5507-b3a2-6e884cd6c178 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		]
+		kb:Derivation-1a2e6940-bbdc-53f4-adbe-28947fa2af7f ,
+		kb:Derivation-79ade09f-f720-532e-a268-989541b74d20
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-4 ;
-		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-8647dc38-8cd3-5512-b8e1-309e6e8c75c4 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1076,27 +1614,12 @@ kb:subject-device-photograph-uuid-1
 
 kb:subject-device-photograph-uuid-2
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-f094c5b3-c310-5708-8531-9797e164dcb1 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		]
+		kb:Derivation-13b0d26d-7e96-5bf1-9ccb-a1cd83e46407 ,
+		kb:Derivation-88e22b7f-48d3-55db-9404-329c8e97cd52
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-4 ;
-		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-0d767eac-a7d5-5409-b87b-b3bbc0b785e3 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1107,27 +1630,12 @@ kb:subject-device-photograph-uuid-2
 
 kb:subject-device-photograph-uuid-3
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-c0a09019-5c01-530d-8a93-9e0ab80655b5 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-4 ;
-		]
+		kb:Derivation-02c16cf9-d4ae-5d37-b1b8-932f6ec79da4 ,
+		kb:Derivation-ce9ba645-3134-5ef1-8640-c15de91a6121
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-4 ;
-		prov:atTime "2019-01-01T14:15:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-1e0177a7-74b6-5e6e-aa93-30c94e0bf36a ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1138,27 +1646,12 @@ kb:subject-device-photograph-uuid-3
 
 kb:subject-device-photograph-uuid-4
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-f651d01a-4bfc-527a-b5bb-a8ea297b92d7 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		]
+		kb:Derivation-4b72f9fd-b110-5b15-b260-f0bba4299a80 ,
+		kb:Derivation-bb412752-490e-537e-83b5-0534691190c3
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-6 ;
-		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-56fc8f86-62bb-5aa4-8039-05a59f29f487 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1169,27 +1662,12 @@ kb:subject-device-photograph-uuid-4
 
 kb:subject-device-photograph-uuid-5
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-3fa2733c-3b26-52cf-87d6-15d30176ada2 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		]
+		kb:Derivation-bea2e4c6-dc85-5f9c-9348-54329f734f1d ,
+		kb:Derivation-c7933ec9-6b24-5578-8116-5539f79c8b7e
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-6 ;
-		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-fd4e1edf-d058-5daf-b0a9-adce85ee52a8 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1200,27 +1678,12 @@ kb:subject-device-photograph-uuid-5
 
 kb:subject-device-photograph-uuid-6
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:camera-uuid-1 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-eadba839-fb53-50c9-b655-b51e6a2ee039 ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:provenance-record-uuid-3 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:subject-device-uuid-1 ;
-			prov:hadActivity kb:action-uuid-6 ;
-		]
+		kb:Derivation-27557de3-7de2-5151-a355-1792eb7415bc ,
+		kb:Derivation-def22d33-dcb7-597a-aa37-3f445bc6d61e
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-6 ;
-		prov:atTime "2019-01-01T14:21:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-dfa68ba5-48c4-5213-9f11-bc9a0e9c7b79 ;
 	prov:wasAttributedTo kb:camera-uuid-1 ;
 	prov:wasDerivedFrom
 		kb:provenance-record-uuid-3 ,
@@ -1231,20 +1694,9 @@ kb:subject-device-photograph-uuid-6
 
 kb:subject-device-uuid-1
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:officer-uuid-1 ;
-	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:action-uuid-1 ;
-	] ;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:action-uuid-1 ;
-		prov:atTime "2019-01-01T14:00:00+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-1bae2651-cfdf-5cc7-85bf-0c286f7da3c4 ;
+	prov:qualifiedDerivation kb:Derivation-4fdfc6f4-a934-51a6-9ad6-e7cbdea0d60d ;
+	prov:qualifiedGeneration kb:Generation-d5163342-08cc-54fa-bbc2-f7bf01aa7941 ;
 	prov:wasAttributedTo kb:officer-uuid-1 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:action-uuid-1 ;

@@ -6,42 +6,97 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Association-40a3d4c4-145f-5cfb-85c8-eb54a52e419f
+	a prov:Association ;
+	prov:agent kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81 ;
+	.
+
+kb:Association-5666a42d-e50f-56da-852d-922c00141e92
+	a prov:Association ;
+	prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	.
+
+kb:Attribution-1e43e6c0-39c2-5180-b407-43f4b17f15cc
+	a prov:Attribution ;
+	prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	.
+
+kb:Attribution-e4e70c4f-ed9e-5139-adb1-8959f872867b
+	a prov:Attribution ;
+	prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
+	.
+
 kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3
 	a
 		prov:Agent ,
 		prov:SoftwareAgent
 		;
 	prov:actedOnBehalfOf kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81 ;
-	prov:qualifiedDelegation [
-		a prov:Delegation ;
-		prov:agent kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81 ;
-		prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-	] ;
+	prov:qualifiedDelegation kb:Delegation-4215a2cc-39fe-53d5-9ceb-63df23d50152 ;
+	.
+
+kb:Delegation-4215a2cc-39fe-53d5-9ceb-63df23d50152
+	a prov:Delegation ;
+	prov:agent kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81 ;
+	prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+
+kb:Derivation-a195abd6-4738-5e89-965c-8f36962e633f
+	a prov:Derivation ;
+	prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
+	prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+
+kb:Derivation-b1ce3a19-ad3f-5d51-b7f6-cd68bb4aeac3
+	a prov:Derivation ;
+	prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+	prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+
+kb:Derivation-c702a79f-c725-5c49-b8e0-071ec41b20f4
+	a prov:Derivation ;
+	prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
+	prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+
+kb:Derivation-d07743dc-39cb-585f-96c1-e33bd6f4496c
+	a prov:Derivation ;
+	prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+	prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
 	.
 
 kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1
 	a prov:Entity ;
 	.
 
+kb:End-b7e9c240-c798-508c-8abb-bba2a90743f0
+	a prov:End ;
+	prov:atTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-39794b09-cea8-5ebc-832b-58aba299df36
+	a prov:Generation ;
+	prov:activity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+
+kb:Generation-9641ef8d-df3c-5b17-9109-41799e563f19
+	a prov:Generation ;
+	prov:activity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
+	.
+
 kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c
 	a prov:Activity ;
 	rdfs:comment "Acquisition of Kingston DataTraveler 2.0" ;
 	prov:endedAtTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
-	prov:qualifiedAssociation [
-		a prov:Association ;
-		prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
-	] ;
+	prov:qualifiedAssociation
+		kb:Association-40a3d4c4-145f-5cfb-85c8-eb54a52e419f ,
+		kb:Association-5666a42d-e50f-56da-852d-922c00141e92
+		;
+	prov:qualifiedEnd kb:End-b7e9c240-c798-508c-8abb-bba2a90743f0 ;
+	prov:qualifiedStart kb:Start-0f4342fc-ff40-5bdb-a93f-7814693401ea ;
 	prov:qualifiedUsage
-		[
-			a prov:Usage ;
-			prov:atTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
-			prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
-		] ,
-		[
-			a prov:Usage ;
-			prov:atTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
-			prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
-		]
+		kb:Usage-33d52b01-982b-5310-b89d-09d6f2dd7a95 ,
+		kb:Usage-b00b6811-7230-57e0-9f16-b0487a7f0185
 		;
 	prov:startedAtTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
 	prov:used
@@ -58,27 +113,12 @@ kb:ProvenanceRecord-0ff68932-2abc-433c-91b0-5af1ca34b470
 		;
 	rdfs:comment "Forensic image with E01Capture" ;
 	prov:hadMember kb:usb-b2dbb227-06ec-432d-9f63-058e8ab73944 ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-e4e70c4f-ed9e-5139-adb1-8959f872867b ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
-			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
-			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-		]
+		kb:Derivation-c702a79f-c725-5c49-b8e0-071ec41b20f4 ,
+		kb:Derivation-d07743dc-39cb-585f-96c1-e33bd6f4496c
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-		prov:atTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-9641ef8d-df3c-5b17-9109-41799e563f19 ;
 	prov:wasAttributedTo kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
 	prov:wasDerivedFrom
 		kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ,
@@ -102,29 +142,29 @@ kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81
 	a prov:Agent ;
 	.
 
+kb:Start-0f4342fc-ff40-5bdb-a93f-7814693401ea
+	a prov:Start ;
+	prov:atTime "2018-11-19T15:51:10+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-33d52b01-982b-5310-b89d-09d6f2dd7a95
+	a prov:Usage ;
+	prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
+	.
+
+kb:Usage-b00b6811-7230-57e0-9f16-b0487a7f0185
+	a prov:Usage ;
+	prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
+	.
+
 kb:usb-b2dbb227-06ec-432d-9f63-058e8ab73944
 	a prov:Entity ;
-	prov:qualifiedAttribution [
-		a prov:Attribution ;
-		prov:agent kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
-	] ;
+	prov:qualifiedAttribution kb:Attribution-1e43e6c0-39c2-5180-b407-43f4b17f15cc ;
 	prov:qualifiedDerivation
-		[
-			a prov:Derivation ;
-			prov:entity kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ;
-			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-		] ,
-		[
-			a prov:Derivation ;
-			prov:entity kb:ProvenanceRecord-53d614ea-d7cd-4491-a100-2f0b88299e89 ;
-			prov:hadActivity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-		]
+		kb:Derivation-a195abd6-4738-5e89-965c-8f36962e633f ,
+		kb:Derivation-b1ce3a19-ad3f-5d51-b7f6-cd68bb4aeac3
 		;
-	prov:qualifiedGeneration [
-		a prov:Generation ;
-		prov:activity kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c ;
-		prov:atTime "2018-11-19T15:58:38+00:00"^^xsd:dateTime ;
-	] ;
+	prov:qualifiedGeneration kb:Generation-39794b09-cea8-5ebc-832b-58aba299df36 ;
 	prov:wasAttributedTo kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3 ;
 	prov:wasDerivedFrom
 		kb:Disk-6dbe5066-dfb8-4551-9bda-39aab2ae3db1 ,
